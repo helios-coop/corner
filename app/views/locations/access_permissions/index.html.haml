@@ -1,0 +1,11 @@
+.row
+  .main-content
+    %h2 Access Permissions
+
+    %ul
+    - @controllers.each do |controller|
+      %li = controller
+
+
+    = form_tag access_permissions_path do
+      = submit_tag 'Save'

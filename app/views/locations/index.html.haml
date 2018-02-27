@@ -1,0 +1,20 @@
+%h1 Map
+= image_tag "https://i.imgur.com/shLssYR.png"
+
+%h1 Locations
+%ul
+  - @locations.each do |location|
+    %li
+      = location.name
+      |
+      = location.address
+      |
+      = link_to "Edit", edit_location_path(location)
+
+%h1 Location Details
+%ul
+  %li Review 1
+  %li Review 2
+  %li Review 3
+
+%h3= link_to "Add a Location", new_location_path
