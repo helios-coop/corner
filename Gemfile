@@ -13,7 +13,6 @@ gem 'puma', '~> 3.7' # Use Puma as the app server
 gem 'rails', '~> 5.1.5'
 gem 'sass-rails', '~> 5.0' # Use SCSS for stylesheets
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'sqlite3'
 gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -29,7 +28,12 @@ gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+group :producton do
+  gem 'pg'
+end
+
 group :development, :test do
+  gem 'sqlite3'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw] # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'capybara', '~> 2.13' # Adds support for Capybara system testing and selenium driver
   gem 'selenium-webdriver'
