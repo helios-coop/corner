@@ -7,10 +7,12 @@ end
 
 ruby '2.3.6'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'bootstrap', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.2' # Use CoffeeScript for .coffee assets and views
+gem 'font-awesome-rails' # https://github.com/bokmann/font-awesome-rails
 gem 'haml'
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
 gem 'puma', '~> 3.7' # Use Puma as the app server
 gem 'rails', '~> 5.1.5'
 gem 'sass-rails', '~> 5.0' # Use SCSS for stylesheets

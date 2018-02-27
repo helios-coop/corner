@@ -1,20 +1,28 @@
-%h1 Map
-= image_tag "https://i.imgur.com/shLssYR.png"
+.row
+  .col-md-4
+    %h1 Map
+    = image_tag "https://i.imgur.com/shLssYR.png", width: "500"
 
-%h1 Locations
-%ul
-  - @locations.each do |location|
-    %li
-      = location.name
-      |
-      = location.address
-      |
-      = link_to "Edit", edit_location_path(location)
+  .col-md-5
+    %h1
+      = fa_icon "compass", text: "Locations"
 
-%h1 Location Details
-%ul
-  %li Review 1
-  %li Review 2
-  %li Review 3
+    %h3= link_to "Add a Location", new_location_path, class: "btn btn-primary"
+    
+    %p
+      %ul
+        - @locations.each do |location|
+          %li
+            = location.name
+            |
+            = location.address
+            |
+            = link_to "Edit", edit_location_path(location)
 
-%h3= link_to "Add a Location", new_location_path
+  .col-md-3
+    %h1= fa_icon "far address-book", text: "Location Details"
+
+    %ul
+      %li Review 1
+      %li Review 2
+      %li Review 3
