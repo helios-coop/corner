@@ -11,7 +11,7 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.2' # Use CoffeeScript for .coffee assets and views
 gem 'font-awesome-rails' # https://github.com/bokmann/font-awesome-rails
 gem 'haml'
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.5' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jquery-rails'
 gem 'puma', '~> 3.7' # Use Puma as the app server
 gem 'rails', '~> 5.1.5'
@@ -19,29 +19,23 @@ gem 'sass-rails', '~> 5.0' # Use SCSS for stylesheets
 gem 'turbolinks', '~> 5' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+# gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
+# gem 'bcrypt', '~> 3.1.7' # Use ActiveModel has_secure_password
+# gem 'capistrano-rails', group: :development # Use Capistrano for deployment
+# gem 'therubyracer', platforms: :ruby # See https://github.com/rails/execjs#readme for more supported runtimes
 
 group :producton do
   gem 'pg'
 end
 
 group :development, :test do
-  gem 'sqlite3'
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw] # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'rspec-rails', '~> 3.7'
   gem 'capybara', '~> 2.13' # Adds support for Capybara system testing and selenium driver
+  gem "pry-byebug"
+  gem 'pry-rails'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 3.7'
   gem 'selenium-webdriver'
+  gem 'sqlite3'
 end
 
 group :development do
