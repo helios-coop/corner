@@ -19,6 +19,8 @@
 // Bootstrap 4: https://github.com/twbs/bootstrap-rubygem
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 // The available variables can be found here: https://github.com/twbs/bootstrap-rubygem/blob/master/assets/stylesheets/bootstrap/_variables.scss.
+
+@import "boot_extended_370_components/style-15"; // This might start overiding things
 @import "ashobiz/ashobiz.base";
 @import "ashobiz/ashobiz-90";
 @import "bootstrap";

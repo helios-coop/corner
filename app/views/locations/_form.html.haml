@@ -1,17 +1,32 @@
-= form_for @location do |f|
-  = f.label :name
-  = f.text_field :name
-
-  = f.label :address
-  = f.text_field :address
-
-  = f.label :phone
-  = f.text_field :phone
-
-  = f.label :url
-  = f.text_field :url
-
-  = label_tag :currencies
-  = text_field_tag :currencies
-
-  = submit_tag
+/ UI
+.ui-15
+  / UI Content
+  .ui-content
+    .container-fluid
+      .row
+        .col-md-8.col-sm-8.ui-padd
+          / Ui Form
+          .ui-form
+            / Heading
+            %h2 Location
+            / Form
+            = form_for @location do |f|
+              / UI Input
+              .ui-input
+                / Input Box
+                = f.text_field :name, class: "form-control", :placeholder => "Name"
+                %label.ui-icon
+                  %i.fa.fa-user
+              .ui-input
+                = f.text_field :address, class: "form-control", :placeholder => "Address"
+                %label.ui-icon
+                  %i.fa.fa-envelope-o
+              .ui-input
+                = f.text_field :phone, class: "form-control",  :placeholder => "phone"
+                %label.ui-icon
+                  %i.fa.fa-phone
+              .ui-input
+                = f.text_field :url, class: "form-control", :placeholder => "url"
+                %label.ui-icon
+                  %i.fa.fa-lock
+              = submit_tag "Submit", class: "btn btn-red btn-lg btn-block", :type => "submit"
