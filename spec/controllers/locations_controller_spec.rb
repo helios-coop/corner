@@ -18,7 +18,6 @@ describe LocationsController do
   end
 
   describe "GET #new" do
-    binding.pry
     subject { get :new }
 
     it "renders the new template" do

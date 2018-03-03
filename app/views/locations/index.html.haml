@@ -1,14 +1,14 @@
 .row
-  .col-md-4
+  .col-4
     %h1 Map
     = image_tag "https://i.imgur.com/shLssYR.png", width: "500"
 
-  .col-md-5
+  .col-5
     %h1
       = fa_icon "compass", text: "Locations"
 
     %h3= link_to "Add a Location", new_location_path, class: "btn btn-primary"
-    
+
     %p
       %ul
         - @locations.each do |location|
@@ -19,7 +19,7 @@
             |
             = link_to "Edit", edit_location_path(location)
 
-  .col-md-3
+  .col-3
     %h1= fa_icon "far address-book", text: "Location Details"
 
     %ul
