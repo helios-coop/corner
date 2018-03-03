@@ -10,6 +10,7 @@ gem 'rails', '~> 5.1.5'
 
 gem 'bcrypt' # Use ActiveModel has_secure_password
 gem 'bootstrap'
+gem 'coffee-rails', '~> 4.2' # Use CoffeeScript for .coffee assets and views
 gem 'font-awesome-rails' # https://github.com/bokmann/font-awesome-rails
 gem 'haml-rails'
 gem 'jbuilder' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
