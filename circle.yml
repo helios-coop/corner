@@ -1,0 +1,5 @@
+deployment:
+  prod:
+    branch: master
+    heroku:
+      appname: corner-pay # appname must not include upper-case characters
