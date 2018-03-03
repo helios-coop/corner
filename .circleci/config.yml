@@ -71,7 +71,7 @@ jobs:
   # jobs for building/testing go here
   deploy-job:
     docker:
-      - image: my-image
+      - image: circleci/ruby:2.4.1-node-browsers
     working_directory: /tmp/my-project
     steps:
       - checkout
