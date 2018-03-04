@@ -27,6 +27,7 @@ RSpec.describe UsersController, type: :controller do
       let(:user_params) { {display_name: 'AAntonop', email: 'andrea@mastering_bitcoin.com', password: 'permissionless', password_confirmation: 'consenys'} }
 
       it 'does not create a new user account' do
+        post :create, params: {user: user_params}
         expect(assigns(:user).persisted?).to be false
       end
     end
