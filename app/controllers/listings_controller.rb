@@ -10,9 +10,6 @@ class ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
 
-    # TODO: change to current user once login is setup
-    @listing.submitter_id = 1
-
     if @listing.save
       redirect_to listings_path
     else
