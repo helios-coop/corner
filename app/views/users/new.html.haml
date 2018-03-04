@@ -1,0 +1,30 @@
+.container-fluid
+  .row
+    .col
+    .col-6
+      %h1 Sign Up
+
+      -# Error messages
+      - if @user.errors.any?
+        .error_messages
+          %h2 Form is invalid
+          %ul
+            - for message in @user.errors.full_messages
+              %li{style: "color: red;"}= message
+
+      = form_for @user do |f|
+        .form-group
+          = f.label :display_name
+          = f.text_field :display_name, placeholder: "Satoshi", class: "form-control"
+        .form-group
+          = f.label :email
+          = f.email_field :email, placeholder: "crypto@kittens.com", class: "form-control"
+        .form-group
+          = f.label :password
+          = f.password_field :password, placeholder: "12345", class: "form-control"
+        .form-group
+          = f.label :password_confirmation
+          = f.password_field :password_confirmation, placeholder: "12345", class: "form-control"
+
+        = submit_tag "Create Account", class: 'btn btn-primary'
+    .col
