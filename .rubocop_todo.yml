@@ -55,11 +55,6 @@ Layout/SpaceInsideBlockBraces:
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 
-# Offense count: 2
-# Configuration parameters: CountComments, ExcludedMethods.
-Metrics/BlockLength:
-  Max: 32
-
 # Offense count: 1
 # Configuration parameters: CountComments.
 Metrics/MethodLength:
@@ -86,13 +81,8 @@ Rails/FilePath:
   Exclude:
     - 'config/environments/development.rb'
 
-# Offense count: 2
-# Configuration parameters: Include.
-# Include: app/models/**/*.rb
-Rails/HasManyOrHasOneDependent:
-  Exclude:
-    - 'app/models/currency.rb'
-    - 'app/models/listing.rb'
+Rails/InverseOf:
+  Enabled: false
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -107,25 +97,6 @@ Style/BlockComments:
 Style/ClassAndModuleChildren:
   Exclude:
     - 'test/test_helper.rb'
-
-# Offense count: 13
-Style/Documentation:
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'app/controllers/application_controller.rb'
-    - 'app/controllers/listings_controller.rb'
-    - 'app/helpers/application_helper.rb'
-    - 'app/helpers/locations_helper.rb'
-    - 'app/mailers/application_mailer.rb'
-    - 'app/models/application_record.rb'
-    - 'app/models/currency.rb'
-    - 'app/models/currency_listing.rb'
-    - 'app/models/listing.rb'
-    - 'config/application.rb'
-    - 'db/migrate/20180303010220_create_listings.rb'
-    - 'db/migrate/20180304041947_create_currencies.rb'
-    - 'db/migrate/20180304043236_create_currency_listings.rb'
 
 # Offense count: 54
 # Cop supports --auto-correct.
