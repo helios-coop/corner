@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe ListingsController do
 
-  let!(:satoshi) { User.create(display_name: "satoshi", email: "satoshi@bitcoin.org", password_digest: "123456")}
+  let!(:satoshi) { User.create(display_name: "satoshi", email: "satoshi@bitcoin.org", password_digest: "123456") }
   let!(:listing) { Listing.create(name: "Pizza House", submitter_id: satoshi.id) }
   before { subject }
 
