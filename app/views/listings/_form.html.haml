@@ -10,7 +10,7 @@
             / Heading
             %h2 Listing
             / Form
-            = form_for @location do |f|
+            = form_for @listing do |f|
               / UI Input
               .ui-input
                 / Input Box
@@ -22,11 +22,27 @@
                 %label.ui-icon
                   %i.fa.fa-envelope-o
               .ui-input
-                = f.text_field :phone, class: "form-control",  :placeholder => "phone"
+                = f.text_field :address2, class: "form-control", :placeholder => "Address 2"
+                %label.ui-icon
+                  %i.fa.fa-envelope-o
+              .ui-input
+                = f.text_field :city, class: "form-control", :placeholder => "City"
+                %label.ui-icon
+                  %i.fa.fa-envelope-o
+              .ui-input
+                = f.text_field :state, class: "form-control", :placeholder => "State"
+                %label.ui-icon
+                  %i.fa.fa-envelope-o
+              .ui-input
+                = f.text_field :zipcode, class: "form-control", :placeholder => "Zipcode"
+                %label.ui-icon
+                  %i.fa.fa-envelope-o
+              .ui-input
+                = f.text_field :phone, class: "form-control",  :placeholder => "Phone"
                 %label.ui-icon
                   %i.fa.fa-phone
               .ui-input
-                = f.text_field :url, class: "form-control", :placeholder => "url"
+                = f.text_field :url, class: "form-control", :placeholder => "Url"
                 %label.ui-icon
                   %i.fa.fa-lock
               = submit_tag "Submit", class: "btn btn-red btn-lg btn-block", :type => "submit"

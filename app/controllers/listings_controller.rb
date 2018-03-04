@@ -8,9 +8,17 @@ class ListingsController < ApplicationController
   end
 
   def create
-    @listing = Listing.create(listing_params)
-    # Todo add in currencies
-    redirect_to listings_path
+    @listing = Listing.new(listing_params)
+
+    # TODO: change to current user once login is setup
+    @listing.submitter_id = 1
+
+    if @listing.save
+      redirect_to listings_path
+    else
+      flash[:error] = "Something has gone horribly wrong. Listing not created."
+      render :new
+    end
   end
 
   def edit
