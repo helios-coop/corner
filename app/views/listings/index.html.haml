@@ -1,0 +1,28 @@
+.row
+  .col-4
+    %h1 Map
+    = image_tag "https://i.imgur.com/shLssYR.png", width: "500"
+
+  .col-5
+    %h1
+      = fa_icon "compass", text: "Listings"
+
+    %h3= link_to "Add a Listing", new_listing_path, class: "btn btn-primary"
+
+    %p
+      %ul
+        - @listings.each do |listing|
+          %li
+            = listing.name
+            |
+            = listing.address
+            |
+            = link_to "Edit", edit_listing_path(listing)
+
+  .col-3
+    %h1= fa_icon "far address-book", text: "Listing Details"
+
+    %ul
+      %li Review 1: Cats are the best
+      %li Review 2: Meow says meow.
+      %li Review 3
