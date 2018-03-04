@@ -10,15 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180226010220) do
+ActiveRecord::Schema.define(version: 20180303010220) do
 
-  create_table "locations", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "listings", force: :cascade do |t|
     t.string "name"
     t.string "address"
+    t.string "address2"
+    t.string "city"
+    t.string "state"
+    t.string "zipcode"
+    t.string "country"
     t.string "phone"
     t.string "url"
+    t.integer "submitter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["submitter_id"], name: "index_listings_on_submitter_id"
   end
 
 end
