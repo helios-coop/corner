@@ -11,17 +11,6 @@
 Metrics/MethodLength:
   Max: 14
 
-# Offense count: 10
-# Configuration parameters: .
-# SupportedStyles: is_expected, should
-RSpec/ImplicitExpect:
-  EnforcedStyle: should
-
-# Offense count: 4
-RSpec/NamedSubject:
-  Exclude:
-    - 'spec/controllers/listings_controller_spec.rb'
-
 # Offense count: 1
 Rails/FilePath:
   Exclude:

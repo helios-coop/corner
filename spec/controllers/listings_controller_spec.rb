@@ -4,13 +4,11 @@ describe ListingsController do
   let!(:satoshi) { User.create(display_name: "satoshi", email: "satoshi@bitcoin.org", password_digest: "123456") }
   let!(:listing) { Listing.create(name: "Pizza House", submitter_id: satoshi.id) }
 
-  before { subject }
-
   describe "GET #index" do
-    subject { get :index }
+    before { get :index }
 
     it "renders the index template" do
-      expect(subject).to render_template :index
+      expect(response).to render_template :index
     end
 
     it "finds all listings in the db" do
@@ -19,18 +17,18 @@ describe ListingsController do
   end
 
   describe "GET #new" do
-    subject { get :new }
+    before { get :new }
 
     it "renders the new template" do
-      expect(subject).to render_template :new
+      expect(response).to render_template :new
     end
   end
 
   describe "GET #edit" do
-    subject { get :edit, params: { id: listing.id } }
+    before { get :edit, params: { id: listing.id } }
 
     it "renders the index template" do
-      expect(subject).to render_template :edit
+      expect(response).to render_template :edit
     end
 
     it "finds the correct listing" do
@@ -39,7 +37,7 @@ describe ListingsController do
   end
 
   describe "POST #create" do
-    subject { get :create, params: { listing: { name: "Satoshi's Pub", submitter_id: satoshi.id } } }
+    before { get :create, params: { listing: { name: "Satoshi's Pub", submitter_id: satoshi.id } } }
 
     it "adds a listing to the database" do
       expect(Listing.count).to eq 2
