@@ -22,6 +22,17 @@ ActiveRecord::Schema.define(version: 20180304043236) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "currency_listings", force: :cascade do |t|
+    t.integer "currency_id"
+    t.integer "listing_id"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["currency_id"], name: "index_currency_listings_on_currency_id"
+    t.index ["deleted_at"], name: "index_currency_listings_on_deleted_at"
+    t.index ["listing_id"], name: "index_currency_listings_on_listing_id"
+  end
+
   create_table "listings", force: :cascade do |t|
     t.string "name"
     t.string "address"
