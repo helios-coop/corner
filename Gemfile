@@ -8,6 +8,7 @@ end
 ruby '2.4.1'
 gem 'rails', '~> 5.1.5'
 
+gem 'acts_as_paranoid', github: 'ActsAsParanoid/acts_as_paranoid' # Need to point to repo or can't migrate: https://github.com/ActsAsParanoid/acts_as_paranoid/issues/36
 gem 'bcrypt' # Use ActiveModel has_secure_password
 gem 'bootstrap'
 gem 'coffee-rails', '~> 4.2' # TODO: Remove. Heroku was breaking when I tried to remove
