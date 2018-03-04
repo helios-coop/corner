@@ -1,24 +1,5 @@
-# README
+### Data Model
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Keep this updated:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://drive.google.com/file/d/13rWZlBrkVmeWPsVDByswylRkaf30jm_F/view?usp=sharing
