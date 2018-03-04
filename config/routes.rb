@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   # Homepage
-  root "listings#index"
+  root 'listings#index'
 
   resources :listings
 
