@@ -2,7 +2,8 @@ require "rails_helper"
 
 describe ListingsController do
 
-  let!(:listing) { Listing.create(name: "Pizza House", submitter_id: 1) }
+  let!(:satoshi) { User.create(display_name: "satoshi", email: "satoshi@bitcoin.org", password_digest: "123456")}
+  let!(:listing) { Listing.create(name: "Pizza House", submitter_id: satoshi.id) }
   before { subject }
 
   describe "GET #index" do
@@ -38,7 +39,7 @@ describe ListingsController do
   end
 
   describe "POST #create" do
-    subject { get :create, params: {listing: {name: "Satoshi's Pub", submitter_id: 1}} }
+    subject { get :create, params: {listing: {name: "Satoshi's Pub", submitter_id: satoshi.id}} }
 
     it "adds a listing to the database" do
       expect(Listing.count).to eq 2
