@@ -1,0 +1,4 @@
+-# TODO: Setup CSS
+
+- flash.each do |name, msg|
+  = content_tag :div, msg, id: "flash#{name}", class: "alert alert-#{name}", role: "alert"
