@@ -5,5 +5,4 @@ class LocationsControllerTest < ActionDispatch::IntegrationTest
     get locations_index_url
     assert_response :success
   end
-
 end
