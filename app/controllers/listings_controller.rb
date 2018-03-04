@@ -35,7 +35,20 @@ class ListingsController < ApplicationController
 
   private
 
+  PERMITTED_PARAMS = %i[
+    name
+    address
+    address2
+    city
+    state
+    zipcode
+    country
+    phone
+    url
+    submitter_id
+  ].freeze
+
   def listing_params
-    params.require(:listing).permit(:name, :address, :address2, :city, :state, :zipcode, :country, :phone, :url, :submitter_id)
+    params.require(:listing).permit(*PERMITTED_PARAMS)
   end
 end

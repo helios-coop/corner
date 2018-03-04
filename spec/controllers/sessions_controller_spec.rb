@@ -11,7 +11,14 @@ RSpec.describe SessionsController, type: :controller do
   end
 
   describe 'POST #create' do
-    before { User.create(display_name: 'satoshi', email: 'satoshi@gmail.com', password: 'segwit2x', password_confirmation: 'segwit2x') }
+    before do
+      User.create!(
+        display_name: 'satoshi',
+        email: 'satoshi@gmail.com',
+        password: 'segwit2x',
+        password_confirmation: 'segwit2x'
+      )
+    end
 
     context 'with a correct email and password' do
       it 'logs the user in' do
