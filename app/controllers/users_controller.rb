@@ -23,8 +23,15 @@ class UsersController < ApplicationController
 
   private
 
+  PERMITTED_PARAMS = %i[
+    display_name
+    email
+    password
+    password_confirmation
+  ].freeze
+
   def user_params
-    params.require(:user).permit(:display_name, :email, :password, :password_confirmation)
+    params.require(:user).permit(*PERMITTED_PARAMS)
   end
 
   def invalid_password_length?

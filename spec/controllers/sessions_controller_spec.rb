@@ -22,14 +22,16 @@ RSpec.describe SessionsController, type: :controller do
 
     context 'with a correct email and password' do
       it 'logs the user in' do
-        post :create, params: { email: 'satoshi@gmail.com', password: 'segwit2x' }
+        session_params = { email: 'satoshi@gmail.com', password: 'segwit2x' }
+        post :create, params: session_params
         expect(session[:user_id]).to be_present
       end
     end
 
     context 'with an incorrect email and password' do
       it 'does not log the user in' do
-        post :create, params: { email: 'satoshi@gmail.com', password: 'bad_password' }
+        session_params = { email: 'satoshi@gmail.com', password: 'badpassword' }
+        post :create, params: session_params
         expect(session[:user_id]).to be nil
       end
     end
