@@ -14,6 +14,7 @@ gem 'bootstrap'
 gem 'coffee-rails', '~> 4.2' # TODO: Remove. Heroku was breaking when I tried to remove
 gem 'font-awesome-rails' # https://github.com/bokmann/font-awesome-rails
 gem 'haml-rails'
+gem 'honeybadger'
 gem 'jbuilder' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jquery-rails'
 gem 'pg'
