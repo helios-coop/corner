@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ListingsController < ApplicationController
   def index
     @listings = Listing.all
@@ -13,7 +15,7 @@ class ListingsController < ApplicationController
     if @listing.save
       redirect_to listings_path
     else
-      flash[:error] = "Something has gone horribly wrong. Listing not created."
+      flash[:error] = 'Something has gone horribly wrong. Listing not created.'
       render :new
     end
   end

@@ -33,13 +33,6 @@ Style/ClassAndModuleChildren:
   Exclude:
     - 'test/test_helper.rb'
 
-# Offense count: 54
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: when_needed, always, never
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
 # Offense count: 2
 Style/MixinUsage:
   Exclude:
@@ -62,33 +55,6 @@ Style/PercentLiteralDelimiters:
 # Offense count: 2
 # Cop supports --auto-correct.
 Style/StderrPuts:
-  Exclude:
-    - 'bin/yarn'
-
-# Offense count: 60
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiterals:
-  Exclude:
-    - 'Gemfile'
-    - 'app/controllers/listings_controller.rb'
-    - 'bin/spring'
-    - 'bin/yarn'
-    - 'config/environments/production.rb'
-    - 'config/puma.rb'
-    - 'config/routes.rb'
-    - 'db/schema.rb'
-    - 'spec/controllers/listings_controller_spec.rb'
-    - 'spec/rails_helper.rb'
-    - 'test/application_system_test_case.rb'
-    - 'test/controllers/locations_controller_test.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiteralsInInterpolation:
   Exclude:
     - 'bin/yarn'
 

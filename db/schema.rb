@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20180305011401) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,7 +28,7 @@ ActiveRecord::Schema.define(version: 20180305011401) do
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index %w[currency_id listing_id], name: "index_currencies_listings_on_currency_id_and_listing_id", unique: true
+    t.index ["currency_id", "listing_id"], name: "index_currencies_listings_on_currency_id_and_listing_id", unique: true
     t.index ["currency_id"], name: "index_currencies_listings_on_currency_id"
     t.index ["deleted_at"], name: "index_currencies_listings_on_deleted_at"
     t.index ["listing_id"], name: "index_currencies_listings_on_listing_id"

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddConstraints < ActiveRecord::Migration[5.1]
   def change
     add_index :currency_listings, %i[currency_id listing_id], unique: true
