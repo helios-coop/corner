@@ -18,7 +18,7 @@ describe ListingsController do
     end
   end
 
-  describe "GET #new" do
+  describe 'GET #new' do
     before do
       login(satoshi)
       get :new
@@ -29,7 +29,7 @@ describe ListingsController do
     end
   end
 
-  describe "GET #edit" do
+  describe 'GET #edit' do
     before do
       login(satoshi)
       get :edit, params: { id: listing.id }
@@ -44,22 +44,22 @@ describe ListingsController do
     end
   end
 
-  describe "POST #create" do
-    context "when a user is logged in" do
+  describe 'POST #create' do
+    context 'when a user is logged in' do
       before do
         login(satoshi)
-        post :create, params: { listing: { name: "Satoshi's Pub", submitter_id: satoshi.id } }
+        post :create, params: { listing: { name: 'Satoshi\'s Pub', submitter_id: satoshi.id } }
       end
 
-      it "adds a listing to the database" do
+      it 'adds a listing to the database' do
         expect(Listing.count).to eq 2
       end
     end
 
-    context "when a user is not logged in" do
-      before { post :create, params: { listing: { name: "Satoshi's Pub", submitter_id: satoshi.id } } }
+    context 'when a user is not logged in' do
+      before { post :create, params: { listing: { name: 'Satoshi\'s Pub', submitter_id: satoshi.id } } }
 
-      it "adds a listing to the database" do
+      it 'adds a listing to the database' do
         expect(Listing.count).to eq 1
       end
     end

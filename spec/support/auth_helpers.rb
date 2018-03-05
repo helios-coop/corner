@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AuthHelpers
   def login(user)
     session[:user_id] = user.id

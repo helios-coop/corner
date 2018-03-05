@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # Authenticaiton was created following this doc: https://gist.github.com/thebucknerlife/10090014
 
 class SessionsController < ApplicationController
