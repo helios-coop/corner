@@ -12,7 +12,7 @@ class ListingsController < ApplicationController
   end
 
   def create
-    @listing = Listing.new(listing_params)
+    @listing = Listing.new(listing_params.merge(submitter_id: current_user.id))
 
     if @listing.save
       redirect_to listings_path
