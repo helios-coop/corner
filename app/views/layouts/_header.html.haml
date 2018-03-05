@@ -8,9 +8,6 @@
     %a.a-bg-orange{:href => "/listings/new"}
       %span Add A Listing
   %li
-    %a.a-bg-orange{:href => "/signup"}
-      %span Create Account
-  %li
     %a.a-bg-orange{:href => "#"}
       %span --
   %li
@@ -19,3 +16,11 @@
   %li
     %a.a-bg-orange{:href => "#"}
       %span --
+  - if current_user
+    %li
+      %a.a-bg-orange{:href => "/logout"}
+        %span Log Out
+  - else
+    %li
+      %a.a-bg-orange{:href => "/login"}
+        %span Signin / Signup
