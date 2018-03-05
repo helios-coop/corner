@@ -14,6 +14,6 @@ class ApplicationController < ActionController::Base
     return if current_user
 
     flash[:danger] = 'You must be logged in to do that.'
-    redirect_to 'login_path'
+    redirect_to login_path
   end
 end
