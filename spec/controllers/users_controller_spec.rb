@@ -17,7 +17,14 @@ RSpec.describe UsersController, type: :controller do
 
   describe 'POST #create' do
     context 'when password confirmation matches' do
-      let(:user_params) { { display_name: 'AAntonop', email: 'andrea@mastering_bitcoin.com', password: 'permissionless', password_confirmation: 'permissionless' } }
+      let(:user_params) do
+        {
+          display_name: 'AAntonop',
+          email: 'andrea@mastering_bitcoin.com',
+          password: 'permissionless',
+          password_confirmation: 'permissionless'
+        }
+      end
 
       it 'creates a new user account' do
         post :create, params: { user: user_params }
@@ -26,7 +33,14 @@ RSpec.describe UsersController, type: :controller do
     end
 
     context 'when password confirmation does not match' do
-      let(:user_params) { { display_name: 'AAntonop', email: 'andrea@mastering_bitcoin.com', password: 'permissionless', password_confirmation: 'consenys' } }
+      let(:user_params) do
+        {
+          display_name: 'AAntonop',
+          email: 'andrea@mastering_bitcoin.com',
+          password: 'permissionless',
+          password_confirmation: 'consenys'
+        }
+      end
 
       it 'does not create a new user account' do
         post :create, params: { user: user_params }

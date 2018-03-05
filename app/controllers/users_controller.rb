@@ -9,7 +9,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if invalid_password_length?
-      flash[:danger] = "Roger V says: Don't Do That!" # This should only happen if the user is removing html input validations.
+      # This should only happen if the user is removing html input validations.
+      flash[:danger] = "Roger V says: Don't Do That!"
       render :new
     elsif @user.save
       session[:user_id] = @user.id

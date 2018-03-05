@@ -10,20 +10,21 @@ end
 ruby '2.4.1'
 gem 'rails', '~> 5.1.5'
 
-gem 'acts_as_paranoid', github: 'ActsAsParanoid/acts_as_paranoid' # Need to point to repo or can't migrate: https://github.com/ActsAsParanoid/acts_as_paranoid/issues/36
+# https://github.com/ActsAsParanoid/acts_as_paranoid/issues/36
+gem 'acts_as_paranoid', github: 'ActsAsParanoid/acts_as_paranoid'
 gem 'bcrypt' # Use ActiveModel has_secure_password
 gem 'bootstrap'
 gem 'font-awesome-rails' # https://github.com/bokmann/font-awesome-rails
 gem 'haml-rails'
 gem 'honeybadger'
-gem 'jbuilder' # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder' # Build JSON APIs with ease
 gem 'jquery-rails'
 gem 'pg'
 gem 'puma' # Use Puma as the app server
 gem 'sass-rails' # Use SCSS for stylesheets
 gem 'sidekiq'
-gem 'turbolinks' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby] # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'turbolinks' # Makes navigating your web application faster
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby] # Windows zoneinfo
 gem 'uglifier' # Use Uglifier as compressor for JavaScript assets
 
 # gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
@@ -45,9 +46,9 @@ end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'spring' # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring' # Speeds up development by keeping your application running
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'web-console', '>= 3.3.0' # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem 'web-console', '>= 3.3.0' # Access an IRB console on exception pages
 end
 
 group :test do
