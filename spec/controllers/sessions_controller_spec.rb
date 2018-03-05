@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
-  let!(:satoshi) { User.create(display_name: 'satoshi', email: 'satoshi@gmail.com', password: 'segwit2x', password_confirmation: 'segwit2x') }
-
   describe 'GET #new' do
     it 'returns http success' do
       get :new
@@ -11,6 +9,8 @@ RSpec.describe SessionsController, type: :controller do
   end
 
   describe 'POST #create' do
+    before { User.create(display_name: 'satoshi', email: 'satoshi@gmail.com', password: 'segwit2x', password_confirmation: 'segwit2x') }
+
     context 'with a correct email and password' do
       it 'logs the user in' do
         post :create, params: { email: 'satoshi@gmail.com', password: 'segwit2x' }
