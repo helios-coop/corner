@@ -12,14 +12,6 @@ Metrics/MethodLength:
   Max: 14
 
 # Offense count: 1
-Rails/FilePath:
-  Exclude:
-    - 'config/environments/development.rb'
-
-Rails/InverseOf:
-  Enabled: false
-
-# Offense count: 1
 # Cop supports --auto-correct.
 Style/BlockComments:
   Exclude:
