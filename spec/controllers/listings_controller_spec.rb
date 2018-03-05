@@ -54,6 +54,10 @@ describe ListingsController do
       it 'adds a listing to the database' do
         expect(Listing.count).to eq 2
       end
+
+      it 'sets the submitter correctly' do
+        expect(Listing.last.submitter).to eq satoshi
+      end
     end
 
     context 'when a user is not logged in' do
