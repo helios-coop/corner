@@ -10,30 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180304203102) do
+ActiveRecord::Schema.define(version: 20180305011401) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "currencies", force: :cascade do |t|
-    t.string "name"
-    t.string "symbol"
+    t.string "name", null: false
+    t.string "symbol", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "currency_listings", force: :cascade do |t|
-    t.integer "currency_id"
-    t.integer "listing_id"
+  create_table "currencies_listings", force: :cascade do |t|
+    t.integer "currency_id", null: false
+    t.integer "listing_id", null: false
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["currency_id"], name: "index_currency_listings_on_currency_id"
-    t.index ["deleted_at"], name: "index_currency_listings_on_deleted_at"
-    t.index ["listing_id"], name: "index_currency_listings_on_listing_id"
+    t.index %w[currency_id listing_id], name: "index_currencies_listings_on_currency_id_and_listing_id", unique: true
+    t.index ["currency_id"], name: "index_currencies_listings_on_currency_id"
+    t.index ["deleted_at"], name: "index_currencies_listings_on_deleted_at"
+    t.index ["listing_id"], name: "index_currencies_listings_on_listing_id"
   end
 
   create_table "listings", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.string "address"
     t.string "address2"
     t.string "city"
@@ -42,20 +43,24 @@ ActiveRecord::Schema.define(version: 20180304203102) do
     t.string "country"
     t.string "phone"
     t.string "url"
-    t.integer "submitter_id"
+    t.integer "submitter_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["submitter_id"], name: "index_listings_on_submitter_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "display_name"
+    t.string "display_name", null: false
     t.string "role"
-    t.string "email"
+    t.string "email", null: false
     t.string "first_name"
     t.string "last_name"
-    t.string "password_digest"
+    t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_foreign_key "currencies_listings", "currencies"
+  add_foreign_key "currencies_listings", "listings"
+  add_foreign_key "listings", "users", column: "submitter_id"
 end
