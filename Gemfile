@@ -21,6 +21,7 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'puma' # Use Puma as the app server
 gem 'sass-rails' # Use SCSS for stylesheets
+gem 'sidekiq'
 gem 'turbolinks' # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby] # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'uglifier' # Use Uglifier as compressor for JavaScript assets
