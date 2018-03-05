@@ -1,7 +1,7 @@
 .container-fluid
   .row
     .col
-    .col-6
+    .col-5
       %h1 Sign Up
 
       -# Error messages
@@ -15,16 +15,16 @@
       = form_for @user do |f|
         .form-group
           = f.label :display_name
-          = f.text_field :display_name, placeholder: "Satoshi", class: "form-control"
+          = f.text_field :display_name, placeholder: "Satoshi", class: "form-control", required: true
         .form-group
           = f.label :email
-          = f.email_field :email, placeholder: "crypto@kittens.com", class: "form-control"
+          = f.email_field :email, placeholder: "crypto@kittens.com", class: "form-control", required: true
         .form-group
           = f.label :password
-          = f.password_field :password, placeholder: "12345", class: "form-control"
+          = f.password_field :password, placeholder: "min 8 characters", class: "form-control", pattern:".{8,}", title: "Minimum password length is 8. Don't get Mt Goxed.", required: true
         .form-group
           = f.label :password_confirmation
-          = f.password_field :password_confirmation, placeholder: "12345", class: "form-control"
+          = f.password_field :password_confirmation, class: "form-control", required: true
 
         = submit_tag "Create Account", class: 'btn btn-primary'
     .col

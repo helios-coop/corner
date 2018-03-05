@@ -19,7 +19,10 @@ describe ListingsController do
   end
 
   describe 'GET #new' do
-    before { get :new }
+    before do
+      login(satoshi)
+      get :new
+    end
 
     it 'renders the new template' do
       expect(response).to render_template :new
@@ -27,7 +30,10 @@ describe ListingsController do
   end
 
   describe 'GET #edit' do
-    before { get :edit, params: { id: listing.id } }
+    before do
+      login(satoshi)
+      get :edit, params: { id: listing.id }
+    end
 
     it 'renders the index template' do
       expect(response).to render_template :edit
@@ -39,10 +45,23 @@ describe ListingsController do
   end
 
   describe 'POST #create' do
-    before { get :create, params: { listing: { name: "Satoshi's Pub", submitter_id: satoshi.id } } }
+    context 'when a user is logged in' do
+      before do
+        login(satoshi)
+        post :create, params: { listing: { name: 'Satoshi\'s Pub', submitter_id: satoshi.id } }
+      end
 
-    it 'adds a listing to the database' do
-      expect(Listing.count).to eq 2
+      it 'adds a listing to the database' do
+        expect(Listing.count).to eq 2
+      end
+    end
+
+    context 'when a user is not logged in' do
+      before { post :create, params: { listing: { name: 'Satoshi\'s Pub', submitter_id: satoshi.id } } }
+
+      it 'adds a listing to the database' do
+        expect(Listing.count).to eq 1
+      end
     end
   end
 end

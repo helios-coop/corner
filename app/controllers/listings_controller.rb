@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ListingsController < ApplicationController
+  before_action :authorize, except: [:index]
+
   def index
     @listings = Listing.all
   end
