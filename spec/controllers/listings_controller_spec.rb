@@ -3,17 +3,8 @@
 require 'rails_helper'
 
 RSpec.describe ListingsController do
-  let!(:satoshi) do
-    User.create(
-      display_name: 'satoshi',
-      email: 'satoshi@bitcoin.org',
-      password_digest: '123456'
-    )
-  end
-
-  let!(:listing) do
-    Listing.create(name: 'Pizza House', submitter_id: satoshi.id)
-  end
+  let(:satoshi) { create(:user, display_name: 'satoshi') }
+  let!(:listing) { create(:listing, submitter: satoshi) }
 
   describe 'GET #index' do
     before { get :index }

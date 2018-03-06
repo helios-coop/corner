@@ -31,6 +31,8 @@ gem 'uglifier' # Use Uglifier as compressor for JavaScript assets
 
 group :development, :test do
   gem 'capybara' # Adds support for Capybara system testing and selenium driver
+  gem 'factory_bot_rails'
+  gem 'faker'
   gem 'foreman'
   gem 'guard'
   gem 'guard-rspec'
