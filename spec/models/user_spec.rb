@@ -3,9 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  before do
-    User.create!(display_name: 'foo', email: 'bar', password_digest: 'butts')
-  end
+  before { create(:user) }
 
   it { is_expected.to validate_presence_of(:display_name) }
   it { is_expected.to validate_presence_of(:email) }

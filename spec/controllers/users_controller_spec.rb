@@ -3,6 +3,8 @@
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
+  let(:user_params) { attributes_for(:user) }
+
   describe 'GET #new' do
     before { get :new }
 
@@ -17,15 +19,6 @@ RSpec.describe UsersController, type: :controller do
 
   describe 'POST #create' do
     context 'when password confirmation matches' do
-      let(:user_params) do
-        {
-          display_name: 'AAntonop',
-          email: 'andrea@mastering_bitcoin.com',
-          password: 'permissionless',
-          password_confirmation: 'permissionless'
-        }
-      end
-
       it 'creates a new user account' do
         post :create, params: { user: user_params }
         expect(assigns(:user).persisted?).to be true
@@ -33,17 +26,8 @@ RSpec.describe UsersController, type: :controller do
     end
 
     context 'when password confirmation does not match' do
-      let(:user_params) do
-        {
-          display_name: 'AAntonop',
-          email: 'andrea@mastering_bitcoin.com',
-          password: 'permissionless',
-          password_confirmation: 'consenys'
-        }
-      end
-
       it 'does not create a new user account' do
-        post :create, params: { user: user_params }
+        post :create, params: { user: user_params.merge(password: 'butts') }
         expect(assigns(:user).persisted?).to be false
       end
     end
