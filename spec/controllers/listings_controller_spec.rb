@@ -3,8 +3,17 @@
 require 'rails_helper'
 
 RSpec.describe ListingsController do
-  let!(:satoshi) { User.create(display_name: 'satoshi', email: 'satoshi@bitcoin.org', password_digest: '123456') }
-  let!(:listing) { Listing.create(name: 'Pizza House', submitter_id: satoshi.id) }
+  let!(:satoshi) do
+    User.create(
+      display_name: 'satoshi',
+      email: 'satoshi@bitcoin.org',
+      password_digest: '123456'
+    )
+  end
+
+  let!(:listing) do
+    Listing.create(name: 'Pizza House', submitter_id: satoshi.id)
+  end
 
   describe 'GET #index' do
     before { get :index }
@@ -45,10 +54,12 @@ RSpec.describe ListingsController do
   end
 
   describe 'POST #create' do
+    let(:listing_params) { { name: 'Pub Satoshi', submitter_id: satoshi.id } }
+
     context 'when a user is logged in' do
       before do
         login(satoshi)
-        post :create, params: { listing: { name: 'Satoshi\'s Pub', submitter_id: satoshi.id } }
+        post :create, params: { listing: listing_params }
       end
 
       it 'adds a listing to the database' do
@@ -61,7 +72,9 @@ RSpec.describe ListingsController do
     end
 
     context 'when a user is not logged in' do
-      before { post :create, params: { listing: { name: 'Satoshi\'s Pub', submitter_id: satoshi.id } } }
+      before do
+        post :create, params: { listing: listing_params }
+      end
 
       it 'adds a listing to the database' do
         expect(Listing.count).to eq 1
