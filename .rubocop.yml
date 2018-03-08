@@ -1,5 +1,4 @@
 require: rubocop-rspec
-inherit_from: .rubocop_todo.yml
 
 AllCops:
   TargetRailsVersion: 5.1
@@ -11,6 +10,7 @@ AllCops:
 Rails: { Enabled: true }
 
 Metrics/BlockLength: { Exclude: [spec/**/*_spec.rb] }
+Metrics/MethodLength: { Exclude: [db/migrate/**] }
 Rails/HasManyOrHasOneDependent: { Enabled: false }
 Style/Documentation: { Enabled: false }
 Style/MixinUsage: { Exclude: [bin/**] }

@@ -3,6 +3,7 @@
 class User < ApplicationRecord
   validates :display_name, :email, :password_digest, presence: true
   validates :display_name, :email, uniqueness: true
+  validates :password, length: { minimum: 8 }
 
   has_many :submissions,
            class_name: :Listing,
