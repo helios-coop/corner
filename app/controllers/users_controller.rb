@@ -6,9 +6,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    # @user = User.new(user_params)
+    @user = User.new(user_params)
 
-    if @user.save
+    if invalid_password_length?
+      # This should only happen if the user is removing html input validations.
+      flash[:danger] = "Roger V says: Don't Do That!"
+      render :new
+    elsif @user.save
       session[:user_id] = @user.id
       flash[:success] = 'Much Wow. Account created'
       redirect_to listings_path
@@ -28,5 +32,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(*PERMITTED_PARAMS)
+  end
+
+  def invalid_password_length?
+    user_params[:password].length < 8
   end
 end
