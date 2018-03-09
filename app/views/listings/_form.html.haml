@@ -1,48 +1,62 @@
-/ UI
-.ui-15
-  / UI Content
-  .ui-content
-    .container-fluid
-      .row
-        .col-md-8.col-sm-8.ui-padd
-          / Ui Form
-          .ui-form
-            / Heading
-            %h2 Listing
-            / Form
-            = form_for @listing do |f|
-              / UI Input
-              .ui-input
-                / Input Box
-                = f.text_field :name, class: "form-control", :placeholder => "Name"
-                %label.ui-icon
-                  %i.fa.fa-user
-              .ui-input
-                = f.text_field :address, class: "form-control", :placeholder => "Address"
-                %label.ui-icon
-                  %i.fa.fa-envelope-o
-              .ui-input
-                = f.text_field :address2, class: "form-control", :placeholder => "Address 2"
-                %label.ui-icon
-                  %i.fa.fa-envelope-o
-              .ui-input
-                = f.text_field :city, class: "form-control", :placeholder => "City"
-                %label.ui-icon
-                  %i.fa.fa-envelope-o
-              .ui-input
-                = f.text_field :state, class: "form-control", :placeholder => "State"
-                %label.ui-icon
-                  %i.fa.fa-envelope-o
-              .ui-input
-                = f.text_field :zipcode, class: "form-control", :placeholder => "Zipcode"
-                %label.ui-icon
-                  %i.fa.fa-envelope-o
-              .ui-input
-                = f.text_field :phone, class: "form-control",  :placeholder => "Phone"
-                %label.ui-icon
-                  %i.fa.fa-phone
-              .ui-input
-                = f.text_field :url, class: "form-control", :placeholder => "Url"
-                %label.ui-icon
-                  %i.fa.fa-lock
-              = submit_tag "Submit", class: "btn btn-red btn-lg btn-block", :type => "submit"
+= content_for :head do
+  = stylesheet_link_tag 'listings'
+
+
+#listing-form
+  / UI
+  .ui-15
+    / UI Content
+    .ui-content
+      .container-fluid
+        .row
+          .col-md-8.col-sm-8.ui-padd
+            / Ui Form
+            .ui-form
+              / Heading
+              %h2 Listing
+              / Form
+              = form_for @listing do |f|
+                / UI Input
+                .ui-input
+                  / Input Box
+                  = f.text_field :name, class: "form-control", :placeholder => "Name"
+                  %label.ui-icon
+                    %i.fa.fa-user
+                .ui-input
+                  %label#accepts Accepts:
+                  - @currencies.each do |currency|
+                    .form-check.form-check-inline
+
+                      = check_box_tag "currencies[]", currency.id
+                      -# %input{ type: 'checkbox', class: "form-check-input", id: "currencies[]", value: "#{currency.id}" }
+                      %label{ class:"form-check-label", for:"#{currency.symbol}-Checkbox" }= "#{currency.symbol}"
+
+                .ui-input
+                  = f.text_field :address, class: "form-control", :placeholder => "Address"
+                  %label.ui-icon
+                    %i.fa.fa-envelope-o
+                .ui-input
+                  = f.text_field :address2, class: "form-control", :placeholder => "Address 2"
+                  %label.ui-icon
+                    %i.fa.fa-envelope-o
+                .ui-input
+                  = f.text_field :city, class: "form-control", :placeholder => "City"
+                  %label.ui-icon
+                    %i.fa.fa-envelope-o
+                .ui-input
+                  = f.text_field :state, class: "form-control", :placeholder => "State"
+                  %label.ui-icon
+                    %i.fa.fa-envelope-o
+                .ui-input
+                  = f.text_field :zipcode, class: "form-control", :placeholder => "Zipcode"
+                  %label.ui-icon
+                    %i.fa.fa-envelope-o
+                .ui-input
+                  = f.text_field :phone, class: "form-control",  :placeholder => "Phone"
+                  %label.ui-icon
+                    %i.fa.fa-phone
+                .ui-input
+                  = f.text_field :url, class: "form-control", :placeholder => "Url"
+                  %label.ui-icon
+                    %i.fa.fa-lock
+                = submit_tag "Submit", class: "btn btn-red btn-lg btn-block", :type => "submit"
