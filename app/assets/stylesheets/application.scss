@@ -14,7 +14,10 @@
 
 // This is a SCSS file. It's like CSS, but morer: https://sass-lang.com/guide
 
-// use @import to import Sass files.
+// Use @import to import Sass files.
+// For css specific to just one resource, you'll probably want to just include it
+// as a content_for :head in the haml file. @import it here if you want ALL views
+// to have access.
 
 // Bootstrap 4: https://github.com/twbs/bootstrap-rubygem
 // Custom bootstrap variables must be set or imported *before* bootstrap.

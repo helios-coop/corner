@@ -45,12 +45,15 @@ RSpec.describe ListingsController do
   end
 
   describe 'POST #create' do
-    let(:listing_params) { { name: 'Pub Satoshi', submitter_id: satoshi.id } }
+    let(:bitcoin) { create(:currency) }
+    let(:currency_params) { [bitcoin.id] }
+    let(:listing_params)  { { name: 'Pub Satoshi', submitter_id: satoshi.id } }
 
     context 'when a user is logged in' do
       before do
         login(satoshi)
-        post :create, params: { listing: listing_params }
+        post :create, params: { listing: listing_params,
+                                currencies: currency_params }
       end
 
       it 'adds a listing to the database' do
@@ -59,6 +62,10 @@ RSpec.describe ListingsController do
 
       it 'sets the submitter correctly' do
         expect(Listing.last.submitter).to eq satoshi
+      end
+
+      it 'adds currencies to a listing' do
+        expect(assigns(:listing).currencies.pluck(:name)).to eq ['Bitcoin']
       end
     end
 

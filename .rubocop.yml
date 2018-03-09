@@ -1,3 +1,5 @@
+# https://github.com/bbatsov/rubocop/blob/master/manual/configuration.md
+
 require: rubocop-rspec
 
 AllCops:
@@ -15,3 +17,8 @@ Rails/HasManyOrHasOneDependent: { Enabled: false }
 Style/Documentation: { Enabled: false }
 Style/MixinUsage: { Exclude: [bin/**] }
 Style/SafeNavigation: { Enabled: false }
+
+# Things I'm not prepared to deal with at the moment. Feel free to refactor.
+Metrics/AbcSize:
+  Exclude:
+    - '**/listings_controller.rb'

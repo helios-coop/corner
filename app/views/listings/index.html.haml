@@ -1,23 +1,27 @@
 .row
   .col-4
     %h1 Map
-    = image_tag "https://i.imgur.com/shLssYR.png", width: "500"
+    = image_tag "https://i.imgur.com/shLssYR.png", 'width': "300"
 
   .col-5
     %h1
       = fa_icon "compass", text: "Listings"
 
-    %h3= link_to "Add a Listing", new_listing_path, class: "btn btn-primary"
-
     %p
-      %ul
+      %ul.list-unstyled
         - @listings.each do |listing|
-          %li
-            = listing.name
-            |
-            = listing.address
-            |
-            = link_to "Edit", edit_listing_path(listing)
+          %li.media
+            = image_tag "https://www.fillmurray.com/100/100", class: "mr-3"
+            .media-body
+              %h4.mt-0.mb-1
+                = listing.name
+              %p
+                Accepted:
+                - listing.currencies.pluck(:symbol).each do |currency_symbol|
+                  %span.badge.badge-success= currency_symbol
+
+              %p= listing.address
+              %p= link_to "Edit", edit_listing_path(listing)
 
   .col-3
     %h1= fa_icon "far address-book", text: "Listing Details"
