@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :currency do
-    name { "Bitcoin" }
-    symbol { "BTC" }
+    name 'Bitcoin'
+    symbol 'BTC'
   end
 end
