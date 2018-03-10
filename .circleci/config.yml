@@ -58,9 +58,9 @@ jobs:
 
             bundle exec rspec --format progress \
                             --format RspecJunitFormatter \
-                            --out /tmp/test-results/rspec.xml
+                            --out /tmp/test-results/rspec.xml \
+                            $TEST_FILES
       - run: bundle exec rubocop
-
 
       # collect reports
       - store_test_results:
