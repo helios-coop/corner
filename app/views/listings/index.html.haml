@@ -1,25 +1,30 @@
-.row
-  .col-4
-    = image_tag "https://i.imgur.com/shLssYR.png", 'width': "300"
+= content_for :head do
+  = stylesheet_link_tag 'listings'
 
-  .col-4
-    %p
-      %ul.list-unstyled
-        - @listings.each do |listing|
-          %li.media
-            = image_tag "https://www.fillmurray.com/100/100", class: "mr-3"
-            .media-body
-              %h4.mt-0.mb-1
-                = link_to listing.name, listing_path(listing), :remote => true
+#listings-index
+  .row
+    .col-4
+      = image_tag "https://i.imgur.com/shLssYR.png", 'width': "300"
 
-              %p
-                Accepted:
-                - listing.currencies.pluck(:symbol).each do |currency_symbol|
-                  %span.badge.badge-success= currency_symbol
+    .col-4
+      %p
+        %ul.list-unstyled
+          - @listings.each do |listing|
+            %li.media.listing
+              = link_to listing_path(listing), :remote => true do
+                = image_tag "https://www.fillmurray.com/100/100", class: "mr-3"
+                .media-body
+                  %h4.mt-0.mb-1
+                    .name= listing.name
 
-              %p= listing.address
-              %p= link_to "Edit", edit_listing_path(listing)
+                  %p
+                    Accepted:
+                    - listing.currencies.pluck(:symbol).each do |currency_symbol|
+                      %span.badge.badge-success= currency_symbol
 
-  -# Displayed dynamically via ajax
-  .col-4#listing-details
-    = render "details"
+                  %p= listing.address
+                  %p= link_to "Edit", edit_listing_path(listing), class: "edit"
+
+    -# Displayed dynamically via ajax
+    .col-4#listing-details
+      = render "details"

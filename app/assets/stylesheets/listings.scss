@@ -8,3 +8,28 @@
     font-weight: 500;
   }
 }
+
+#listings-index {
+  a {
+    font-size: 20px;
+    text-decoration: none !important;
+    color: black;
+  }
+
+  li:hover {
+    background: #f781532e;
+  }
+
+  .name {
+    color: #f58159;
+  }
+
+  a.edit {
+    text-decoration: underline !important;
+    color: #f58159 !important;
+  }
+
+  .detail-name {
+    color: #f58159;
+  }
+}
