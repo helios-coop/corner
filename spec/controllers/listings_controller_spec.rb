@@ -79,4 +79,15 @@ RSpec.describe ListingsController do
       end
     end
   end
+
+  describe 'GET #show' do
+    before do
+      login(satoshi)
+      get :show, params: { id: listing.id }
+    end
+
+    it 'finds the correct listing' do
+      expect(assigns(:listing).name).to eq listing.name
+    end
+  end
 end
