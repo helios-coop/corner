@@ -27,8 +27,7 @@
                   - @currencies.each do |currency|
                     .form-check.form-check-inline
 
-                      = check_box_tag "currencies[]", currency.id
-                      -# %input{ type: 'checkbox', class: "form-check-input", id: "currencies[]", value: "#{currency.id}" }
+                      = check_box_tag "currencies[]", currency.id,  @listing.currencies.include?(currency)
                       %label{ class:"form-check-label", for:"#{currency.symbol}-Checkbox" }= "#{currency.symbol}"
 
                 .ui-input
