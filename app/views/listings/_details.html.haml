@@ -1,0 +1,16 @@
+%h1= @listing.name
+
+%h3
+  Address:
+  = @listing.address
+%h4
+  = "#{@listing.city}, #{@listing.state}"
+%p
+  Currencies
+  - @listing.currencies.each do |currency|
+    %span.badge.badge-success= currency.symbol
+
+%ul
+  %li Review 1: Cats are the best
+  %li Review 2: Meow says meow.
+  %li Review 3: Murder Floof

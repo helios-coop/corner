@@ -5,6 +5,7 @@ class ListingsController < ApplicationController
 
   def index
     @listings = Listing.all
+    @listing = @listings.first
   end
 
   def new
@@ -23,6 +24,14 @@ class ListingsController < ApplicationController
     else
       flash[:error] = 'Something has gone horribly wrong. Listing not created.'
       render :new
+    end
+  end
+
+  def show
+    @listing = Listing.find(params[:id])
+
+    respond_to do |format|
+      format.js
     end
   end
 
