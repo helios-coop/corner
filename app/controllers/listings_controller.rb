@@ -14,7 +14,7 @@ class ListingsController < ApplicationController
   end
 
   def create
-    @listing = Listing.new(listing_params.merge(submitter_id: current_user.id))
+    @listing = Listing.new(listing_params)
 
     if @listing.save
       @listing.currencies = Currency.where(id: params[:currencies])
@@ -41,7 +41,7 @@ class ListingsController < ApplicationController
 
   def update
     @listing = Listing.find(params[:id])
-    @listing.update_attributes(listing_params)
+    @listing.update!(listing_params)
     update_currencies
     redirect_to listings_path
   end
@@ -58,11 +58,13 @@ class ListingsController < ApplicationController
     country
     phone
     url
-    submitter_id
   ].freeze
 
   def listing_params
-    params.require(:listing).permit(*PERMITTED_PARAMS)
+    params
+      .require(:listing)
+      .permit(*PERMITTED_PARAMS)
+      .merge(submitter_id: current_user.id)
   end
 
   def update_currencies
