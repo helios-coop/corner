@@ -79,4 +79,15 @@ RSpec.describe ListingsController do
       end
     end
   end
+
+  describe 'GET #show' do
+    before do
+      login(satoshi)
+      post :show, xhr: true, params: { id: listing.id, format: 'js' }
+    end
+
+    it 'finds the correct listing via ajax call' do
+      expect(assigns(:listing).name).to eq listing.name
+    end
+  end
 end
