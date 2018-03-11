@@ -28,6 +28,7 @@ class ListingsController < ApplicationController
 
   def edit
     @listing = Listing.find(params[:id])
+    @currencies = Currency.all
   end
 
   def update
