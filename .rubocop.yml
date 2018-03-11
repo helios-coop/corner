@@ -21,5 +21,4 @@ Style/SafeNavigation: { Enabled: false }
 # Things I'm not prepared to deal with at the moment. Feel free to refactor.
 Metrics/AbcSize:
   Exclude:
-    - '**/listings_controller.rb'
     - '**/app/models/listing.rb'

@@ -47,13 +47,12 @@ RSpec.describe ListingsController do
   describe 'POST #create' do
     let(:bitcoin) { create(:currency) }
     let(:currency_params) { [bitcoin.id] }
-    let(:listing_params)  { { name: 'Pub Satoshi', submitter_id: satoshi.id } }
+    let(:valid_params) { { listing: { name: 'Pub Satoshi' } } }
 
     context 'when a user is logged in' do
       before do
         login(satoshi)
-        post :create, params: { listing: listing_params,
-                                currencies: currency_params }
+        post :create, params: valid_params.merge(currencies: currency_params)
       end
 
       it 'adds a listing to the database' do
@@ -71,7 +70,7 @@ RSpec.describe ListingsController do
 
     context 'when a user is not logged in' do
       before do
-        post :create, params: { listing: listing_params }
+        post :create, params: valid_params
       end
 
       it 'adds a listing to the database' do
