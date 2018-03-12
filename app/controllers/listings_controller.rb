@@ -5,6 +5,7 @@ class ListingsController < ApplicationController
 
   def index
     @listings = Listing.all
+    gon.coordinates = @listings.pluck(:lat, :long)
     @listing = @listings.first
   end
 
