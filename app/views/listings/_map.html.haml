@@ -1,21 +1,26 @@
 -# https://developers.google.com/maps/documentation/javascript/adding-a-google-map
-
 #map
-
 
 %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAPS_API_KEY"]}&callback=initMap"}
   :cdata
 
-
 :javascript
+  console.log("gon.coordinates: ", gon.coordinates)
+  var listingCoordinates = gon.coordinates;
+
   function initMap() {
-    var uluru = {lat: -25.363, lng: 131.044};
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      center: uluru
+      center: new google.maps.LatLng(listingCoordinates[0][0], listingCoordinates[0][1]),
+      zoom: 14
     });
-    var marker = new google.maps.Marker({
-      position: uluru,
-      map: map
-    });
-  }
+
+    var infoWindow = new google.maps.InfoWindow;
+
+    listingCoordinates.forEach(function(coordinate) {
+      var marker = new google.maps.Marker({
+        map: map,
+        position: {lat: coordinate[0], lng: coordinate[1]},
+        label: "฿"
+      })
+    })
+  };

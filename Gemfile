@@ -15,6 +15,7 @@ gem 'acts_as_paranoid', github: 'ActsAsParanoid/acts_as_paranoid'
 gem 'bcrypt' # Use ActiveModel has_secure_password
 gem 'bootstrap'
 gem 'font-awesome-rails' # https://github.com/bokmann/font-awesome-rails
+gem 'gon'
 gem 'haml-rails'
 gem 'honeybadger'
 gem 'jbuilder' # Build JSON APIs with ease
