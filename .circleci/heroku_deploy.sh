@@ -1,4 +1,6 @@
 #!/bin/bash
+set -eu
+
 wget https://cli-assets.heroku.com/branches/stable/heroku-linux-amd64.tar.gz
 sudo mkdir -p /usr/local/lib /usr/local/bin
 sudo tar -xvzf heroku-linux-amd64.tar.gz -C /usr/local/lib
@@ -14,3 +16,9 @@ cat >> ~/.ssh/config << EOF
 VerifyHostKeyDNS yes
 StrictHostKeyChecking no
 EOF
+
+heroku maintenance:on
+heroku git:remote -a $HEROKU_APP_NAME
+git push heroku master
+heroku run rake db:migrate
+heroku maintenance:off
