@@ -17,7 +17,7 @@ VerifyHostKeyDNS yes
 StrictHostKeyChecking no
 EOF
 
-heroku git:remote -a $HEROKU_APP_NAME
+heroku git:remote --ssh-git -a $HEROKU_APP_NAME
 heroku maintenance:on
 git push heroku master
 heroku run rake db:migrate
