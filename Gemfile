@@ -31,6 +31,7 @@ gem 'uglifier' # Use Uglifier as compressor for JavaScript assets
 
 group :development, :test do
   gem 'capybara' # Adds support for Capybara system testing and selenium driver
+  gem 'dotenv-rails' # Move to the top if you need Env Vars before rails loads.
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'foreman'
