@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305011401) do
+ActiveRecord::Schema.define(version: 20180312030257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 20180305011401) do
     t.integer "submitter_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "lat"
+    t.float "long"
     t.index ["submitter_id"], name: "index_listings_on_submitter_id"
   end
 
