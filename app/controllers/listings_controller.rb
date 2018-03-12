@@ -4,7 +4,7 @@ class ListingsController < ApplicationController
   before_action :authorize, except: [:index]
 
   def index
-    @listings = Listing.all
+    @listings = Listing.order(:name)
     gon.coordinates = @listings.pluck(:lat, :long)
     @listing = @listings.first
   end
