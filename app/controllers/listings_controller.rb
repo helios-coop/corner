@@ -58,6 +58,8 @@ class ListingsController < ApplicationController
     country
     phone
     url
+    lat
+    long
   ].freeze
 
   def listing_params
