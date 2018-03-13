@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ListingsController < ApplicationController
-  before_action :authorize, except: [:index]
+  before_action :authorize, except: %i[index show]
 
   def index
     @listings = Listing.order(:name)
