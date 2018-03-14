@@ -1,0 +1,25 @@
+.container-fluid
+  .row
+    .col
+    .col-4
+      %h1
+
+      -# Error messages
+      - if @currency.errors.any?
+        .error_messages
+          %h2 Form is invalid
+          %ul
+            - for message in @currency.errors.full_messages
+              %li{style: "color: red;"}= message
+
+      -# URL is not adding 'admin_' to the name automatically
+      = form_for @currency, url: @currency.persisted? ? admin_currency_path(@currency) : admin_currencies_path do |f|
+        .form-group
+          = f.label :name
+          = f.text_field :name, placeholder: "Bitcoin, Ether, Tron, etc...", class: "form-control", required: true
+        .form-group
+          = f.label :symbol
+          = f.text_field :symbol, placeholder: "BTC, ETH, TRX, etc...", class: "form-control", required: true
+
+        = submit_tag "Submit", class: 'btn btn-primary'
+    .col
