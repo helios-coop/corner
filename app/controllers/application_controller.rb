@@ -16,4 +16,11 @@ class ApplicationController < ActionController::Base
     flash[:danger] = 'You must be logged in to do that.'
     redirect_to login_path
   end
+
+  def authorize_admin
+    return if current_user&.role == 'Admin'
+
+    flash[:danger] = 'You must be and Admin to do that.'
+    redirect_to root_path
+  end
 end

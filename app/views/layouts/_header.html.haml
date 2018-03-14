@@ -13,9 +13,16 @@
   %li
     %a.a-bg-orange{:href => "#"}
       %span --
-  %li
-    %a.a-bg-orange{:href => "#"}
-      %span --
+
+  - if current_user&.role == "Admin"
+    %li
+      %a.a-bg-orange{:href => "/admin/currencies"}
+        %span Currencies
+  - else
+    %li
+      %a.a-bg-orange{:href => "#"}
+        %span --
+
   - if current_user
     %li
       %a.a-bg-orange{:href => "/logout"}
