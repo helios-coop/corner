@@ -1,8 +1,7 @@
+%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAPS_API_KEY"]}&callback=initMap"}
+
 -# https://developers.google.com/maps/documentation/javascript/adding-a-google-map
 #map
-
-%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAPS_API_KEY"]}&callback=initMap"}
-  :cdata
 
 :javascript
   console.log("gon.coordinates: ", gon.coordinates)
@@ -10,7 +9,7 @@
 
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-      center: new google.maps.LatLng(listingCoordinates[0][0], listingCoordinates[0][1]),
+      center: new google.maps.LatLng(37.791139, -122.396067),
       zoom: 14
     });
 
