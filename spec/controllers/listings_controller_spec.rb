@@ -44,6 +44,28 @@ RSpec.describe ListingsController do
     end
   end
 
+  describe 'PATCH #update' do
+    let(:bitcoin)  { create(:currency) }
+    let(:litecoin) { create(:currency, name: 'Litecoin') }
+    let(:tron)     { create(:currency, name: 'Tron') }
+
+    before do
+      login(satoshi)
+      listing.currencies = [bitcoin, litecoin]
+      patch :update, params: { id: listing.id, currencies: [litecoin.id, tron.id], listing: { name: 'whatevs' } }
+    end
+
+    it 'updates currencies' do
+      expect(listing.reload.currencies.pluck(:name)).to match_array %w[Litecoin Tron]
+    end
+
+    it 'soft deletes removed currencies' do
+      deleted_currencies_listings = listing.reload.currencies_listings.only_deleted
+      expect(deleted_currencies_listings.length).to eq 1
+      expect(deleted_currencies_listings.first.currency_id).to eq bitcoin.id
+    end
+  end
+
   describe 'POST #create' do
     let(:bitcoin) { create(:currency) }
     let(:currency_params) { [bitcoin.id] }

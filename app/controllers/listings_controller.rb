@@ -45,7 +45,7 @@ class ListingsController < ApplicationController
   def update
     @listing = Listing.find(params[:id])
     @listing.update!(listing_params)
-    update_currencies
+    @listing.currencies = Currency.where(id: params[:currencies])
     redirect_to listings_path
   end
 
@@ -109,12 +109,5 @@ class ListingsController < ApplicationController
     attrs.delete(:route)
     attrs[:google_places_id] = g_place['id']
     attrs
-  end
-
-  def update_currencies
-    new_currencies = Currency.where(id: params[:currencies])
-
-    @listing.remove_currencies(new_currencies)
-    @listing.add_new_currencies(new_currencies)
   end
 end
