@@ -13,6 +13,12 @@
       zoom: 14
     });
 
+
+
+    window.googleMap = map;
+
+    map.addListener('bounds_changed', mapBoundsChanged);
+
     var infoWindow = new google.maps.InfoWindow;
 
     listingCoordinates.forEach(function(coordinate) {
@@ -21,5 +27,10 @@
         position: {lat: coordinate[0], lng: coordinate[1]},
         label: "฿"
       })
-    })
+    });
+
+
+    function mapBoundsChanged() {
+      console.log("New center lng: ", map.center.lng())
+    }
   };
