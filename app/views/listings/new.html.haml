@@ -64,7 +64,6 @@
     // Get the place details from the autocomplete object.
     var place = autocomplete.getPlace();
     console.log("Place: ", place)
-    console.log(JSON.stringify(place))
 
     //TODO: create method for attributes
     $('#name').html(place.name);
@@ -75,4 +74,3 @@
     $('#website').attr('href', place.website);
     $('#google-place').val(JSON.stringify(place));
   }
-  console.log("starting....");
