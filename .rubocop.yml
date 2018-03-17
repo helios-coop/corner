@@ -22,3 +22,13 @@ Style/SafeNavigation: { Enabled: false }
 Metrics/AbcSize:
   Exclude:
     - '**/app/models/listing.rb'
+    - '**/app/controllers/listings_controller.rb'
+
+Metrics/MethodLength:
+  Exclude:
+    - '**/app/controllers/listings_controller.rb'
+    - '**/migrate/20180303010220_create_listings.rb'
+
+Metrics/LineLength:
+  Exclude:
+    - '**spec/controllers/listings_controller_spec.rb'
