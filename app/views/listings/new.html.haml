@@ -1,3 +1,78 @@
 %h1 Add a Listing
 
-= render "form"
+= content_for :head do
+  = stylesheet_link_tag 'listings'
+  = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAPS_API_KEY"]}&libraries=places", 'data-turbolinks-track': 'reload'
+
+#listings-new-form
+  .container-fluid
+    .row
+      .col
+      .col-md-8
+        / Heading
+        %h2 Listing
+
+        .input-group.mb-3
+          .input-group-prepend
+            %span#basic-addon1.input-group-text Name
+          %input.form-control{"aria-describedby" => "basic-addon1", "aria-label" => "name", :placeholder => "Satoshi's Cafe", :type => "text", id: "searchTextField"}
+
+        %hr
+        %p
+          .media
+            = image_tag 'http://www.sbs.com.au/news/sites/sbs.com.au.news/files/styles/full/public/BITCOIN.jpg?itok=HoUTbMII&mtime=1398071027', class: 'mr-3', id: 'image', height: '200'
+            .media-body
+              %h5.mt-0#name Satoshi's Cafe
+              %span#address 1000 Financial Freedom Blvd, Sea of Tranquility, The Moon
+              %br
+              %span#phone (415) 867 5390
+
+              %p
+                %span.icon= image_tag 'https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png', class: 'mr-3', id: 'icon', height: '20'
+                %span
+                  = link_to 'https://www.merkle-tree-cafe.com', 'https://www.merkle-tree-cafe.com', id: 'website'
+
+              = form_tag listings_path do
+                %label#accepts Accepts:
+                - @currencies.each do |currency|
+                  = check_box_tag "currencies[]", currency.id,  @listing.currencies.include?(currency)
+                  %label{class: 'currency-check-box', for:"#{currency.symbol}-Checkbox" }= "#{currency.symbol}"
+
+                = hidden_field_tag 'google-place', "not added yet"
+
+                %p
+                  = submit_tag "Add Listing", class: "btn btn-primary"
+
+      .col
+
+
+:javascript
+  document.addEventListener("turbolinks:load", function() {
+    console.log('It works on each visit!');
+  });
+
+  var input = document.getElementById('searchTextField');
+  var options = { types: ['establishment'] };
+
+  //Create the autocomplete object, restricting the search to establishments
+  var autocomplete = new google.maps.places.Autocomplete(input, options);
+
+  // Update media object on place selection
+  autocomplete.addListener('place_changed', displacePlace);
+
+  function displacePlace() {
+    // Get the place details from the autocomplete object.
+    var place = autocomplete.getPlace();
+    console.log("Place: ", place)
+    console.log(JSON.stringify(place))
+
+    //TODO: create method for attributes
+    $('#name').html(place.name);
+    $('#address').html(place.formatted_address)
+    $('#phone').html(place.formatted_phone_number)
+    $('#image').attr('src', place.photos[0].getUrl({maxHeight: 175}))
+    $('#icon').attr('src', place.icon)
+    $('#website').attr('href', place.website);
+    $('#google-place').val(JSON.stringify(place));
+  }
+  console.log("starting....");
