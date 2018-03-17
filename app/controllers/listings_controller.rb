@@ -82,8 +82,8 @@ class ListingsController < ApplicationController
   }.freeze
 
   # Fuck you google places. Seriously the worst API ever.
-  # What the actual fuck where you thinking with the address returned
-  # listing_attributes_from_params 'autocomplete.getPlace()'.
+  # What the actual fuck were you thinking with the data structure
+  # returned from 'autocomplete.getPlace()'.
   # Its like a bad interview question.
   # https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform?utm_source=welovemapsdevelopers&utm_campaign=mdr-gdl#style_autocomplete
   def listing_attributes_from_params
