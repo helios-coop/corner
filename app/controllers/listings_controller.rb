@@ -96,8 +96,10 @@ class ListingsController < ApplicationController
           component['short_name']
       end
     end
-    attrs[:name]  = g_place['name']
-    attrs[:phone] = g_place['formatted_phone_number'].gsub(/[()+\s-]/, '')
+    attrs[:name] = g_place['name']
+    if g_place['formatted_phone_number']
+      attrs[:phone] = g_place['formatted_phone_number'].gsub(/[()+\s-]/, '')
+    end
     attrs[:address] = "#{attrs[:street_number]} #{attrs[:route]}"
     attrs[:url]   = g_place['website']
     attrs[:lat]   = g_place['geometry']['location']['lat']
@@ -105,8 +107,7 @@ class ListingsController < ApplicationController
     attrs[:submitter_id] = current_user.id
     attrs.delete(:street_number)
     attrs.delete(:route)
-    # Uncomment after creating migration for column
-    # attrs[:googl_places_id] = g_place['id']
+    attrs[:google_places_id] = g_place['id']
     attrs
   end
 
