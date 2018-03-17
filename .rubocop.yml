@@ -14,6 +14,7 @@ Rails: { Enabled: true }
 Metrics/BlockLength: { Exclude: [spec/**/*_spec.rb] }
 Metrics/MethodLength: { Exclude: [db/migrate/**] }
 Rails/HasManyOrHasOneDependent: { Enabled: false }
+Rspec/MultipleExpectations: { Enabled: false }
 Style/Documentation: { Enabled: false }
 Style/MixinUsage: { Exclude: [bin/**] }
 Style/SafeNavigation: { Enabled: false }
@@ -24,10 +25,7 @@ Metrics/AbcSize:
     - '**/app/models/listing.rb'
     - '**/app/controllers/listings_controller.rb'
 
-Metrics/MethodLength:
-  Exclude:
-    - '**/app/controllers/listings_controller.rb'
-    - '**/migrate/20180303010220_create_listings.rb'
+Metrics/MethodLength: { Exclude: [app/controllers/listings_controller.rb, db/migrate/*] }
 
 Metrics/LineLength:
   Exclude:
