@@ -11,7 +11,7 @@
         %ul.list-unstyled
           - @listings.each do |listing|
             %li.media.listing
-              = link_to listing_path(listing), :remote => true do -# , class: 'listing'
+              = link_to listing_path(listing), class: 'listing', :remote => true do
                 = image_tag "https://www.fillmurray.com/100/100", class: "mr-3"
                 .media-body
                   %h4.mt-0.mb-1
@@ -30,9 +30,13 @@
       = render "details"
 
 
--# :javascript
--#   $('a.listing').on('click', (event) => {
--#     event.preventDefault();
--#     $.ajax(url, success(data))
--#     id.html(data)
--#   }
+// Different way to reload when user clicks on listing
+:javascript
+  $('a.listing').on('click', (event) => {
+    event.preventDefault();
+    $.ajax(url, success(updateDetailsColumn(data))) // here data should be html
+  }
+
+  function updateDetailsColumn(data){
+    $("#listing-details-column").html(data);
+  }

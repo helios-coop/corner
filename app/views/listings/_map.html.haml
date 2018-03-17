@@ -13,10 +13,11 @@
       zoom: 14
     });
 
-
-
+    // Only used to get access in the console. Remove after testing
     window.googleMap = map;
 
+    // This fires when map is changed
+    // https://developers.google.com/maps/documentation/javascript/events
     map.addListener('bounds_changed', mapBoundsChanged);
 
     var infoWindow = new google.maps.InfoWindow;
@@ -31,6 +32,19 @@
 
 
     function mapBoundsChanged() {
-      console.log("New center lng: ", map.center.lng())
+      console.log("New center lng: ", map.center.lng());
+      console.log("New center lat: ", map.center.lat());
+      console.log("Bounds lats: ", googleMap.getBounds().f)
+      console.log("Bounds lats: ", googleMap.getBounds().b)
+      // Version 1. Make get request to listings page with new map location and same search terms.
+      // Version 2. Use Ajax to all an API endpoint with map location and search terms. Rerender Listing collection and Listing details without page reload.
+
+    //  $.ajax(url, success(updateListingsCollectionAndDetails(data))); // here data is a hash containing two sets of html
     }
+
+    function updateListingsCollectionAndDetails(data) {
+      $("#listingsCollection").html(data['listings_collection'])
+      $("#listingDetails").html(data['listing_details']);
+    }
+
   };
