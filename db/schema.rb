@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180317164008) do
+ActiveRecord::Schema.define(version: 20180317214052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20180317164008) do
     t.float "lat"
     t.float "long"
     t.string "google_places_id"
+    t.string "thumbnail_url"
     t.index ["google_places_id"], name: "index_listings_on_google_places_id", unique: true
     t.index ["submitter_id"], name: "index_listings_on_submitter_id"
   end
