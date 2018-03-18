@@ -7,6 +7,7 @@ class ListingsController < ApplicationController
     @listings = Listing.order(:name)
     gon.coordinates = @listings.pluck(:lat, :long)
     @listing = @listings.first
+    create_google_place_variables(@listing.google_places_id)
   end
 
   def new
@@ -31,6 +32,7 @@ class ListingsController < ApplicationController
 
   def show
     @listing = Listing.find(params[:id])
+    create_google_place_variables(@listing.google_places_id)
 
     respond_to do |format|
       format.js
@@ -87,6 +89,8 @@ class ListingsController < ApplicationController
   # returned from 'autocomplete.getPlace()'.
   # Its like a bad interview question.
   # https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform?utm_source=welovemapsdevelopers&utm_campaign=mdr-gdl#style_autocomplete
+
+  # Ahhh, we can clean all this nonsense up with the Ruby Gem: https://github.com/qpowell/google_places
   def listing_attributes_from_params
     g_place = JSON.parse params['google-place']
     attrs = {}
@@ -110,7 +114,14 @@ class ListingsController < ApplicationController
     attrs[:submitter_id] = current_user.id
     attrs.delete(:street_number)
     attrs.delete(:route)
-    attrs[:google_places_id] = g_place['id']
+    attrs[:google_places_id] = g_place['place_id']
     attrs
+  end
+
+  def create_google_place_variables(google_place_id)
+    return if Rails.env.test?
+    @google_places_client = GooglePlaces::Client.new(ENV['GOOGLE_MAPS_API_KEY'])
+    @google_place = @google_places_client.spot(google_place_id)
+    @reviews = @google_place.reviews[0..4]
   end
 end

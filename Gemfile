@@ -16,6 +16,7 @@ gem 'bcrypt' # Use ActiveModel has_secure_password
 gem 'bootstrap'
 gem 'font-awesome-rails' # https://github.com/bokmann/font-awesome-rails
 gem 'gon'
+gem 'google_places'
 gem 'haml-rails'
 gem 'honeybadger'
 gem 'jbuilder' # Build JSON APIs with ease
