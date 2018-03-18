@@ -63,16 +63,18 @@
   function displacePlace() {
     // Get the place details from the autocomplete object.
     var place = autocomplete.getPlace();
+    var thumbnailUrl = place.photos[0].getUrl({maxHeight: 300})
     console.log("Place: ", place)
-    console.log(JSON.stringify(place))
 
     //TODO: create method for attributes
+    place['thumbnailUrl'] = thumbnailUrl;
     $('#name').html(place.name);
     $('#address').html(place.formatted_address)
     $('#phone').html(place.formatted_phone_number)
-    $('#image').attr('src', place.photos[0].getUrl({maxHeight: 175}))
+    $('#image').attr('src', thumbnailUrl)
     $('#icon').attr('src', place.icon)
     $('#website').attr('href', place.website);
+    $('#website').text(place.website)
+
     $('#google-place').val(JSON.stringify(place));
   }
-  console.log("starting....");

@@ -29,4 +29,5 @@ Metrics/MethodLength: { Exclude: [app/controllers/listings_controller.rb, db/mig
 
 Metrics/LineLength:
   Exclude:
-    - '**spec/controllers/listings_controller_spec.rb'
+    - '**/spec/controllers/listings_controller_spec.rb'
+    - '**/spec/models/listings_spec.rb'

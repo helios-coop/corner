@@ -12,7 +12,11 @@
           - @listings.each do |listing|
             %li.media.listing
               = link_to listing_path(listing), :remote => true do
-                = image_tag "https://www.fillmurray.com/100/100", class: "mr-3"
+                - if listing.thumbnail_url
+                  = image_tag listing.thumbnail_url, class: "mr-3", height: '100'
+                - else
+                  = image_tag "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960", class: "mr-3", height: "100"
+
                 .media-body
                   %h4.mt-0.mb-1
                     .name= listing.name
