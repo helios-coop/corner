@@ -3,8 +3,11 @@
 
 #listings-index
   .row
+    = render 'search'
+
+  .row
     .col-4
-      = render "map"
+      = render 'map'
 
     .col-4
       %p
@@ -13,7 +16,7 @@
             %li.media.listing
               = link_to listing_path(listing), :remote => true do
                 - if listing.thumbnail_url
-                  = image_tag listing.thumbnail_url, class: "mr-3", height: '100'
+                  = image_tag listing.thumbnail_url, class: 'mr-3', height: '100'
                 - else
                   = image_tag "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960", class: "mr-3", height: "100"
 

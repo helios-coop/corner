@@ -4,8 +4,10 @@ class ListingsController < ApplicationController
   before_action :authorize, except: %i[index show]
 
   def index
-    @listings = Listing.order(:name)
-    gon.coordinates = @listings.pluck(:lat, :long)
+    @listings = listings_by_location
+    gon.coordinates = @listings.map { |listing| [listing.lat, listing.long] }
+
+    return if @listings.blank?
     @listing = @listings.first
     create_google_place_variables(@listing.google_places_id)
   end
@@ -123,5 +125,13 @@ class ListingsController < ApplicationController
     @google_places_client = GooglePlaces::Client.new(ENV['GOOGLE_MAPS_API_KEY'])
     @google_place = @google_places_client.spot(google_place_id)
     @reviews = @google_place.reviews[0..4]
+  end
+
+  def listings_by_location
+    if params[:location].present?
+      Listing.near(params[:location])
+    else
+      @listings = Listing.limit(10).order(:name)
+    end
   end
 end
