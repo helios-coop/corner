@@ -21,10 +21,15 @@
     = @google_place.formatted_phone_number
   %p
     %strong Open Now:
-    = @google_place.opening_hours['open_now'] ? 'Yes' : 'No'
-  %p
-    %strong Hours:
-    %ul
+    - if @google_place.opening_hours
+      = @google_place.opening_hours['open_now'] ? 'Yes' : 'No'
+    - else
+      Unknown
+
+  - if @google_place.opening_hours
+    %p
+      %strong Hours:
+      %ul
       - @google_place.opening_hours['weekday_text'].each do |day|
         %li= day
   %p
