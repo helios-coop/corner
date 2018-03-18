@@ -23,7 +23,7 @@ class ListingsController < ApplicationController
 
       redirect_to listings_path
     else
-      flash[:error] = 'Something has gone horribly wrong. Listing not created.'
+      flash[:danger] = 'Something has gone horribly wrong. Listing not created.'
       @currencies = Currency.all
       render :new
     end
@@ -92,9 +92,10 @@ class ListingsController < ApplicationController
     attrs = {}
 
     g_place['address_components'].each do |component|
-      if ADDR_COMPONENTS_MAP[component['types'][0].to_sym]
-        attrs[ADDR_COMPONENTS_MAP[component['types'][0].to_sym].to_sym] =
-          component['short_name']
+      if ADDR_COMPONENTS_MAP[component['types'][0].to_sym] == 'city'
+        attrs[ADDR_COMPONENTS_MAP[component['types'][0].to_sym].to_sym] = component['long_name']
+      elsif ADDR_COMPONENTS_MAP[component['types'][0].to_sym].present?
+        attrs[ADDR_COMPONENTS_MAP[component['types'][0].to_sym].to_sym] = component['short_name']
       end
     end
     attrs[:name] = g_place['name']

@@ -21,13 +21,13 @@
                   %h4.mt-0.mb-1
                     .name= listing.name
 
-                  %p
+                  %p.currencies
                     Accepted:
                     - listing.currencies.pluck(:symbol).each do |currency_symbol|
                       %span.badge.badge-success= currency_symbol
 
-                  %p= listing.address
-                  %p= link_to "Edit", edit_listing_path(listing), class: "edit"
+                  %p.address= "#{listing.address}, #{listing.city}, #{listing.state}"
+                  %p.edit-paragraph= link_to "Edit", edit_listing_path(listing), class: "edit-link"
 
     -# Displayed dynamically via ajax
     .col-4#listing-details
