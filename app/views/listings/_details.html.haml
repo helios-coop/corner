@@ -1,16 +1,20 @@
-%h1.detail-name= @listing.name
+- if @listing
+  %h1.detail-name= @listing.name
+  = image_tag @listing.thumbnail_url if @listing.thumbnail_url
+  %h3
+    Address:
+    = @listing.address
+  %h4
+    = "#{@listing.city}, #{@listing.state}"
+  %p
+    Currencies
+    - @listing.currencies.each do |currency|
+      %span.badge.badge-success= currency.symbol
 
-%h3
-  Address:
-  = @listing.address
-%h4
-  = "#{@listing.city}, #{@listing.state}"
-%p
-  Currencies
-  - @listing.currencies.each do |currency|
-    %span.badge.badge-success= currency.symbol
-
-%ul
-  %li Review 1: Cats are the best
-  %li Review 2: Meow says meow.
-  %li Review 3: Murder Floof
+  %ul
+    %li Review 1: Cats are the best
+    %li Review 2: Meow says meow.
+    %li Review 3: Murder Floof
+- else
+  %h2 Will the real Satoshi Nakamoto please stand up?
+  = image_tag "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960", width: 300

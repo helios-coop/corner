@@ -63,6 +63,7 @@ class ListingsController < ApplicationController
     url
     lat
     long
+    thumbnail_url
   ].freeze
 
   def listing_params
@@ -104,6 +105,7 @@ class ListingsController < ApplicationController
     attrs[:url]   = g_place['website']
     attrs[:lat]   = g_place['geometry']['location']['lat']
     attrs[:long] = g_place['geometry']['location']['lng']
+    attrs[:thumbnail_url] = g_place['thumbnailUrl']
     attrs[:submitter_id] = current_user.id
     attrs.delete(:street_number)
     attrs.delete(:route)
