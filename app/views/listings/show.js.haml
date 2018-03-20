@@ -1,1 +1,9 @@
 $("#listing-details").html("#{escape_javascript(render partial: 'details', locals: { listing: @listing } ) }");
+var latitude = parseFloat("#{@listing.lat}")
+var longitude = parseFloat("#{@listing.long}")
+
+var newCenter = new google.maps.LatLng(latitude, longitude);
+console.log("Listing Center Point: ", newCenter);
+
+googleMap.setCenter(newCenter);
+googleMap.setZoom(16)

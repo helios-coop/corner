@@ -15,6 +15,9 @@
       zoom: gon.centerPoint['zoom']
     });
 
+    // Used by show.js.haml when selecting individual 
+    window.googleMap = map;
+
     var infoWindow = new google.maps.InfoWindow;
 
     listingCoordinates.forEach(function(coordinate) {
