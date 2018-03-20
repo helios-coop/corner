@@ -4,8 +4,7 @@ class ListingsController < ApplicationController
   before_action :authorize, except: %i[index show]
 
   def index
-    @listings = listings_by_location
-    gon.coordinates = @listings.map { |listing| [listing.lat, listing.long] }
+    set_listings_and_coordinates
 
     return if @listings.blank?
     @listing = @listings.first
@@ -127,11 +126,23 @@ class ListingsController < ApplicationController
     @reviews = @google_place.reviews[0..4]
   end
 
-  def listings_by_location
+  def set_listings_and_coordinates
     if params[:location].present?
-      Listing.near(params[:location])
+      @listings = Listing.near(params[:location])
+
+      lat_long = Geocoder.coordinates params[:location]
+      gon.centerPoint = { latitude: lat_long[0], longitude: lat_long[1], zoom: 13 }
     else
       @listings = Listing.limit(10).order(:name)
+
+      # lat and long are '0' when ip address is 127.0.0.1
+      latitude = request.location.data['latitude']   != '0' ? request.location.data['latitude'].to_f : 37.791139
+      longitude = request.location.data['longitude'] != '0' ? request.location.data['latitude'].to_f : -122.396067
+      zoom = request.location.data['latitude']       != '0' ? 14 : 9
+
+      gon.centerPoint = { latitude: latitude, longitude: longitude, zoom: zoom }
     end
+
+    gon.coordinates = @listings.map { |listing| [listing.lat, listing.long] }
   end
 end
