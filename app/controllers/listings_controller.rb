@@ -138,8 +138,8 @@ class ListingsController < ApplicationController
       # lat and long are '0' when ip address is 127.0.0.1
       Rails.logger.info('---------- request.location.inspect: ')
       Rails.logger.info(request.location.inspect)
-      latitude = request.location.data['latitude']   != '0' ? request.location.data['latitude'].to_f : 37.791139
-      longitude = request.location.data['longitude'] != '0' ? request.location.data['latitude'].to_f : -122.396067
+      latitude = request.location.data['latitude']   != '0' ? request.location.data['latitude'] : 37.791139
+      longitude = request.location.data['longitude'] != '0' ? request.location.data['longitude'] : -122.396067
       zoom = request.location.data['latitude']       != '0' ? 14 : 9
 
       gon.centerPoint = { latitude: latitude, longitude: longitude, zoom: zoom }
