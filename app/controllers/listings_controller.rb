@@ -128,13 +128,13 @@ class ListingsController < ApplicationController
 
   def set_listings_and_coordinates
     if params[:location].present?
-      @listings = Listing.near(params[:location])
+      @listings = Listing.near(params[:location], 5)
 
       lat_long = Geocoder.coordinates params[:location]
       gon.centerPoint = { latitude: lat_long[0], longitude: lat_long[1], zoom: 13 }
     else
-      @listings = Listing.limit(10).order(:name)
       gon.centerPoint = center_point_from_ip_address
+      @listings = Listing.near([gon.centerPoint[:latitude], gon.centerPoint[:longitude]], 5)
     end
 
     gon.coordinates = @listings.map { |listing| [listing.lat, listing.long] }
