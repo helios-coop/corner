@@ -133,9 +133,8 @@ class ListingsController < ApplicationController
       lat_long = Geocoder.coordinates params[:location]
       gon.centerPoint = { latitude: lat_long[0], longitude: lat_long[1], zoom: 13 }
     else
-      center_point = center_point_from_ip_address
-      @listings = Listing.near([center_point[:latitude], center_point[:longitude]], 5)
-      gon.centerPoint = center_point
+      gon.centerPoint = center_point_from_ip_address
+      @listings = Listing.near([gon.centerPoint[:latitude], gon.centerPoint[:longitude]], 5)
     end
 
     gon.coordinates = @listings.map { |listing| [listing.lat, listing.long] }

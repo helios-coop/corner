@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe ListingsController do
   let(:satoshi) { create(:user, display_name: 'satoshi') }
-  let!(:listing) { create(:listing, submitter: satoshi) }
+  let!(:listing) { create(:listing, submitter: satoshi, lat: 37.791139, long: -122.396067) }
 
   describe 'GET #index' do
     before { get :index }
@@ -14,7 +14,7 @@ RSpec.describe ListingsController do
     end
 
     it 'finds all listings in the db' do
-      expect(assigns(:listings).count).to eq 1
+      expect(assigns(:listings).count(:all)).to eq 1
     end
   end
 
