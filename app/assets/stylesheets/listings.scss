@@ -1,65 +1,94 @@
 // Place all the styles related to the Listings controller here.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#listing-form {
-  #accepts {
-    margin-right: 5px;
-    color: green;
-    font-weight: 500;
-  }
-}
+$standard-radius: 20px;
+$listings-background-color: #ebebeb;
+$card-text-color: black;
+$navbar-color-ligher-1: #f7eec8;
+
+// #listing-form {
+//   #accepts {
+//     margin-right: 5px;
+//     color: green;
+//     font-weight: 500;
+//   }
+// }
 
 #listings-index {
-  // Map column
-  #map {
-    width: 100%;
-    height: 400px;
+  background-color: $listings-background-color;
+
+  #listing-cards {
+    padding-top: 15px;
+    padding-left: 15px;
+
+    .card {
+      margin-bottom: 15px;
+      border-radius: $standard-radius;
+      overflow: hidden;
+      height: 225px;
+      flex-direction: row;
+
+      .card-body:hover {
+        background-color: $navbar-color-ligher-1;
+      }
+
+      .card-body.active {
+        background-color: $navbar-color-ligher-1;
+      }
+
+      .card-body a {
+        text-decoration: none;
+        color: $card-text-color;
+
+        .card-text {
+          font-size: 1em;
+        }
+
+        address.card-text {
+          font-size: 0.75em;
+        }
+
+        .edit-link {
+          color: red !important;
+        }
+      }
+
+      .img-container {
+        width: 45%;
+      }
+    }
   }
 
-  // Collection Column
-  a {
-    font-size: 20px;
-    text-decoration: none !important;
-    color: black;
+  #map-photos-details {
+    margin-left: -10px;
+
+    #map-photos {
+      border-top-left-radius: $standard-radius;
+      border-bottom-left-radius: $standard-radius;
+      overflow: hidden;
+      height: 20%;
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+
+    // Map column
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+
+    #listing-details {
+      .card {
+        border-top-left-radius: $standard-radius;
+        border-bottom-left-radius: $standard-radius;
+        margin-left: 10px;
+      }
+    }
   }
 
-  li:hover {
-    background: #f781532e;
-  }
-
-  .name {
-    color: #f58159;
-  }
-
-  .currencies {
-    margin-top: -5px;
-    margin-bottom: -5px;
-  }
-
-  .address {
-    margin-bottom: 0px;
-    font-size: 13px;
-  }
-
-  a.edit-link {
-    text-decoration: underline !important;
-    color: #f58159 !important;
-    font-size: 15px;
-    margin-top: 0px;
-  }
-
-  .edit-paragraph {
-    margin-top: -10px;
-  }
-
-  // Detail Column
-  .detail-name {
-    color: #f58159;
-  }
-}
-
-#listings-new-form {
-  .currency-check-box {
-    margin-right: 10px;
+  #listings-new-form {
+    .currency-check-box {
+      margin-right: 10px;
+    }
   }
 }

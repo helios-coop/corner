@@ -1,7 +1,9 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}
+
     %title Corner
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -11,10 +13,8 @@
     = yield :head
 
   %body
-    = render "layouts/flash_messages"
-    = render "layouts/header"
-
     .container-fluid
-      = yield
+      = render "layouts/header"
+      = render "layouts/flash_messages"
 
-    -# = render "layouts/footer"
+    = yield

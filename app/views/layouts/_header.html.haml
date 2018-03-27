@@ -1,33 +1,26 @@
-/ #90
-%ul.a-90
-  %li
-    / Change the word "COLORNAME" to any colors.
-    %a.a-bg-orange{:href => "/"}
-      %span Corner
-  %li
-    %a.a-bg-orange{:href => "/listings/new"}
-      %span Add A Listing
-  %li
-    %a.a-bg-orange{:href => "#"}
-      %span --
-  %li
-    %a.a-bg-orange{:href => "#"}
-      %span --
+%nav.navbar.navbar-expand-sm.navbar-light#primary-navbar
+  = link_to root_path, class: "navbar-brand" do
+    = image_tag "corner_logo.png", height: 80
+    -# %img{:alt => "", :height => "30", :src => "corner_logo.png", :width => "30"}/
 
-  - if current_user&.role == "Admin"
-    %li
-      %a.a-bg-orange{:href => "/admin/currencies"}
-        %span Currencies
-  - else
-    %li
-      %a.a-bg-orange{:href => "#"}
-        %span --
 
-  - if current_user
-    %li
-      %a.a-bg-orange{:href => "/logout"}
-        %span Log Out
-  - else
-    %li
-      %a.a-bg-orange{:href => "/login"}
-        %span Signin / Signup
+
+  %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+
+  #navbarNav.collapse.navbar-collapse.justify-content-end
+    - if request.path == "/listings" || request.path == "/"
+      .search= render "layouts/search"
+
+    %ul.navbar-nav.nav-pills.ml-auto
+      %li.nav-item.mr-1{class: request.path == "/listings/new" ? "active" : ""}
+        = link_to "Add Listing", new_listing_path, class: "nav-link"
+      %li.nav-item.mr-1{class: request.path == "/admin/currencies" ? "active" : ""}
+        = link_to "Currencies", admin_currencies_path, class: "nav-link"
+
+      - if current_user
+        %li.nav-item
+          = link_to "Logout", logout_path, class: "btn btn-outline-success my-2.my-sm-0"
+      - else
+        %li.nav-item
+          = link_to "Login / Sign Up", login_path, class: "btn btn-outline-success my-2.my-sm-0"
