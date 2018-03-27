@@ -1,37 +1,72 @@
+%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAPS_API_KEY"]}&callback=initMap"}
+
 = content_for :head do
   = stylesheet_link_tag 'listings'
 
 #listings-index
   .row
-    = render 'search'
-
-  .row
-    .col-4
-      = render 'map'
-
-    .col-4
-      %p
-        %ul.list-unstyled
-          - @listings.each do |listing|
-            %li.media.listing
-              = link_to listing_path(listing), :remote => true do
-                - if listing.thumbnail_url
-                  = image_tag listing.thumbnail_url, class: 'mr-3', height: '100'
-                - else
-                  = image_tag "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960", class: "mr-3", height: "100"
-
-                .media-body
-                  %h4.mt-0.mb-1
-                    .name= listing.name
-
-                  %p.currencies
+    .col-sm-4
+      #listing-cards.card-deck.d-flex.flex-column
+        - @listings.each do |listing|
+          .card
+            = link_to listing_path(listing), :remote => true do
+              .card-body{onclick: "setActive(this)"}
+                %h5.card-title= listing.name
+                %p.card-text
+                  %span.currencies
                     Accepted:
                     - listing.currencies.pluck(:symbol).each do |currency_symbol|
                       %span.badge.badge-success= currency_symbol
+                %address.card-text= "#{listing.address}, #{listing.city}, #{listing.state}"
+                %u.card-text= link_to "Edit", edit_listing_path(listing), class: "edit-link"
+              .img-container
+                - if listing.thumbnail_url
+                  .img-container
+                    %img{src: listing.thumbnail_url}
+                - else
+                  .img-container
+                    %img{src: "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960"}
 
-                  %p.address= "#{listing.address}, #{listing.city}, #{listing.state}"
-                  %p.edit-paragraph= link_to "Edit", edit_listing_path(listing), class: "edit-link"
+    .col.sm-4#map-photos-details
+      #map-photos
+        -# https://developers.google.com/maps/documentation/javascript/adding-a-google-map
+        #map
 
-    -# Displayed dynamically via ajax
-    .col-4#listing-details
-      = render "details"
+
+      .row#listing-details
+        -# Displayed dynamically via ajax
+        = render "details"
+
+
+:javascript
+
+  function setActive(element) {
+    console.log("clicked: ", element)
+    $(".card-body").removeClass("active")
+    $(element).addClass("active");
+  }
+
+  console.log("Center Point: ", gon.centerPoint)
+  window.centerPoint = gon.centerPoint
+  console.log("gon.coordinates: ", gon.coordinates)
+  var listingCoordinates = gon.coordinates;
+
+  function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: new google.maps.LatLng(gon.centerPoint['latitude'], gon.centerPoint['longitude']),
+      zoom: gon.centerPoint['zoom']
+    });
+
+    // Used by show.js.haml when selecting individual
+    window.googleMap = map;
+
+    var infoWindow = new google.maps.InfoWindow;
+
+    listingCoordinates.forEach(function(coordinate) {
+      var marker = new google.maps.Marker({
+        map: map,
+        position: {lat: coordinate[0], lng: coordinate[1]},
+        label: "฿"
+      })
+    })
+  };

@@ -1,51 +1,54 @@
-- if @listing
-  %h1.detail-name= @listing.name
-  = image_tag @listing.thumbnail_url if @listing.thumbnail_url
-  %h3
-    Address:
-    = @listing.address
-  %h4
-    = "#{@listing.city}, #{@listing.state}"
-  %p
-    Currencies
-    - @listing.currencies.each do |currency|
-      %span.badge.badge-success= currency.symbol
+.card
+  .card-body
+    - if @listing
+      %h2.card-title= @listing.name
 
-  %p= link_to @google_place.website, @google_place.website
-  %p
-    %strong Rating:
-    = "5/#{@google_place.rating}"
+      -# = image_tag @listing.thumbnail_url if @listing.thumbnail_url
+      %h3
+        Address:
+        = @listing.address
+      %h4
+        = "#{@listing.city}, #{@listing.state}"
+      %p
+        Currencies
+        - @listing.currencies.each do |currency|
+          %span.badge.badge-success= currency.symbol
 
-  %p
-    %strong Rating:
-    = @google_place.formatted_phone_number
-  %p
-    %strong Open Now:
-    - if @google_place.opening_hours
-      = @google_place.opening_hours['open_now'] ? 'Yes' : 'No'
+      %p= link_to @google_place.website, @google_place.website
+      %p
+        %strong Rating:
+        = "5/#{@google_place.rating}"
+
+      %p
+        %strong Rating:
+        = @google_place.formatted_phone_number
+      %p
+        %strong Open Now:
+        - if @google_place.opening_hours
+          = @google_place.opening_hours['open_now'] ? 'Yes' : 'No'
+        - else
+          Unknown
+
+      - if @google_place.opening_hours
+        %p
+          %strong Hours:
+          %ul
+          - @google_place.opening_hours['weekday_text'].each do |day|
+            %li= day
+      %p
+        %strong Price:
+        - if @google_place.price_level.to_i >= 1
+          = '$' * @google_place.price_level.to_i
+        - else
+          $
+      %p
+        %strong Reviews:
+        %ul
+          - @reviews.each do |review|
+            %p= review.rating
+            %p= review.text
+            %p= review.author_name
+
     - else
-      Unknown
-
-  - if @google_place.opening_hours
-    %p
-      %strong Hours:
-      %ul
-      - @google_place.opening_hours['weekday_text'].each do |day|
-        %li= day
-  %p
-    %strong Price:
-    - if @google_place.price_level.to_i >= 1
-      = '$' * @google_place.price_level.to_i
-    - else
-      $
-  %p
-    %strong Reviews:
-    %ul
-      - @reviews.each do |review|
-        %p= review.rating
-        %p= review.text
-        %p= review.author_name
-
-- else
-  %h2 Will the real Satoshi Nakamoto please stand up?
-  = image_tag "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960", width: 300
+      %h2 Will the real Satoshi Nakamoto please stand up?
+      = image_tag "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960", width: 300
