@@ -5,6 +5,9 @@ $standard-radius: 20px;
 $listings-background-color: #ebebeb;
 $card-text-color: black;
 $navbar-color-ligher-1: #f7eec8;
+$navbar-color: #fbdd58;
+$navbar-color-darker-1: #f1ce35;
+$bitcoin-organge: #f5922f;
 
 // #listing-form {
 //   #accepts {
@@ -13,6 +16,14 @@ $navbar-color-ligher-1: #f7eec8;
 //     font-weight: 500;
 //   }
 // }
+
+.primary-color {
+  color: $navbar-color;
+}
+
+.primary-color-darker-1 {
+  color: $navbar-color-darker-1;
+}
 
 #listings-index {
   background-color: $listings-background-color;
@@ -25,7 +36,7 @@ $navbar-color-ligher-1: #f7eec8;
       margin-bottom: 15px;
       border-radius: $standard-radius;
       overflow: hidden;
-      height: 225px;
+      max-height: 175px;
       flex-direction: row;
 
       .card-body:hover {
@@ -46,10 +57,6 @@ $navbar-color-ligher-1: #f7eec8;
 
         address.card-text {
           font-size: 0.75em;
-        }
-
-        .edit-link {
-          color: red !important;
         }
       }
 
@@ -86,9 +93,24 @@ $navbar-color-ligher-1: #f7eec8;
     }
   }
 
-  #listings-new-form {
-    .currency-check-box {
-      margin-right: 10px;
+  #listing-details {
+    a.detail-url {
+      font-size: 0.75em;
+      color: $navbar-color-darker-1;
     }
+
+    .star-icon {
+      color: $navbar-color;
+    }
+
+    .bitcoin-orange {
+      color: $bitcoin-organge;
+    }
+  }
+}
+
+#listings-new-form {
+  .currency-check-box {
+    margin-right: 10px;
   }
 }

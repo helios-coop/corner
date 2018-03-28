@@ -11,14 +11,16 @@
           .card
             = link_to listing_path(listing), :remote => true do
               .card-body{onclick: "setActive(this)"}
-                %h5.card-title= listing.name
-                %p.card-text
-                  %span.currencies
-                    Accepted:
-                    - listing.currencies.pluck(:symbol).each do |currency_symbol|
-                      %span.badge.badge-success= currency_symbol
-                %address.card-text= "#{listing.address}, #{listing.city}, #{listing.state}"
-                %u.card-text= link_to "Edit", edit_listing_path(listing), class: "edit-link"
+                %h5.card-title.mb-1= listing.name
+                %p.card-text.mb-1
+                  Accepted:
+                  - listing.currencies.each do |currency|
+                    %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png", height: 16
+
+                %address.card-text.mb-0= truncate "#{listing.address}, #{listing.city}, #{listing.state}", length: 35
+                .card-text
+                  = link_to "Edit", edit_listing_path(listing), class: "edit-link mt-0", style: "color: #f1ce35; text-decoration: underline"
+
               .img-container
                 - if listing.thumbnail_url
                   .img-container
