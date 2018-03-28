@@ -1,53 +1,85 @@
 .card
   .card-body
     - if @listing
-      %h2.card-title= @listing.name
+      %h1.card-title
+        %span.mr-2= @listing.name
 
-      -# = image_tag @listing.thumbnail_url if @listing.thumbnail_url
-      %h3
-        Address:
-        = @listing.address
-      %h4
-        = "#{@listing.city}, #{@listing.state}"
-      %p
-        Currencies
-        - @listing.currencies.each do |currency|
-          %span.badge.badge-success= currency.symbol
+        -# TODO: Make into a view helper or decorator or whateves
+        %span.rating
+          - 1.upto(@google_place.rating) do
+            .star-icon.d-inline= fa_icon "star"
+          - if (@google_place.rating % 1) >= 0.9
+            .star-icon.d-inline= fa_icon "star"
+          - elsif (@google_place.rating % 1) >= 0.5
+            .star-icon.d-inline= fa_icon "star-half"
 
-      %p= link_to @google_place.website, @google_place.website
-      %p
-        %strong Rating:
-        = "5/#{@google_place.rating}"
+      .row
+        .col-sm-4
+          %ul.list-unstyled
+            %h4
+              Price Level:
+              - if @google_place.price_level
+                - 1.upto(4) do
+                  .bitcoin-orange.d-inline= fa_icon "btc"
+              - else
+                .primary-color-darker-1.d-inline Unknown
 
-      %p
-        %strong Rating:
-        = @google_place.formatted_phone_number
-      %p
-        %strong Open Now:
-        - if @google_place.opening_hours
-          = @google_place.opening_hours['open_now'] ? 'Yes' : 'No'
-        - else
-          Unknown
 
-      - if @google_place.opening_hours
-        %p
-          %strong Hours:
-          %ul
-          - @google_place.opening_hours['weekday_text'].each do |day|
-            %li= day
-      %p
-        %strong Price:
-        - if @google_place.price_level.to_i >= 1
-          = '$' * @google_place.price_level.to_i
-        - else
-          $
-      %p
-        %strong Reviews:
-        %ul
+            %li
+              = fa_icon "building"
+              = "#{@listing.address}, #{@listing.city}, #{@listing.state}"
+
+            %li
+              = fa_icon "phone"
+              = @google_place.formatted_phone_number
+            %li
+              %span
+                -# = fa_icon "desktop"
+                = link_to @google_place.website, @google_place.website, target: "_blank",   class: "detail-url"
+
+        .col-sm-4
+          %p.d-inline
+            - if @google_place.opening_hours && @google_place.opening_hours['open_now']
+              %strong
+                Open Now:
+                .d-inline.text-success Yes
+            - elsif @google_place.opening_hours
+              %strong
+                Open Now:
+                .d-inline.primary-color-darker-1 No
+            - else
+              Unknown
+
+
+          - if @google_place.opening_hours
+            %strong.mb-0 Hours:
+            %ul.list-unstyled
+              - @google_place.opening_hours['weekday_text'].each do |day|
+                %li= day
+
+        .col-sm-4
+          %p
+            %strong Currencies Accepted
+
+          - @listing.currencies.each do |currency|
+            %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png"
+
+
+
+
+      .row
+        .card-header.w-100 Reviews:
+        %ul.list-group.list-group-flush
           - @reviews.each do |review|
-            %p= review.rating
-            %p= review.text
-            %p= review.author_name
+            %li.list-group-item
+              %p
+                - 1.upto(review.rating) do
+                  .star-icon.d-inline= fa_icon "star"
+
+              %blockquote.blockquote
+                %p.mb-0.mx-5= review.text
+                %footer.blockquote-footer
+                  = review.author_name
 
     - else
       %h2 Will the real Satoshi Nakamoto please stand up?
