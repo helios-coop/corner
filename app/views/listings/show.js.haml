@@ -13,4 +13,5 @@ googleMap.setCenter(newCenter);
 googleMap.setZoom(16)
 
 -# Update photos
+-# TODO: Probably need to save photo urls when the listing is created. This seems slow
 $(".carousel-inner").html("#{escape_javascript(render partial: 'carousel', locals: { photos: @google_place.photos } ) }");
