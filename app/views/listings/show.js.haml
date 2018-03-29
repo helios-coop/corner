@@ -1,4 +1,8 @@
+
+-# Update details card
 $("#listing-details").html("#{escape_javascript(render partial: 'details', locals: { listing: @listing } ) }");
+
+-# Update map
 var latitude = parseFloat("#{@listing.lat}")
 var longitude = parseFloat("#{@listing.long}")
 
@@ -7,3 +11,6 @@ console.log("Listing Center Point: ", newCenter);
 
 googleMap.setCenter(newCenter);
 googleMap.setZoom(16)
+
+-# Update photos
+$(".carousel-inner").html("#{escape_javascript(render partial: 'carousel', locals: { photos: @google_place.photos } ) }");

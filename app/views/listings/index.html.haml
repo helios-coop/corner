@@ -1,5 +1,3 @@
-%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAPS_API_KEY"]}&callback=initMap"}
-
 = content_for :head do
   = stylesheet_link_tag 'listings'
 
@@ -29,11 +27,27 @@
                   .img-container
                     %img{src: "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960"}
 
-    .col.sm-4#map-photos-details
+    .col.sm-8#map-photos-details
       #map-photos
         -# https://developers.google.com/maps/documentation/javascript/adding-a-google-map
         #map
 
+        #photos
+          #carouselControls.carousel.slide{"data-ride" => "carousel"}
+            .carousel-inner
+              .carousel-item.active
+                %img.d-block.w-100{:alt => "First slide", :src => "#{@google_place.photos[0].fetch_url(400)}"}/
+
+              - 1.upto(@google_place.photos.count - 1) do |index|
+                .carousel-item
+                  %img.d-block.w-100{:alt => "First slide", :src => "#{@google_place.photos[index].fetch_url(400)}"}
+
+            %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselControls", :role => "button"}
+              %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+              %span.sr-only Previous
+            %a.carousel-control-next{"data-slide" => "next", :href => "#carouselControls", :role => "button"}
+              %span.carousel-control-next-icon{"aria-hidden" => "true"}
+              %span.sr-only Next
 
       .row#listing-details
         -# Displayed dynamically via ajax
@@ -41,9 +55,7 @@
 
 
 :javascript
-
   function setActive(element) {
-    console.log("clicked: ", element)
     $(".card-body").removeClass("active")
     $(element).addClass("active");
   }
@@ -54,6 +66,7 @@
   var listingCoordinates = gon.coordinates;
 
   function initMap() {
+    console.log("Initializeing Map...")
     var map = new google.maps.Map(document.getElementById('map'), {
       center: new google.maps.LatLng(gon.centerPoint['latitude'], gon.centerPoint['longitude']),
       zoom: gon.centerPoint['zoom']
@@ -72,3 +85,7 @@
       })
     })
   };
+
+
+-# This has to be called after javascript above loads
+%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAPS_API_KEY"]}&callback=initMap"}
