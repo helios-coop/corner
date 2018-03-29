@@ -73,15 +73,25 @@ $bitcoin-organge: #f5922f;
       border-top-left-radius: $standard-radius;
       border-bottom-left-radius: $standard-radius;
       overflow: hidden;
-      height: 20%;
+      height: 15%;
       margin-bottom: 20px;
       margin-top: 15px;
     }
 
     // Map column
     #map {
-      width: 100%;
+      width: 50%;
       height: 100%;
+      display: inline;
+      float: left;
+      // position: relative;
+    }
+
+    #photos {
+      background: red;
+      width: 50%;
+      height: 100%;
+      float: right;
     }
 
     #listing-details {
