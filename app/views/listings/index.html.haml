@@ -36,7 +36,7 @@
           #carouselControls.carousel.slide{"data-ride" => "carousel"}
             .carousel-inner
               .carousel-item.active
-                %img.d-block.w-100{:alt => "First slide", :src => "#{@google_place.photos[0].fetch_url(400)}"}/
+                %img.d-block.w-100{:alt => "First slide", :src => "#{@google_place.photos[0].fetch_url(400)}"}
 
               - 1.upto(@google_place.photos.count - 1) do |index|
                 .carousel-item
