@@ -27,6 +27,6 @@ class UsersController < ApplicationController
   ].freeze
 
   def user_params
-    params.require(:user).permit(*PERMITTED_PARAMS)
+    params.require(:user).permit(*PERMITTED_PARAMS).merge(role: 'user')
   end
 end

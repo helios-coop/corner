@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  ROLES = ['user', 'admin'].freeze
+
   validates :display_name, :email, :password_digest, presence: true
   validates :display_name, :email, uniqueness: true
   validates :password, length: { minimum: 8 }
+  validates :role, inclusion: { in: ROLES }
 
   has_many :submissions,
            class_name: :Listing,
