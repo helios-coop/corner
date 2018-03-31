@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ListingsController < ApplicationController
-  before_action :authorize, except: %i[index show]
+  before_action :authorize, except: [:index, :show]
 
   def index
     set_listings_and_coordinates
@@ -54,19 +54,19 @@ class ListingsController < ApplicationController
 
   private
 
-  PERMITTED_PARAMS = %i[
-    name
-    address
-    address2
-    city
-    state
-    zipcode
-    country
-    phone
-    url
-    lat
-    long
-    thumbnail_url
+  PERMITTED_PARAMS = [
+    :address,
+    :address2,
+    :city,
+    :country,
+    :lat,
+    :long,
+    :name,
+    :phone,
+    :state,
+    :thumbnail_url,
+    :url,
+    :zipcode
   ].freeze
 
   def listing_params

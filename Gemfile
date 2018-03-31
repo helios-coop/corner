@@ -28,7 +28,7 @@ gem 'puma' # Use Puma as the app server
 gem 'sass-rails' # Use SCSS for stylesheets
 gem 'sidekiq'
 gem 'turbolinks' # Makes navigating your web application faster
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby] # Windows zoneinfo
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby] # for Windows
 gem 'uglifier' # Use Uglifier as compressor for JavaScript assets
 
 # gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production

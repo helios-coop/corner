@@ -19,11 +19,11 @@ class UsersController < ApplicationController
 
   private
 
-  PERMITTED_PARAMS = %i[
-    display_name
-    email
-    password
-    password_confirmation
+  PERMITTED_PARAMS = [
+    :display_name,
+    :email,
+    :password,
+    :password_confirmation
   ].freeze
 
   def user_params
