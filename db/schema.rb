@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180317214052) do
+ActiveRecord::Schema.define(version: 20180331162400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20180317214052) do
     t.string "symbol", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_currencies_on_name", unique: true
+    t.index ["symbol"], name: "index_currencies_on_symbol", unique: true
   end
 
   create_table "currencies_listings", force: :cascade do |t|
@@ -64,6 +66,8 @@ ActiveRecord::Schema.define(version: 20180317214052) do
     t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["display_name"], name: "index_users_on_display_name", unique: true
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "currencies_listings", "currencies"
