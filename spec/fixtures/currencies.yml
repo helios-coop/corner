@@ -1,0 +1,15 @@
+bitcoin:
+  name: Bitcoin
+  symbol: BTC
+litecoin:
+  name: Litecoin
+  symbol: LTC
+bitcoin_cash:
+  name: Bitcoin Cash
+  symbol: BCH
+etherium:
+  name: Etherium
+  symbol: ETH
+tron:
+  name: Tron
+  symbol: TRX

@@ -11,11 +11,11 @@ RSpec.describe SessionsController, type: :controller do
   end
 
   describe 'POST #create' do
-    let(:user) { create(:user) }
+    let(:user) { users(:satoshi) }
 
     context 'with a correct email and password' do
       it 'logs the user in' do
-        post :create, params: { email: user.email, password: user.password }
+        post :create, params: { email: user.email, password: 'satoshi' }
         expect(session[:user_id]).to be user.id
       end
     end

@@ -3,9 +3,9 @@
 require 'rails_helper'
 
 RSpec.describe Admin::CurrenciesController, type: :controller do
-  let(:btc) { create(:currency, name: 'Bitcoin',  symbol: 'LTC') }
-  let(:ltc) { create(:currency, name: 'Litecoin', symbol: 'LTC') }
-  let(:admin) { create(:user, role: 'Admin') }
+  let(:bitcoin) { currencies(:bitcoin) }
+  let(:litecoin) { currencies(:litecoin) }
+  let(:admin) { users(:admin) }
 
   describe 'GET #index' do
     before do
@@ -15,7 +15,7 @@ RSpec.describe Admin::CurrenciesController, type: :controller do
 
     context 'when current_user is an admin' do
       it 'returns a collection of currencies' do
-        expect(assigns(:currencies)).to include(btc, ltc)
+        expect(assigns(:currencies)).to include(litecoin, litecoin)
       end
     end
   end
@@ -46,7 +46,7 @@ RSpec.describe Admin::CurrenciesController, type: :controller do
   describe 'POST #create' do
     before do
       login(admin)
-      post :create, params: { currency: { name: 'Tron', symbol: 'TRX' } }
+      post :create, params: { currency: { name: 'Ripple', symbol: 'XRP' } }
     end
 
     context 'when current_user is an admin' do
