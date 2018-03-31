@@ -23,5 +23,5 @@
 .byebug_history
 
 /spec/examples.txt
-
+/coverage
 .env
