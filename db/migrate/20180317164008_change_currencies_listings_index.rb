@@ -7,7 +7,7 @@ class ChangeCurrenciesListingsIndex < ActiveRecord::Migration[5.1]
 
     add_index :currencies_listings,
               [:currency_id, :listing_id],
-              where: 'deleted_at IS NULL',
+              where: "deleted_at IS NULL",
               unique: true
   end
 end
