@@ -14,10 +14,12 @@ Rails: { Enabled: true }
 Metrics/BlockLength: { Exclude: [spec/**/*_spec.rb] }
 Metrics/MethodLength: { Exclude: [db/migrate/**] }
 Rails/HasManyOrHasOneDependent: { Enabled: false }
-Rspec/MultipleExpectations: { Enabled: false }
+RSpec/MultipleExpectations: { Enabled: false }
 Style/Documentation: { Enabled: false }
 Style/MixinUsage: { Exclude: [bin/**] }
 Style/SafeNavigation: { Enabled: false }
+Style/SymbolArray: { EnforcedStyle: brackets }
+Style/WordArray: { EnforcedStyle: brackets }
 
 Layout/EmptyLinesAroundArguments:
   Exclude:

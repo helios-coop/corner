@@ -56,7 +56,7 @@ RSpec.describe ListingsController do
     end
 
     it 'updates currencies' do
-      expect(listing.reload.currencies.pluck(:name)).to match_array %w[Litecoin Tron]
+      expect(listing.reload.currencies.pluck(:name)).to match_array ['Litecoin', 'Tron']
     end
 
     it 'soft deletes removed currencies' do
