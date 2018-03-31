@@ -19,4 +19,12 @@ class Listing < ApplicationRecord
   def full_address
     [address, city, state, zipcode, country].compact.join(', ')
   end
+
+  def editable_by?(user)
+    return true if user.role == 'admin'
+    return true if user.role == 'moderator'
+    return true if submitter == user
+
+    false
+  end
 end
