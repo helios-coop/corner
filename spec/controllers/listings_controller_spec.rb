@@ -49,20 +49,55 @@ RSpec.describe ListingsController do
     let(:litecoin) { create(:currency, name: 'Litecoin') }
     let(:tron)     { create(:currency, name: 'Tron') }
 
-    before do
-      login(satoshi)
-      listing.currencies = [bitcoin, litecoin]
-      patch :update, params: { id: listing.id, currencies: [litecoin.id, tron.id], listing: { name: 'whatevs' } }
+    context 'when current_user is an admin' do
+      before do
+        login(satoshi)
+        listing.currencies = [bitcoin, litecoin]
+        patch :update, params: { id: listing.id, currencies: [litecoin.id, tron.id], listing: { name: 'whatevs' } }
+      end
+
+      it 'updates currencies' do
+        expect(listing.reload.currencies.pluck(:name)).to match_array ['Litecoin', 'Tron']
+      end
+
+      it 'soft deletes removed currencies' do
+        deleted_currencies_listings = listing.reload.currencies_listings.only_deleted
+        expect(deleted_currencies_listings.length).to eq 1
+        expect(deleted_currencies_listings.first.currency_id).to eq bitcoin.id
+      end
     end
 
-    it 'updates currencies' do
-      expect(listing.reload.currencies.pluck(:name)).to match_array ['Litecoin', 'Tron']
+    context 'when current_user is the submitter' do
+      let(:justin_sun) { create(:user, display_name: 'justin', role: 'user') }
+      let(:listing2) { create(:listing, google_places_id: 12_345, submitter: justin_sun, lat: 37.791139, long: -122.396067) }
+
+      before do
+        login(justin_sun)
+        listing2.currencies = [bitcoin, litecoin]
+        patch :update, params: { id: listing2.id, currencies: [litecoin.id, tron.id], listing: { name: 'whatevs' } }
+      end
+
+      it 'updates currencies' do
+        expect(listing2.reload.currencies.pluck(:name)).to match_array ['Litecoin', 'Tron']
+      end
     end
 
-    it 'soft deletes removed currencies' do
-      deleted_currencies_listings = listing.reload.currencies_listings.only_deleted
-      expect(deleted_currencies_listings.length).to eq 1
-      expect(deleted_currencies_listings.first.currency_id).to eq bitcoin.id
+    context 'when current_user is not the submitter, admin or moderator' do
+      let(:justin_sun) { create(:user, display_name: 'justin', role: 'user') }
+
+      before do
+        login(justin_sun)
+        listing.currencies = [bitcoin, litecoin]
+        patch :update, params: { id: listing.id, currencies: [litecoin.id, tron.id], listing: { name: 'whatevs' } }
+      end
+
+      it 'does not update currencies' do
+        expect(listing.reload.currencies.pluck(:name)).to match_array ['Bitcoin', 'Litecoin']
+      end
+
+      it 'set the flash' do
+        expect(flash[:danger]).to eq 'Sorry, you cannot edit this listing'
+      end
     end
   end
 
