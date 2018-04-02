@@ -11,7 +11,6 @@ AllCops:
     - vendor/**/*
 Rails: { Enabled: true }
 
-Metrics/BlockLength: { Exclude: [spec/**/*_spec.rb] }
 Metrics/MethodLength: { Exclude: [db/migrate/**] }
 Rails/HasManyOrHasOneDependent: { Enabled: false }
 RSpec/MultipleExpectations: { Enabled: false }
@@ -44,6 +43,11 @@ Metrics/MethodLength:
 Metrics/ClassLength:
   Exclude:
     - '**/controllers/listings_controller.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - '**/environments/production.rb'
+    - 'spec/**/*_spec.rb'
 
 Metrics/LineLength:
   Exclude:
