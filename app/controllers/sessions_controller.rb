@@ -9,18 +9,18 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
 
     if user && user.authenticate(params[:password])
-      flash[:success] = 'Great, your logged in. Now when Lambo?'
+      flash[:success] = "Great, your logged in. Now when Lambo?"
       session[:user_id] = user.id
       redirect_to listings_path
     else
-      flash[:danger] = 'Couldn\'t log in. Looks like you got Rekt.'
+      flash[:danger] = "Couldn't log in. Looks like you got Rekt."
       render :new
     end
   end
 
   def destroy
     session[:user_id] = nil
-    flash[:success] = 'Bye bye boys. Have fun storming the castle.'
+    flash[:success] = "Bye bye boys. Have fun storming the castle."
     redirect_to listings_path
   end
 end

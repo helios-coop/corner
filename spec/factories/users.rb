@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :user do
     display_name { Faker::DragonBall.character }
     email { Faker::Internet.email }
-    password 'blahblah'
-    password_confirmation 'blahblah'
+    password "blahblah"
+    password_confirmation "blahblah"
   end
 end

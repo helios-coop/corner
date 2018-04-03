@@ -2,16 +2,16 @@
 
 Rails.application.routes.draw do
   # Homepage
-  root 'listings#index'
+  root "listings#index"
 
   resources :listings
 
   # User Signup, Login, Logout
-  get  '/signup' => 'users#new'
-  post '/users' => 'users#create'
-  get  '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  get  '/logout' => 'sessions#destroy'
+  get  "/signup" => "users#new"
+  post "/users" => "users#create"
+  get  "/login" => "sessions#new"
+  post "/login" => "sessions#create"
+  get  "/logout" => "sessions#destroy"
 
   # Admin pages
   namespace :admin do

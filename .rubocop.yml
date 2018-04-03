@@ -17,6 +17,7 @@ Rails/HasManyOrHasOneDependent: { Enabled: false }
 Style/Documentation: { Enabled: false }
 Style/MixinUsage: { Exclude: [bin/**] }
 Style/SafeNavigation: { Enabled: false }
+Style/StringLiterals: { EnforcedStyle: double_quotes }
 Style/SymbolArray: { EnforcedStyle: brackets }
 Style/TrailingCommaInArguments: { EnforcedStyleForMultiline: consistent_comma }
 Style/TrailingCommaInLiteral: { EnforcedStyleForMultiline: consistent_comma }
