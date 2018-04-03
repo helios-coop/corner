@@ -5,7 +5,7 @@ CURRENCIES = [
   { name: 'Litecoin', symbol: 'LTC' },
   { name: 'Bitcoin Cash', symbol: 'BCH' },
   { name: 'Etherium', symbol: 'ETH' },
-  { name: 'Tron', symbol: 'TRX' }
+  { name: 'Tron', symbol: 'TRX' },
 ].freeze
 
 FactoryBot.define do
