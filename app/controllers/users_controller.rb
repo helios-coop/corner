@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      flash[:success] = 'Much Wow. Account created'
+      flash[:success] = "Much Wow. Account created"
       redirect_to listings_path
     else
       render :new

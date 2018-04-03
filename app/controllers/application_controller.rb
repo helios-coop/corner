@@ -13,14 +13,14 @@ class ApplicationController < ActionController::Base
   def authorize
     return if current_user
 
-    flash[:danger] = 'You must be logged in to do that.'
+    flash[:danger] = "You must be logged in to do that."
     redirect_to login_path
   end
 
   def authorize_admin
-    return if current_user&.role == 'Admin'
+    return if current_user&.role == "Admin"
 
-    flash[:danger] = 'You must be and Admin to do that.'
+    flash[:danger] = "You must be and Admin to do that."
     redirect_to root_path
   end
 end
