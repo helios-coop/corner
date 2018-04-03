@@ -37,19 +37,6 @@ the values with you.
 
 ---
 
----
-
-We use two files for Environment Variables.
-The `.env` file is included in the repo and has non-secret env vars.
-
-Create another file name `.env.local` to hold secret env vars.
-In the `.env` file look at the section titled: **Secret Environment Variables**.
-
-Copy the key value pairs to `.env.local`. Then find someone on the team to share
-the values with you.
-
----
-
 To ensures all dependencies are available to your application.
 
 ```sh
