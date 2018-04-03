@@ -21,7 +21,7 @@
                   - if current_user && listing.editable_by?(current_user)
                     = link_to "Edit", edit_listing_path(listing), class: "edit-link mt-0", style: "color: #f1ce35; text-decoration: underline"
                   - else
-                    = link_to "", "#"
+                    = link_to ".", "#"
 
               .img-container
                 - if listing.thumbnail_url
