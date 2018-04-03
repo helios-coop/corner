@@ -11,7 +11,7 @@ RSpec.describe Listing do
   describe 'uniqueness' do
     subject { described_class.new(name: 'Satoshi Cafe', submitter_id: satoshi.id, google_places_id: '12345') }
 
-    let(:satoshi) { create(:user, display_name: 'satoshi') }
+    let(:satoshi) { users(:satoshi) }
 
     it { is_expected.to validate_uniqueness_of(:google_places_id).case_insensitive }
   end

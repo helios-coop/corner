@@ -75,7 +75,7 @@ class ListingsController < ApplicationController
     :state,
     :thumbnail_url,
     :url,
-    :zipcode
+    :zipcode,
   ].freeze
 
   def listing_params
@@ -91,7 +91,7 @@ class ListingsController < ApplicationController
     locality: 'city',
     administrative_area_level_1: 'state',
     country: 'country',
-    postal_code: 'zipcode'
+    postal_code: 'zipcode',
   }.freeze
 
   # Fuck you google places. Seriously the worst API ever.

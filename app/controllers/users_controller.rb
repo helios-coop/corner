@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     :display_name,
     :email,
     :password,
-    :password_confirmation
+    :password_confirmation,
   ].freeze
 
   def user_params
