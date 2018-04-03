@@ -1,6 +1,6 @@
 # Corner
 
-> Helps drive every day usage of crypto at corner stores and beyond
+> Helping drive every day usage of crypto at corner stores and beyond
 
 ![tweet](https://github.com/helios-coop/corner/blob/master/app/assets/images/jamseson_lopp_tweet.jpg?raw=true)
 
@@ -22,9 +22,22 @@ If you do not have Rails, use this [guide](http://installrails.com).
 
 ## Development setup
 
-For code quality purposes, we use (Rubocop). Download for your specified IDE.
+For code quality purposes, we use [Rubocop](https://github.com/bbatsov/rubocop). Download for your specified IDE. Circle CI will fail if any Rubocop style violations are found.
 
-----
+---
+
+We use two files for Environment Variables.
+The `.env` file is included in the repo and has public env vars.
+
+Create another file name `.env.local` to hold secret env vars.
+In the `.env` file look at the section titled: **Secret Environment Variables**.
+
+Copy the key value pairs to `.env.local`. Then find someone on the team to share
+the values with you.
+
+---
+
+---
 
 We use two files for Environment Variables.
 The `.env` file is included in the repo and has non-secret env vars.
@@ -35,7 +48,7 @@ In the `.env` file look at the section titled: **Secret Environment Variables**.
 Copy the key value pairs to `.env.local`. Then find someone on the team to share
 the values with you.
 
-----
+---
 
 To ensures all dependencies are available to your application.
 
@@ -43,7 +56,7 @@ To ensures all dependencies are available to your application.
 bundle install
 ```
 
-----
+---
 
 Make sure Postgres is running. Run to set up your database.
 
