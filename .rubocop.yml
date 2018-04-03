@@ -23,14 +23,6 @@ Style/TrailingCommaInArguments: { EnforcedStyleForMultiline: consistent_comma }
 Style/TrailingCommaInLiteral: { EnforcedStyleForMultiline: consistent_comma }
 Style/WordArray: { EnforcedStyle: brackets }
 
-Layout/EmptyLinesAroundArguments:
-  Exclude:
-    - '**/initializers/geocoder.rb'
-
-Layout/ExtraSpacing:
-  Exclude:
-    - '**/initializers/geocoder.rb'
-
 # Things I'm not prepared to deal with at the moment. Feel free to refactor.
 Metrics/AbcSize:
   Exclude:
@@ -57,4 +49,3 @@ Metrics/LineLength:
     - '**/spec/controllers/listings_controller_spec.rb'
     - '**/spec/models/listings_spec.rb'
     - '**/app/controllers/listings_controller.rb'
-    - '**/initializers/geocoder.rb'
