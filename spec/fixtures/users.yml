@@ -1,0 +1,9 @@
+satoshi:
+  display_name: satoshi
+  email: satoshi@allthebits.com
+  password_digest: <%= BCrypt::Password.create('satoshi', cost: 5) %>
+admin:
+  display_name: admin
+  email: admin@corner.app
+  password_digest: <%= BCrypt::Password.create('admin', cost: 5) %>
+  role: Admin

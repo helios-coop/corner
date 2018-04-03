@@ -14,6 +14,7 @@ gem 'rails', '~> 5.1.5'
 gem 'acts_as_paranoid', github: 'ActsAsParanoid/acts_as_paranoid'
 gem 'bcrypt' # Use ActiveModel has_secure_password
 gem 'bootstrap'
+gem 'dalli'
 gem 'font-awesome-rails' # https://github.com/bokmann/font-awesome-rails
 gem 'geocoder'
 gem 'gon'
