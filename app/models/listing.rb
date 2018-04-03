@@ -2,7 +2,7 @@
 
 class Listing < ApplicationRecord
   validates :name, :submitter_id, presence: true
-  validates :google_places_id, uniqueness: true
+  validates :google_places_id, uniqueness: true, allow_nil: true
 
   has_many :currencies_listings
   has_many :currencies, through: :currencies_listings
@@ -18,5 +18,13 @@ class Listing < ApplicationRecord
   # https://github.com/alexreisner/geocoder#model-configuration
   def full_address
     [address, city, state, zipcode, country].compact.join(', ')
+  end
+
+  def editable_by?(user)
+    return true if user.role == 'admin'
+    return true if user.role == 'moderator'
+    return true if submitter == user
+
+    false
   end
 end

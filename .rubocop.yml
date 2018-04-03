@@ -11,14 +11,15 @@ AllCops:
     - vendor/**/*
 Rails: { Enabled: true }
 
-Metrics/BlockLength: { Exclude: [spec/**/*_spec.rb] }
 Metrics/MethodLength: { Exclude: [db/migrate/**] }
-Rails/HasManyOrHasOneDependent: { Enabled: false }
 RSpec/MultipleExpectations: { Enabled: false }
+Rails/HasManyOrHasOneDependent: { Enabled: false }
 Style/Documentation: { Enabled: false }
 Style/MixinUsage: { Exclude: [bin/**] }
 Style/SafeNavigation: { Enabled: false }
 Style/SymbolArray: { EnforcedStyle: brackets }
+Style/TrailingCommaInArguments: { EnforcedStyleForMultiline: consistent_comma }
+Style/TrailingCommaInLiteral: { EnforcedStyleForMultiline: consistent_comma }
 Style/WordArray: { EnforcedStyle: brackets }
 
 Layout/EmptyLinesAroundArguments:
@@ -44,6 +45,11 @@ Metrics/MethodLength:
 Metrics/ClassLength:
   Exclude:
     - '**/controllers/listings_controller.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - '**/environments/production.rb'
+    - 'spec/**/*_spec.rb'
 
 Metrics/LineLength:
   Exclude:

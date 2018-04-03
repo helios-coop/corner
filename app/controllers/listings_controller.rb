@@ -42,13 +42,22 @@ class ListingsController < ApplicationController
 
   def edit
     @listing = Listing.find(params[:id])
-    @currencies = Currency.all
+    if @listing.editable_by?(current_user)
+      @currencies = Currency.all
+    else
+      flash[:danger] = 'Sorry, you cannot edit this listing'
+      redirect_to listings_path
+    end
   end
 
   def update
     @listing = Listing.find(params[:id])
-    @listing.update!(listing_params)
-    @listing.currencies = Currency.where(id: params[:currencies])
+    if @listing.editable_by?(current_user)
+      @listing.update!(listing_params)
+      @listing.currencies = Currency.where(id: params[:currencies])
+    else
+      flash[:danger] = 'Sorry, you cannot edit this listing'
+    end
     redirect_to listings_path
   end
 
@@ -66,7 +75,7 @@ class ListingsController < ApplicationController
     :state,
     :thumbnail_url,
     :url,
-    :zipcode
+    :zipcode,
   ].freeze
 
   def listing_params
@@ -82,7 +91,7 @@ class ListingsController < ApplicationController
     locality: 'city',
     administrative_area_level_1: 'state',
     country: 'country',
-    postal_code: 'zipcode'
+    postal_code: 'zipcode',
   }.freeze
 
   # Fuck you google places. Seriously the worst API ever.
