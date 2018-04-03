@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize_admin
-    return if current_user&.role == 'Admin'
+    return if current_user&.role == 'admin'
 
     flash[:danger] = 'You must be and Admin to do that.'
     redirect_to root_path

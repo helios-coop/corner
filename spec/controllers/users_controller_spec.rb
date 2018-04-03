@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
-  let(:user_params) { attributes_for(:user) }
+  let(:user_params) { attributes_for(:user).without(:role) }
 
   describe 'GET #new' do
     before { get :new }
