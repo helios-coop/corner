@@ -31,7 +31,7 @@ module Admin
     def update
       @currency = Currency.find(params[:id])
 
-      if @currency.update_attributes(currency_params)
+      if @currency.update(currency_params)
         flash[:success] = 'Currency updated.'
         redirect_to admin_currencies_path
       else
