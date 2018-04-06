@@ -6,6 +6,6 @@ Geocoder.configure(
   ip_lookup: :freegeoip,
   language: :en,
   use_https: false,
-  api_key: ENV["GOOGLE_MAPS_API_KEY"],
+  api_key: ENV.fetch("GOOGLE_MAPS_API_KEY"),
   units: :mi,
 )
