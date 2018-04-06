@@ -20,11 +20,11 @@ class Listing < ApplicationRecord
     [address, city, state, zipcode, country].compact.join(", ")
   end
 
-  def editable_by?(user)
-    return true if user.role == "admin"
-    return true if user.role == "moderator"
-    return true if submitter == user
+  def coordinates
+    [lat, long]
+  end
 
-    false
+  def editable_by?(user)
+    user == submitter || ["admin", "moderator"].include?(user.role)
   end
 end

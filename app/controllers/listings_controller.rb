@@ -132,27 +132,24 @@ class ListingsController < ApplicationController
     return if Rails.env.test?
     @google_places_client = GooglePlaces::Client.new(ENV["GOOGLE_MAPS_API_KEY"])
     @google_place = @google_places_client.spot(google_place_id)
-    @reviews = @google_place.reviews[0..4]
+    @reviews = @google_place.reviews.first(5)
   end
 
   def set_listings_and_coordinates
     if params[:location].present?
       @listings = Listing.near(params[:location], 5)
 
-      lat_long = Geocoder.coordinates params[:location]
-      gon.centerPoint = { latitude: lat_long[0], longitude: lat_long[1], zoom: 13 }
+      latitude, longitude = Geocoder.coordinates params[:location]
+      gon.centerPoint = { latitude: latitude, longitude: longitude, zoom: 13 }
     else
       gon.centerPoint = center_point_from_ip_address
       @listings = Listing.near([gon.centerPoint[:latitude], gon.centerPoint[:longitude]], 5)
     end
 
-    gon.coordinates = @listings.map { |listing| [listing.lat, listing.long] }
+    gon.coordinates = @listings.map(&:coordinates)
   end
 
   def center_point_from_ip_address
-    Rails.logger.info("\n---------- request.location.inspect: ")
-    Rails.logger.info(request.location.inspect)
-
     if Rails.env.production?
       { latitude: request.location.data["latitude"], longitude: request.location.data["longitude"], zoom: 13 }
     else
