@@ -3,6 +3,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user
+  helper_method :google_maps_api_key
 
   before_action :detect_device_variant
 
@@ -31,5 +32,9 @@ class ApplicationController < ActionController::Base
     return unless browser.device.mobile?
     request.variant = :phone
     prepend_view_path Rails.root + "app" + "views" + "mobile_views"
+  end
+
+  def google_maps_api_key
+    ENV.fetch("GOOGLE_MAPS_API_KEY")
   end
 end

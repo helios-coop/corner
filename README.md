@@ -29,11 +29,11 @@ For code quality purposes, we use [Rubocop](https://github.com/bbatsov/rubocop).
 We use two files for Environment Variables.
 The `.env` file is included in the repo and has public env vars.
 
-Create another file name `.env.local` to hold secret env vars.
+Create files named `.env.local` and `.env.test.local` to hold secret env vars.
 In the `.env` file look at the section titled: **Secret Environment Variables**.
 
-Copy the key value pairs to `.env.local`. Then find someone on the team to share
-the values with you.
+Copy the key value pairs to `.env.local` and `.env.test.local`. Then find
+someone on the team to share the values with you.
 
 ---
 

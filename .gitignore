@@ -25,3 +25,4 @@
 /spec/examples.txt
 /coverage
 .env.local
+.env.test.local
