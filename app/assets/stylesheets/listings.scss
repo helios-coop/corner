@@ -4,7 +4,7 @@
 $standard-radius: 20px;
 $listings-background-color: #ebebeb;
 $card-text-color: black;
-$navbar-color-ligher-1: #f7eec8;
+$navbar-color-lighter-1: #f7eec8;
 $navbar-color: #fbdd58;
 $navbar-color-darker-1: #f1ce35;
 $bitcoin-organge: #f5922f;
@@ -26,7 +26,16 @@ $bitcoin-organge: #f5922f;
 }
 
 #listings-index {
-  background-color: $listings-background-color;
+  @media (min-width: 0px) {
+    background-color: $navbar-color-darker-1;
+  }
+  @media (min-width: 576px) {
+    background-color: $listings-background-color;
+  }
+
+  #mobile-search-bar {
+    background-color: $navbar-color-darker-1;
+  }
 
   #listing-cards {
     padding-top: 15px;
@@ -40,11 +49,11 @@ $bitcoin-organge: #f5922f;
       flex-direction: row;
 
       .card-body:hover {
-        background-color: $navbar-color-ligher-1;
+        background-color: $navbar-color-lighter-1;
       }
 
       .card-body.active {
-        background-color: $navbar-color-ligher-1;
+        background-color: $navbar-color-lighter-1;
       }
 
       .card-body a {

@@ -1,7 +1,7 @@
 // Variables
 // Colors
 $navbar-color: #fbdd58;
-$navbar-color-ligher-1: #f7eec8;
+$navbar-color-lighter-1: #f7eec8;
 $navbar-color-active: #e4bd09;
 $navbar-button-color: black;
 
@@ -20,20 +20,6 @@ $navbar-input-radius: 20px;
   background: $navbar-color !important;
   height: 6rem;
 
-  .btn-outline-success {
-    color: $navbar-button-color;
-    background-color: transparent;
-    background-image: none;
-    border-color: $navbar-button-color;
-    border-radius: $navbar-button-radius;
-  }
-
-  .btn-outline-success:hover {
-    color: $navbar-button-color;
-    background-color: $navbar-color-active;
-    border-color: $navbar-button-color;
-  }
-
   .active {
     background-color: $navbar-color-active;
     border-radius: $navbar-button-radius;
@@ -44,10 +30,24 @@ $navbar-input-radius: 20px;
     border-color: $navbar-color-active;
     border-radius: $navbar-button-radius;
   }
+}
 
-  .location-search {
-    background-color: $navbar-color-ligher-1;
-    border-radius: $navbar-input-radius;
-    border-color: $navbar-button-color;
-  }
+.btn-outline-success {
+  color: $navbar-button-color;
+  background-color: transparent;
+  background-image: none;
+  border-color: $navbar-button-color;
+  border-radius: $navbar-button-radius;
+}
+
+.btn-outline-success:hover {
+  color: $navbar-button-color;
+  background-color: $navbar-color-active;
+  border-color: $navbar-button-color;
+}
+
+.location-search {
+  background-color: $navbar-color-lighter-1;
+  border-radius: $navbar-input-radius;
+  border-color: $navbar-button-color;
 }

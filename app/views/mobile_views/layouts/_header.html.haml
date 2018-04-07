@@ -6,9 +6,6 @@
     %span.navbar-toggler-icon
 
   #navbarNav.collapse.navbar-collapse.justify-content-end
-    - if request.path == "/listings" || request.path == "/"
-      #search= render "layouts/search"
-
     %ul.navbar-nav.nav-pills.ml-auto
       %li.nav-item.mr-1{class: request.path == "/listings/new" ? "active" : ""}
         = link_to "Add Listing", new_listing_path, class: "nav-link"

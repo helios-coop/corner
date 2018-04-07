@@ -2,8 +2,9 @@
 
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  layout :set_layout
   helper_method :current_user
+
+  before_action :detect_device_variant
 
   private
 
@@ -25,7 +26,10 @@ class ApplicationController < ActionController::Base
     redirect_to root_path
   end
 
-  def set_layout
-    browser.device.mobile? ? "mobile" : "application"
+  # http://blog.chrismaxwell.com/mobile-device-detection-with-ruby-on-rails
+  def detect_device_variant
+    return unless browser.device.mobile?
+    request.variant = :phone
+    prepend_view_path Rails.root + "app" + "views" + "mobile_views"
   end
 end
