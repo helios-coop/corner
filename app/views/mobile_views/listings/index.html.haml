@@ -5,8 +5,8 @@
 
   #mobile-search-bar= render "layouts/search"
 
-  .row
-    .col-sm-4
+  .row.mx-auto
+    .col-sm-4.listings-column
       #listing-cards.card-deck.d-flex.flex-column
         - @listings.each do |listing|
           .card
