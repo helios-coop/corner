@@ -27,19 +27,40 @@ $bitcoin-organge: #f5922f;
 
 #listings-index {
   @media (min-width: 0px) {
-    background-color: $navbar-color-darker-1;
+    background-color: $navbar-color;
   }
+
   @media (min-width: 576px) {
     background-color: $listings-background-color;
   }
 
   #mobile-search-bar {
-    background-color: $navbar-color-darker-1;
+    background-color: $navbar-color;
+  }
+
+  .listings-column {
+    @media (min-width: 0px) {
+      padding-top: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @media (min-width: 576px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   #listing-cards {
-    padding-top: 15px;
-    padding-left: 15px;
+    @media (min-width: 0px) {
+      padding-top: 0px;
+      padding-left: 0px;
+    }
+
+    @media (min-width: 576px) {
+      padding-top: 15px;
+      padding-left: 15px;
+    }
 
     .card {
       margin-bottom: 15px;
@@ -47,6 +68,7 @@ $bitcoin-organge: #f5922f;
       overflow: hidden;
       max-height: 175px;
       flex-direction: row;
+      border-color: $navbar-color-darker-1;
 
       .card-body:hover {
         background-color: $navbar-color-lighter-1;
