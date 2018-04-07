@@ -60,7 +60,7 @@ bin/rails db:migrate RAILS_ENV=development
 To run the app locally:
 
 ```sh
-rails s
+foreman start -f Procfile.dev
 ```
 
 and then navigate to `localhost:3000`
