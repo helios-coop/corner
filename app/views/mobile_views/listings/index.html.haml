@@ -1,0 +1,92 @@
+= content_for :head do
+  = stylesheet_link_tag 'listings'
+
+#listings-index
+
+  #mobile-search-bar= render "layouts/search"
+
+  .row
+    .col-sm-4
+      #listing-cards.card-deck.d-flex.flex-column
+        - @listings.each do |listing|
+          .card
+            = link_to listing_path(listing), :remote => true do
+              .card-body{onclick: "setActive(this)"}
+                %h5.card-title.mb-1= listing.name
+                %p.card-text.mb-1
+                  Accepted:
+                  - listing.currencies.each do |currency|
+                    %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png", height: 16
+
+                %address.card-text.mb-0= truncate "#{listing.address}, #{listing.city}, #{listing.state}", length: 35
+                .card-text
+                  -# I dont know why css formating breaks if you remove the link.
+                  - if current_user && listing.editable_by?(current_user)
+                    = link_to "Edit", edit_listing_path(listing), class: "edit-link mt-0", style: "color: #f1ce35; text-decoration: underline"
+                  - else
+                    = link_to "", "#"
+
+              .img-container
+                - if listing.thumbnail_url
+                  .img-container
+                    %img{src: listing.thumbnail_url}
+                - else
+                  .img-container
+                    %img{src: "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960"}
+
+    .col.sm-8#map-photos-details
+      #map-photos
+        -# https://developers.google.com/maps/documentation/javascript/adding-a-google-map
+        #map
+
+        #photos
+          #carouselControls.carousel.slide{"data-ride" => "carousel"}
+            = render "carousel"
+
+            %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselControls", :role => "button"}
+              %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+              %span.sr-only Previous
+            %a.carousel-control-next{"data-slide" => "next", :href => "#carouselControls", :role => "button"}
+              %span.carousel-control-next-icon{"aria-hidden" => "true"}
+              %span.sr-only Next
+
+      .row#listing-details
+        -# Displayed dynamically via ajax
+        = render "details"
+
+
+:javascript
+  function setActive(element) {
+    $(".card-body").removeClass("active")
+    $(element).addClass("active");
+  }
+
+  console.log("Center Point: ", gon.centerPoint)
+  window.centerPoint = gon.centerPoint
+  console.log("gon.coordinates: ", gon.coordinates)
+  var listingCoordinates = gon.coordinates;
+
+  function initMap() {
+    console.log("Initializeing Map...")
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: new google.maps.LatLng(gon.centerPoint['latitude'], gon.centerPoint['longitude']),
+      zoom: gon.centerPoint['zoom']
+    });
+
+    // Used by show.js.haml when selecting individual
+    window.googleMap = map;
+
+    var infoWindow = new google.maps.InfoWindow;
+
+    listingCoordinates.forEach(function(coordinate) {
+      var marker = new google.maps.Marker({
+        map: map,
+        position: {lat: coordinate[0], lng: coordinate[1]},
+        label: "฿"
+      })
+    })
+  };
+
+
+-# This has to be called after javascript above loads
+%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAPS_API_KEY"]}&callback=initMap"}
