@@ -2,6 +2,7 @@
 
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  layout :set_layout
   helper_method :current_user
 
   private
@@ -22,5 +23,9 @@ class ApplicationController < ActionController::Base
 
     flash[:danger] = "You must be and Admin to do that."
     redirect_to root_path
+  end
+
+  def set_layout
+    browser.device.mobile? ? "mobile" : "application"
   end
 end
