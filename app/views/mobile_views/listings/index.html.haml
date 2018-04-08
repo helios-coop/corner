@@ -49,7 +49,7 @@
   .row
     .col#map-photos
     - if @google_place
-      .card#photos
+      .card#photo-card
         #carouselControls.carousel.slide{"data-ride" => "carousel"}
           = render "carousel"
           %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselControls", :role => "button"}

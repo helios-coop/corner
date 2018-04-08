@@ -24,6 +24,7 @@ $listings-background-color: #fbdd58;
         margin-left: 25px;
         margin-right: 25px;
         border-radius: $standard-radius;
+        width: 100%;
 
         .card-body {
           padding-left: 10px;
@@ -108,7 +109,7 @@ $listings-background-color: #fbdd58;
       }
     }
 
-    #photos {
+    #photo-card {
       border-radius: $standard-radius;
       margin-left: 25px;
       margin-right: 25px;
