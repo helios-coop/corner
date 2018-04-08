@@ -1,13 +1,17 @@
-// Variables
+//// Variables
+
 // Colors
 $navbar-color: #fbdd58;
 $navbar-color-lighter-1: #f7eec8;
+$navbar-color-darker-1: #f1ce35;
 $navbar-color-active: #e4bd09;
 $navbar-button-color: black;
 
-//Radius
-$navbar-button-radius: 20px;
-$navbar-input-radius: 20px;
+$card-text-color: black;
+$bitcoin-organge: #f5922f;
+
+// Radius
+$standard-radius: 20px;
 
 .container-fluid {
   padding-right: 0px;
@@ -22,13 +26,13 @@ $navbar-input-radius: 20px;
 
   .active {
     background-color: $navbar-color-active;
-    border-radius: $navbar-button-radius;
+    border-radius: $standard-radius;
   }
 
   .nav-pills .nav-item:hover {
     background-color: $navbar-color-active;
     border-color: $navbar-color-active;
-    border-radius: $navbar-button-radius;
+    border-radius: $standard-radius;
   }
 }
 
@@ -37,7 +41,7 @@ $navbar-input-radius: 20px;
   background-color: transparent;
   background-image: none;
   border-color: $navbar-button-color;
-  border-radius: $navbar-button-radius;
+  border-radius: $standard-radius;
 }
 
 .btn-outline-success:hover {
@@ -48,6 +52,6 @@ $navbar-input-radius: 20px;
 
 .location-search {
   background-color: $navbar-color-lighter-1;
-  border-radius: $navbar-input-radius;
+  border-radius: $standard-radius;
   border-color: $navbar-button-color;
 }
