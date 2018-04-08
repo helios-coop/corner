@@ -12,27 +12,26 @@
           .card
             = link_to listing_path(listing), :remote => true do
               .card-body{onclick: "setActive(this)"}
-                %h5.card-title.mb-1= listing.name
+                %h5.card-title.mb-1= truncate listing.name, length: 29
                 %p.card-text.mb-1
                   Accepted:
                   - listing.currencies.each do |currency|
-                    %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png", height: 16
+                    %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png", height: 12
 
-                %address.card-text.mb-0= truncate "#{listing.address}, #{listing.city}, #{listing.state}", length: 35
+                %address.card-text.mb-0= truncate "#{listing.address}, #{listing.city}", length: 35
                 .card-text
                   -# I dont know why css formating breaks if you remove the link.
                   - if current_user && listing.editable_by?(current_user)
-                    = link_to "Edit", edit_listing_path(listing), class: "edit-link mt-0", style: "color: #f1ce35; text-decoration: underline"
+                    = link_to "", "#"
                   - else
                     = link_to "", "#"
 
+
               .img-container
                 - if listing.thumbnail_url
-                  .img-container
-                    %img{src: listing.thumbnail_url}
+                  %img{src: listing.thumbnail_url}
                 - else
-                  .img-container
-                    %img{src: "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960"}
+                  %img{src: "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960"}
 
     .col.sm-8#map-photos-details
       #map-photos
@@ -89,4 +88,4 @@
 
 
 -# This has to be called after javascript above loads
-%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAPS_API_KEY"]}&callback=initMap"}
+%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{google_maps_api_key}&callback=initMap"}

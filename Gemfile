@@ -8,6 +8,9 @@ git_source(:github) do |repo_name|
 end
 
 ruby "2.4.1"
+
+# needs to be included before any other gems that use environment variables
+gem "dotenv-rails", groups: [:development, :test]
 gem "rails", "~> 5.1.5"
 
 # https://github.com/ActsAsParanoid/acts_as_paranoid/issues/36
@@ -37,7 +40,6 @@ gem "uglifier" # Use Uglifier as compressor for JavaScript assets
 
 group :development, :test do
   gem "capybara" # Adds support for Capybara system testing and selenium driver
-  gem "dotenv-rails" # Move to the top if you need Env Vars before rails loads.
   gem "factory_bot_rails"
   gem "faker"
   gem "foreman"

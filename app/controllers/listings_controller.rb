@@ -130,7 +130,7 @@ class ListingsController < ApplicationController
 
   def create_google_place_variables(google_place_id)
     return if Rails.env.test?
-    @google_places_client = GooglePlaces::Client.new(ENV["GOOGLE_MAPS_API_KEY"])
+    @google_places_client = GooglePlaces::Client.new(google_maps_api_key)
     @google_place = @google_places_client.spot(google_place_id)
     @reviews = @google_place.reviews.first(5)
   end
