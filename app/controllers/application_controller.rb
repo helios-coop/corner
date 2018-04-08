@@ -31,7 +31,7 @@ class ApplicationController < ActionController::Base
   def detect_device_variant
     return unless browser.device.mobile?
     request.variant = :phone
-    prepend_view_path Rails.root + "app" + "views" + "mobile_views"
+    prepend_view_path Rails.root.join("app", "views", "mobile_views")
   end
 
   def google_maps_api_key
