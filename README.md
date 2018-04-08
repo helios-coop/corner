@@ -55,13 +55,34 @@ and
 
 ```sh
 bin/rails db:migrate RAILS_ENV=development
+
 ```
 
-To run the app locally:
+---
+
+To run all servers (web and workers) locally:
 
 ```sh
 foreman start -f Procfile.dev
 ```
+
+**note you won't be able to use `binding.pry`**
+
+OR
+
+If you want to use `binding.pry` (because its the coolest) start the servers seperately in their own tabs:
+
+```sh
+rails server
+```
+
+and 
+
+```sh
+< TODO: sidekiq startup goes here >
+```
+
+
 
 and then navigate to `localhost:3000`
 
