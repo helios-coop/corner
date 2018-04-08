@@ -28,32 +28,30 @@
               = fa_icon "building"
               = "#{@listing.address}, #{@listing.city}, #{@listing.state}"
 
-            %li
-              = fa_icon "phone"
-              = @google_place.formatted_phone_number
-            %li
-              %span
-                -# = fa_icon "desktop"
-                = link_to @google_place.website, @google_place.website, target: "_blank",   class: "detail-url"
 
         .col-12
           .show-details-button
             = link_to "Show Details", "#", class: "btn btn-primary btn-sm btn-outline-success", id: "show-details"
 
           .row#hours-currencies-reviews
-            .col-12
+            .col-12#phone-url
+              %ul.list-unstyled
+                %li
+                  = fa_icon "phone"
+                  = @google_place.formatted_phone_number
+                %li
+                  %span
+                    = link_to @google_place.website, @google_place.website, target: "_blank",   class: "detail-url"
+            .col-12#open-now
               %p.d-inline
+                %strong.open-now
+                  Open Now:
                 - if @google_place.opening_hours && @google_place.opening_hours['open_now']
-                  %strong.open-now
-                    Open Now:
-                    .d-inline.text-success Yes
+                  .d-inline.text-success Yes
                 - elsif @google_place.opening_hours
-                  %strong.open-now
-                    Open Now:
-                    .d-inline.primary-color-darker-1 No
+                  .d-inline.primary-color-darker-1 No
                 - else
-                  Unknown
-
+                  .d-inline.primary-color-darker-1 Unknown
 
               - if @google_place.opening_hours
                 #hours
@@ -64,20 +62,18 @@
 
 
             .col-12
-              %p
+              %p#accepted
                 %strong Currencies Accepted
 
               - @listing.currencies.each do |currency|
                 %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png"
 
 
-
-
             .col-12.mt-3
               %p
                 %strong Reviews:
               %ul.list-group.list-group-flush
-                - @reviews.each do |review|
+                - @reviews.first(3).each do |review|
                   %li.list-group-item
                     %p
                       - 1.upto(review.rating) do
@@ -101,5 +97,4 @@
     } else {
       $("#show-details").text("Hide Details");
     }
-
   })
