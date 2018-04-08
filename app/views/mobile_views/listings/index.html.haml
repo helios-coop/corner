@@ -8,6 +8,9 @@
   - if @google_place
     .row
       .card#map-card
+        #update-size-container
+          = link_to "Larger", "#", class: "btn btn-primary btn-sm btn-outline-success map-button  ", id: "larger-map-button"
+          = link_to "Smaller", "#", class: "btn btn-primary btn-sm btn-outline-success map-button ", id: "smaller-map-button"
         -# https://developers.google.com/maps/documentation/javascript/adding-a-google-map
         #map
 
@@ -61,6 +64,32 @@
 
 -# TODO: DRY up. This also lives in the non-mobile haml file
 :javascript
+  $("#larger-map-button").click( function(event) {
+    event.preventDefault();
+
+    var height = $("#map-card").height()
+    if (height < 110) {
+      $("#map-card").height(150)
+      $("#smaller-map-button").toggle()
+    } else {
+      $("#map-card").height(300)
+      $("#larger-map-button").toggle()
+    }
+  })
+
+  $("#smaller-map-button").click( function(event) {
+    event.preventDefault();
+
+    var height = $("#map-card").height()
+    if (height > 200) {
+      $("#map-card").height(150)
+      $("#larger-map-button").toggle()
+    } else {
+      $("#map-card").height(100)
+      $("#smaller-map-button").toggle()
+    }
+  })
+
   function setActive(element) {
     $(".card-body").removeClass("active")
     $(element).addClass("active");
