@@ -15,6 +15,7 @@ $listings-background-color: #fbdd58;
 }
 
 #listings-index {
+  // Mobile
   @media (min-width: 0px) {
     background-color: $navbar-color;
 
@@ -63,8 +64,6 @@ $listings-background-color: #fbdd58;
       }
     }
 
-    // Mobile
-
     #map-card {
       width: 100%;
       height: 150px;
@@ -73,6 +72,21 @@ $listings-background-color: #fbdd58;
       margin-bottom: 5px;
       border-radius: $standard-radius;
       overflow: hidden;
+
+      #update-size-container {
+        z-index: 100;
+        bottom: 10px;
+        position: absolute;
+        margin-left: 5px;
+      }
+
+      .map-button {
+        font-size: 0.65em;
+        background: $navbar-color;
+        margin-top: 5px;
+        margin-left: 5px;
+      }
+
       #map {
         width: 100%;
         height: 100%;
