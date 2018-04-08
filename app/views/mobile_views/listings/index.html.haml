@@ -6,34 +6,40 @@
   #mobile-search-bar= render "layouts/search"
 
   .row.mx-auto
-    .col-sm-4.listings-column
-      #listing-cards.card-deck.d-flex.flex-column
-        - @listings.each do |listing|
-          .card
-            = link_to listing_path(listing), :remote => true do
-              .card-body{onclick: "setActive(this)"}
-                %h5.card-title.mb-1= truncate listing.name, length: 29
-                %p.card-text.mb-1
-                  Accepted:
-                  - listing.currencies.each do |currency|
-                    %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png", height: 12
+    .row#mobile-listing-details
+      -# Displayed dynamically via ajax
+      = render "details"
 
-                %address.card-text.mb-0= truncate "#{listing.address}, #{listing.city}", length: 35
-                .card-text
-                  -# I dont know why css formating breaks if you remove the link.
-                  - if current_user && listing.editable_by?(current_user)
-                    = link_to "", "#"
+    .row
+      .col
+        #listing-cards.card-deck.d-flex.flex-column
+          - @listings.each do |listing|
+            .card
+              = link_to listing_path(listing), :remote => true do
+                .card-body{onclick: "setActive(this)"}
+                  %h5.card-title.mb-1= truncate listing.name, length: 29
+                  %p.card-text.mb-1
+                    Accepted:
+                    - listing.currencies.each do |currency|
+                      %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png", height: 12
+
+                  %address.card-text.mb-0= truncate "#{listing.address}, #{listing.city}", length: 35
+                  .card-text
+                    -# I dont know why css formating breaks if you remove the link.
+                    - if current_user && listing.editable_by?(current_user)
+                      = link_to "", "#"
+                    - else
+                      = link_to "", "#"
+
+
+                .img-container
+                  - if listing.thumbnail_url
+                    %img{src: listing.thumbnail_url, width: 200}
                   - else
-                    = link_to "", "#"
+                    %img{src: "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960"}
 
-
-              .img-container
-                - if listing.thumbnail_url
-                  %img{src: listing.thumbnail_url}
-                - else
-                  %img{src: "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960"}
-
-    .col.sm-8#map-photos-details
+    .row
+      .col#map-photos
       - if @google_place
         #map-photos
           -# https://developers.google.com/maps/documentation/javascript/adding-a-google-map
@@ -50,9 +56,7 @@
                 %span.carousel-control-next-icon{"aria-hidden" => "true"}
                 %span.sr-only Next
 
-      .row#listing-details
-        -# Displayed dynamically via ajax
-        = render "details"
+
 
 
 :javascript
@@ -89,4 +93,4 @@
 
 
 -# This has to be called after javascript above loads
-%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{google_maps_api_key}&callback=initMap"}
+%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_MAPS_API_KEY"]}&callback=initMap"}
