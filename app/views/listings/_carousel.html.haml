@@ -1,5 +1,3 @@
-- return unless @google_place
-
 .carousel-inner
   .carousel-item.active
     - if image_url = Rails.cache.read("#{@google_place.id}-photo-0}")
