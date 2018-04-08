@@ -1,0 +1,17 @@
+
+-# Update details card
+$("#mobile-listing-details").html("#{escape_javascript(render partial: 'details', locals: { listing: @listing } ) }");
+
+-# Update map
+var latitude = parseFloat("#{@listing.lat}")
+var longitude = parseFloat("#{@listing.long}")
+
+var newCenter = new google.maps.LatLng(latitude, longitude);
+console.log("Listing Center Point: ", newCenter);
+
+googleMap.setCenter(newCenter);
+googleMap.setZoom(16)
+
+-# Update photos
+-# TODO: Probably need to save photo urls when the listing is created. This seems slow
+$(".carousel-inner").html("#{escape_javascript(render partial: 'carousel', locals: { photos: @google_place.photos } ) }");
