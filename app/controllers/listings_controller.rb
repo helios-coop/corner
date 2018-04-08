@@ -96,7 +96,15 @@ class ListingsController < ApplicationController
 
   def listing_attributes_from_params
     g_place = JSON.parse(params["google-place"]).deep_symbolize_keys
-    attrs = {}
+    attrs = {
+      name: g_place[:name],
+      url: g_place[:website],
+      lat: g_place[:geometry][:location][:lat],
+      long: g_place[:geometry][:location][:lng],
+      thumbnail_url: g_place[:thumbnailUrl],
+      submitter_id: current_user.id,
+      google_places_id: g_place[:place_id],
+    }
 
     g_place[:address_components].each do |component|
       component_type = component[:types][0].to_sym
@@ -108,17 +116,10 @@ class ListingsController < ApplicationController
         attrs[address_component] = component[:short_name]
       end
     end
-    attrs[:name] = g_place[:name]
     if g_place[:formatted_phone_number]
       attrs[:phone] = g_place[:formatted_phone_number].gsub(/[()+\s-]/, "")
     end
     attrs[:address] = "#{attrs.delete(:street_number)} #{attrs.delete(:route)}"
-    attrs[:url]   = g_place[:website]
-    attrs[:lat]   = g_place[:geometry][:location][:lat]
-    attrs[:long] = g_place[:geometry][:location][:lng]
-    attrs[:thumbnail_url] = g_place[:thumbnailUrl]
-    attrs[:submitter_id] = current_user.id
-    attrs[:google_places_id] = g_place[:place_id]
     attrs
   end
 
