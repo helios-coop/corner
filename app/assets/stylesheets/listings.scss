@@ -1,21 +1,10 @@
 // Place all the styles related to the Listings controller here.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$standard-radius: 20px;
-$listings-background-color: #ebebeb;
-$card-text-color: black;
-$navbar-color-lighter-1: #f7eec8;
-$navbar-color: #fbdd58;
-$navbar-color-darker-1: #f1ce35;
-$bitcoin-organge: #f5922f;
+@import "application";
 
-// #listing-form {
-//   #accepts {
-//     margin-right: 5px;
-//     color: green;
-//     font-weight: 500;
-//   }
-// }
+////Variables
+$listings-background-color: #fbdd58;
 
 .primary-color {
   color: $navbar-color;
@@ -71,6 +60,24 @@ $bitcoin-organge: #f5922f;
         #hours-currencies-reviews {
           display: none;
         }
+      }
+    }
+
+    // Mobile
+
+    #map-card {
+      width: 100%;
+      height: 150px;
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-bottom: 5px;
+      border-radius: $standard-radius;
+      overflow: hidden;
+      #map {
+        width: 100%;
+        height: 100%;
+        display: inline;
+        float: left;
       }
     }
   }

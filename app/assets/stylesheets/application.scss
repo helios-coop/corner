@@ -26,16 +26,7 @@
 // @import "boot_extended_370_components/style-15"; // This might start overiding things
 // @import "ashobiz/ashobiz.base";
 // @import "ashobiz/ashobiz-90";
+
 @import "bootstrap";
 @import "font-awesome";
-@import "corner";
-
-// footer {
-//   position: absolute;
-//   bottom: 0;
-//   width: 100%;
-//   height: 60px;
-//   line-height: 60px;
-//   background-color: #f78153;
-//   color: white !important;
-// }
+@import "corner-shared"; // needs to be after bootstrap
