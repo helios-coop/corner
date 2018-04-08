@@ -5,7 +5,7 @@
         %span.mr-2= @listing.name
 
         -# TODO: Make into a view helper or decorator or whateves
-        %span.rating
+        .rating
           - 1.upto(@google_place.rating) do
             .star-icon.d-inline= fa_icon "star"
           - if (@google_place.rating % 1) >= 0.9
