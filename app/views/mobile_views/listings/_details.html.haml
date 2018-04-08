@@ -61,12 +61,7 @@
                   %ul.list-unstyled
                     - @google_place.opening_hours['weekday_text'].each do |day|
                       %li= day
-              - else
-                #hours
-                  %strong.mb-0 Hours:
-                  %ul.list-unstyled
-                    - @google_place.opening_hours['weekday_text'].each do |day|
-                      %li= day
+
 
             .col-12
               %p
