@@ -35,10 +35,6 @@ $bitcoin-organge: #f5922f;
         margin-right: 25px;
         border-radius: $standard-radius;
 
-        .star-icon {
-          color: $navbar-color;
-        }
-
         .card-body {
           padding-left: 10px;
           padding-top: 10px;
@@ -203,15 +199,15 @@ $bitcoin-organge: #f5922f;
         font-size: 0.75em;
         color: $navbar-color-darker-1;
       }
-
-      .star-icon {
-        color: $navbar-color;
-      }
-
-      .bitcoin-orange {
-        color: $bitcoin-organge;
-      }
     }
+  }
+
+  .star-icon {
+    color: $navbar-color;
+  }
+
+  .bitcoin-orange {
+    color: $bitcoin-organge;
   }
 }
 
