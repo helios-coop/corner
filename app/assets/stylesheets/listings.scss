@@ -94,6 +94,14 @@ $listings-background-color: #fbdd58;
         float: left;
       }
     }
+
+    #photos {
+      border-radius: $standard-radius;
+      margin-left: 25px;
+      margin-right: 25px;
+      overflow: hidden;
+      border-color: $navbar-color-darker-1;
+    }
   }
 
   @media (min-width: 576px) {
