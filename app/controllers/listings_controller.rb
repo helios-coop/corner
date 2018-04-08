@@ -94,36 +94,28 @@ class ListingsController < ApplicationController
     postal_code: "zipcode",
   }.freeze
 
-  # Fuck you google places. Seriously the worst API ever.
-  # What the actual fuck were you thinking with the data structure
-  # returned from 'autocomplete.getPlace()'.
-  # Its like a bad interview question.
-  # https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform?utm_source=welovemapsdevelopers&utm_campaign=mdr-gdl#style_autocomplete
-
-  # Ahhh, we can clean all this nonsense up with the Ruby Gem: https://github.com/qpowell/google_places
   def listing_attributes_from_params
     g_place = JSON.parse params["google-place"]
     attrs = {}
 
     g_place["address_components"].each do |component|
-      if ADDR_COMPONENTS_MAP[component["types"][0].to_sym] == "city"
-        attrs[ADDR_COMPONENTS_MAP[component["types"][0].to_sym].to_sym] = component["long_name"]
-      elsif ADDR_COMPONENTS_MAP[component["types"][0].to_sym].present?
-        attrs[ADDR_COMPONENTS_MAP[component["types"][0].to_sym].to_sym] = component["short_name"]
+      component_type = component["types"][0].to_sym
+      if ADDR_COMPONENTS_MAP[component_type] == "city"
+        attrs[ADDR_COMPONENTS_MAP[component_type].to_sym] = component["long_name"]
+      elsif ADDR_COMPONENTS_MAP[component_type].present?
+        attrs[ADDR_COMPONENTS_MAP[component_type].to_sym] = component["short_name"]
       end
     end
     attrs[:name] = g_place["name"]
     if g_place["formatted_phone_number"]
       attrs[:phone] = g_place["formatted_phone_number"].gsub(/[()+\s-]/, "")
     end
-    attrs[:address] = "#{attrs[:street_number]} #{attrs[:route]}"
+    attrs[:address] = "#{attrs.delete(:street_number)} #{attrs.delete(:route)}"
     attrs[:url]   = g_place["website"]
     attrs[:lat]   = g_place["geometry"]["location"]["lat"]
     attrs[:long] = g_place["geometry"]["location"]["lng"]
     attrs[:thumbnail_url] = g_place["thumbnailUrl"]
     attrs[:submitter_id] = current_user.id
-    attrs.delete(:street_number)
-    attrs.delete(:route)
     attrs[:google_places_id] = g_place["place_id"]
     attrs
   end
