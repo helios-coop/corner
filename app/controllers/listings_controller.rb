@@ -100,10 +100,12 @@ class ListingsController < ApplicationController
 
     g_place["address_components"].each do |component|
       component_type = component["types"][0].to_sym
-      if ADDR_COMPONENTS_MAP[component_type] == :city
-        attrs[ADDR_COMPONENTS_MAP[component_type]] = component["long_name"]
-      elsif ADDR_COMPONENTS_MAP[component_type].present?
-        attrs[ADDR_COMPONENTS_MAP[component_type]] = component["short_name"]
+      address_component = ADDR_COMPONENTS_MAP[component_type]
+
+      if address_component == :city
+        attrs[address_component] = component["long_name"]
+      elsif address_component.present?
+        attrs[address_component] = component["short_name"]
       end
     end
     attrs[:name] = g_place["name"]
