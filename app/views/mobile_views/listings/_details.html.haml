@@ -1,0 +1,110 @@
+.card
+  .card-body
+    - if @listing
+      %h1.card-title
+        %span.mr-2= @listing.name
+
+        -# TODO: Make into a view helper or decorator or whateves
+        %span.rating
+          - 1.upto(@google_place.rating) do
+            .star-icon.d-inline= fa_icon "star"
+          - if (@google_place.rating % 1) >= 0.9
+            .star-icon.d-inline= fa_icon "star"
+          - elsif (@google_place.rating % 1) >= 0.5
+            .star-icon.d-inline= fa_icon "star-half"
+
+      .row
+        .col-12
+          %ul.list-unstyled
+            %h4
+              Price Level:
+              - if @google_place.price_level
+                - 1.upto(4) do
+                  .bitcoin-orange.d-inline= fa_icon "btc"
+              - else
+                .primary-color-darker-1.d-inline Unknown
+
+            %li
+              = fa_icon "building"
+              = "#{@listing.address}, #{@listing.city}, #{@listing.state}"
+
+            %li
+              = fa_icon "phone"
+              = @google_place.formatted_phone_number
+            %li
+              %span
+                -# = fa_icon "desktop"
+                = link_to @google_place.website, @google_place.website, target: "_blank",   class: "detail-url"
+
+        .col-12
+          .show-details-button
+            = link_to "Show Details", "#", class: "btn btn-primary btn-sm btn-outline-success", id: "show-details"
+
+          .row#hours-currencies-reviews
+            .col-12
+              %p.d-inline
+                - if @google_place.opening_hours && @google_place.opening_hours['open_now']
+                  %strong.open-now
+                    Open Now:
+                    .d-inline.text-success Yes
+                - elsif @google_place.opening_hours
+                  %strong.open-now
+                    Open Now:
+                    .d-inline.primary-color-darker-1 No
+                - else
+                  Unknown
+
+
+              - if @google_place.opening_hours
+                #hours
+                  %strong.mb-0 Hours:
+                  %ul.list-unstyled
+                    - @google_place.opening_hours['weekday_text'].each do |day|
+                      %li= day
+              - else
+                #hours
+                  %strong.mb-0 Hours:
+                  %ul.list-unstyled
+                    - @google_place.opening_hours['weekday_text'].each do |day|
+                      %li= day
+
+            .col-12
+              %p
+                %strong Currencies Accepted
+
+              - @listing.currencies.each do |currency|
+                %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png"
+
+
+
+
+            .col-12.mt-3
+              %p
+                %strong Reviews:
+              %ul.list-group.list-group-flush
+                - @reviews.each do |review|
+                  %li.list-group-item
+                    %p
+                      - 1.upto(review.rating) do
+                        .star-icon.d-inline= fa_icon "star"
+
+                    %blockquote.blockquote
+                      %p.mb-0.mx-5= review.text
+                      %footer.blockquote-footer
+                        = review.author_name
+
+    - else
+      %h4 No listings found for your location. Satoshi suggests searching somewhere else.
+      = image_tag "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960", width: 300
+
+:javascript
+  $("#show-details").click(function(event) {
+    event.preventDefault();
+    $("#hours-currencies-reviews").toggle();
+    if ($("#show-details").text() == "Hide Details"){
+      $("#show-details").text("Show Details");
+    } else {
+      $("#show-details").text("Hide Details");
+    }
+
+  })

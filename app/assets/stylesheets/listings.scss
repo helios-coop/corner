@@ -28,6 +28,50 @@ $bitcoin-organge: #f5922f;
 #listings-index {
   @media (min-width: 0px) {
     background-color: $navbar-color;
+
+    #mobile-listing-details {
+      .card {
+        margin-left: 25px;
+        margin-right: 25px;
+        border-radius: 10px;
+      }
+      .card-body {
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      h4 {
+        font-size: 1em;
+      }
+
+      li {
+        font-size: 0.75em;
+      }
+
+      p {
+        font-size: 0.75em;
+      }
+
+      #show-details {
+        font-size: 0.65em;
+        background: $navbar-color;
+        margin-top: -10px;
+        margin-bottom: 5px;
+      }
+
+      #hours {
+        font-size: 0.75em;
+      }
+
+      #hours-currencies-reviews {
+        display: none;
+      }
+    }
   }
 
   @media (min-width: 576px) {
@@ -39,14 +83,12 @@ $bitcoin-organge: #f5922f;
   }
 
   .listings-column {
-    // Mobile
     @media (min-width: 0px) {
       padding-top: 5px;
       padding-left: 10px;
       padding-right: 10px;
     }
 
-    // Desktop
     @media (min-width: 576px) {
       padding-left: 15px;
       padding-right: 15px;
@@ -54,57 +96,25 @@ $bitcoin-organge: #f5922f;
   }
 
   #listing-cards {
-    // Mobile
     @media (min-width: 0px) {
-      padding-top: 0px;
-      padding-left: 0px;
+      padding-top: 5px;
+      padding-left: 10px;
 
       .card {
         max-height: 75px;
 
-        .card-title {
-          font-size: 0.8em;
-        }
-
         .card-body {
-          padding-left: 12px;
-          padding-right: 5px;
-          padding-top: 10px;
-          padding-bottom: 10px;
-        }
-        .card-body a {
-          .card-text {
-            font-size: 0.75em;
-          }
-        }
-
-        .img-container {
-          width: 40%;
+          padding-top: 5px;
         }
       }
     }
 
-    // Desktop
     @media (min-width: 576px) {
       padding-top: 15px;
       padding-left: 15px;
 
       .card {
         max-height: 175px;
-
-        .card-title {
-          font-size: 1em;
-        }
-
-        .card-body a {
-          .card-text {
-            font-size: 1em;
-          }
-        }
-
-        .img-container {
-          width: 45%;
-        }
       }
     }
 
@@ -127,13 +137,22 @@ $bitcoin-organge: #f5922f;
         text-decoration: none;
         color: $card-text-color;
 
+        .card-text {
+          font-size: 1em;
+        }
+
         address.card-text {
           font-size: 0.75em;
         }
       }
+
+      .img-container {
+        width: 45%;
+      }
     }
   }
 
+  // Desktop
   #map-photos-details {
     margin-left: -10px;
 
@@ -167,21 +186,19 @@ $bitcoin-organge: #f5922f;
         border-bottom-left-radius: $standard-radius;
         margin-left: 10px;
       }
-    }
-  }
 
-  #listing-details {
-    a.detail-url {
-      font-size: 0.75em;
-      color: $navbar-color-darker-1;
-    }
+      a.detail-url {
+        font-size: 0.75em;
+        color: $navbar-color-darker-1;
+      }
 
-    .star-icon {
-      color: $navbar-color;
-    }
+      .star-icon {
+        color: $navbar-color;
+      }
 
-    .bitcoin-orange {
-      color: $bitcoin-organge;
+      .bitcoin-orange {
+        color: $bitcoin-organge;
+      }
     }
   }
 }
