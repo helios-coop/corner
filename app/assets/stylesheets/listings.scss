@@ -60,6 +60,19 @@ $listings-background-color: #fbdd58;
 
         #hours-currencies-reviews {
           display: none;
+
+          #phone-url {
+            margin-top: 10px;
+            margin-bottom: -15px;
+          }
+
+          #open-now {
+            margin-bottom: -15px;
+          }
+
+          #accepted {
+            margin-bottom: 5px;
+          }
         }
       }
     }
