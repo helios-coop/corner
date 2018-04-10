@@ -32,20 +32,22 @@
                     %img{src: "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960"}
 
     .col.sm-8#map-photos-details
-      #map-photos
-        -# https://developers.google.com/maps/documentation/javascript/adding-a-google-map
-        #map
+      - if @google_place
 
-        #photos
-          #carouselControls.carousel.slide{"data-ride" => "carousel"}
-            = render "carousel"
+        #map-photos
+          -# https://developers.google.com/maps/documentation/javascript/adding-a-google-map
+          #map
 
-            %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselControls", :role => "button"}
-              %span.carousel-control-prev-icon{"aria-hidden" => "true"}
-              %span.sr-only Previous
-            %a.carousel-control-next{"data-slide" => "next", :href => "#carouselControls", :role => "button"}
-              %span.carousel-control-next-icon{"aria-hidden" => "true"}
-              %span.sr-only Next
+          #photos
+            #carouselControls.carousel.slide{"data-ride" => "carousel"}
+              = render "carousel"
+
+              %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselControls", :role => "button"}
+                %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+                %span.sr-only Previous
+              %a.carousel-control-next{"data-slide" => "next", :href => "#carouselControls", :role => "button"}
+                %span.carousel-control-next-icon{"aria-hidden" => "true"}
+                %span.sr-only Next
 
       .row#listing-details
         -# Displayed dynamically via ajax

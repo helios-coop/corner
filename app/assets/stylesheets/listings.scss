@@ -116,6 +116,13 @@ $listings-background-color: #fbdd58;
       overflow: hidden;
       border-color: $navbar-color-darker-1;
     }
+
+    #no-listing-found {
+      border-radius: $standard-radius;
+      overflow: hidden;
+      margin-top: 0px;
+      margin-bottom: 200px;
+    }
   }
 
   @media (min-width: 576px) {
@@ -241,6 +248,13 @@ $listings-background-color: #fbdd58;
       a.detail-url {
         font-size: 0.75em;
         color: $navbar-color-darker-1;
+      }
+
+      #no-listing-found {
+        border-radius: $standard-radius;
+        overflow: hidden;
+        margin-top: 50px;
+        margin-bottom: 50px;
       }
     }
   }
