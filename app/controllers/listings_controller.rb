@@ -96,8 +96,11 @@ class ListingsController < ApplicationController
 
   def listing_attributes_from_params
     g_place = JSON.parse(params["google-place"]).deep_symbolize_keys
+    phone = g_place[:formatted_phone_number]
+    phone = phone.gsub(/[()+\s-]/, "") if phone
     attrs = {
       name: g_place[:name],
+      phone: phone,
       url: g_place[:website],
       lat: g_place[:geometry][:location][:lat],
       long: g_place[:geometry][:location][:lng],
@@ -115,9 +118,6 @@ class ListingsController < ApplicationController
       elsif address_component.present?
         attrs[address_component] = component[:short_name]
       end
-    end
-    if g_place[:formatted_phone_number]
-      attrs[:phone] = g_place[:formatted_phone_number].gsub(/[()+\s-]/, "")
     end
     attrs[:address] = "#{attrs.delete(:street_number)} #{attrs.delete(:route)}"
     attrs
