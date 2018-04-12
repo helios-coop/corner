@@ -86,12 +86,12 @@ class ListingsController < ApplicationController
   end
 
   ADDR_COMPONENTS_MAP = {
-    street_number: "street_number",
-    route: "route",
-    locality: "city",
-    administrative_area_level_1: "state",
-    country: "country",
-    postal_code: "zipcode",
+    street_number: :street_number,
+    route: :route,
+    locality: :city,
+    administrative_area_level_1: :state,
+    country: :country,
+    postal_code: :zipcode,
   }.freeze
 
   def listing_attributes_from_params
@@ -100,10 +100,10 @@ class ListingsController < ApplicationController
 
     g_place["address_components"].each do |component|
       component_type = component["types"][0].to_sym
-      if ADDR_COMPONENTS_MAP[component_type] == "city"
-        attrs[ADDR_COMPONENTS_MAP[component_type].to_sym] = component["long_name"]
+      if ADDR_COMPONENTS_MAP[component_type] == :city
+        attrs[ADDR_COMPONENTS_MAP[component_type]] = component["long_name"]
       elsif ADDR_COMPONENTS_MAP[component_type].present?
-        attrs[ADDR_COMPONENTS_MAP[component_type].to_sym] = component["short_name"]
+        attrs[ADDR_COMPONENTS_MAP[component_type]] = component["short_name"]
       end
     end
     attrs[:name] = g_place["name"]
