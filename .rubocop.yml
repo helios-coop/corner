@@ -31,7 +31,6 @@ Metrics/AbcSize:
 
 Metrics/MethodLength:
   Exclude:
-    - '**/app/controllers/listings_controller.rb'
     - 'db/migrate/*'
     - '**/controllers/listings_controller.rb'
 
@@ -47,4 +46,3 @@ Metrics/BlockLength:
 Metrics/LineLength:
   Exclude:
     - '**/spec/controllers/listings_controller_spec.rb'
-    - '**/app/controllers/listings_controller.rb'
