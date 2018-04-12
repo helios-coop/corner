@@ -9,10 +9,12 @@ RSpec.describe Listing do
   it { is_expected.to belong_to(:submitter) }
 
   describe "uniqueness" do
-    subject { described_class.new(name: "Satoshi Cafe", submitter_id: satoshi.id, google_places_id: "12345") }
+    before { create(:listing, google_places_id: "abc123") }
 
     let(:satoshi) { users(:satoshi) }
 
-    it { is_expected.to validate_uniqueness_of(:google_places_id).case_insensitive }
+    it do
+      is_expected.to validate_uniqueness_of(:google_places_id).case_insensitive
+    end
   end
 end
