@@ -95,30 +95,30 @@ class ListingsController < ApplicationController
   }.freeze
 
   def listing_attributes_from_params
-    g_place = JSON.parse params["google-place"]
+    g_place = JSON.parse(params["google-place"]).deep_symbolize_keys
     attrs = {}
 
-    g_place["address_components"].each do |component|
-      component_type = component["types"][0].to_sym
+    g_place[:address_components].each do |component|
+      component_type = component[:types][0].to_sym
       address_component = ADDR_COMPONENTS_MAP[component_type]
 
       if address_component == :city
-        attrs[address_component] = component["long_name"]
+        attrs[address_component] = component[:long_name]
       elsif address_component.present?
-        attrs[address_component] = component["short_name"]
+        attrs[address_component] = component[:short_name]
       end
     end
-    attrs[:name] = g_place["name"]
-    if g_place["formatted_phone_number"]
-      attrs[:phone] = g_place["formatted_phone_number"].gsub(/[()+\s-]/, "")
+    attrs[:name] = g_place[:name]
+    if g_place[:formatted_phone_number]
+      attrs[:phone] = g_place[:formatted_phone_number].gsub(/[()+\s-]/, "")
     end
     attrs[:address] = "#{attrs.delete(:street_number)} #{attrs.delete(:route)}"
-    attrs[:url]   = g_place["website"]
-    attrs[:lat]   = g_place["geometry"]["location"]["lat"]
-    attrs[:long] = g_place["geometry"]["location"]["lng"]
-    attrs[:thumbnail_url] = g_place["thumbnailUrl"]
+    attrs[:url]   = g_place[:website]
+    attrs[:lat]   = g_place[:geometry][:location][:lat]
+    attrs[:long] = g_place[:geometry][:location][:lng]
+    attrs[:thumbnail_url] = g_place[:thumbnailUrl]
     attrs[:submitter_id] = current_user.id
-    attrs[:google_places_id] = g_place["place_id"]
+    attrs[:google_places_id] = g_place[:place_id]
     attrs
   end
 
