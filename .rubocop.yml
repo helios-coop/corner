@@ -28,11 +28,12 @@ Metrics/AbcSize:
   Exclude:
     - '**/app/models/listing.rb'
     - '**/app/controllers/listings_controller.rb'
+    - app/poros/google_place_params_parser.rb
 
 Metrics/MethodLength:
   Exclude:
     - 'db/migrate/*'
-    - '**/controllers/listings_controller.rb'
+    - app/poros/google_place_params_parser.rb
 
 Metrics/ClassLength:
   Exclude:
