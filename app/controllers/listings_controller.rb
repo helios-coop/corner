@@ -143,7 +143,8 @@ class ListingsController < ApplicationController
       gon.centerPoint = { latitude: latitude, longitude: longitude, zoom: 13 }
     else
       gon.centerPoint = center_point_from_ip_address
-      @listings = Listing.near([gon.centerPoint[:latitude], gon.centerPoint[:longitude]], 5)
+      coordinates = gon.centerPoint.values_at(:latitude, :longitude)
+      @listings = Listing.near(coordinates, 5)
     end
 
     gon.coordinates = @listings.map(&:coordinates)
@@ -151,7 +152,11 @@ class ListingsController < ApplicationController
 
   def center_point_from_ip_address
     if Rails.env.production?
-      { latitude: request.location.data["latitude"], longitude: request.location.data["longitude"], zoom: 13 }
+      {
+        latitude: request.location.data["latitude"],
+        longitude: request.location.data["longitude"],
+        zoom: 13,
+      }
     else
       { latitude: 37.791139, longitude: -122.396067, zoom: 9 }
     end
