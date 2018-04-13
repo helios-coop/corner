@@ -43,7 +43,3 @@ Metrics/BlockLength:
   Exclude:
     - '**/environments/production.rb'
     - 'spec/**/*_spec.rb'
-
-Metrics/LineLength:
-  Exclude:
-    - '**/spec/controllers/listings_controller_spec.rb'
