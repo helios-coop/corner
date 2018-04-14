@@ -30,7 +30,7 @@
         %hr
 
         #add-manually
-          Manual Form Here
+          = render "form"
 
         #add-via-google-places
           .input-group.mb-3.google-search-field
@@ -38,7 +38,7 @@
               %span#basic-addon1.input-group-text Name
             %input.form-control{"aria-describedby" => "basic-addon1", "aria-label" => "name", :placeholder => "Satoshi's Cafe", :type => "text", id: "searchTextField", required: true}
 
-          
+
           %p
             .media
               = image_tag 'http://www.sbs.com.au/news/sites/sbs.com.au.news/files/styles/full/public/BITCOIN.jpg?itok=HoUTbMII&mtime=1398071027', class: 'mr-3', id: 'image', height: '200'
