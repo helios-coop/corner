@@ -11,6 +11,7 @@ AllCops:
     - vendor/**/*
 Rails: { Enabled: true }
 
+Metrics/BlockLength: { Exclude: [config/**/*.rb, spec/**/*_spec.rb] }
 Metrics/MethodLength: { Exclude: [db/migrate/**] }
 RSpec/ExampleLength: { Enabled: false }
 RSpec/MultipleExpectations: { Enabled: false }
@@ -24,23 +25,17 @@ Style/TrailingCommaInArguments: { EnforcedStyleForMultiline: consistent_comma }
 Style/TrailingCommaInLiteral: { EnforcedStyleForMultiline: consistent_comma }
 Style/WordArray: { EnforcedStyle: brackets }
 
-# Things I'm not prepared to deal with at the moment. Feel free to refactor.
+# Things that can be improved
 Metrics/AbcSize:
   Exclude:
-    - '**/app/models/listing.rb'
-    - '**/app/controllers/listings_controller.rb'
     - app/poros/google_place_params_parser.rb
+    - app/controllers/listings_controller.rb
 
 Metrics/MethodLength:
   Exclude:
-    - 'db/migrate/*'
+    - db/migrate/**
     - app/poros/google_place_params_parser.rb
 
 Metrics/ClassLength:
   Exclude:
-    - '**/controllers/listings_controller.rb'
-
-Metrics/BlockLength:
-  Exclude:
-    - '**/environments/production.rb'
-    - 'spec/**/*_spec.rb'
+    - app/controllers/listings_controller.rb
