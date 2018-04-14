@@ -269,6 +269,24 @@ $listings-background-color: #fbdd58;
 }
 
 #listings-new-form {
+  .btn {
+    background: $navbar-color;
+    color: black;
+    border-radius: 20px;
+    border-color: $navbar-color-darker-1;
+  }
+
+  .btn-large {
+    padding: 20px;
+  }
+
+  .btn:hover {
+    background: $navbar-color-darker-1;
+  }
+
+  .selection-container {
+  }
+
   #add-via-google-places {
     display: show;
   }
@@ -278,11 +296,11 @@ $listings-background-color: #fbdd58;
   }
 
   #add-google-button {
-    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+    box-shadow: 0 0 0 0.2rem $navbar-color-lighter-1;
   }
 
   .missing-name {
-    box-shadow: 0 0 0 0.2rem rgba(243, 68, 68, 0.75);
+    box-shadow: 0 0 20px 5px $navbar-color-darker-1;
   }
 
   .currency-check-box {

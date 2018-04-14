@@ -23,10 +23,11 @@
             %dt.col-sm-2 Manually
             %dd.col-sm-10 If your listing is not on Google Maps, add it manually and upload photos.
 
-        .selection-container.mb-5
-          = link_to "Add Via Google Places", "#", class: "btn btn-large btn-success disabled", id: "add-google-button"
+        .selection-container.mb-4
+          = link_to "Add Via Google Places", "#", class: "btn btn-large btn-success disabled mr-2", id: "add-google-button"
           = link_to "Add Listing Manually", "#", class: "btn btn-large btn-success", id: "add-manually-button"
 
+        %hr
 
         #add-manually
           Manual Form Here
@@ -37,7 +38,7 @@
               %span#basic-addon1.input-group-text Name
             %input.form-control{"aria-describedby" => "basic-addon1", "aria-label" => "name", :placeholder => "Satoshi's Cafe", :type => "text", id: "searchTextField", required: true}
 
-          %hr
+          
           %p
             .media
               = image_tag 'http://www.sbs.com.au/news/sites/sbs.com.au.news/files/styles/full/public/BITCOIN.jpg?itok=HoUTbMII&mtime=1398071027', class: 'mr-3', id: 'image', height: '200'
@@ -114,10 +115,11 @@
     $("#add-via-google-places").toggle()
     $("#add-manually").toggle()
 
-    $("#add-google-button").css("box-shadow", "0 0 0 0.2rem rgba(40, 167, 69, 0.5)")
+    $("#add-google-button").css("box-shadow", "0 0 0 0.2rem rgba(234, 234, 46, 0.5)")
     $("#add-google-button").addClass("disabled")
 
     $("#add-manually-button").removeClass("disabled")
+    $("#add-manually-button").css("box-shadow", "none")
   })
 
   $("#add-manually-button").click(function(e){
@@ -126,7 +128,7 @@
     $("#add-via-google-places").toggle()
     $("#add-manually").toggle()
 
-    $("#add-manually-button").css("box-shadow", "0 0 0 0.2rem rgba(40, 167, 69, 0.5)")
+    $("#add-manually-button").css("box-shadow", "0 0 0 0.2rem rgba(234, 234, 46, 0.5)")
     $("#add-manually-button").addClass("disabled")
 
     $("#add-google-button").css("box-shadow", "none")
