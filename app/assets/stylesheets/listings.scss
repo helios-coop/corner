@@ -269,6 +269,22 @@ $listings-background-color: #fbdd58;
 }
 
 #listings-new-form {
+  #add-via-google-places {
+    display: show;
+  }
+
+  #add-manually {
+    display: none;
+  }
+
+  #add-google-button {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+  }
+
+  .missing-name {
+    box-shadow: 0 0 0 0.2rem rgba(243, 68, 68, 0.75);
+  }
+
   .currency-check-box {
     margin-right: 10px;
   }
