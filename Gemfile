@@ -38,7 +38,6 @@ gem "uglifier" # Use Uglifier as compressor for JavaScript assets
 # gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
 
 group :development, :test do
-  gem "capybara" # Adds support for Capybara system testing and selenium driver
   gem "factory_bot_rails"
   gem "faker"
   gem "foreman"
@@ -51,7 +50,6 @@ group :development, :test do
   gem "rspec-rails"
   gem "rubocop", require: false
   gem "rubocop-rspec", require: false
-  gem "selenium-webdriver"
 end
 
 group :development do
@@ -62,7 +60,10 @@ group :development do
 end
 
 group :test do
+  gem "capybara"
+  gem "capybara-screenshot", require: false
   gem "rspec_junit_formatter", require: false
+  gem "selenium-webdriver"
   gem "shoulda-matchers", "~> 3.1"
   gem "simplecov", require: false
 end
