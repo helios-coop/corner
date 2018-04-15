@@ -43,3 +43,5 @@ Metrics/ClassLength:
 Metrics/LineLength:
   Exclude:
     - app/controllers/application_controller.rb
+    - app/controllers/listings_controller.rb
+    - spec/controllers/listings_controller_spec.rb

@@ -14,6 +14,7 @@ class ListingsController < ApplicationController
   def new
     @listing = Listing.new
     @currencies = Currency.all
+    @states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
   end
 
   def create
@@ -82,11 +83,14 @@ class ListingsController < ApplicationController
     params
       .require(:listing)
       .permit(*PERMITTED_PARAMS)
-      .merge(submitter_id: current_user.id)
   end
 
   def listing_attributes_from_params
-    GooglePlaceParamsParser.new.call(params["google-place"])
+    if params[:from_google_places] == "true"
+      GooglePlaceParamsParser.new.call(params["google-place"])
+    else
+      listing_params
+    end
   end
 
   def create_google_place_variables(google_place_id)

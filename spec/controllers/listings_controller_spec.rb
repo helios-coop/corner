@@ -126,7 +126,7 @@ RSpec.describe ListingsController do
       File.read(File.join(fixture_path, "places.json"))
     end
 
-    let(:valid_params) { { 'google-place': google_place_params } }
+    let(:valid_params) { { 'google-place': google_place_params }.merge(from_google_places: "true") }
 
     context "when a user is logged in" do
       before do
