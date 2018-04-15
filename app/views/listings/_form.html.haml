@@ -3,67 +3,41 @@
 
 
 #listing-form
-  / UI
-  .ui-15
-    / UI Content
-    .ui-content
-      .container-fluid
-        .row
-          .col-md-8.col-sm-8.ui-padd
-            / Ui Form
-            .ui-form
-              / Heading
-              %h2 Listing
-              / Form
-              = form_for @listing do |f|
-                / UI Input
-                .ui-input
-                  / Input Box
-                  = f.text_field :name, class: "form-control", :placeholder => "Name"
-                  %label.ui-icon
-                    %i.fa.fa-user
-                .ui-input
-                  %label#accepts Accepts:
-                  - @currencies.each do |currency|
-                    .form-check.form-check-inline
+  = form_for @listing do |f|
+    .row.form-group
+      .col-sm-2= f.label :name
+      .col-sm-10= f.text_field :name, class: "form-control", :placeholder => "Satoshi's Cafe"
 
-                      = check_box_tag "currencies[]", currency.id,  @listing.currencies.include?(currency)
-                      %label{ class:"form-check-label", for:"#{currency.symbol}-Checkbox" }= "#{currency.symbol}"
+    .row.form-group
+      %label#accepts.col-sm-2 Accepted
+      .col-sm-10
+        - @currencies.each do |currency|
+          .form-check.form-check-inline
+            = check_box_tag "currencies[]", currency.id, @listing.currencies.include?(currency), class: "form-check-input", id: currency.symbol
+            %label{ class:"form-check-label", for:"#{currency.symbol}"}= currency.symbol
 
-                .ui-input
-                  = f.text_field :address, class: "form-control", :placeholder => "Address"
-                  %label.ui-icon
-                    %i.fa.fa-envelope-o
-                .ui-input
-                  = f.text_field :address2, class: "form-control", :placeholder => "Address 2"
-                  %label.ui-icon
-                    %i.fa.fa-envelope-o
-                .ui-input
-                  = f.text_field :city, class: "form-control", :placeholder => "City"
-                  %label.ui-icon
-                    %i.fa.fa-envelope-o
-                .ui-input
-                  = f.text_field :state, class: "form-control", :placeholder => "State"
-                  %label.ui-icon
-                    %i.fa.fa-envelope-o
-                .ui-input
-                  = f.text_field :zipcode, class: "form-control", :placeholder => "Zipcode"
-                  %label.ui-icon
-                    %i.fa.fa-envelope-o
-                .ui-input
-                  = f.text_field :phone, class: "form-control",  :placeholder => "Phone"
-                  %label.ui-icon
-                    %i.fa.fa-phone
-                .ui-input
-                  = f.text_field :url, class: "form-control", :placeholder => "Url"
-                  %label.ui-icon
-                    %i.fa.fa-lock
-                .ui-input
-                  = f.text_field :lat, class: "form-control", :placeholder => "Latitude"
-                  %label.ui-icon
-                    %i.fa.fa-lock
-                .ui-input
-                  = f.text_field :long, class: "form-control", :placeholder => "Longitude"
-                  %label.ui-icon
-                    %i.fa.fa-lock
-                = submit_tag "Submit", class: "btn btn-red btn-lg btn-block", :type => "submit"
+    .row.form-group
+      .col-sm-2= f.label :url
+      .col-sm-10= f.text_field :url, class: "form-control", :placeholder => "http://www.unchainedpodcast.co"
+
+    .form-row
+      .form-group.col-sm-6
+        = f.text_field :address, class: "form-control", :placeholder => "Address"
+      .form-group.col-sm-6
+        = f.text_field :address2, class: "form-control", :placeholder => "Address 2"
+      .form-group.col-sm-4
+        = f.text_field :city, class: "form-control", :placeholder => "City"
+
+      .form-group.col-sm-4
+        = f.select :state, options_for_select(@states), {}, { class: "form-control" }
+
+
+      .form-group.col-sm-4
+        = f.text_field :zipcode, class: "form-control", :placeholder => "Zipcode"
+      .form-group.col-sm-4
+        = f.text_field :phone, class: "form-control",  :placeholder => "Phone"
+      .form-group.col-sm-8
+        = hidden_field_tag :from_google_places, false
+
+    .row.form-group
+      .col-sm-2= submit_tag "Submit", class: "btn btn-red btn-lg btn-block ml-2", :type => "submit"
