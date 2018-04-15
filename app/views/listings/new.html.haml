@@ -83,8 +83,8 @@
 
   $("#add-google-button").click(function(e){
     e.preventDefault()
-    $("#add-via-google-places").toggle()
-    $("#add-manually").toggle()
+    $("#add-via-google-places").slideToggle()
+    $("#add-manually").slideToggle()
 
     $("#add-google-button").css("box-shadow", "0 0 0 0.2rem rgba(234, 234, 46, 0.5)")
     $("#add-google-button").addClass("disabled")
@@ -96,8 +96,8 @@
   $("#add-manually-button").click(function(e){
     e.preventDefault()
 
-    $("#add-via-google-places").toggle()
-    $("#add-manually").toggle()
+    $("#add-via-google-places").slideToggle()
+    $("#add-manually").slideToggle()
 
     $("#add-manually-button").css("box-shadow", "0 0 0 0.2rem rgba(234, 234, 46, 0.5)")
     $("#add-manually-button").addClass("disabled")

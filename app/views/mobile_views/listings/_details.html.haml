@@ -97,7 +97,7 @@
 :javascript
   $("#show-details").click(function(event) {
     event.preventDefault();
-    $("#hours-currencies-reviews").toggle();
+    $("#hours-currencies-reviews").slideToggle()
     if ($("#show-details").text() == "Hide Details"){
       $("#show-details").text("Show Details");
     } else {
