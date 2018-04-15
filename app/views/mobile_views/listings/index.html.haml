@@ -70,10 +70,10 @@
     var height = $("#map-card").height()
     if (height < 110) {
       $("#map-card").height(150)
-      $("#smaller-map-button").toggle()
+      $("#smaller-map-button").slideToggle()
     } else {
       $("#map-card").height(300)
-      $("#larger-map-button").toggle()
+      $("#larger-map-button").slideToggle()
     }
   })
 
@@ -83,10 +83,10 @@
     var height = $("#map-card").height()
     if (height > 200) {
       $("#map-card").height(150)
-      $("#larger-map-button").toggle()
+      $("#larger-map-button").slideToggle()
     } else {
       $("#map-card").height(100)
-      $("#smaller-map-button").toggle()
+      $("#smaller-map-button").slideToggle()
     }
   })
 
