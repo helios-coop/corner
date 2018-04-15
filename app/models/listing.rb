@@ -10,6 +10,8 @@ class Listing < ApplicationRecord
   has_many :currencies, through: :currencies_listings
   belongs_to :submitter, class_name: :User, inverse_of: :submissions
 
+  ALLOWED_STATES = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"].freeze
+
   # https://github.com/alexreisner/geocoder
   geocoded_by :full_address, latitude: :lat, longitude: :long
   reverse_geocoded_by :lat, :long
