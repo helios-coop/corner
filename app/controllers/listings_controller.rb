@@ -77,6 +77,7 @@ class ListingsController < ApplicationController
     :thumbnail_url,
     :url,
     :zipcode,
+    :online_only,
   ].freeze
 
   def listing_params

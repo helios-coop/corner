@@ -24,7 +24,7 @@
       .col-sm-10= f.text_field :url, class: "form-control", :placeholder => "http://www.unchainedpodcast.co"
     .row.form-group
       %label.col-sm-2{ class:"form-check-label", for:"online_only"} Online Only
-      .col-sm-2= check_box_tag :online_only, "online_only", @listing.online_only, class: "form-check-input", id: "online_only"
+      .col-sm-2= f.check_box :online_only, class: "form-check-input", id: "online_only"
     .form-row#address-components
       .form-group.col-sm-6
         = f.text_field :address, class: "form-control", :placeholder => "Address"
