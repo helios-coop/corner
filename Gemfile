@@ -11,9 +11,10 @@ ruby "2.4.1"
 
 # needs to be included before any other gems that use environment variables
 gem "dotenv-rails", groups: [:development, :test]
-gem "rails", "~> 5.1.5"
+gem "rails", "~> 5.2.0"
 
 gem "bcrypt" # Use ActiveModel has_secure_password
+gem "bootsnap", require: false
 gem "bootstrap"
 gem "browser"
 gem "dalli"
@@ -59,7 +60,7 @@ group :development do
 end
 
 group :test do
-  gem "capybara", "~> 2.18.0"
+  gem "capybara"
   gem "capybara-screenshot", require: false
   gem "rspec_junit_formatter", require: false
   gem "selenium-webdriver"
