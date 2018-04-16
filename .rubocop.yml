@@ -22,7 +22,8 @@ Style/SafeNavigation: { Enabled: false }
 Style/StringLiterals: { EnforcedStyle: double_quotes }
 Style/SymbolArray: { EnforcedStyle: brackets }
 Style/TrailingCommaInArguments: { EnforcedStyleForMultiline: consistent_comma }
-Style/TrailingCommaInLiteral: { EnforcedStyleForMultiline: consistent_comma }
+Style/TrailingCommaInArrayLiteral: { EnforcedStyleForMultiline: consistent_comma }
+Style/TrailingCommaInHashLiteral: { EnforcedStyleForMultiline: consistent_comma }
 Style/WordArray: { EnforcedStyle: brackets }
 
 # Things that can be improved
