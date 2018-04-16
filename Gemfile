@@ -13,8 +13,6 @@ ruby "2.4.1"
 gem "dotenv-rails", groups: [:development, :test]
 gem "rails", "~> 5.1.5"
 
-# https://github.com/ActsAsParanoid/acts_as_paranoid/issues/36
-gem "acts_as_paranoid", github: "ActsAsParanoid/acts_as_paranoid"
 gem "bcrypt" # Use ActiveModel has_secure_password
 gem "bootstrap"
 gem "browser"
@@ -27,6 +25,7 @@ gem "haml-rails"
 gem "honeybadger"
 gem "jbuilder" # Build JSON APIs with ease
 gem "jquery-rails"
+gem "paranoia"
 gem "pg"
 gem "pg_search"
 gem "puma" # Use Puma as the app server

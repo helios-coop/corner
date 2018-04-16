@@ -54,7 +54,7 @@ class ListingsController < ApplicationController
     @listing = Listing.find(params[:id])
     if @listing.editable_by?(current_user)
       @listing.update!(listing_params)
-      @listing.currencies = Currency.where(id: params[:currencies])
+      @listing.replace_currencies(Currency.where(id: params[:currencies]))
     else
       flash[:danger] = "Sorry, you cannot edit this listing"
     end

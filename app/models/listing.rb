@@ -31,4 +31,11 @@ class Listing < ApplicationRecord
   def editable_by?(user)
     user == submitter || ["admin", "moderator"].include?(user.role)
   end
+
+  def replace_currencies(currencies)
+    new_currencies = currencies - self.currencies
+    removed_currencies = self.currencies - currencies
+    currencies_listings.where(currency_id: removed_currencies).destroy_all
+    self.currencies += new_currencies
+  end
 end
