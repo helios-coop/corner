@@ -376,7 +376,7 @@ DEPENDENCIES
   honeybadger
   jbuilder
   jquery-rails
-  listen (>= 3.0.5, < 3.2)
+  listen
   paranoia
   pg
   pg_search
@@ -391,14 +391,14 @@ DEPENDENCIES
   rubocop-rspec
   sass-rails
   selenium-webdriver
-  shoulda-matchers (~> 3.1)
+  shoulda-matchers
   sidekiq
   simplecov
   spring
-  spring-watcher-listen (~> 2.0.0)
+  spring-watcher-listen
   turbolinks
   uglifier
-  web-console (>= 3.3.0)
+  web-console
 
 RUBY VERSION
    ruby 2.4.1p111
