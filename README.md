@@ -83,39 +83,6 @@ and
 
 and then navigate to `localhost:3000`
 
----
-
-For feature tests you'll need the chromedriver.
-You can either install using homebrew or download the binary directly.
-
-**Homebrew**
-
-```sh
-brew tap caskroom/cask
-```
-
-then
-
-```sh
-brew cask install chromedriver
-```
-
-### OR
-
-**Downloading**
-
-Download it here:
-
-<https://sites.google.com/a/chromium.org/chromedriver/downloads>
-
-Unpack it and install it in any folder in your OS path
-
-To see your paths runs
-
-```sh
-echo $PATH
-```
-
 ## Data Model
 
 Keep this updated:

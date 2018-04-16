@@ -62,6 +62,7 @@ end
 group :test do
   gem "capybara"
   gem "capybara-screenshot", require: false
+  gem "chromedriver-helper"
   gem "rspec_junit_formatter", require: false
   gem "selenium-webdriver"
   gem "shoulda-matchers", "~> 3.1"
