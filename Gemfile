@@ -60,7 +60,7 @@ group :development do
 end
 
 group :test do
-  gem "capybara"
+  gem "capybara", "~> 2.18.0"
   gem "capybara-screenshot", require: false
   gem "rspec_junit_formatter", require: false
   gem "selenium-webdriver"
