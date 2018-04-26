@@ -16,7 +16,7 @@ class GooglePlaceParamsParser
     phone = g_place[:formatted_phone_number]
     phone = phone.gsub(/[()+\s-]/, "") if phone
 
-    attrs = {
+    {
       name: g_place[:name],
       phone: phone,
       url: g_place[:website],
@@ -24,9 +24,13 @@ class GooglePlaceParamsParser
       long: g_place[:geometry][:location][:lng],
       thumbnail_url: g_place[:thumbnailUrl],
       google_places_id: g_place[:place_id],
+      **address(g_place[:address_components]),
     }
+  end
 
-    g_place[:address_components].each do |component|
+  def address(address_components)
+    attrs = {}
+    address_components.each do |component|
       component_type = component[:types][0].to_sym
       address_component = ADDR_COMPONENTS_MAP[component_type]
 
