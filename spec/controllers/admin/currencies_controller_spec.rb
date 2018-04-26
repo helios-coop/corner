@@ -55,4 +55,42 @@ RSpec.describe Admin::CurrenciesController, type: :controller do
       end
     end
   end
+
+  describe "#update" do
+    before { login(admin) }
+
+    let(:valid_params) { { name: "Watcoin", symbol: "WAT" } }
+
+    context "when params are valid" do
+      it "flashes a success message" do
+        patch(:update, params: { currency: valid_params, id: bitcoin.id })
+        expect(flash[:success]).to eq("Currency updated.")
+      end
+
+      it "updates the currency" do
+        expect do
+          patch(:update, params: { currency: valid_params, id: bitcoin.id })
+        end.to change { bitcoin.reload.name }.to("Watcoin")
+      end
+
+      it "redirects to currencies path" do
+        patch(:update, params: { currency: valid_params, id: bitcoin.id })
+        expect(response).to redirect_to(admin_currencies_path)
+      end
+    end
+
+    context "when params are invalid" do
+      it "does not update the currency" do
+        expect do
+          patch(:update, params: { currency: { name: nil }, id: bitcoin.id })
+        end.not_to change { bitcoin.reload.name }.from("Bitcoin")
+      end
+
+      it "renders the new template" do
+        patch(:update, params: { currency: { name: nil }, id: bitcoin.id })
+
+        expect(response).to render_template(:new)
+      end
+    end
+  end
 end
