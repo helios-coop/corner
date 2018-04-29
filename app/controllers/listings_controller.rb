@@ -80,9 +80,7 @@ class ListingsController < ApplicationController
   ].freeze
 
   def listing_params
-    params
-      .require(:listing)
-      .permit(*PERMITTED_PARAMS)
+    params.require(:listing).permit(*PERMITTED_PARAMS)
   end
 
   def listing_attributes_from_params
