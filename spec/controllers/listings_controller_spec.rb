@@ -4,6 +4,9 @@ require "rails_helper"
 
 RSpec.describe ListingsController do
   let(:satoshi) { users(:satoshi) }
+  let(:bitcoin)  { currencies(:bitcoin) }
+  let(:litecoin) { currencies(:litecoin) }
+  let(:tron)     { currencies(:tron) }
   let!(:listing) do
     create(:listing, submitter: satoshi, lat: 37.791139, long: -122.396067)
   end
@@ -32,24 +35,41 @@ RSpec.describe ListingsController do
   end
 
   describe "GET #edit" do
-    before do
-      login(satoshi)
-      get :edit, params: { id: listing.id }
+    context "when current user is the submitter" do
+      before do
+        login(satoshi)
+        get :edit, params: { id: listing.id }
+      end
+
+      it "renders the index template" do
+        expect(response).to render_template :edit
+      end
+
+      it "finds the correct listing" do
+        expect(assigns(:listing).name).to eq listing.name
+      end
     end
 
-    it "renders the index template" do
-      expect(response).to render_template :edit
-    end
+    context "when current_user is not the submitter, admin or moderator" do
+      let(:justin_sun) { create(:user, display_name: "justin") }
+      let(:valid_params) { { id: listing.id } }
 
-    it "finds the correct listing" do
-      expect(assigns(:listing).name).to eq listing.name
+      before do
+        login(justin_sun)
+        get :edit, params: valid_params
+      end
+
+      it "redirects to the listings page" do
+        expect(response).to redirect_to(listings_path)
+      end
+
+      it "set the flash" do
+        expect(flash[:danger]).to eq "Sorry, you cannot edit this listing"
+      end
     end
   end
 
   describe "PATCH #update" do
-    let(:bitcoin)  { currencies(:bitcoin) }
-    let(:litecoin) { currencies(:litecoin) }
-    let(:tron)     { currencies(:tron) }
     let(:valid_params) do
       {
         id: listing.id,
@@ -144,6 +164,27 @@ RSpec.describe ListingsController do
 
       it "adds currencies to a listing" do
         expect(assigns(:listing).currencies.pluck(:name)).to eq ["Bitcoin"]
+      end
+    end
+
+    context "when params are invalid" do
+      let(:invalid_params) { { listing: { name: nil } } }
+
+      before { login(satoshi) }
+
+      it "flashes an error" do
+        post(:create, params: invalid_params)
+        expect(flash[:danger]).to match(/horribly wrong/)
+      end
+
+      it "assigns currencies" do
+        post(:create, params: invalid_params)
+        expect(assigns(:currencies)).to match_array(Currency.all)
+      end
+
+      it "renders the :new template" do
+        post(:create, params: invalid_params)
+        expect(response).to render_template(:new)
       end
     end
 
