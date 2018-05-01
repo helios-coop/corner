@@ -1,5 +1,7 @@
 = form_tag listings_path, class: 'form-inline', method: :get do
-  .col-8
-    = search_field_tag :location, nil, class: 'form-control mr-sm-2 location-search', placeholder: 'Location'
-  .col-4
+  .col-5.pr-0
+    = search_field_tag :location, params[:location], class: 'form-control mr-sm-2 location-search', placeholder: 'Location'
+  .col-4.pr-0.pl-1
+    = search_field_tag :name, params[:name], class: 'form-control mr-sm-2 location-search', placeholder: 'Name'
+  .col-3.pr-0.pl-1
     %button.btn.btn-outline.btn-outline-success.nav-button.my-2.my-sm-0{:type => 'submit'} Search

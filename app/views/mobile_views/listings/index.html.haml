@@ -5,14 +5,13 @@
 
   #mobile-search-bar= render "layouts/search"
 
-  - if @google_place
-    .row
-      .card#map-card
-        #update-size-container
-          = link_to "Larger", "#", class: "btn btn-primary btn-sm btn-outline-success map-button  ", id: "larger-map-button"
-          = link_to "Smaller", "#", class: "btn btn-primary btn-sm btn-outline-success map-button ", id: "smaller-map-button"
-        -# https://developers.google.com/maps/documentation/javascript/adding-a-google-map
-        #map
+  .row
+    .card#map-card
+      #update-size-container
+        = link_to "Larger", "#", class: "btn btn-primary btn-sm btn-outline-success map-button  ", id: "larger-map-button"
+        = link_to "Smaller", "#", class: "btn btn-primary btn-sm btn-outline-success map-button ", id: "smaller-map-button"
+      -# https://developers.google.com/maps/documentation/javascript/adding-a-google-map
+      #map
 
   .row#mobile-listing-details
     - if @listing && @listing.google_places_id
@@ -33,7 +32,11 @@
                   - listing.currencies.each do |currency|
                     %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png", height: 12
 
-                %address.card-text.mb-0= truncate "#{listing.address}, #{listing.city}", length: 35
+                %address.card-text.mb-0
+                  - if listing.online_only
+                    Online Only
+                  - else
+                    = truncate "#{listing.address}, #{listing.city}, #{listing.state}", length: 35
                 .card-text
                   -# I dont know why css formating breaks if you remove the link.
                   - if current_user && listing.editable_by?(current_user)
@@ -52,16 +55,16 @@
 
   .row
     .col#map-photos
-    - if @google_place
-      .card#photo-card
-        #carouselControls.carousel.slide{"data-ride" => "carousel"}
-          = render "carousel"
-          %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselControls", :role => "button"}
-            %span.carousel-control-prev-icon{"aria-hidden" => "true"}
-            %span.sr-only Previous
-          %a.carousel-control-next{"data-slide" => "next", :href => "#carouselControls", :role => "button"}
-            %span.carousel-control-next-icon{"aria-hidden" => "true"}
-            %span.sr-only Next
+    -# - if @google_place
+    .card#photo-card
+      #carouselControls.carousel.slide{"data-ride" => "carousel"}
+        = render "listings/carousel"
+        %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselControls", :role => "button"}
+          %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+          %span.sr-only Previous
+        %a.carousel-control-next{"data-slide" => "next", :href => "#carouselControls", :role => "button"}
+          %span.carousel-control-next-icon{"aria-hidden" => "true"}
+          %span.sr-only Next
 
 
 
