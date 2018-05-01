@@ -163,6 +163,10 @@ $listings-background-color: #fbdd58;
         }
         .img-container {
           width: 40%;
+
+          img {
+            max-width: 100%;
+          }
         }
       }
     }
@@ -181,6 +185,10 @@ $listings-background-color: #fbdd58;
 
         .img-container {
           width: 45%;
+
+          img {
+            max-width: 100%;
+          }
         }
       }
     }
@@ -243,6 +251,10 @@ $listings-background-color: #fbdd58;
         border-top-left-radius: $standard-radius;
         border-bottom-left-radius: $standard-radius;
         margin-left: 10px;
+      }
+
+      .card.non-google-place {
+        width: 100%;
       }
 
       a.detail-url {
@@ -309,5 +321,9 @@ $listings-background-color: #fbdd58;
 
   .currency-check-box {
     margin-right: 10px;
+  }
+
+  .custom-file {
+    margin-bottom: 20px;
   }
 }

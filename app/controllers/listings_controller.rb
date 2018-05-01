@@ -33,7 +33,10 @@ class ListingsController < ApplicationController
 
   def show
     @listing = Listing.find(params[:id])
-    create_google_place_variables(@listing.google_places_id)
+
+    if @listing.google_places_id
+      create_google_place_variables(@listing.google_places_id)
+    end
 
     respond_to do |format|
       format.js
@@ -77,6 +80,7 @@ class ListingsController < ApplicationController
     :url,
     :zipcode,
     :online_only,
+    images: [],
   ].freeze
 
   def listing_params

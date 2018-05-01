@@ -26,3 +26,6 @@
 /coverage
 .env.local
 .env.test.local
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key

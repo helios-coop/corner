@@ -15,8 +15,10 @@
         #map
 
   .row#mobile-listing-details
-    -# Displayed dynamically via ajax
-    = render "listings/details"
+    - if @listing && @listing.google_places_id
+      = render "listings/google_place_details"
+    - else
+      = render "listings/non_google_place_details"
 
   .row
     .col
@@ -42,9 +44,11 @@
 
               .img-container
                 - if listing.thumbnail_url
-                  %img{src: listing.thumbnail_url, width: 200}
+                  = image_tag listing.thumbnail_url, width: 200
+                - elsif listing.images.attached?
+                  = image_tag listing.images.last
                 - else
-                  %img{src: "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960"}
+                  = image_tag "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960"
 
   .row
     .col#map-photos

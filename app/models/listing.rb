@@ -13,6 +13,11 @@ class Listing < ApplicationRecord
   # Get lat and long, unless listing comes from google places
   after_validation :geocode, unless: :google_places_id
 
+  # Active Storage
+  # https://evilmartians.com/chronicles/rails-5-2-active-storage-and-beyond
+  has_many_attached :images
+  scope :with_eager_loaded_images, -> { eager_load(images_attachments: :blob) }
+
   ALLOWED_STATES = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"].freeze
 
   # https://github.com/alexreisner/geocoder

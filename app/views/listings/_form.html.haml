@@ -36,6 +36,14 @@
       .form-group.col-sm-4
         = f.text_field :zipcode, class: "form-control", :placeholder => "Zipcode"
 
+    %hr
+
+    .input-group
+      .custom-file
+        #inputGroupFile.custom-file-input= f.file_field :images, multiple: true
+        %label.custom-file-label{:for => "inputGroupFile"} Upload Images
+
+
     .form-row
       = hidden_field_tag :from_google_places, false
 
