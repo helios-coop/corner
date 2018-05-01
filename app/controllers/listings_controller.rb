@@ -4,8 +4,7 @@ class ListingsController < ApplicationController
   before_action :authorize, except: [:index, :show]
 
   def index
-    # set_listings_and_coordinates
-    get_listings
+    set_listings
 
     return if @listings.blank?
     @listing = @listings.first
@@ -107,7 +106,7 @@ class ListingsController < ApplicationController
   end
 
   # TODO: Maybe move this to the listing model
-  def get_listings
+  def set_listings
     if params[:location].present? && params[:name].present?
       @listings = Listing.near(params[:location], 5).search_by_name(params[:name])
 

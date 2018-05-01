@@ -21,8 +21,8 @@ class Listing < ApplicationRecord
   # Search By Name
   include PgSearch
   pg_search_scope :search_by_name,
-                  :against => :name,
-                  :using => { :tsearch => {:prefix => true} }
+                  against: :name,
+                  using: { tsearch: { prefix: true } }
 
   # Search By Location
   # https://github.com/alexreisner/geocoder

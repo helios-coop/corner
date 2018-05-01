@@ -12,7 +12,6 @@ AllCops:
 Rails: { Enabled: true }
 
 Metrics/BlockLength: { Exclude: [config/**/*.rb, spec/**/*_spec.rb] }
-Metrics/MethodLength: { Exclude: [db/migrate/**] }
 RSpec/ExampleLength: { Enabled: false }
 RSpec/MultipleExpectations: { Enabled: false }
 Rails/HasManyOrHasOneDependent: { Enabled: false }
@@ -36,6 +35,7 @@ Metrics/MethodLength:
   Exclude:
     - db/migrate/**
     - app/poros/google_place_params_parser.rb
+    - app/controllers/listings_controller.rb
 
 Metrics/ClassLength:
   Exclude:

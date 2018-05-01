@@ -26,11 +26,11 @@ RSpec.describe Listing do
 
     context "with partial search terms" do
       it "finds by partial word" do
-        expect(Listing.search_by_name("Card").count).to eq 1
+        expect(described_class.search_by_name("Card").count).to eq 1
       end
 
       it "finds by single word" do
-        expect(Listing.search_by_name("cafe").count).to eq 2
+        expect(described_class.search_by_name("cafe").count).to eq 2
       end
     end
   end
