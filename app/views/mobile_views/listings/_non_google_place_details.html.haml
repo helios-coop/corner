@@ -1,0 +1,38 @@
+- if @listing
+  .card.non-google-place
+    .card-body
+      %h1.card-title
+        %span.mr-2= @listing.name
+
+      .row
+        .col-sm-6
+          %ul.list-unstyled
+            %li
+              = fa_icon "building"
+              = "#{@listing.address}, #{@listing.city}, #{@listing.state}"
+
+            %li
+              = fa_icon "phone"
+              = @listing.phone
+            %li
+              %span
+                -# = fa_icon "desktop"
+                = link_to @listing.url, @listing.url, target: "_blank",   class: "detail-url"
+
+        .col-sm-6
+          %p
+            %strong Currencies Accepted
+
+          - @listing.currencies.each do |currency|
+            %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png"
+
+- else
+  .card#no-listing-found
+    %img.card-img-top{src: "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=500", width: "300"}
+    .card-body
+      %h4.card-title No listings found for your search location
+      %p.card-text Satoshi suggests searching somewhere else
+    .card-footer
+      %h5
+        Try a different Location
+        = link_to "or starting here", "/listings?location=san+francisco"

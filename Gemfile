@@ -13,6 +13,7 @@ ruby "2.4.1"
 gem "dotenv-rails", groups: [:development, :test]
 gem "rails", "~> 5.2.0"
 
+gem "aws-sdk-s3", require: false
 gem "bcrypt" # Use ActiveModel has_secure_password
 gem "bootsnap", require: false
 gem "bootstrap"
