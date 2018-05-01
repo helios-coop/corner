@@ -47,3 +47,4 @@ Metrics/LineLength:
     - app/controllers/listings_controller.rb
     - app/models/listing.rb
     - spec/controllers/listings_controller_spec.rb
+    - db/migrate/**

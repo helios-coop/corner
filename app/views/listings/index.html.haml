@@ -50,7 +50,7 @@
                 %span.sr-only Next
 
       .row#listing-details
-        - if @listing.google_places_id
+        - if @listing && @listing.google_places_id
           = render "listings/google_place_details"
         - else
           = render "listings/non_google_place_details"
