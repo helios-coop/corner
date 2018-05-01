@@ -4,7 +4,7 @@ class ListingsController < ApplicationController
   before_action :authorize, except: [:index, :show]
 
   def index
-    set_listings_and_coordinates
+    set_listings
 
     return if @listings.blank?
     @listing = @listings.first
@@ -97,17 +97,29 @@ class ListingsController < ApplicationController
 
   def create_google_place_variables(google_place_id)
     return if Rails.env.test?
+
     @google_places_client = GooglePlaces::Client.new(google_maps_api_key)
+
+    return unless @listing.google_places_id
     @google_place = @google_places_client.spot(google_place_id)
     @reviews = @google_place.reviews.first(5)
   end
 
-  def set_listings_and_coordinates
-    if params[:location].present?
+  # TODO: Maybe move this to the listing model
+  def set_listings
+    if params[:location].present? && params[:name].present?
+      @listings = Listing.near(params[:location], 5).search_by_name(params[:name])
+
+      latitude, longitude = Geocoder.coordinates params[:location]
+      gon.centerPoint = { latitude: latitude, longitude: longitude, zoom: 13 }
+    elsif params[:location].present?
       @listings = Listing.near(params[:location], 5)
 
       latitude, longitude = Geocoder.coordinates params[:location]
       gon.centerPoint = { latitude: latitude, longitude: longitude, zoom: 13 }
+    elsif params[:name].present?
+      @listings = Listing.search_by_name(params[:name])
+      gon.centerPoint = center_point_from_ip_address
     else
       gon.centerPoint = center_point_from_ip_address
       coordinates = gon.centerPoint.values_at(:latitude, :longitude)
