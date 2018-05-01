@@ -18,11 +18,18 @@ class Listing < ApplicationRecord
   has_many_attached :images
   scope :with_eager_loaded_images, -> { eager_load(images_attachments: :blob) }
 
-  ALLOWED_STATES = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"].freeze
+  # Search By Name
+  include PgSearch
+  pg_search_scope :search_by_name,
+                  :against => :name,
+                  :using => { :tsearch => {:prefix => true} }
 
+  # Search By Location
   # https://github.com/alexreisner/geocoder
   geocoded_by :full_address, latitude: :lat, longitude: :long
   reverse_geocoded_by :lat, :long
+
+  ALLOWED_STATES = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"].freeze
 
   # Used by geocoder. Here we construct the full address on the fly.
   # Google Places returns a formatted address. For performance reasons it might
