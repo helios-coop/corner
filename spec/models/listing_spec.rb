@@ -6,6 +6,7 @@ RSpec.describe Listing do
   it { is_expected.to validate_presence_of(:name) }
   it { is_expected.to validate_presence_of(:submitter_id) }
   it { is_expected.to have_many(:currencies) }
+  it { is_expected.to have_many(:categories) }
   it { is_expected.to belong_to(:submitter) }
 
   describe "uniqueness" do

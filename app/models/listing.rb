@@ -10,6 +10,9 @@ class Listing < ApplicationRecord
   has_many :currencies, through: :currencies_listings
   belongs_to :submitter, class_name: :User, inverse_of: :submissions
 
+  has_many :categories_listings
+  has_many :categories, through: :categories_listings
+
   # Get lat and long, unless listing comes from google places
   after_validation :geocode, unless: :google_places_id
 
