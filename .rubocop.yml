@@ -40,6 +40,7 @@ Metrics/MethodLength:
 Metrics/ClassLength:
   Exclude:
     - app/controllers/listings_controller.rb
+    - app/models/category.rb
 
 Metrics/LineLength:
   Exclude:
