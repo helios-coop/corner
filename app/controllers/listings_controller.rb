@@ -109,7 +109,8 @@ class ListingsController < ApplicationController
     @reviews = @google_place.reviews.first(5)
   end
 
-  # TODO: Maybe move this to the listing model
+  # TODO: Probably should rethink this search method
+  # TODO: Need to implement all 9 possibilities. Definitely not the best approach.
   def set_listings
     if params[:location].present? && params[:name].present?
       @listings = Listing.near(params[:location], 5).search_by_name(params[:name])
@@ -124,6 +125,10 @@ class ListingsController < ApplicationController
     elsif params[:name].present?
       @listings = Listing.search_by_name(params[:name])
       gon.centerPoint = center_point_from_ip_address
+
+    elsif params[:category].present?
+      categories = Category.search_by_name(params[:category])
+      @listings = categories.map(&:listings).flatten
     else
       gon.centerPoint = center_point_from_ip_address
       coordinates = gon.centerPoint.values_at(:latitude, :longitude)

@@ -6,6 +6,12 @@ class Category < ApplicationRecord
   has_many :categories_listings
   has_many :listings, through: :categories_listings
 
+  # Search By Name
+  include PgSearch
+  pg_search_scope :search_by_name,
+                  against: :name,
+                  using: { tsearch: { prefix: true } }
+
   def self.update_all_categories
     CATEGORY_NAMES.each do |category_name|
       Category.find_or_create_by(name: category_name)
