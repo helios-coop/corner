@@ -18,4 +18,9 @@
 //= require popper
 //= require bootstrap-sprockets
 
+// Semantic-UI: https://github.com/doabit/semantic-ui-sass#javascripts
+// https://semantic-ui.com/introduction/getting-started.html
+//= require semantic-ui/transition
+//= require semantic-ui/dropdown
+
 //= require_tree .

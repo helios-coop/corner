@@ -14,6 +14,10 @@ $listings-background-color: #fbdd58;
   color: $navbar-color-darker-1;
 }
 
+.categories-badge {
+  background: $navbar-color;
+}
+
 #listings-index {
   // Mobile
   @media (min-width: 0px) {
@@ -125,10 +129,6 @@ $listings-background-color: #fbdd58;
     }
   }
 
-  @media (min-width: 576px) {
-    background-color: $listings-background-color;
-  }
-
   #mobile-search-bar {
     background-color: $navbar-color;
   }
@@ -219,6 +219,10 @@ $listings-background-color: #fbdd58;
   }
 
   // Desktop
+  @media (min-width: 576px) {
+    background-color: $listings-background-color;
+  }
+
   #map-photos-details {
     margin-left: -10px;
 

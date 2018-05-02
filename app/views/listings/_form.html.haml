@@ -43,6 +43,11 @@
         #inputGroupFile.custom-file-input= f.file_field :images, multiple: true
         %label.custom-file-label{:for => "inputGroupFile"} Upload Images
 
+    %hr
+    .input-group.mb-5
+      = label_tag "Add Categories"
+      = select_tag "categories", options_for_select(@categories),{ class: "ui fluid search dropdown", :multiple => "", :prompt => 'Search' }
+
 
     .form-row
       = hidden_field_tag :from_google_places, false
@@ -56,3 +61,5 @@
     console.log("I'm Online Only")
     $("#address-components").slideToggle()
   })
+
+  $('.ui.dropdown').dropdown();
