@@ -30,3 +30,4 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "corner-shared"; // needs to be after bootstrap
+@import "semantic-ui"; // not sure why we can't just import specific files. https://github.com/doabit/semantic-ui-sass#css

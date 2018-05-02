@@ -14,6 +14,7 @@ class ListingsController < ApplicationController
   def new
     @listing = Listing.new
     @currencies = Currency.all
+    @categories = Category.all.pluck(:name)
   end
 
   def create
@@ -22,6 +23,7 @@ class ListingsController < ApplicationController
 
     if @listing.save
       @listing.currencies = Currency.where(id: params[:currencies])
+      @listing.categories << Category.where(name: params[:categories])
 
       redirect_to listings_path
     else
@@ -45,6 +47,8 @@ class ListingsController < ApplicationController
 
   def edit
     @listing = Listing.find(params[:id])
+    @categories = Category.all.pluck(:name)
+
     if @listing.editable_by?(current_user)
       @currencies = Currency.all
     else
