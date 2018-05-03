@@ -56,6 +56,6 @@ Metrics/CyclomaticComplexity:
   Exclude:
     - app/models/listing.rb
 
-Metrics/PercievedComplexity:
+Metrics/PerceivedComplexity:
   Exclude:
     - app/models/listing.rb

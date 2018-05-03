@@ -37,11 +37,5 @@ RSpec.describe Listing do
         expect(described_class.full_search(name: "Litecoin").count).to eq 1
       end
     end
-
-    context "when searched by location" do
-    end
-
-    context "when searched by category" do
-    end
   end
 end
