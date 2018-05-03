@@ -34,6 +34,23 @@ class Listing < ApplicationRecord
 
   ALLOWED_STATES = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"].freeze
 
+  SEARCHES = {
+    name: ->(scope, term) { scope.search_by_name(term) },
+    location: ->(scope, term) { scope.near(term, 5) },
+    category: ->(scope, term) { scope.merge(Category.search_by_name(term)) },
+    coordinates: ->(scope, term) { scope.near(term, 5) },
+  }.freeze
+
+  # def self.full_search(search_options)
+  #   scope = self
+  #
+  #   search_options.each do |search_type, term|
+  #     scope = SEARCHES.fetch(search_type).call(scope, term)
+  #   end
+  #
+  #   scope
+  # end
+
   def self.full_search(search_options)
     name_query = search_options[:name]
     location_query = search_options[:location]
