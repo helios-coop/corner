@@ -128,7 +128,7 @@ class ListingsController < ApplicationController
 
     elsif params[:category].present?
       categories = Category.search_by_name(params[:category])
-      @listings = categories.map(&:listings).flatten
+      @listings = categories.map(&:listings).flatten.uniq
     else
       gon.centerPoint = center_point_from_ip_address
       coordinates = gon.centerPoint.values_at(:latitude, :longitude)

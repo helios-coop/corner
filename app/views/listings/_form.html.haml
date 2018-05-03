@@ -46,7 +46,7 @@
     %hr
     .input-group.mb-5
       = label_tag "Add Categories"
-      = select_tag "categories", options_for_select(@categories),{ class: "ui fluid search dropdown", :multiple => "", :prompt => 'Search' }
+      = select_tag "categories[]", options_for_select(@categories),{ class: "ui fluid search dropdown", id: "categories", :multiple => "", :prompt => 'Search' }
 
 
     .form-row
