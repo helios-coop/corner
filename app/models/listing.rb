@@ -51,14 +51,27 @@ class Listing < ApplicationRecord
   #   scope
   # end
 
+  # Ok, this is cray cray (but works until Robert makes me clean it up)
   def self.full_search(search_options)
     name_query = search_options[:name]
     location_query = search_options[:location]
     category_query = search_options[:category]
     coordinates_query = search_options[:coordinates]
 
-    if name_query && location_query
+    if name_query && location_query && category_query
+      near(location_query, 5).search_by_name(name_query).select do |listing|
+        (listing.categories & Category.search_by_name(category_query)).any?
+      end.flatten.uniq
+    elsif name_query && location_query
       near(location_query, 5).search_by_name(name_query)
+    elsif name_query && category_query
+      search_by_name(name_query).select do |listing|
+        (listing.categories & Category.search_by_name(category_query)).any?
+      end.flatten.uniq
+    elsif location_query && category_query
+      near(location_query, 5).select do |listing|
+        (listing.categories & Category.search_by_name(category_query)).any?
+      end.flatten.uniq
     elsif name_query
       search_by_name(name_query)
     elsif location_query
