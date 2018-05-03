@@ -5,6 +5,7 @@ class ListingsController < ApplicationController
 
   def index
     set_listings
+    set_map_center_point unless gon.centerPoint
 
     return if @listings.blank?
     @listing = @listings.first
@@ -109,33 +110,36 @@ class ListingsController < ApplicationController
     @reviews = @google_place.reviews.first(5)
   end
 
-  # TODO: Probably should rethink this search method
-  # TODO: Need to implement all 9 possibilities. Definitely not the best approach.
   def set_listings
-    if params[:location].present? && params[:name].present?
-      @listings = Listing.near(params[:location], 5).search_by_name(params[:name])
+    search_terms            = {}
+    search_terms[:name]     = params[:name]     if params[:name].present?
+    search_terms[:location] = params[:location] if params[:location].present?
+    search_terms[:category] = params[:category] if params[:category].present?
 
-      latitude, longitude = Geocoder.coordinates params[:location]
-      gon.centerPoint = { latitude: latitude, longitude: longitude, zoom: 13 }
-    elsif params[:location].present?
-      @listings = Listing.near(params[:location], 5)
-
-      latitude, longitude = Geocoder.coordinates params[:location]
-      gon.centerPoint = { latitude: latitude, longitude: longitude, zoom: 13 }
-    elsif params[:name].present?
-      @listings = Listing.search_by_name(params[:name])
-      gon.centerPoint = center_point_from_ip_address
-
-    elsif params[:category].present?
-      categories = Category.search_by_name(params[:category])
-      @listings = categories.map(&:listings).flatten.uniq
+    if search_terms.present?
+      @listings = Listing.full_search(search_terms)
     else
-      gon.centerPoint = center_point_from_ip_address
+      set_map_center_point
       coordinates = gon.centerPoint.values_at(:latitude, :longitude)
-      @listings = Listing.near(coordinates, 5)
+      @listings = Listing.full_search(coordinates: coordinates)
     end
 
     gon.coordinates = @listings.map(&:coordinates)
+  end
+
+  def set_map_center_point
+    if params[:location]
+      latitude, longitude = Geocoder.coordinates params[:location]
+      gon.centerPoint = { latitude: latitude, longitude: longitude, zoom: 13 }
+
+    # Currently showing map when no location given because we haven't dealt with hiding it in haml yet
+    elsif params[:name] || params[:category]
+      gon.centerPoint = center_point_from_ip_address
+
+    # If no search terms given pull location from ip address
+    else
+      gon.centerPoint = center_point_from_ip_address
+    end
   end
 
   def center_point_from_ip_address
