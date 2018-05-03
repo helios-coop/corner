@@ -149,20 +149,23 @@ RSpec.describe ListingsController do
     let(:valid_params) { { 'google-place': google_place_params }.merge(from_google_places: "true") }
 
     context "when a user is logged in" do
+      subject(:post_request) { post :create, params: valid_params.merge(currencies: currency_params) }
+
       before do
         login(satoshi)
-        post :create, params: valid_params.merge(currencies: currency_params)
       end
 
       it "adds a listing to the database" do
-        expect(Listing.count).to eq 2
+        expect { post_request }.to change(Listing, :count).by(1)
       end
 
       it "sets the submitter correctly" do
+        post_request
         expect(Listing.last.submitter).to eq satoshi
       end
 
       it "adds currencies to a listing" do
+        post_request
         expect(assigns(:listing).currencies.pluck(:name)).to eq ["Bitcoin"]
       end
     end
@@ -189,12 +192,10 @@ RSpec.describe ListingsController do
     end
 
     context "when a user is not logged in" do
-      before do
-        post :create, params: valid_params
-      end
+      subject(:post_request) { post :create, params: valid_params }
 
       it "adds a listing to the database" do
-        expect(Listing.count).to eq 1
+        expect { post_request }.not_to change(Listing, :count)
       end
     end
   end
