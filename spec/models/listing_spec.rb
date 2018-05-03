@@ -32,9 +32,24 @@ RSpec.describe Listing do
   end
 
   describe "full_search" do
+    let(:litecoin_cafe) { described_class.find_by(name: "Litecoin Cafe") }
+    let(:cafe_category) { Category.find_by(name: "cafe") }
+
+    before { litecoin_cafe.categories << cafe_category }
+
+    context "when searched by name and category" do
+      it do
+        expect(described_class.full_search(name: "Litecoin", category: "cafe").first).to eq litecoin_cafe
+      end
+
+      it do
+        expect(described_class.full_search(name: "Litecoin", category: "bad category").count).to eq 0
+      end
+    end
+
     context "when searched by name" do
       it do
-        expect(described_class.full_search(name: "Litecoin").count).to eq 1
+        expect(described_class.full_search(name: "Litecoin").first).to eq litecoin_cafe
       end
     end
   end
