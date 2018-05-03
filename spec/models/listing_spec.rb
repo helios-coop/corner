@@ -43,6 +43,5 @@ RSpec.describe Listing do
 
     context "when searched by category" do
     end
-
   end
 end
