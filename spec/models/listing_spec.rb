@@ -20,18 +20,21 @@ RSpec.describe Listing do
   end
 
   describe "search_by_name" do
-    before do
-      create(:listing, name: "Cardano Cafe")
-      create(:listing, name: "Cat Cafe")
-    end
-
     context "with partial search terms" do
       it "finds by partial word" do
-        expect(described_class.search_by_name("Card").count).to eq 1
+        expect(described_class.search_by_name("Ether").count).to eq 1
       end
 
       it "finds by single word" do
         expect(described_class.search_by_name("cafe").count).to eq 2
+      end
+    end
+  end
+
+  describe "full_search" do
+    context "when searched by name" do
+      it do
+        expect(described_class.full_search(name: "Litecoin").count).to eq 1
       end
     end
   end
