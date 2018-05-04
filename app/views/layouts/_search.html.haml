@@ -1,5 +1,9 @@
+
 = form_tag listings_path, class: 'form-inline', method: :get do
+  %span
     = search_field_tag :location, params[:location], class: 'form-control mr-sm-2 location-search', placeholder: 'Location'
     = search_field_tag :name, params[:name], class: 'form-control mr-sm-2 location-search', placeholder: 'Name'
-    = search_field_tag :category, params[:category], class: 'form-control mr-sm-2 location-search', placeholder: 'Category'
-    %button.btn.btn-outline.btn-outline-success.nav-button.my-2.my-sm-0{:type => 'submit'} Search
+  %span#category-search
+    = select_tag :category, options_for_select(@categories),{ class: "ui fluid search dropdown form-control mr-sm-2 location-search", :prompt => 'Category' }
+
+  %button.btn.btn-outline.btn-outline-success.nav-button.my-2.my-sm-0{:type => 'submit'} Search

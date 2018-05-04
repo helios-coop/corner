@@ -90,6 +90,9 @@
     })
   };
 
+  // for semanitic-ui
+  $('.ui.dropdown').dropdown();
+
 
 -# This has to be called after javascript above loads
 %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{google_maps_api_key}&callback=initMap"}

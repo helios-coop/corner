@@ -51,7 +51,11 @@ $standard-radius: 20px;
 }
 
 .location-search {
-  background-color: $navbar-color-lighter-1;
-  border-radius: $standard-radius;
-  border-color: $navbar-button-color;
+  background-color: $navbar-color-lighter-1 !important;
+  border-radius: $standard-radius !important;
+  border-color: $navbar-button-color !important;
+}
+
+#category-search {
+  min-width: 200px;
 }

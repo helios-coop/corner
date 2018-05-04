@@ -6,6 +6,7 @@ class ListingsController < ApplicationController
   def index
     set_listings
     set_map_center_point unless gon.centerPoint
+    @categories = Category.all.pluck(:name)
 
     return if @listings.blank?
     @listing = @listings.first
