@@ -57,13 +57,18 @@
               - @google_place.opening_hours['weekday_text'].each do |day|
                 %li= day
 
-        .col-sm-4
+        .col-sm-4.pb-2
           %p
             %strong Currencies Accepted
 
           - @listing.currencies.each do |currency|
             %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png"
 
+          %p.mt-3.mb-0
+            %strong Categories
+
+          - @listing.categories.pluck(:name).each do |category_name|
+            %span.badge.badge-primary.categories-badge= category_name
 
 
 

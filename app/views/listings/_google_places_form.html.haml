@@ -27,6 +27,12 @@
           -# = check_box_tag "currencies[]", currency.id, @listing.currencies.include?(currency), id: currency.id
           -# %label{ class:"form-check-label", for:"#{currency.id}"}=
 
+        %hr
+        .input-group.mb-5
+          = label_tag "Add Categories"
+          = select_tag "categories[]", options_for_select(@categories),{ class: "ui fluid search dropdown", id: "categories", :multiple => "", :prompt => 'Search' }
+
+
         = hidden_field_tag 'google-place', "not added yet"
         = hidden_field_tag :from_google_places, true
 
