@@ -38,18 +38,21 @@ RSpec.describe Listing do
     before { litecoin_cafe.categories << cafe_category }
 
     context "when searched by name and category" do
-      it do
-        expect(described_class.full_search(name: "Litecoin", category: "cafe").first).to eq litecoin_cafe
+      it "returns associated listings when they match" do
+        search_params = { name: "Litecoin", category: "cafe" }
+        expect(described_class.full_search(search_params)).to eq [litecoin_cafe]
       end
 
-      it do
-        expect(described_class.full_search(name: "Litecoin", category: "bad category").count).to eq 0
+      it "returns an empty collection when no listings are found" do
+        search_params = { name: "Litecoin", category: "bad category" }
+        expect(described_class.full_search(search_params)).to eq []
       end
     end
 
     context "when searched by name" do
-      it do
-        expect(described_class.full_search(name: "Litecoin").first).to eq litecoin_cafe
+      it "returns associated listings when they match" do
+        search_params = { name: "Litecoin" }
+        expect(described_class.full_search(search_params)).to eq [litecoin_cafe]
       end
     end
   end
