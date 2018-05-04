@@ -19,7 +19,7 @@ RSpec.describe ListingsController do
     end
 
     it "finds all listings in the db" do
-      expect(assigns(:listings).count(:all)).to eq 1
+      expect(assigns(:listings).count).to eq 1
     end
   end
 
