@@ -37,51 +37,20 @@ class Listing < ApplicationRecord
   SEARCHES = {
     name: ->(scope, term) { scope.search_by_name(term) },
     location: ->(scope, term) { scope.near(term, 5) },
-    category: ->(scope, term) { scope.merge(Category.search_by_name(term)) },
+    category: lambda do |scope, term|
+      scope.joins(:categories).merge(Category.search_by_name(term))
+    end,
     coordinates: ->(scope, term) { scope.near(term, 5) },
   }.freeze
 
-  # def self.full_search(search_options)
-  #   scope = self
-  #
-  #   search_options.each do |search_type, term|
-  #     scope = SEARCHES.fetch(search_type).call(scope, term)
-  #   end
-  #
-  #   scope
-  # end
-
-  # Ok, this is cray cray (but works until Robert makes me clean it up)
   def self.full_search(search_options)
-    name_query = search_options[:name]
-    location_query = search_options[:location]
-    category_query = search_options[:category]
-    coordinates_query = search_options[:coordinates]
+    scope = self
 
-    if name_query && location_query && category_query
-      near(location_query, 5).search_by_name(name_query).select do |listing|
-        (listing.categories & Category.search_by_name(category_query)).any?
-      end.flatten.uniq
-    elsif name_query && location_query
-      near(location_query, 5).search_by_name(name_query)
-    elsif name_query && category_query
-      search_by_name(name_query).select do |listing|
-        (listing.categories & Category.search_by_name(category_query)).any?
-      end.flatten.uniq
-    elsif location_query && category_query
-      near(location_query, 5).select do |listing|
-        (listing.categories & Category.search_by_name(category_query)).any?
-      end.flatten.uniq
-    elsif name_query
-      search_by_name(name_query)
-    elsif location_query
-      near(location_query, 5)
-    elsif category_query
-      categories = Category.search_by_name(category_query)
-      categories.map(&:listings).flatten.uniq
-    elsif coordinates_query
-      near(coordinates_query, 5)
+    search_options.each do |search_type, term|
+      scope = SEARCHES.fetch(search_type).call(scope, term)
     end
+
+    scope
   end
 
   # Used by geocoder. Here we construct the full address on the fly.
