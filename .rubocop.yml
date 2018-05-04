@@ -49,8 +49,6 @@ Metrics/LineLength:
     - app/controllers/application_controller.rb
     - app/controllers/listings_controller.rb
     - app/models/listing.rb
-    - spec/controllers/listings_controller_spec.rb
-    - spec/models/listing_spec.rb
     - db/migrate/**
 
 Metrics/CyclomaticComplexity:
