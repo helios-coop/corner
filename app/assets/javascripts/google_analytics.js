@@ -9,13 +9,20 @@
       ga = document.createElement("script");
       ga.type = "text/javascript";
       ga.async = true;
-      ga.src = ("https:" === document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+      ga.src =
+        ("https:" === document.location.protocol
+          ? "https://ssl"
+          : "http://www") + ".google-analytics.com/ga.js";
       firstScript = document.getElementsByTagName("script")[0];
       firstScript.parentNode.insertBefore(ga, firstScript);
-      if (typeof Turbolinks !== 'undefined' && Turbolinks.supported) {
-        return document.addEventListener("page:change", (function() {
-          return GoogleAnalytics.trackPageview();
-        }), true);
+      if (typeof Turbolinks !== "undefined" && Turbolinks.supported) {
+        return document.addEventListener(
+          "page:change",
+          function() {
+            return GoogleAnalytics.trackPageview();
+          },
+          true
+        );
       } else {
         return GoogleAnalytics.trackPageview();
       }
@@ -41,13 +48,11 @@
     };
 
     GoogleAnalytics.analyticsId = function() {
-      return 'UA-118755192-1';
+      return gon.google_analytics_key;
     };
 
     return GoogleAnalytics;
-
   })();
 
   GoogleAnalytics.load();
-
-}).call(this);
+}.call(this));
