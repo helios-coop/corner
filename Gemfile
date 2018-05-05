@@ -18,6 +18,7 @@ gem "bcrypt" # Use ActiveModel has_secure_password
 gem "bootsnap", require: false
 gem "bootstrap"
 gem "browser"
+gem "coffee-rails"
 gem "dalli"
 gem "font-awesome-rails" # https://github.com/bokmann/font-awesome-rails
 gem "geocoder"
