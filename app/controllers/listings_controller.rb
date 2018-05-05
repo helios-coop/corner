@@ -38,13 +38,9 @@ class ListingsController < ApplicationController
   def show
     @listing = Listing.find(params[:id])
 
-    if @listing.google_places_id
-      create_google_place_variables(@listing.google_places_id)
-    end
+    create_google_place_variables(@listing.google_places_id)
 
-    respond_to do |format|
-      format.js
-    end
+    respond_to { |format| format.js }
   end
 
   def edit
@@ -101,13 +97,11 @@ class ListingsController < ApplicationController
     end
   end
 
-  def create_google_place_variables(google_place_id)
-    return if Rails.env.test?
+  def create_google_place_variables(google_places_id)
+    return unless google_places_id
 
-    @google_places_client = GooglePlaces::Client.new(google_maps_api_key)
-
-    return unless @listing.google_places_id
-    @google_place = @google_places_client.spot(google_place_id)
+    google_places_client = GooglePlaces::Client.new(google_maps_api_key)
+    @google_place = google_places_client.spot(google_places_id)
     @reviews = @google_place.reviews.first(5)
   end
 
