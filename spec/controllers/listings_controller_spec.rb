@@ -205,13 +205,31 @@ RSpec.describe ListingsController do
   end
 
   describe "GET #show" do
-    before do
-      login(satoshi)
-      post :show, xhr: true, params: { id: listing.id, format: "js" }
-    end
+    before { login(satoshi) }
 
     it "finds the correct listing via ajax call" do
+      post :show, xhr: true, params: { id: listing.id, format: "js" }
       expect(assigns(:listing).name).to eq listing.name
+    end
+
+    vcr_options = { cassette_name: "Tierra Mia" }
+    context "when listing has a google_places_id", vcr: vcr_options do
+      before do
+        listing.update!(google_places_id: "ChIJQcRZgK2Aj4ARnXNv0N65GMI")
+      end
+
+      it "sets a google_place variable" do
+        post :show, xhr: true, params: { id: listing.id, format: "js" }
+
+        expect(assigns(:google_place).name).to eq "Tierra Mia Coffee"
+      end
+
+      it "sets a reviews variable" do
+        post :show, xhr: true, params: { id: listing.id, format: "js" }
+
+        expect(assigns(:reviews).length).to eq 5
+        expect(assigns(:reviews).first.text).to include "Tierra Mia is so good"
+      end
     end
   end
 end

@@ -1,0 +1,353 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/details/json?extensions=&key=trash&language=&placeid=ChIJQcRZgK2Aj4ARnXNv0N65GMI
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sat, 05 May 2018 03:02:18 GMT
+      Expires:
+      - Sat, 05 May 2018 03:07:18 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '4676'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "html_attributions" : [],
+           "result" : {
+              "address_components" : [
+                 {
+                    "long_name" : "2001",
+                    "short_name" : "2001",
+                    "types" : [ "street_number" ]
+                 },
+                 {
+                    "long_name" : "Broadway",
+                    "short_name" : "Broadway",
+                    "types" : [ "route" ]
+                 },
+                 {
+                    "long_name" : "Downtown",
+                    "short_name" : "Downtown",
+                    "types" : [ "neighborhood", "political" ]
+                 },
+                 {
+                    "long_name" : "Oakland",
+                    "short_name" : "Oakland",
+                    "types" : [ "locality", "political" ]
+                 },
+                 {
+                    "long_name" : "Alameda County",
+                    "short_name" : "Alameda County",
+                    "types" : [ "administrative_area_level_2", "political" ]
+                 },
+                 {
+                    "long_name" : "California",
+                    "short_name" : "CA",
+                    "types" : [ "administrative_area_level_1", "political" ]
+                 },
+                 {
+                    "long_name" : "United States",
+                    "short_name" : "US",
+                    "types" : [ "country", "political" ]
+                 },
+                 {
+                    "long_name" : "94612",
+                    "short_name" : "94612",
+                    "types" : [ "postal_code" ]
+                 }
+              ],
+              "adr_address" : "\u003cspan class=\"street-address\"\u003e2001 Broadway\u003c/span\u003e, \u003cspan class=\"locality\"\u003eOakland\u003c/span\u003e, \u003cspan class=\"region\"\u003eCA\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e94612\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eUSA\u003c/span\u003e",
+              "formatted_address" : "2001 Broadway, Oakland, CA 94612, USA",
+              "formatted_phone_number" : "(510) 986-0511",
+              "geometry" : {
+                 "location" : {
+                    "lat" : 37.8092687,
+                    "lng" : -122.2683876
+                 },
+                 "viewport" : {
+                    "northeast" : {
+                       "lat" : 37.8106178302915,
+                       "lng" : -122.2669272697085
+                    },
+                    "southwest" : {
+                       "lat" : 37.8079198697085,
+                       "lng" : -122.2696252302915
+                    }
+                 }
+              },
+              "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+              "id" : "06ba9b39621d9793cf68d6ab8063bb60ef348daf",
+              "international_phone_number" : "+1 510-986-0511",
+              "name" : "Tierra Mia Coffee",
+              "opening_hours" : {
+                 "open_now" : true,
+                 "periods" : [
+                    {
+                       "close" : {
+                          "day" : 0,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 0,
+                          "time" : "0700"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 1,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 1,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 2,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 2,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 3,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 3,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 4,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 4,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 5,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 5,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 6,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 6,
+                          "time" : "0700"
+                       }
+                    }
+                 ],
+                 "weekday_text" : [
+                    "Monday: 6:00 AM – 9:00 PM",
+                    "Tuesday: 6:00 AM – 9:00 PM",
+                    "Wednesday: 6:00 AM – 9:00 PM",
+                    "Thursday: 6:00 AM – 9:00 PM",
+                    "Friday: 6:00 AM – 9:00 PM",
+                    "Saturday: 7:00 AM – 9:00 PM",
+                    "Sunday: 7:00 AM – 9:00 PM"
+                 ]
+              },
+              "photos" : [
+                 {
+                    "height" : 3006,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/100359130346774861821/photos\"\u003eIP Freely\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAGb-e37D1bycjjQMesCyMLrrUJsekImB9ePFgwRbUJ_MseaIWzhrYm3EQFm3wjtk8vtBl6qjRgiXP1thK5MUsBN0z8inD6Vtzc4DlhEp8fDUa3AQCRWIz7St8cPzk2aNyEhAUAossZyJufQhVUZ_y2OhLGhROaVvwbkrDPw6GafzeexUjMOyBxQ",
+                    "width" : 5344
+                 },
+                 {
+                    "height" : 4032,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/112474668069053802130/photos\"\u003eAmanda Huggenkiss\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAaVHbH6IW0ayHbyaVBgH1FySeeqkYlZsWg6HdQIA2yIEfRX93ND5kn-j5ktg8ahTGmfGQJ-HWy-hERsEdaXdekT8RISRTaMKr5eZLRCtO-qjZsS7f8Y7cDtiA-nZJ5wD4EhBF1Y9paM3b2WNP1h7TwYvmGhQihQKBk7q7LNyo1C-caBzpiJyRsQ",
+                    "width" : 3024
+                 },
+                 {
+                    "height" : 3024,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eJacques Strap\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAN7wFdM4X0l_1WVY4i60L3PaRSb0RrMda6PNHA6iZSr4LzxGZRWiwlj3C5PKYxFJVnZmX_p2eUapQoj2VpbrbTDAflIXbTTJ9tDodaF7bAeUS5mz4AoKcReLX7r6ker9AEhCjGQ5iVILqW9TIagqSIogiGhQb8MYvCHzIM99NpThLsZkP4jXTGw",
+                    "width" : 4032
+                 },
+                 {
+                    "height" : 4191,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/111224506919386004790/photos\"\u003eIvana Tinkle\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAceAweha1R_D31g3574WzJALNZUYUK1bfWuoxPOA2uc8uAePnTj_aBrnBfQiK9rqznrklJ6oHAYv0kanTowfkqLUJreda5xLFAPLWWfAXk2WF5bqmzjFREOqa7pda7tqGEhD6F7yITTpy7ceTMTCgEGFpGhQ7m0d28fhLs4seEjWQBCUMYFvpVw",
+                    "width" : 2358
+                 },
+                 {
+                    "height" : 3024,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eAnita Bath\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA5WSHMmYGvOu0SKR0_rRvm-y9y8VaRWooSs6jlU9JdS_VyeTb63jGE_bXq_MPBMeZyhwDtIbEzC74qJPmiLx367tiBP-ge6QdknJHiDhrur9-03xGJZUd6J3A9ykKqfPZEhA7HL04ZjkAOFbVFWxYfS9UGhSGwTdyFAHShHcMm2Hklkr70H2ijg",
+                    "width" : 4032
+                 },
+                 {
+                    "height" : 2048,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eSeymour Butz\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA93bHpI6oa2R10z85p9sGjSL5jReQJdIk0Xy3EQQ7TOLM7jU2_whmC7TnMMePbhSgyis7NZXudw-zpShKbLr8QKD-_8MGi8qPjNuYxSFDOAtm85AgadsNveifr4vVGNo6EhAnEemomUb8KdfTjsnGm1d1GhTnkXegakOhf8ANOzPkHtSJnWkZAw",
+                    "width" : 1536
+                 },
+                 {
+                    "height" : 3120,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/112231468090529052166/photos\"\u003eOllie Tabooger\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAeH4JsFCYXdB8O9UklcbuhrMA5eIKZWNbpCXMh3g9zuqJjwDPb5xVKiNlYvz-aJ8zPQirwhd0owEUHs28leXgk3GgljfaMgWr9V8jHhI7-7jnx1ZxpQMA9G0ziKjatL6qEhCyxO0G2kFWuaPeBIhG2lxyGhSZjlp--AdNU0uxQoNcGd6DE80ceA",
+                    "width" : 4160
+                 },
+                 {
+                    "height" : 4160,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/105450214682081516163/photos\"\u003eBea O’Problem\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAEjmOQU72yQf3_5SPnJV9PnvRL2lxD_YMaxpzwSuFKma41hFkJkQiB8aSo3OJKmpyiYEyWyowwq2kaaDK6ZSHpatvfzQcBunVMJZf0VP6bUGjpobNVZXnfI5WXC7f0MdvEhDEB35CfKEVcGZSz4NDLMD2GhT8CBto5_pdaIDQ3Zzr43yEFitgug",
+                    "width" : 2340
+                 },
+                 {
+                    "height" : 3024,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/117543173314553952567/photos\"\u003eWarren Peace\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAqnlLPzn2GWKRW8pARYFa-AoNLAwB0fsXV1tuzItjaKPEm-b280YS1F3anbRlAlbHdWOiR5lVdD8HmQJGw6q3MQRCGrREpoRX8Ove1T_rHujfV0FWFPfJ7VaqD6xczktFEhAXYevBcbZR5bPNpc_4rnxPGhSSxylTLzv2XLgnub1OX5-npLfT9w",
+                    "width" : 4032
+                 },
+                 {
+                    "height" : 4032,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/107703661146181808138/photos\"\u003eEileen Dover\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAIMKOYasxuKtwufT_8QlH4ndS_WZdPsSXBim2oo9RAwYTOtLfPgrzJwMvTQ9YGB_koWVundYjF44mnnriP93uC4-VDsVuMeV0ETukPyfFUjRZ6HrDQtfXtRmTg54rSz1zEhD8Dy75t7KCgT4CY5jng-89GhSduHJVIQWfpVaqyQ-nRmHG5mF3Ng",
+                    "width" : 3024
+                 }
+              ],
+              "place_id" : "ChIJQcRZgK2Aj4ARnXNv0N65GMI",
+              "price_level" : 1,
+              "rating" : 4.5,
+              "reference" : "CmRSAAAA_ZrfnsW4Tsv9ih_EUX0O-zLrk3J_MRzFtnK986ZIiqiBTLDez3pdSf08VT8U47Kq9C4thj1xOLh6W4IO6tUKPtvWkx2lkFUVnT_ox7CLmRduqiu3mC_TBokLGOI6F_xlEhCbR6lJ4S0JzYnpXa_NefhrGhRRmwBfj0LXJpFXsVJ7kvP7H-rGeA",
+              "reviews" : [
+                 {
+                    "author_name" : "Robyn Banks",
+                    "author_url" : "https://www.google.com/maps/contrib/111711797880452354333/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh5.googleusercontent.com/-25_oG7ro7Ic/AAAAAAAAAAI/AAAAAAAAAGI/XMW43weApLg/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "2 weeks ago",
+                    "text" : "Tierra Mia is so good I drive from San Jose to get here. The hands down best vanilla latte, and the horchata latte is dangerously addictive (I had three in two hours). They also offer alternative milks. It's usually busy, so finding a seat is tricky, but if you're coming to study, it's worth the wait. Outlets all around, and their weird pastries are great. Everyone is friendly and amazing.",
+                    "time" : 1524087684
+                 },
+                 {
+                    "author_name" : "Miles A.Head",
+                    "author_url" : "https://www.google.com/maps/contrib/101664298358840051377/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh6.googleusercontent.com/-TMcuTEZt68g/AAAAAAAAAAI/AAAAAAAAAbc/L7lszvuhS6s/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 4,
+                    "relative_time_description" : "in the last week",
+                    "text" : "Horchata Latte is delicious. Overall vibe and style is great. Could work on the cleanliness a bit. There was a swarm of flies just outside the door that you have to walk through to get in and they get inside. But, if you can handle that, it is great.",
+                    "time" : 1525451221
+                 },
+                 {
+                    "author_name" : "Rex Cars",
+                    "author_url" : "https://www.google.com/maps/contrib/106717560997501857177/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh6.googleusercontent.com/-dA5pTT1AI28/AAAAAAAAAAI/AAAAAAAABDQ/_x2TPBkw35c/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 1,
+                    "relative_time_description" : "a month ago",
+                    "text" : "I think the concept behind is totally backwards. The coffee is decent but to say terra Mia ( my land ) is for he Hispanic community is ridiculous. From where they get the coffee is maybe $2 Per kilo tops, yet they charge $20 for 12oz at their shops. They also told me because it’s from Long Beach they want to keep the Hispanic culture and community behind it so they’re located in newly developed areas which were once Latino. How many Latino customers from the communities do they have? WHAT ABOUT FAIR TRADE???",
+                    "time" : 1520710782
+                 },
+                 {
+                    "author_name" : " Justin Thyme",
+                    "author_url" : "https://www.google.com/maps/contrib/110371970951493322064/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh4.googleusercontent.com/-5o8joC_vj74/AAAAAAAAAAI/AAAAAAAAAEg/50Ttbyri7to/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "3 weeks ago",
+                    "text" : "Stopped here for coffee just by chance. It was the best cup of coffee I had ever had. Period. I have made the 20 mile trip just for coffee half a dozen times since. Hope they open up a joint in Walnut Creek.",
+                    "time" : 1523128889
+                 },
+                 {
+                    "author_name" : "Dinah Mite",
+                    "author_url" : "https://www.google.com/maps/contrib/109145974557381081868/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh4.googleusercontent.com/-zlJG7bMcpwg/AAAAAAAAAAI/AAAAAAAAAp8/O_Y973hIRyo/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "a month ago",
+                    "text" : "Tierra Mia has good food and coffee and a nice, chill vibe. Lots of students and freelancers there. Not super quiet but not too noisy...in between. Staff are very nice. Right above the 19th St. BART station. Highly recommend.",
+                    "time" : 1520560091
+                 }
+              ],
+              "scope" : "GOOGLE",
+              "types" : [
+                 "cafe",
+                 "store",
+                 "restaurant",
+                 "food",
+                 "point_of_interest",
+                 "establishment"
+              ],
+              "url" : "https://maps.google.com/?cid=13986133009429918621",
+              "utc_offset" : -420,
+              "vicinity" : "2001 Broadway, Oakland",
+              "website" : "http://www.tierramiacoffee.com/"
+           },
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Sat, 05 May 2018 03:02:18 GMT
+recorded_with: VCR 4.0.0
