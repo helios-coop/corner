@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   helper_method :google_maps_api_key
 
   before_action :detect_device_variant
+  before_action :set_google_analytics_key if Rails.env.production?
 
   private
 
@@ -37,5 +38,9 @@ class ApplicationController < ActionController::Base
 
   def google_maps_api_key
     ENV.fetch("GOOGLE_MAPS_API_KEY")
+  end
+
+  def set_google_analytics_key
+    gon.google_analytics_key = ENV.fetch("GOOGLE_ANALYTICS_KEY")
   end
 end
