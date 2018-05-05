@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   helper_method :google_maps_api_key
 
   before_action :detect_device_variant
-  before_action :set_google_analytics_key #if Rails.env.production?
+  before_action :set_google_analytics_key if Rails.env.production?
 
   private
 
