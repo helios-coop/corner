@@ -46,5 +46,4 @@ Metrics/LineLength:
   Exclude:
     - app/controllers/application_controller.rb
     - app/controllers/listings_controller.rb
-    - app/models/listing.rb
     - db/migrate/**

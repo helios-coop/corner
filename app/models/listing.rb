@@ -32,7 +32,7 @@ class Listing < ApplicationRecord
   geocoded_by :full_address, latitude: :lat, longitude: :long
   reverse_geocoded_by :lat, :long
 
-  ALLOWED_STATES = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"].freeze
+  ALLOWED_STATES = load_data("states")
 
   SEARCHES = {
     name: ->(scope, term) { scope.search_by_name(term) },
