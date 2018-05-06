@@ -24,6 +24,7 @@ Style/TrailingCommaInArguments: { EnforcedStyleForMultiline: consistent_comma }
 Style/TrailingCommaInArrayLiteral: { EnforcedStyleForMultiline: consistent_comma }
 Style/TrailingCommaInHashLiteral: { EnforcedStyleForMultiline: consistent_comma }
 Style/WordArray: { EnforcedStyle: brackets }
+Style/GuardClause: { MinBodyLength: 3 }
 
 # Things that can be improved
 Metrics/AbcSize:
@@ -47,3 +48,11 @@ Metrics/LineLength:
     - app/controllers/application_controller.rb
     - app/controllers/listings_controller.rb
     - db/migrate/**
+
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - app/controllers/listings_controller.rb
+
+Metrics/PerceivedComplexity:
+  Exclude:
+    - app/controllers/listings_controller.rb
