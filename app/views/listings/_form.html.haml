@@ -37,18 +37,17 @@
         = f.text_field :zipcode, class: "form-control", :placeholder => "Zipcode"
 
     %hr
-
     = label_tag "Add Images"
-    .input-group
+    .input-group.mb-1
       .custom-file
-        #inputGroupFile.custom-file-input= f.file_field :images, multiple: true, id: "file-uploader"
-        %label.custom-file-label{:for => "inputGroupFile"} Select Images
+        = f.file_field :images, multiple: true, id: "customFile", class: "custom-file-input"
+        %label.custom-file-label{:for => "customFile"} Choose file
+    #preview-images-container.mt-2.mb-2
 
     %hr
     .input-group.mb-5
       = label_tag "Add Categories"
       = select_tag "categories[]", options_for_select(@categories),{ class: "ui fluid search dropdown", id: "categories", :multiple => "", :prompt => 'Search' }
-      #preview-images-container.mt-2
 
     .form-row
       = hidden_field_tag :from_google_places, false
@@ -79,6 +78,6 @@
     }
   }
 
-  $("#file-uploader").change(function() {
+  $("#customFile").change(function() {
     readURL(this);
   });
