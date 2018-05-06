@@ -110,18 +110,21 @@ class ListingsController < ApplicationController
     search_terms[:name]     = params[:name]     if params[:name].present?
     search_terms[:location] = params[:location] if params[:location].present?
     search_terms[:category] = params[:category] if params[:category].present?
+
     if search_terms.present?
-      listings = Listing.full_search(search_terms)
+      @listings = Listing.full_search(search_terms)
     else
       set_map_center_point
       coordinates = gon.centerPoint.values_at(:latitude, :longitude)
-      listings = Listing.full_search(coordinates: coordinates)
+      @listings = Listing.full_search(coordinates: coordinates)
     end
 
-    gon.coordinates = listings.map(&:coordinates)
+    gon.coordinates = @listings.map(&:coordinates)
 
     # Until we have enough local listings add in online_only
-    @listings = (listings + Listing.where.not(online_only: nil)).uniq
+    if search_terms[:location].present? || search_terms.empty?
+      @listings = (@listings + Listing.where.not(online_only: nil)).uniq
+    end
   end
 
   def set_map_center_point
