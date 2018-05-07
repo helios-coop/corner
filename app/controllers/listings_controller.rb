@@ -45,7 +45,8 @@ class ListingsController < ApplicationController
 
   def edit
     @listing = Listing.find(params[:id])
-    @categories = Category.all.pluck(:name)
+    @all_categories = Category.all.pluck(:name)
+    @listing_categories = @listing.categories.pluck(:name)
 
     if @listing.editable_by?(current_user)
       @currencies = Currency.all
@@ -60,6 +61,7 @@ class ListingsController < ApplicationController
     if @listing.editable_by?(current_user)
       @listing.update!(listing_params)
       @listing.replace_currencies(Currency.where(id: params[:currencies]))
+      @listing.categories = Category.where(name: params[:categories])
     else
       flash[:danger] = "Sorry, you cannot edit this listing"
     end
