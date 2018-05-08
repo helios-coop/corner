@@ -16,7 +16,8 @@ class ListingsController < ApplicationController
   def new
     @listing = Listing.new
     @currencies = Currency.all
-    @categories = Category.all.pluck(:name)
+    @all_categories = Category.all.pluck(:name)
+    @listing_categories = []
   end
 
   def create
