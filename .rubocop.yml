@@ -12,6 +12,7 @@ AllCops:
 Rails: { Enabled: true }
 
 Metrics/BlockLength: { Exclude: [config/**/*.rb, spec/**/*_spec.rb] }
+RSpec/DescribeClass: { Exclude: [spec/db/**/*] }
 RSpec/ExampleLength: { Enabled: false }
 RSpec/MultipleExpectations: { Enabled: false }
 Rails/HasManyOrHasOneDependent: { Enabled: false }
