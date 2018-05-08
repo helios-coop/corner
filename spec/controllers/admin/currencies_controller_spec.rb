@@ -44,15 +44,31 @@ RSpec.describe Admin::CurrenciesController, type: :controller do
   end
 
   describe "POST #create" do
-    before do
-      login(admin)
-      post :create, params: { currency: { name: "Ripple", symbol: "XRP" } }
-    end
+    before { login(admin) }
+    let(:valid_params) { { name: "Ripple", symbol: "XRP" } }
 
     context "when current_user is an admin" do
       it "creates a new currency" do
+        post :create, params: { currency: valid_params }
         expect(assigns(:currency)).to be_persisted
       end
+    end
+
+    context "when given invalid params" do
+      it "renders the :new template" do
+        post :create, params: { currency: valid_params.merge(name: "") }
+        expect(assigns(:currency)).not_to be_persisted
+        expect(response).to render_template(:new)
+      end
+    end
+  end
+
+  describe "#edit" do
+    before { login(admin) }
+
+    it "assigns @currency" do
+      get(:edit, params: { id: bitcoin.id })
+      expect(assigns(:currency)).to eq bitcoin
     end
   end
 
