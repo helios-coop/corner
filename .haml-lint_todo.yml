@@ -22,10 +22,6 @@ linters:
       - "app/views/admin/currencies/_form.html.haml"
       - "app/views/users/new.html.haml"
 
-  # Offense count: 80
-  SpaceInsideHashAttributes:
-    enabled: false
-
   # Offense count: 4
   IdNames:
     exclude:
