@@ -22,14 +22,6 @@ linters:
       - "app/views/admin/currencies/_form.html.haml"
       - "app/views/users/new.html.haml"
 
-  # Offense count: 4
-  IdNames:
-    exclude:
-      - "app/views/layouts/_header.html.haml"
-      - "app/views/listings/index.html.haml"
-      - "app/views/mobile_views/layouts/_header.html.haml"
-      - "app/views/mobile_views/listings/index.html.haml"
-
   # Offense count: 10
   ClassesBeforeIds:
     exclude:
