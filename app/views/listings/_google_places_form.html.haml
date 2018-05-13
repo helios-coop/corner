@@ -24,9 +24,6 @@
           = check_box_tag "currencies[]", currency.id,  @listing.currencies.include?(currency), id: currency.symbol
           %label{class: 'currency-check-box form-check-label', for:"#{currency.symbol}"}= currency.symbol
 
-          -# = check_box_tag "currencies[]", currency.id, @listing.currencies.include?(currency), id: currency.id
-          -# %label{ class:"form-check-label", for:"#{currency.id}"}=
-
         %hr
         .input-group.mb-5
           = label_tag "Add Categories"
