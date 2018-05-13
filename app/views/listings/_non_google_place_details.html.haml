@@ -13,7 +13,7 @@
               - if @listing.online_only
                 Online Only
               - else
-                = "#{@listing.address}, #{@listing.city}, #{@listing.state}"
+                #{@listing.address}, #{@listing.city}, #{@listing.state}
 
             %li
               = fa_icon "phone"
