@@ -42,10 +42,11 @@ gem "uglifier" # Use Uglifier as compressor for JavaScript assets
 group :development, :test do
   gem "factory_bot_rails"
   gem "faker"
-  gem "foreman"
-  gem "guard"
-  gem "guard-rspec"
-  gem "guard-rubocop"
+  gem "foreman", require: false
+  gem "guard", require: false
+  gem "guard-rspec", require: false
+  gem "guard-rubocop", require: false
+  gem "haml_lint", require: false
   gem "pry-byebug"
   gem "pry-rails"
   gem "rails-controller-testing"

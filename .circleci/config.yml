@@ -65,6 +65,7 @@ jobs:
                             --out /tmp/test-results/rspec.xml \
                             $TEST_FILES
       - run: bundle exec rubocop
+      - run: bundle exec haml-lint app/views/
 
       # collect reports
       - store_test_results:
