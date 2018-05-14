@@ -8,10 +8,6 @@
 
 linters:
 
-  # Offense count: 174
-  RuboCop:
-    enabled: false
-
   # Offense count: 105
   LineLength:
     enabled: false
