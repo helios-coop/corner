@@ -57,11 +57,8 @@ Metrics/PerceivedComplexity:
   Exclude:
     - app/controllers/listings_controller.rb
 
-Style/BracesAroundHashParameters: { Enabled: false }
 Style/For: { Enabled: false }
 Style/HashSyntax: { Enabled: false }
 Style/IdenticalConditionalBranches: { Enabled: false }
-Style/NestedParenthesizedCalls: { Enabled: false }
 Style/StringLiterals: { Enabled: false }
 Style/StringLiteralsInInterpolation: { Enabled: false }
-Style/UnneededInterpolation: { Enabled: false }

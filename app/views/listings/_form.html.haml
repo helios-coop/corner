@@ -13,7 +13,7 @@
         - @currencies.each do |currency|
           .form-check.form-check-inline
             = check_box_tag "currencies[]", currency.id, @listing.currencies.include?(currency), class: "form-check-input", id: currency.symbol
-            %label.form-check-label{ for: "#{currency.symbol}" }= currency.symbol
+            %label.form-check-label{ for: currency.symbol }= currency.symbol
 
     .row.form-group
       .col-sm-2 Phone
@@ -32,7 +32,7 @@
       .form-group.col-sm-4
         = f.text_field :city, class: "form-control", :placeholder => "City"
       .form-group.col-sm-4
-        = f.select :state, options_for_select(Listing::ALLOWED_STATES), { :prompt => 'State' }, { class: "form-control" }
+        = f.select :state, options_for_select(Listing::ALLOWED_STATES), { :prompt => 'State' }, class: "form-control"
       .form-group.col-sm-4
         = f.text_field :zipcode, class: "form-control", :placeholder => "Zipcode"
 
@@ -47,7 +47,7 @@
     %hr
     .input-group.mb-5
       = label_tag "Add Categories"
-      = select_tag "categories[]", options_for_select(@all_categories, @listing_categories), { class: "ui fluid search dropdown", id: "categories", :multiple => "", :prompt => 'Search' }
+      = select_tag "categories[]", options_for_select(@all_categories, @listing_categories), class: "ui fluid search dropdown", id: "categories", :multiple => "", :prompt => 'Search'
 
     .form-row
       = hidden_field_tag :from_google_places, false
