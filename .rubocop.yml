@@ -57,12 +57,6 @@ Metrics/PerceivedComplexity:
   Exclude:
     - app/controllers/listings_controller.rb
 
-Layout/ExtraSpacing: { Enabled: false }
-Layout/SpaceAfterColon: { Enabled: false }
-Layout/SpaceAfterComma: { Enabled: false }
-Layout/SpaceBeforeFirstArg: { Enabled: false }
-Layout/SpaceInsideParens: { Enabled: false }
-Layout/SpaceInsideStringInterpolation: { Enabled: false }
 Style/BracesAroundHashParameters: { Enabled: false }
 Style/For: { Enabled: false }
 Style/HashSyntax: { Enabled: false }

@@ -21,13 +21,13 @@
       = form_tag listings_path do
         %label#accepts Accepts:
         - @currencies.each do |currency|
-          = check_box_tag "currencies[]", currency.id,  @listing.currencies.include?(currency), id: currency.symbol
-          %label{ class: 'currency-check-box form-check-label', for:"#{currency.symbol}" }= currency.symbol
+          = check_box_tag "currencies[]", currency.id, @listing.currencies.include?(currency), id: currency.symbol
+          %label{ class: 'currency-check-box form-check-label', for: "#{currency.symbol}" }= currency.symbol
 
         %hr
         .input-group.mb-5
           = label_tag "Add Categories"
-          = select_tag "categories[]", options_for_select(@all_categories,  @listing_categories),{ class: "ui fluid search dropdown", id: "categories", :multiple => "", :prompt => 'Search' }
+          = select_tag "categories[]", options_for_select(@all_categories, @listing_categories), { class: "ui fluid search dropdown", id: "categories", :multiple => "", :prompt => 'Search' }
 
 
         = hidden_field_tag 'google-place', "not added yet"
