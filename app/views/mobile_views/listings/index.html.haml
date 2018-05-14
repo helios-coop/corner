@@ -38,12 +38,7 @@
                   - else
                     = truncate "#{listing.address}, #{listing.city}, #{listing.state}", length: 35
                 .card-text
-                  -# I dont know why css formating breaks if you remove the link.
-                  - if current_user && listing.editable_by?(current_user)
-                    = link_to "", "#"
-                  - else
-                    = link_to "", "#"
-
+                  = link_to "", "#"
 
               .img-container
                 - if listing.thumbnail_url
