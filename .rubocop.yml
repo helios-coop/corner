@@ -20,6 +20,7 @@ Style/Documentation: { Enabled: false }
 Style/MixinUsage: { Exclude: [bin/**] }
 Style/SafeNavigation: { Enabled: false }
 Style/StringLiterals: { EnforcedStyle: double_quotes }
+Style/StringLiteralsInInterpolation: { EnforcedStyle: double_quotes }
 Style/SymbolArray: { EnforcedStyle: brackets }
 Style/TrailingCommaInArguments: { EnforcedStyleForMultiline: consistent_comma }
 Style/TrailingCommaInArrayLiteral: { EnforcedStyleForMultiline: consistent_comma }
@@ -60,5 +61,3 @@ Metrics/PerceivedComplexity:
 Style/For: { Enabled: false }
 Style/HashSyntax: { Enabled: false }
 Style/IdenticalConditionalBranches: { Enabled: false }
-Style/StringLiterals: { Enabled: false }
-Style/StringLiteralsInInterpolation: { Enabled: false }

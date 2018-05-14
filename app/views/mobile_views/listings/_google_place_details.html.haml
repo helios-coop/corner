@@ -44,7 +44,7 @@
             %p.d-inline
               %strong.open-now
                 Open Now:
-              - if @google_place.opening_hours && @google_place.opening_hours['open_now']
+              - if @google_place.opening_hours && @google_place.opening_hours["open_now"]
                 .d-inline.text-success Yes
               - elsif @google_place.opening_hours
                 .d-inline.primary-color-darker-1 No
@@ -55,7 +55,7 @@
               #hours
                 %strong.mb-0 Hours:
                 %ul.list-unstyled
-                  - @google_place.opening_hours['weekday_text'].each do |day|
+                  - @google_place.opening_hours["weekday_text"].each do |day|
                     %li= day
 
           .col-12

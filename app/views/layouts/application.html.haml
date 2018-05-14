@@ -6,9 +6,9 @@
 
     %title Corner
     = csrf_meta_tags
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload"
     = include_gon
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag "application", "data-turbolinks-track": "reload"
 
     / Global site tag (gtag.js) - Google Analytics
     - if Rails.env.production?
@@ -16,8 +16,8 @@
       :javascript
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', gon.google_analytics_key);
+        gtag("js", new Date());
+        gtag("config", gon.google_analytics_key);
 
     = yield :head
 
