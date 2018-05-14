@@ -58,5 +58,4 @@ Metrics/PerceivedComplexity:
   Exclude:
     - app/controllers/listings_controller.rb
 
-Style/For: { Enabled: false }
 Style/HashSyntax: { Enabled: false }
