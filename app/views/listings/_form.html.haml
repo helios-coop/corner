@@ -8,7 +8,7 @@
       .col-sm-10= f.text_field :name, class: "form-control", placeholder: "Satoshi's Cafe"
 
     .row.form-group
-      %label#accepts.col-sm-2 Accepted
+      %label.col-sm-2#accepts Accepted
       .col-sm-10
         - @currencies.each do |currency|
           .form-check.form-check-inline
@@ -42,7 +42,7 @@
       .custom-file
         = f.file_field :images, multiple: true, id: "customFile", class: "custom-file-input"
         %label.custom-file-label{ for: "customFile" } Choose file
-    #preview-images-container.mt-2.mb-2
+    .mt-2.mb-2#preview-images-container
 
     %hr
     .input-group.mb-5

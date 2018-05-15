@@ -4,7 +4,7 @@
 #listings-index
   .row
     .col-sm-4
-      #listing-cards.card-deck.d-flex.flex-column
+      .card-deck.d-flex.flex-column#listing-cards
         - @listings.each do |listing|
           .card
             = link_to listing_path(listing), remote: true do
@@ -42,7 +42,7 @@
         #map
 
         #photos
-          #carousel-controls.carousel.slide{ "data-ride": "carousel" }
+          .carousel.slide#carousel-controls{ "data-ride": "carousel" }
             = render "listings/carousel"
 
             %a.carousel-control-prev{ "data-slide": "prev", href: "#carousel-controls", role: "button" }

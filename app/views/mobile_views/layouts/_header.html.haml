@@ -6,7 +6,7 @@
   %button.navbar-toggler{ "aria-controls": "navbar-nav", "aria-expanded": "false", "aria-label": "Toggle navigation", "data-target": "#navbar-nav", "data-toggle": "collapse", type: "button" }
     %span.navbar-toggler-icon
 
-  #navbar-nav.collapse.navbar-collapse.justify-content-end
+  .collapse.navbar-collapse.justify-content-end#navbar-nav
     %ul.navbar-nav.nav-pills.ml-auto
       %li.nav-item.mr-1{ class: request.path == "/admin/currencies" ? "active" : "" }
         = link_to "Currencies", admin_currencies_path, class: "nav-link"
