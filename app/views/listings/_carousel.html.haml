@@ -18,7 +18,8 @@
           - if @listing.images.attached?
             %img.d-block.w-100{ alt: "First slide", src: url_for(@listing.images.first) }
           - else
-            %img.d-block.w-100{ alt: "First slide", src: "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960 " }
+            %img.d-block.w-100{ alt: "First slide",
+                                src: "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960 " }
         - @listing.images.drop(1).each do |image|
           .carousel-item
             %img.d-block.w-100{ alt: "First slide", src: url_for(image) }

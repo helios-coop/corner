@@ -21,7 +21,10 @@
             %dd.col-sm-10 If your listing is not on Google Maps, add it manually and upload photos.
 
         .selection-container.mb-4
-          = link_to "Add Via Google Places", "#", class: "#{browser.device.mobile? ? '' : 'btn-large'} mt-2 btn btn-success disabled mr-2 mb-2", id: "add-google-button"
+          = link_to "Add Via Google Places",
+                    "#",
+                    class: "#{browser.device.mobile? ? '' : 'btn-large'} mt-2 btn btn-success disabled mr-2 mb-2",
+                    id: "add-google-button"
           = link_to "Add Listing Manually", "#", class: "#{browser.device.mobile? ? '' : 'btn-large'} btn btn-success", id: "add-manually-button"
         %hr
         #add-manually

@@ -21,7 +21,12 @@
           = f.email_field :email, placeholder: "crypto@kittens.com", class: "form-control", required: true
         .form-group
           = f.label :password
-          = f.password_field :password, placeholder: "min 8 characters", class: "form-control", pattern: ".{8,}", title: "Minimum password length is 8. Don't get Mt Goxed.", required: true
+          = f.password_field :password,
+                             placeholder: "min 8 characters",
+                             class: "form-control",
+                             pattern: ".{8,}",
+                             title: "Minimum password length is 8. Don't get Mt Goxed.",
+                             required: true
         .form-group
           = f.label :password_confirmation
           = f.password_field :password_confirmation, class: "form-control", required: true
