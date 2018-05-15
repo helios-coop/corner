@@ -57,5 +57,3 @@ Metrics/CyclomaticComplexity:
 Metrics/PerceivedComplexity:
   Exclude:
     - app/controllers/listings_controller.rb
-
-Style/HashSyntax: { Enabled: false }
