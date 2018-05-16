@@ -1,98 +1,84 @@
-- if @listing
-  .card
-    .card-body
-      %h1.card-title
-        %span.mr-2= @listing.name
+.card
+  .card-body
+    %h1.card-title
+      %span.mr-2= @listing.name
 
-        -# TODO: Make into a view helper or decorator or whateves
-        .rating
-          - 1.upto(@google_place.rating) do
-            .star-icon.d-inline= fa_icon "star"
-          - if (@google_place.rating % 1) >= 0.9
-            .star-icon.d-inline= fa_icon "star"
-          - elsif (@google_place.rating % 1) >= 0.5
-            .star-icon.d-inline= fa_icon "star-half"
+      -# TODO: Make into a view helper or decorator or whateves
+      .rating
+        - 1.upto(@google_place.rating) do
+          .star-icon.d-inline= fa_icon "star"
+        - if (@google_place.rating % 1) >= 0.9
+          .star-icon.d-inline= fa_icon "star"
+        - elsif (@google_place.rating % 1) >= 0.5
+          .star-icon.d-inline= fa_icon "star-half"
 
-      .row
-        .col-12
-          %ul.list-unstyled
-            %h4
-              Price Level:
-              - if @google_place.price_level
-                - 1.upto(4) do
-                  .bitcoin-orange.d-inline= fa_icon "btc"
+    .row
+      .col-12
+        %ul.list-unstyled
+          %h4
+            Price Level:
+            - if @google_place.price_level
+              - 1.upto(4) do
+                .bitcoin-orange.d-inline= fa_icon "btc"
+            - else
+              .primary-color-darker-1.d-inline Unknown
+
+          %li
+            = fa_icon "building"
+            = "#{@listing.address}, #{@listing.city}, #{@listing.state}"
+
+      .col-12
+        .show-details-button
+          = link_to "Show Details", "#", class: "btn btn-primary btn-sm btn-outline-success", id: "show-details"
+
+        .row#hours-currencies-reviews
+          .col-12#phone-url
+            %ul.list-unstyled
+              %li
+                = fa_icon "phone"
+                = @google_place.formatted_phone_number
+              %li
+                %span
+                  = link_to @google_place.website, @google_place.website, target: "_blank",   class: "detail-url"
+          .col-12#open-now
+            %p.d-inline
+              %strong.open-now
+                Open Now:
+              - if @google_place.opening_hours && @google_place.opening_hours['open_now']
+                .d-inline.text-success Yes
+              - elsif @google_place.opening_hours
+                .d-inline.primary-color-darker-1 No
               - else
-                .primary-color-darker-1.d-inline Unknown
+                .d-inline.primary-color-darker-1 Unknown
 
-            %li
-              = fa_icon "building"
-              = "#{@listing.address}, #{@listing.city}, #{@listing.state}"
+            - if @google_place.opening_hours
+              #hours
+                %strong.mb-0 Hours:
+                %ul.list-unstyled
+                  - @google_place.opening_hours['weekday_text'].each do |day|
+                    %li= day
 
+          .col-12
+            %p#accepted
+              %strong Currencies Accepted
 
-        .col-12
-          .show-details-button
-            = link_to "Show Details", "#", class: "btn btn-primary btn-sm btn-outline-success", id: "show-details"
+            - @listing.currencies.each do |currency|
+              %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png"
 
-          .row#hours-currencies-reviews
-            .col-12#phone-url
-              %ul.list-unstyled
-                %li
-                  = fa_icon "phone"
-                  = @google_place.formatted_phone_number
-                %li
-                  %span
-                    = link_to @google_place.website, @google_place.website, target: "_blank",   class: "detail-url"
-            .col-12#open-now
-              %p.d-inline
-                %strong.open-now
-                  Open Now:
-                - if @google_place.opening_hours && @google_place.opening_hours['open_now']
-                  .d-inline.text-success Yes
-                - elsif @google_place.opening_hours
-                  .d-inline.primary-color-darker-1 No
-                - else
-                  .d-inline.primary-color-darker-1 Unknown
+          .col-12.mt-3
+            %p
+              %strong Reviews:
+            %ul.list-group.list-group-flush
+              - @reviews.first(3).each do |review|
+                %li.list-group-item
+                  %p
+                    - 1.upto(review.rating) do
+                      .star-icon.d-inline= fa_icon "star"
 
-              - if @google_place.opening_hours
-                #hours
-                  %strong.mb-0 Hours:
-                  %ul.list-unstyled
-                    - @google_place.opening_hours['weekday_text'].each do |day|
-                      %li= day
-
-
-            .col-12
-              %p#accepted
-                %strong Currencies Accepted
-
-              - @listing.currencies.each do |currency|
-                %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png"
-
-
-            .col-12.mt-3
-              %p
-                %strong Reviews:
-              %ul.list-group.list-group-flush
-                - @reviews.first(3).each do |review|
-                  %li.list-group-item
-                    %p
-                      - 1.upto(review.rating) do
-                        .star-icon.d-inline= fa_icon "star"
-
-                    %blockquote.blockquote
-                      %p.mb-0.mx-5= review.text
-                      %footer.blockquote-footer
-                        = review.author_name
-
-- else
-  .card#no-listing-found
-    %img.card-img-top{src: "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=500", width: "300"}
-    .card-body
-      %h4.card-title No listings found for your search location
-      .card-text Satoshi suggests searching somewhere else
-    .card-footer
-      Try a different Location
-      = link_to "or starting here", "/listings?location=san+francisco"
+                  %blockquote.blockquote
+                    %p.mb-0.mx-5= review.text
+                    %footer.blockquote-footer
+                      = review.author_name
 
 :javascript
   $("#show-details").click(function(event) {
