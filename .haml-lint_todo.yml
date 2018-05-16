@@ -62,14 +62,6 @@ linters:
     exclude:
       - "app/views/listings/_form.html.haml"
 
-  # Offense count: 4
-  UnnecessaryStringOutput:
-    exclude:
-      - "app/views/listings/_google_place_details.html.haml"
-      - "app/views/listings/_non_google_place_details.html.haml"
-      - "app/views/mobile_views/listings/_google_place_details.html.haml"
-      - "app/views/mobile_views/listings/_non_google_place_details.html.haml"
-
   # Offense count: 3
   ViewLength:
     exclude:
