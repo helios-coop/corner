@@ -6,15 +6,6 @@
     .col-5
       %h1 Log In
 
-
-      -# Error messages
-      -# - if @user.errors.any?
-      -#   .error_messages
-      -#     %h2 Form is invalid
-      -#     %ul
-      -#       - for message in @user.errors.full_messages
-      -#         %li{style: "color: red;"}= message
-
       = form_tag login_path do
         .form-group
           = label_tag :email

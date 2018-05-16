@@ -70,13 +70,6 @@ linters:
       - "app/views/mobile_views/listings/_google_place_details.html.haml"
       - "app/views/mobile_views/listings/_non_google_place_details.html.haml"
 
-  # Offense count: 4
-  ConsecutiveComments:
-    exclude:
-      - "app/views/listings/_google_places_form.html.haml"
-      - "app/views/mobile_views/listings/show.js.haml"
-      - "app/views/sessions/new.html.haml"
-
   # Offense count: 3
   ViewLength:
     exclude:

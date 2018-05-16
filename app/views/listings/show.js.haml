@@ -1,4 +1,3 @@
-
 -# Update details card
 - if @listing.google_places_id
   $("#listing-details").html("#{escape_javascript(render partial: 'google_place_details', locals: { listing: @listing } ) }");

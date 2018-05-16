@@ -1,4 +1,3 @@
-
 -# Update details card
 - if @listing.google_places_id
   $("#mobile-listing-details").html("#{escape_javascript(render partial: 'google_place_details', locals: { listing: @listing } ) }");
@@ -17,5 +16,4 @@ googleMap.setCenter(newCenter);
 googleMap.setZoom(16)
 
 -# Update photos
--# TODO: Probably need to save photo urls when the listing is created. This seems slow
 $(".carousel-inner").html("#{escape_javascript(render partial: 'carousel') }");
