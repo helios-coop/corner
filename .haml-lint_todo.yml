@@ -9,7 +9,7 @@
 linters:
 
   # Offense count: 105
-  LineLength: { max: 150 }
+  LineLength: { max: 140 }
 
   # Offense count: 2
   InlineStyles:
