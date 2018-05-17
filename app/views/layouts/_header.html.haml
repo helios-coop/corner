@@ -7,7 +7,7 @@
     %span.navbar-toggler-icon
 
   #navbarNav.collapse.navbar-collapse.justify-content-end
-    - if request.path == "/listings" || request.path == "/"
+    - if current_page?(listings_path) || current_page?(root_path)
       #search= render "layouts/search"
 
     %ul.navbar-nav.nav-pills.ml-auto
