@@ -14,4 +14,8 @@ class User < ApplicationRecord
            inverse_of: :submitter
 
   has_secure_password
+
+  def admin?
+    role == "admin"
+  end
 end
