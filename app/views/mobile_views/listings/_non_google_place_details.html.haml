@@ -27,7 +27,7 @@
             %strong Currencies Accepted
 
           - @listing.currencies.each do |currency|
-            %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png"
+            %span= image_tag currency.icon_path
 
 - else
   .card#no-listing-found
