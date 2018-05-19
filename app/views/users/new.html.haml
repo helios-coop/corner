@@ -10,7 +10,7 @@
           %h2 Form is invalid
           %ul
             - for message in @user.errors.full_messages
-              %li{style: "color: red;"}= message
+              %li{ style: "color: red;" }= message
 
       = form_for @user do |f|
         .form-group

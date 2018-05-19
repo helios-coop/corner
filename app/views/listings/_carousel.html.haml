@@ -4,21 +4,21 @@
       .carousel-inner
         .carousel-item.active
           - image_url = @google_place.photos.first.fetch_url(400)
-          %img.d-block.w-100{:alt => "First slide", :src => image_url}
+          %img.d-block.w-100{ :alt => "First slide", :src => image_url }
 
         - @google_place.photos.drop(1).each do |photo|
           .carousel-item
             - image_url = photo.fetch_url(400)
-            %img.d-block.w-100{:alt => "First slide", :src => image_url}
+            %img.d-block.w-100{ :alt => "First slide", :src => image_url }
 
   - else
     - cache @listing do
       .carousel-inner
         .carousel-item.active
           - if @listing.images.attached?
-            %img.d-block.w-100{:alt => "First slide", :src => url_for(@listing.images.first)}
+            %img.d-block.w-100{ :alt => "First slide", :src => url_for(@listing.images.first) }
           - else
-            %img.d-block.w-100{:alt => "First slide", :src => "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960 "}
+            %img.d-block.w-100{ :alt => "First slide", :src => "https://www.thesun.co.uk/wp-content/uploads/2017/11/nintchdbpict000074010725.jpg?strip=all&w=960 " }
         - @listing.images.drop(1).each do |image|
           .carousel-item
-            %img.d-block.w-100{:alt => "First slide", :src => url_for(image)}
+            %img.d-block.w-100{ :alt => "First slide", :src => url_for(image) }

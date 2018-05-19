@@ -10,7 +10,7 @@
           %h2 Form is invalid
           %ul
             - for message in @currency.errors.full_messages
-              %li{style: "color: red;"}= message
+              %li{ style: "color: red;" }= message
 
       -# URL is not adding 'admin_' to the name automatically
       = form_for @currency, url: @currency.persisted? ? admin_currency_path(@currency) : admin_currencies_path do |f|

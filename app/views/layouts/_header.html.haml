@@ -3,7 +3,7 @@
     = image_tag "corner_logo.png", height: 70
     = image_tag "beta-icon.png", height: 50
 
-  %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
+  %button.navbar-toggler{ "aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button" }
     %span.navbar-toggler-icon
 
   #navbarNav.collapse.navbar-collapse.justify-content-end
@@ -11,10 +11,10 @@
       #search= render "layouts/search"
 
     %ul.navbar-nav.nav-pills.ml-auto
-      %li.nav-item.mr-1{class: request.path == "/listings/new" ? "active" : ""}
+      %li.nav-item.mr-1{ class: request.path == "/listings/new" ? "active" : "" }
         = link_to "Add Listing", new_listing_path, class: "nav-link"
       - if current_user && current_user.admin?
-        %li.nav-item.mr-1{class: request.path == "/admin/currencies" ? "active" : ""}
+        %li.nav-item.mr-1{ class: request.path == "/admin/currencies" ? "active" : "" }
           = link_to "Currencies", admin_currencies_path, class: "nav-link"
 
       - if current_user

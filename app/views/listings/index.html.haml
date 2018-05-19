@@ -8,7 +8,7 @@
         - @listings.each do |listing|
           .card
             = link_to listing_path(listing), :remote => true do
-              .card-body{onclick: "setActive(this)"}
+              .card-body{ onclick: "setActive(this)" }
                 %h5.card-title.mb-1= listing.name
                 %p.card-text.mb-1
                   Accepted:
@@ -42,14 +42,14 @@
         #map
 
         #photos
-          #carouselControls.carousel.slide{"data-ride" => "carousel"}
+          #carouselControls.carousel.slide{ "data-ride" => "carousel" }
             = render "listings/carousel"
 
-            %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselControls", :role => "button"}
-              %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+            %a.carousel-control-prev{ "data-slide" => "prev", :href => "#carouselControls", :role => "button" }
+              %span.carousel-control-prev-icon{ "aria-hidden" => "true" }
               %span.sr-only Previous
-            %a.carousel-control-next{"data-slide" => "next", :href => "#carouselControls", :role => "button"}
-              %span.carousel-control-next-icon{"aria-hidden" => "true"}
+            %a.carousel-control-next{ "data-slide" => "next", :href => "#carouselControls", :role => "button" }
+              %span.carousel-control-next-icon{ "aria-hidden" => "true" }
               %span.sr-only Next
 
       .row#listing-details
@@ -95,4 +95,4 @@
 
 
 -# This has to be called after javascript above loads
-%script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{google_maps_api_key}&callback=initMap"}
+%script{ :async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{google_maps_api_key}&callback=initMap" }

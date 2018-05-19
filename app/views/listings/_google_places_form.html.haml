@@ -1,7 +1,7 @@
 .input-group.mb-3.google-search-field
   .input-group-prepend
     %span#basic-addon1.input-group-text Name
-  %input.form-control{"aria-describedby" => "basic-addon1", "aria-label" => "name", :placeholder => "Satoshi's Cafe", :type => "text", id: "searchTextField", required: true}
+  %input.form-control{ "aria-describedby" => "basic-addon1", "aria-label" => "name", :placeholder => "Satoshi's Cafe", :type => "text", id: "searchTextField", required: true }
 
 
 %p
@@ -22,7 +22,7 @@
         %label#accepts Accepts:
         - @currencies.each do |currency|
           = check_box_tag "currencies[]", currency.id,  @listing.currencies.include?(currency), id: currency.symbol
-          %label{class: 'currency-check-box form-check-label', for:"#{currency.symbol}"}= currency.symbol
+          %label{ class: 'currency-check-box form-check-label', for:"#{currency.symbol}" }= currency.symbol
 
         %hr
         .input-group.mb-5
