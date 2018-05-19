@@ -134,12 +134,6 @@ class ListingsController < ApplicationController
     if params[:location]
       latitude, longitude = Geocoder.coordinates params[:location]
       gon.centerPoint = { latitude: latitude, longitude: longitude, zoom: 13 }
-
-    # Currently showing map when no location given because we haven't dealt with hiding it in haml yet
-    elsif params[:name] || params[:category]
-      gon.centerPoint = center_point_from_ip_address
-
-    # If no search terms given pull location from ip address
     else
       gon.centerPoint = center_point_from_ip_address
     end
