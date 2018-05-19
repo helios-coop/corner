@@ -18,7 +18,7 @@
           %h4
             Price Level:
             - if @google_place.price_level
-              - 1.upto(4) do
+              - 1.upto(@google_place.price_level) do
                 .bitcoin-orange.d-inline= fa_icon "btc"
             - else
               .primary-color-darker-1.d-inline Unknown
