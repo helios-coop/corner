@@ -6,10 +6,15 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :google_maps_api_key
 
+  before_action :fake_ip unless Rails.env.production?
   before_action :detect_device_variant
   before_action :set_google_analytics_key if Rails.env.production?
 
   private
+
+  def fake_ip
+    request.headers["REMOTE_ADDR"] = ENV.fetch("REMOTE_ADDR")
+  end
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
