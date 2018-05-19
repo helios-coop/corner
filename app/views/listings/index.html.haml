@@ -42,13 +42,13 @@
         #map
 
         #photos
-          #carouselControls.carousel.slide{ "data-ride" => "carousel" }
+          #carousel-controls.carousel.slide{ "data-ride" => "carousel" }
             = render "listings/carousel"
 
-            %a.carousel-control-prev{ "data-slide" => "prev", :href => "#carouselControls", :role => "button" }
+            %a.carousel-control-prev{ "data-slide" => "prev", :href => "#carousel-controls", :role => "button" }
               %span.carousel-control-prev-icon{ "aria-hidden" => "true" }
               %span.sr-only Previous
-            %a.carousel-control-next{ "data-slide" => "next", :href => "#carouselControls", :role => "button" }
+            %a.carousel-control-next{ "data-slide" => "next", :href => "#carousel-controls", :role => "button" }
               %span.carousel-control-next-icon{ "aria-hidden" => "true" }
               %span.sr-only Next
 
