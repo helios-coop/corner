@@ -16,7 +16,7 @@ gem "rails", "~> 5.2.0"
 gem "aws-sdk-s3", require: false
 gem "bcrypt" # Use ActiveModel has_secure_password
 gem "bootsnap", require: false
-gem "bootstrap"
+gem "bootstrap" # Using v4.0 https://getbootstrap.com/docs/4.0/getting-started/introduction/
 gem "browser"
 gem "dalli"
 gem "font-awesome-rails" # https://github.com/bokmann/font-awesome-rails
