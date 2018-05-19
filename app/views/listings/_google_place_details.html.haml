@@ -59,7 +59,7 @@
           %strong Currencies Accepted
 
         - @listing.currencies.each do |currency|
-          %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png"
+          %span= image_tag currency.image_path
 
         %p.mt-3.mb-0
           %strong Categories

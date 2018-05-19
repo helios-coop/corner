@@ -13,7 +13,7 @@
                 %p.card-text.mb-1
                   Accepted:
                   - listing.currencies.each do |currency|
-                    %span= image_tag "crypto_icons/32/color/#{currency.symbol.downcase}.png", height: 16
+                    %span= image_tag currency.icon_path, height: 16
 
                 %address.card-text.mb-0
                   - if listing.online_only
