@@ -146,14 +146,10 @@ class ListingsController < ApplicationController
   end
 
   def center_point_from_ip_address
-    if Rails.env.production?
-      {
-        latitude: request.location.data["latitude"],
-        longitude: request.location.data["longitude"],
-        zoom: 13,
-      }
-    else
-      { latitude: 37.791139, longitude: -122.396067, zoom: 9 }
-    end
+    {
+      latitude: request.location.data["latitude"],
+      longitude: request.location.data["longitude"],
+      zoom: 13,
+    }
   end
 end
