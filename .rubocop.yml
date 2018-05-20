@@ -39,6 +39,7 @@ Metrics/MethodLength:
     - db/migrate/**
     - app/poros/google_place_params_parser.rb
     - app/controllers/listings_controller.rb
+    - app/controllers/users_controller.rb
 
 Metrics/ClassLength:
   Exclude:
