@@ -1,5 +1,5 @@
 = content_for :head do
-  = stylesheet_link_tag 'listings'
+  = stylesheet_link_tag "listings"
 
 #listing-form
   = form_for @listing do |f|
@@ -32,7 +32,7 @@
       .form-group.col-sm-4
         = f.text_field :city, class: "form-control", :placeholder => "City"
       .form-group.col-sm-4
-        = f.select :state, options_for_select(Listing::ALLOWED_STATES), { :prompt => 'State' }, class: "form-control"
+        = f.select :state, options_for_select(Listing::ALLOWED_STATES), { :prompt => "State" }, class: "form-control"
       .form-group.col-sm-4
         = f.text_field :zipcode, class: "form-control", :placeholder => "Zipcode"
 
@@ -47,7 +47,7 @@
     %hr
     .input-group.mb-5
       = label_tag "Add Categories"
-      = select_tag "categories[]", options_for_select(@all_categories, @listing_categories), class: "ui fluid search dropdown", id: "categories", :multiple => "", :prompt => 'Search'
+      = select_tag "categories[]", options_for_select(@all_categories, @listing_categories), class: "ui fluid search dropdown", id: "categories", :multiple => "", :prompt => "Search"
 
     .form-row
       = hidden_field_tag :from_google_places, false

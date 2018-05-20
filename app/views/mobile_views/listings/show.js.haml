@@ -1,8 +1,8 @@
 -# Update details card
 - if @listing.google_places_id
-  $("#mobile-listing-details").html("#{escape_javascript(render(partial: 'google_place_details', locals: { listing: @listing }))}");
+  $("#mobile-listing-details").html("#{escape_javascript(render(partial: "google_place_details", locals: { listing: @listing }))}");
 - else
-  $("#mobile-listing-details").html("#{escape_javascript(render(partial: 'non_google_place_details', locals: { listing: @listing }))}");
+  $("#mobile-listing-details").html("#{escape_javascript(render(partial: "non_google_place_details", locals: { listing: @listing }))}");
 
 
 -# Update map
@@ -16,4 +16,4 @@ googleMap.setCenter(newCenter);
 googleMap.setZoom(16)
 
 -# Update photos
-$(".carousel-inner").html("#{escape_javascript(render(partial: 'carousel'))}");
+$(".carousel-inner").html("#{escape_javascript(render(partial: "carousel"))}");
