@@ -47,3 +47,9 @@ linters:
       - "app/views/listings/new.html.haml"
       - "app/views/mobile_views/listings/_google_place_details.html.haml"
       - "app/views/mobile_views/listings/index.html.haml"
+
+  # Offense count: 8
+  RuboCop:
+    exclude:
+      - "app/views/listings/_add_listing.html.haml"
+      - "app/views/listings/_google_places_form.html.haml"
