@@ -3,6 +3,7 @@
     = image_tag "corner_logo.png", height: 70
     = image_tag "beta-icon.png", height: 50
 
+
   %button.navbar-toggler{ "aria-controls": "navbar-nav",
                           "aria-expanded": "false",
                           "aria-label": "Toggle navigation",
@@ -27,3 +28,7 @@
       - else
         %li.nav-item
           = link_to "Login / Sign Up", login_path, class: "btn btn-outline-success my-2.my-sm-0"
+
+  // Hide on horizonal. Formatting isn't working.
+  .d-sm-none.mobile-tagline
+    Spend your crypto at the corner store and everywhere
