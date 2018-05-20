@@ -9,7 +9,7 @@
         .error_messages
           %h2 Form is invalid
           %ul
-            - for message in @currency.errors.full_messages
+            - @currency.errors.full_messages.each do |message|
               %li{ style: "color: red;" }= message
 
       -# URL is not adding "admin_" to the name automatically
