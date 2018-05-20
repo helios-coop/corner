@@ -8,7 +8,7 @@
 
   #navbar-nav.collapse.navbar-collapse.justify-content-end
     %ul.navbar-nav.nav-pills.ml-auto
-      %li.nav-item.mr-1{class: request.path == "/admin/currencies" ? "active" : ""}
+      %li.nav-item.mr-1{ class: request.path == "/admin/currencies" ? "active" : "" }
         = link_to "Currencies", admin_currencies_path, class: "nav-link"
 
       - if current_user

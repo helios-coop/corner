@@ -1,6 +1,6 @@
 = content_for :head do
-  = stylesheet_link_tag 'listings'
-  = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{google_maps_api_key}&libraries=places", 'data-turbolinks-track': 'reload'
+  = stylesheet_link_tag "listings"
+  = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{google_maps_api_key}&libraries=places", "data-turbolinks-track": "reload"
 #listings-new-form
   .container-fluid
     .row
@@ -31,21 +31,17 @@
       .col-md-2
 
 :javascript
-  document.addEventListener("turbolinks:load", function() {
-    console.log('It works on each visit!');
-  });
-
   // for semantic-ui
-  $('.ui.dropdown').dropdown();
+  $(".ui.dropdown").dropdown();
 
-  var input = document.getElementById('searchTextField');
-  var options = { types: ['establishment'] };
+  var input = document.getElementById("searchTextField");
+  var options = { types: ["establishment"] };
 
   //Create the autocomplete object, restricting the search to establishments
   var autocomplete = new google.maps.places.Autocomplete(input, options);
 
   // Update media object on place selection
-  autocomplete.addListener('place_changed', displacePlace);
+  autocomplete.addListener("place_changed", displacePlace);
 
   function displacePlace() {
     // Get the place details from the autocomplete object.
@@ -54,16 +50,16 @@
     console.log("Place: ", place)
 
     //TODO: create method for attributes
-    place['thumbnailUrl'] = thumbnailUrl;
-    $('#name').html(place.name);
-    $('#address').html(place.formatted_address)
-    $('#phone').html(place.formatted_phone_number)
-    $('#image').attr('src', thumbnailUrl)
-    $('#icon').attr('src', place.icon)
-    $('#website').attr('href', place.website);
-    $('#website').text(place.website)
+    place["thumbnailUrl"] = thumbnailUrl;
+    $("#name").html(place.name);
+    $("#address").html(place.formatted_address)
+    $("#phone").html(place.formatted_phone_number)
+    $("#image").attr("src", thumbnailUrl)
+    $("#icon").attr("src", place.icon)
+    $("#website").attr("href", place.website);
+    $("#website").text(place.website)
 
-    $('#google-place').val(JSON.stringify(place));
+    $("#google-place").val(JSON.stringify(place));
   }
 
   $("#submit-listing-buttton").click(function(e){

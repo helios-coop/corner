@@ -20,27 +20,27 @@
       .col-sm-10= f.text_field :phone, class: "form-control", placeholder: "408 867 5309"
     .row.form-group
       .col-sm-2= f.label :url
-      .col-sm-10= f.text_field :url, class: "form-control", :placeholder => "http://www.unchainedpodcast.co"
+      .col-sm-10= f.text_field :url, class: "form-control", placeholder: "http://www.unchainedpodcast.co"
 
     %hr
 
     #address-section
       .row.form-group.mb-4
-        %label.form-check-label.col-md-2{ for:"online_only"} Online Only
+        %label.form-check-label.col-md-2{ for: "online_only" } Online Only
         .col-md-2= f.check_box :online_only, class: "form-check-input", id: "online_only"
       .form-row#address-components
         .form-group.col-md-6#or
           OR
         .form-group.col-md-6
-          = f.text_field :address, class: "form-control", :placeholder => "Address"
+          = f.text_field :address, class: "form-control", placeholder: "Address"
         .form-group.col-md-6
-          = f.text_field :address2, class: "form-control", :placeholder => "Address 2"
+          = f.text_field :address2, class: "form-control", placeholder: "Address 2"
         .form-group.col-md-4
-          = f.text_field :city, class: "form-control", :placeholder => "City"
+          = f.text_field :city, class: "form-control", placeholder: "City"
         .form-group.col-md-4
-          = f.select :state, options_for_select(Listing::ALLOWED_STATES), {:prompt => 'State'}, { class: "form-control" }
+          = f.select :state, options_for_select(Listing::ALLOWED_STATES), { prompt: "State" }, class: "form-control"
         .form-group.col-md-4
-          = f.text_field :zipcode, class: "form-control", :placeholder => "Zipcode"
+          = f.text_field :zipcode, class: "form-control", placeholder: "Zipcode"
 
     %hr
     = label_tag "Add Images"

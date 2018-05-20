@@ -7,31 +7,31 @@
 %p
   .media.pl-3
     .row
-      = image_tag 'http://www.sbs.com.au/news/sites/sbs.com.au.news/files/styles/full/public/BITCOIN.jpg?itok=HoUTbMII&mtime=1398071027', class: 'mr-3', id: 'image', height: '200'
-      .media-body{ class: "#{ browser.device.mobile? ? 'mt-3' : '' }" }
+      = image_tag "http://www.sbs.com.au/news/sites/sbs.com.au.news/files/styles/full/public/BITCOIN.jpg?itok=HoUTbMII&mtime=1398071027", class: "mr-3", id: "image", height: "200"
+      .media-body{ class: "#{browser.device.mobile? ? 'mt-3' : ''}" }
         %h5.mt-0#name Satoshi's Cafe
         %span#address 21 blockchain Blvd, San Francsico, CA 94105
         %br
         %span#phone (415) 867 5390
 
         %p
-          %span.icon= image_tag 'https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png', class: 'mr-3', id: 'icon', height: '20'
+          %span.icon= image_tag "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png", class: "mr-3", id: "icon", height: "20"
           %span
-            = link_to 'https://www.merkle-tree-cafe.com', 'https://www.merkle-tree-cafe.com', id: 'website'
+            = link_to "https://www.merkle-tree-cafe.com", "https://www.merkle-tree-cafe.com", id: "website"
 
         = form_tag listings_path do
           %label#accepts Accepts:
           - @currencies.each do |currency|
-            = check_box_tag "currencies[]", currency.id,  @listing.currencies.include?(currency), id: currency.symbol
-            %label{class: 'currency-check-box form-check-label', for:"#{currency.symbol}"}= currency.symbol
+            = check_box_tag "currencies[]", currency.id, @listing.currencies.include?(currency), id: currency.symbol
+            %label{ class: "currency-check-box form-check-label", for: "#{currency.symbol}" }= currency.symbol
 
           %hr
           .input-group.mb-5
             = label_tag "Add Categories"
-            = select_tag "categories[]", options_for_select(@all_categories,  @listing_categories),{ class: "ui fluid search dropdown", id: "categories", :multiple => "", :prompt => 'Search' }
+            = select_tag "categories[]", options_for_select(@all_categories, @listing_categories), class: "ui fluid search dropdown", id: "categories", multiple: "", prompt: "Search"
 
 
-          = hidden_field_tag 'google-place', "not added yet"
+          = hidden_field_tag "google-place", "not added yet"
           = hidden_field_tag :from_google_places, true
 
           %p
