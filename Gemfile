@@ -41,6 +41,7 @@ gem "uglifier" # Use Uglifier as compressor for JavaScript assets
 # gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
 
 group :development, :test do
+  gem "brakeman", require: false
   gem "factory_bot_rails"
   gem "faker"
   gem "foreman", require: false
