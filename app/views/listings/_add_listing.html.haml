@@ -1,0 +1,93 @@
+= content_for :head do
+  = stylesheet_link_tag "listings"
+  = javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{google_maps_api_key}&libraries=places", "data-turbolinks-track": "reload"
+#listings-new-form
+  .container-fluid
+    .row
+      .col-md-2
+      .col-md-8
+        / Heading
+        %h1.mt-3 Add a Listing
+        %hr
+        %p.lead
+          You can add your listing two ways:
+          %dl.row
+            %dt.col-sm-2 Google Places
+            %dd.col-sm-10
+              We pull from
+              = link_to "Google Maps.", "https://www.google.com/maps"
+              If youre listing is already there, do that. It's easy.
+            %dt.col-sm-2 Manually
+            %dd.col-sm-10 If your listing is not on Google Maps, add it manually and upload photos.
+
+        .selection-container.mb-4
+          = link_to "Add Via Google Places", "#", class: "#{browser.device.mobile? ? '' : 'btn-large'} mt-2 btn btn-success disabled mr-2 mb-2", id: "add-google-button"
+          = link_to "Add Listing Manually", "#", class: "#{browser.device.mobile? ? '' : 'btn-large'} btn btn-success", id: "add-manually-button"
+        %hr
+        #add-manually
+          = render "form"
+        #add-via-google-places
+          = render "google_places_form"
+      .col-md-2
+
+:javascript
+  // for semantic-ui
+  $(".ui.dropdown").dropdown();
+
+  var input = document.getElementById("searchTextField");
+  var options = { types: ["establishment"] };
+
+  //Create the autocomplete object, restricting the search to establishments
+  var autocomplete = new google.maps.places.Autocomplete(input, options);
+
+  // Update media object on place selection
+  autocomplete.addListener("place_changed", displacePlace);
+
+  function displacePlace() {
+    // Get the place details from the autocomplete object.
+    var place = autocomplete.getPlace();
+    var thumbnailUrl = place.photos[0].getUrl({maxHeight: 300})
+    console.log("Place: ", place)
+
+    //TODO: create method for attributes
+    place["thumbnailUrl"] = thumbnailUrl;
+    $("#name").html(place.name);
+    $("#address").html(place.formatted_address)
+    $("#phone").html(place.formatted_phone_number)
+    $("#image").attr("src", thumbnailUrl)
+    $("#icon").attr("src", place.icon)
+    $("#website").attr("href", place.website);
+    $("#website").text(place.website)
+
+    $("#google-place").val(JSON.stringify(place));
+  }
+
+  $("#submit-listing-buttton").click(function(e){
+    var listingName = $("#name").text()
+
+    if (listingName == "Satoshi's Cafe"){
+      e.preventDefault()
+      $(".google-search-field").addClass("missing-name")
+      $("#searchTextField").attr("placeholder", "Please Search for a Listing");
+    }
+  })
+
+  $("#add-google-button").click(function(e){
+    e.preventDefault()
+    $("#add-via-google-places").slideToggle()
+    $("#add-manually").slideToggle()
+    $("#add-google-button").css("box-shadow", "0 0 0 0.2rem rgba(234, 234, 46, 0.5)")
+    $("#add-google-button").addClass("disabled")
+    $("#add-manually-button").removeClass("disabled")
+    $("#add-manually-button").css("box-shadow", "none")
+  })
+
+  $("#add-manually-button").click(function(e){
+    e.preventDefault()
+    $("#add-via-google-places").slideToggle()
+    $("#add-manually").slideToggle()
+    $("#add-manually-button").css("box-shadow", "0 0 0 0.2rem rgba(234, 234, 46, 0.5)")
+    $("#add-manually-button").addClass("disabled")
+    $("#add-google-button").css("box-shadow", "none")
+    $("#add-google-button").removeClass("disabled")
+  })
