@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
     if notifier.post slack_formatted_message
       flash[:success] = "We've notified a real person. " \
-                      "Hodl tight and we'll get back to you"
+                      "Hodl tight and we'll get back to you."
     else
       flash[:danger] = "Something has gone horribly wrong. " \
                       "You're message was not sent. " \
