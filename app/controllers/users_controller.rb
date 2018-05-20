@@ -17,6 +17,12 @@ class UsersController < ApplicationController
     end
   end
 
+  # Contact Us Page
+  def contact; end
+
+  # Recieves message from Contact Us page
+  def message; end
+
   private
 
   PERMITTED_PARAMS = [
