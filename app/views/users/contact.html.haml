@@ -12,12 +12,12 @@
           = label_tag :email
           = email_field_tag :email, nil, placeholder: "nick@bit-gold.com", class: "form-control", required: true
         .form-group
-          %label{ for: "message-text-area" } Message
+          = label_tag :message
           :ruby
             placeholder = "Hi, I'm wondering if you can add bit-gold as a " \
-              "currency to your platform. It's like bitcoin, but old school. " \
-              "\n\n-- thanks"
-          %textarea.form-control#message-text-area{ rows: "5", required: true, placeholder: placeholder }
+                          "currency to your platform. It's like bitcoin, but old school. " \
+                          "\n\n-- thanks"
+          = text_area_tag :message, nil, rows: 5, required: true, class: "form-control", placeholder: placeholder
 
         = submit_tag "Send Us A Message", class: "btn btn-primary"
     .col.col-sm.col-md

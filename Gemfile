@@ -34,6 +34,7 @@ gem "puma" # Use Puma as the app server
 gem "sass-rails" # Use SCSS for stylesheets
 gem "semantic-ui-sass"
 gem "sidekiq"
+gem "slack-notifier"
 gem "turbolinks" # Makes navigating your web application faster
 gem "uglifier" # Use Uglifier as compressor for JavaScript assets
 
