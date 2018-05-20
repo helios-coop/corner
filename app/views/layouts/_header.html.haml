@@ -6,7 +6,7 @@
   %button.navbar-toggler{ "aria-controls": "navbar-nav", "aria-expanded": "false", "aria-label": "Toggle navigation", "data-target": "#navbar-nav", "data-toggle": "collapse", type: "button" }
     %span.navbar-toggler-icon
 
-  #navbar-nav.collapse.navbar-collapse.justify-content-end
+  .collapse.navbar-collapse.justify-content-end#navbar-nav
     - if current_page?(listings_path) || current_page?(root_path)
       #search= render "layouts/search"
 

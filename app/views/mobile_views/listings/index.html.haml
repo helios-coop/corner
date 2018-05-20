@@ -21,7 +21,7 @@
 
   .row
     .col
-      #listing-cards.card-deck.d-flex.flex-column
+      .card-deck.d-flex.flex-column#listing-cards
         - @listings.each do |listing|
           .card
             = link_to listing_path(listing), remote: true do
@@ -52,7 +52,7 @@
     .col#map-photos
     -# - if @google_place
     .card#photo-card
-      #carousel-controls.carousel.slide{ "data-ride": "carousel" }
+      .carousel.slide#carousel-controls{ "data-ride": "carousel" }
         = render "listings/carousel"
         %a.carousel-control-prev{ "data-slide": "prev", href: "#carousel-controls", role: "button" }
           %span.carousel-control-prev-icon{ "aria-hidden": "true" }
