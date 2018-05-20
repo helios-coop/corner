@@ -60,4 +60,3 @@ Metrics/PerceivedComplexity:
 
 Style/For: { Enabled: false }
 Style/HashSyntax: { Enabled: false }
-Style/IdenticalConditionalBranches: { Enabled: false }
