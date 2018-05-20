@@ -21,9 +21,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Sat, 05 May 2018 03:02:18 GMT
+      - Sun, 20 May 2018 01:52:24 GMT
       Expires:
-      - Sat, 05 May 2018 03:07:18 GMT
+      - Sun, 20 May 2018 01:57:24 GMT
       Cache-Control:
       - public, max-age=300
       Vary:
@@ -31,7 +31,7 @@ http_interactions:
       Server:
       - scaffolding on HTTPServer2
       Content-Length:
-      - '4676'
+      - '4634'
       X-Xss-Protection:
       - 1; mode=block
       X-Frame-Options:
@@ -200,23 +200,23 @@ http_interactions:
                     "html_attributions" : [
                        "\u003ca href=\"https://maps.google.com/maps/contrib/100359130346774861821/photos\"\u003eIP Freely\u003c/a\u003e"
                     ],
-                    "photo_reference" : "CmRaAAAAGb-e37D1bycjjQMesCyMLrrUJsekImB9ePFgwRbUJ_MseaIWzhrYm3EQFm3wjtk8vtBl6qjRgiXP1thK5MUsBN0z8inD6Vtzc4DlhEp8fDUa3AQCRWIz7St8cPzk2aNyEhAUAossZyJufQhVUZ_y2OhLGhROaVvwbkrDPw6GafzeexUjMOyBxQ",
+                    "photo_reference" : "CmRaAAAAYF_qMmffbPZgaIu7A_hyikHX7mQa4WC1CPwOuRsoTHtCBMufpy5f1klibvaBtlsw5gqcSdU5_qvnk2N42HMfkdqxEE2-hH3A9YtVglk9gQxr05zFQbIp7_ztI5qXbzerEhBu5qoNfOapmrYIzg2wtbicGhQsb4kXpuLJwGfjWN3VVm3pD_s6Gw",
                     "width" : 5344
                  },
                  {
-                    "height" : 4032,
+                    "height" : 3036,
                     "html_attributions" : [
                        "\u003ca href=\"https://maps.google.com/maps/contrib/112474668069053802130/photos\"\u003eAmanda Huggenkiss\u003c/a\u003e"
                     ],
-                    "photo_reference" : "CmRaAAAAaVHbH6IW0ayHbyaVBgH1FySeeqkYlZsWg6HdQIA2yIEfRX93ND5kn-j5ktg8ahTGmfGQJ-HWy-hERsEdaXdekT8RISRTaMKr5eZLRCtO-qjZsS7f8Y7cDtiA-nZJ5wD4EhBF1Y9paM3b2WNP1h7TwYvmGhQihQKBk7q7LNyo1C-caBzpiJyRsQ",
-                    "width" : 3024
+                    "photo_reference" : "CmRaAAAAczv6iHSBI4g5jWeEWFasB-u9-qXZmlF8YXVIfBB51RhN9BDDJK02W2f1DwT4xAwxk0IGfkU18trklJHbv6nZNavwGOYu6etcndR0DhzQXnkQYbmBH-nSKFdt3px03xd-EhC0XX24HywbQ2MzTmdsDWoZGhQPwKDohVilIYXrIvzxjmHnvBKnJw",
+                    "width" : 4048
                  },
                  {
                     "height" : 3024,
                     "html_attributions" : [
                        "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eJacques Strap\u003c/a\u003e"
                     ],
-                    "photo_reference" : "CmRaAAAAN7wFdM4X0l_1WVY4i60L3PaRSb0RrMda6PNHA6iZSr4LzxGZRWiwlj3C5PKYxFJVnZmX_p2eUapQoj2VpbrbTDAflIXbTTJ9tDodaF7bAeUS5mz4AoKcReLX7r6ker9AEhCjGQ5iVILqW9TIagqSIogiGhQb8MYvCHzIM99NpThLsZkP4jXTGw",
+                    "photo_reference" : "CmRaAAAAGs_oA2_iY8IQ_g6ldbSWPAApO5_j59XNY2P8BUnJ-cHRiALJ7t1Zba_p9XdARLPpXRTs8OTtZ2ZXnpnQZkgQO0Bxtui8A5SGUEB7NwMl748AdSQ-b4Xulpu6ymlDxvXQEhDpn07gTyfGmcVQtXniqfuJGhT4mNM33ZVXnMsivJdfPqw7yfY5FQ",
                     "width" : 4032
                  },
                  {
@@ -224,56 +224,56 @@ http_interactions:
                     "html_attributions" : [
                        "\u003ca href=\"https://maps.google.com/maps/contrib/111224506919386004790/photos\"\u003eIvana Tinkle\u003c/a\u003e"
                     ],
-                    "photo_reference" : "CmRaAAAAceAweha1R_D31g3574WzJALNZUYUK1bfWuoxPOA2uc8uAePnTj_aBrnBfQiK9rqznrklJ6oHAYv0kanTowfkqLUJreda5xLFAPLWWfAXk2WF5bqmzjFREOqa7pda7tqGEhD6F7yITTpy7ceTMTCgEGFpGhQ7m0d28fhLs4seEjWQBCUMYFvpVw",
+                    "photo_reference" : "CmRaAAAAuSuTZ42v4uPW5MKXef2pulkL2UNnA9Sw5Lhd5DegCw2xcF0etqcJwQowx6cmp57lqbpctyLQIjT5RYllsi0QPm98wwhOSc6gqBxSMReAza-Pst7vQ4v4jU0XFNL9vworEhDWAQBiscSbXsPdeKO9vKtXGhS13m-Nibw6uU-WmNwiohbXUUn6ag",
                     "width" : 2358
+                 },
+                 {
+                    "height" : 2652,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eAnita Bath\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAANTV2-5PIpox7ld9sbWEafkJCOUy0YJWJRLX_HkE4DZPTZv5-KK1V9_Upq5WjPZL_q2wHzGSI1fn3S0m8f7GpigfLLxue28Kcb_tV5j7Mi7qQejnehS8aKW6Gk5s0bgtVEhDT-rjglog3VfzYHnsosG0yGhS4XsqJTUa7UNiR1txQ2ncgsghXqg",
+                    "width" : 3560
+                 },
+                 {
+                    "height" : 4032,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eSeymour Butz\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAATiC44-5POGMZmYLNW7EWDK9dCo-Eb1q20dBQmn5WgOTlwihQl5g2ZcwM7hsje-WP6JUlBe47keyKekDq9xsWooLBFUZtMYwm4y6KKhWiM75iIiuWf8CyRJJKkdnM9_UuEhD8nSDkKlzRKOsZ__seRwofGhQfknb8BYmlQ77vpH16G9m_0VgE3w",
+                    "width" : 3024
                  },
                  {
                     "height" : 3024,
                     "html_attributions" : [
-                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eAnita Bath\u003c/a\u003e"
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/112231468090529052166/photos\"\u003eOllie Tabooger\u003c/a\u003e"
                     ],
-                    "photo_reference" : "CmRaAAAA5WSHMmYGvOu0SKR0_rRvm-y9y8VaRWooSs6jlU9JdS_VyeTb63jGE_bXq_MPBMeZyhwDtIbEzC74qJPmiLx367tiBP-ge6QdknJHiDhrur9-03xGJZUd6J3A9ykKqfPZEhA7HL04ZjkAOFbVFWxYfS9UGhSGwTdyFAHShHcMm2Hklkr70H2ijg",
+                    "photo_reference" : "CmRaAAAAwtQSxC9F3kw5vDYM5ieacI5gxZ5FhTXxfIJMqOj7O9sgW3Vc2daQ3PFZLJ1oEV7PljfcstT8uiUMp0o1QP_IuMGprS1es2TEAvtgMDMzvm3TXEJ-gjlko0dChbu5_7VQEhBRWbXBf_7pwpuxrrffCkkGGhTIpPA5M7Q4STaDXhUuU-B12t2-Fg",
                     "width" : 4032
                  },
                  {
                     "height" : 2048,
                     "html_attributions" : [
-                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eSeymour Butz\u003c/a\u003e"
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/105450214682081516163/photos\"\u003eBea O’Problem\u003c/a\u003e"
                     ],
-                    "photo_reference" : "CmRaAAAA93bHpI6oa2R10z85p9sGjSL5jReQJdIk0Xy3EQQ7TOLM7jU2_whmC7TnMMePbhSgyis7NZXudw-zpShKbLr8QKD-_8MGi8qPjNuYxSFDOAtm85AgadsNveifr4vVGNo6EhAnEemomUb8KdfTjsnGm1d1GhTnkXegakOhf8ANOzPkHtSJnWkZAw",
+                    "photo_reference" : "CmRaAAAAYiYpFcuB0QknP7RFtGIE4mGhp8SpyIx9NjNyjwvdorlR9jBIPoS8BpyiD8rXBUUaw6ZsmmRyx4ZliuLhJMF-Sq0spdTGMUJ0-ce9BvDX9ULpm2LcXOjbjAp8hp0LMbfAEhAa9_OyYS1tA6EUkTvSbPBIGhS9C9WAlFkqNjaJU_s__G7Vxh6z1g",
                     "width" : 1536
                  },
                  {
                     "height" : 3120,
                     "html_attributions" : [
-                       "\u003ca href=\"https://maps.google.com/maps/contrib/112231468090529052166/photos\"\u003eOllie Tabooger\u003c/a\u003e"
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/117543173314553952567/photos\"\u003eWarren Peace\u003c/a\u003e"
                     ],
-                    "photo_reference" : "CmRaAAAAeH4JsFCYXdB8O9UklcbuhrMA5eIKZWNbpCXMh3g9zuqJjwDPb5xVKiNlYvz-aJ8zPQirwhd0owEUHs28leXgk3GgljfaMgWr9V8jHhI7-7jnx1ZxpQMA9G0ziKjatL6qEhCyxO0G2kFWuaPeBIhG2lxyGhSZjlp--AdNU0uxQoNcGd6DE80ceA",
+                    "photo_reference" : "CmRaAAAARVN4zi7pzBOAz31UPyUJnFqW548_bi7dqyr_t-W1r-SW29bJY-MsVbPyJpkrNX0jB4SQBgc61sDHDgSr6S2xGArfXlOXFumGAbjgk1gJOZ4-IIijmAUIhoe1cCTbqvAuEhBgO3JQu5RzvqBBcEzEUcNgGhRWf4-RTNYdy7pHQ1wXUYkYH4Ti5g",
                     "width" : 4160
                  },
                  {
-                    "height" : 4160,
-                    "html_attributions" : [
-                       "\u003ca href=\"https://maps.google.com/maps/contrib/105450214682081516163/photos\"\u003eBea O’Problem\u003c/a\u003e"
-                    ],
-                    "photo_reference" : "CmRaAAAAEjmOQU72yQf3_5SPnJV9PnvRL2lxD_YMaxpzwSuFKma41hFkJkQiB8aSo3OJKmpyiYEyWyowwq2kaaDK6ZSHpatvfzQcBunVMJZf0VP6bUGjpobNVZXnfI5WXC7f0MdvEhDEB35CfKEVcGZSz4NDLMD2GhT8CBto5_pdaIDQ3Zzr43yEFitgug",
-                    "width" : 2340
-                 },
-                 {
-                    "height" : 3024,
-                    "html_attributions" : [
-                       "\u003ca href=\"https://maps.google.com/maps/contrib/117543173314553952567/photos\"\u003eWarren Peace\u003c/a\u003e"
-                    ],
-                    "photo_reference" : "CmRaAAAAqnlLPzn2GWKRW8pARYFa-AoNLAwB0fsXV1tuzItjaKPEm-b280YS1F3anbRlAlbHdWOiR5lVdD8HmQJGw6q3MQRCGrREpoRX8Ove1T_rHujfV0FWFPfJ7VaqD6xczktFEhAXYevBcbZR5bPNpc_4rnxPGhSSxylTLzv2XLgnub1OX5-npLfT9w",
-                    "width" : 4032
-                 },
-                 {
-                    "height" : 4032,
+                    "height" : 3120,
                     "html_attributions" : [
                        "\u003ca href=\"https://maps.google.com/maps/contrib/107703661146181808138/photos\"\u003eEileen Dover\u003c/a\u003e"
                     ],
-                    "photo_reference" : "CmRaAAAAIMKOYasxuKtwufT_8QlH4ndS_WZdPsSXBim2oo9RAwYTOtLfPgrzJwMvTQ9YGB_koWVundYjF44mnnriP93uC4-VDsVuMeV0ETukPyfFUjRZ6HrDQtfXtRmTg54rSz1zEhD8Dy75t7KCgT4CY5jng-89GhSduHJVIQWfpVaqyQ-nRmHG5mF3Ng",
-                    "width" : 3024
+                    "photo_reference" : "CmRaAAAACK3WWpbxzGwgY3ca7PJ6kWto2eoy2YkyG_O9gYRRMyTuo0wnpslWrekYQ8IKrnt5qSa6Mz_58kFZolbPgc1odMwNBCqCcth4-RfxhJayc2TDS-bD6ZdYOnmWYDX2AbMNEhDlYBeUCnnPtCM9wVI99DpOGhRwFJ4GJC3fHqqSNNmOUf1mo6cASA",
+                    "width" : 4160
                  }
               ],
               "place_id" : "ChIJQcRZgK2Aj4ARnXNv0N65GMI",
@@ -348,6 +348,486 @@ http_interactions:
            },
            "status" : "OK"
         }
-    http_version: 
-  recorded_at: Sat, 05 May 2018 03:02:18 GMT
+    http_version:
+  recorded_at: Sun, 20 May 2018 01:52:24 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAYF_qMmffbPZgaIu7A_hyikHX7mQa4WC1CPwOuRsoTHtCBMufpy5f1klibvaBtlsw5gqcSdU5_qvnk2N42HMfkdqxEE2-hH3A9YtVglk9gQxr05zFQbIp7_ztI5qXbzerEhBu5qoNfOapmrYIzg2wtbicGhQsb4kXpuLJwGfjWN3VVm3pD_s6Gw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Sun, 20 May 2018 01:52:24 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipMhiW5xJjaP8KIsUgbQZKFRJXxN_0ty3VSxiRst=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipMhiW5xJjaP8KIsUgbQZKFRJXxN_0ty3VSxiRst=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Sun, 20 May 2018 01:52:24 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAczv6iHSBI4g5jWeEWFasB-u9-qXZmlF8YXVIfBB51RhN9BDDJK02W2f1DwT4xAwxk0IGfkU18trklJHbv6nZNavwGOYu6etcndR0DhzQXnkQYbmBH-nSKFdt3px03xd-EhC0XX24HywbQ2MzTmdsDWoZGhQPwKDohVilIYXrIvzxjmHnvBKnJw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Sun, 20 May 2018 01:52:25 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipMVp5rt-rHtbTw6LLLHjUeGFubBH6WkbfOtnSlX=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipMVp5rt-rHtbTw6LLLHjUeGFubBH6WkbfOtnSlX=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Sun, 20 May 2018 01:52:25 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAGs_oA2_iY8IQ_g6ldbSWPAApO5_j59XNY2P8BUnJ-cHRiALJ7t1Zba_p9XdARLPpXRTs8OTtZ2ZXnpnQZkgQO0Bxtui8A5SGUEB7NwMl748AdSQ-b4Xulpu6ymlDxvXQEhDpn07gTyfGmcVQtXniqfuJGhT4mNM33ZVXnMsivJdfPqw7yfY5FQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Sun, 20 May 2018 01:52:25 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipPHBMJ6P_CjyGtD_tawv7bzbmZH3KQRCAXMB09m=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipPHBMJ6P_CjyGtD_tawv7bzbmZH3KQRCAXMB09m=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Sun, 20 May 2018 01:52:25 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAuSuTZ42v4uPW5MKXef2pulkL2UNnA9Sw5Lhd5DegCw2xcF0etqcJwQowx6cmp57lqbpctyLQIjT5RYllsi0QPm98wwhOSc6gqBxSMReAza-Pst7vQ4v4jU0XFNL9vworEhDWAQBiscSbXsPdeKO9vKtXGhS13m-Nibw6uU-WmNwiohbXUUn6ag
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Sun, 20 May 2018 01:52:25 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipM5AcZw8fpM-QqPOXv9QYBy4MZaicQP0Oa-adUB=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipM5AcZw8fpM-QqPOXv9QYBy4MZaicQP0Oa-adUB=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Sun, 20 May 2018 01:52:26 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAANTV2-5PIpox7ld9sbWEafkJCOUy0YJWJRLX_HkE4DZPTZv5-KK1V9_Upq5WjPZL_q2wHzGSI1fn3S0m8f7GpigfLLxue28Kcb_tV5j7Mi7qQejnehS8aKW6Gk5s0bgtVEhDT-rjglog3VfzYHnsosG0yGhS4XsqJTUa7UNiR1txQ2ncgsghXqg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Sun, 20 May 2018 01:52:26 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipNfIg0-Cq3R9ojbNe72a0XFmgZHq9Gx6LhXqJ11=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipNfIg0-Cq3R9ojbNe72a0XFmgZHq9Gx6LhXqJ11=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Sun, 20 May 2018 01:52:26 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAATiC44-5POGMZmYLNW7EWDK9dCo-Eb1q20dBQmn5WgOTlwihQl5g2ZcwM7hsje-WP6JUlBe47keyKekDq9xsWooLBFUZtMYwm4y6KKhWiM75iIiuWf8CyRJJKkdnM9_UuEhD8nSDkKlzRKOsZ__seRwofGhQfknb8BYmlQ77vpH16G9m_0VgE3w
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Sun, 20 May 2018 01:52:26 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipOiglRKXvuSu88icOuewSRm_iZFxFQvu4jct_EO=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipOiglRKXvuSu88icOuewSRm_iZFxFQvu4jct_EO=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Sun, 20 May 2018 01:52:26 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAwtQSxC9F3kw5vDYM5ieacI5gxZ5FhTXxfIJMqOj7O9sgW3Vc2daQ3PFZLJ1oEV7PljfcstT8uiUMp0o1QP_IuMGprS1es2TEAvtgMDMzvm3TXEJ-gjlko0dChbu5_7VQEhBRWbXBf_7pwpuxrrffCkkGGhTIpPA5M7Q4STaDXhUuU-B12t2-Fg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Sun, 20 May 2018 01:52:26 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipPTc06MNDdJwx5kTBS0AT9pd8t5ubwyFkE48w9v=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipPTc06MNDdJwx5kTBS0AT9pd8t5ubwyFkE48w9v=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Sun, 20 May 2018 01:52:27 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAYiYpFcuB0QknP7RFtGIE4mGhp8SpyIx9NjNyjwvdorlR9jBIPoS8BpyiD8rXBUUaw6ZsmmRyx4ZliuLhJMF-Sq0spdTGMUJ0-ce9BvDX9ULpm2LcXOjbjAp8hp0LMbfAEhAa9_OyYS1tA6EUkTvSbPBIGhS9C9WAlFkqNjaJU_s__G7Vxh6z1g
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Sun, 20 May 2018 01:52:27 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipMkei8oIMbOss1ejFzOLce0bi8zVh8YDziOOW49=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipMkei8oIMbOss1ejFzOLce0bi8zVh8YDziOOW49=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Sun, 20 May 2018 01:52:27 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAARVN4zi7pzBOAz31UPyUJnFqW548_bi7dqyr_t-W1r-SW29bJY-MsVbPyJpkrNX0jB4SQBgc61sDHDgSr6S2xGArfXlOXFumGAbjgk1gJOZ4-IIijmAUIhoe1cCTbqvAuEhBgO3JQu5RzvqBBcEzEUcNgGhRWf4-RTNYdy7pHQ1wXUYkYH4Ti5g
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Sun, 20 May 2018 01:52:27 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipNXG0PXIoCcH3AXDuTdBTEZzzeRqvQQMqKtEBr6=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipNXG0PXIoCcH3AXDuTdBTEZzzeRqvQQMqKtEBr6=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Sun, 20 May 2018 01:52:27 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAACK3WWpbxzGwgY3ca7PJ6kWto2eoy2YkyG_O9gYRRMyTuo0wnpslWrekYQ8IKrnt5qSa6Mz_58kFZolbPgc1odMwNBCqCcth4-RfxhJayc2TDS-bD6ZdYOnmWYDX2AbMNEhDlYBeUCnnPtCM9wVI99DpOGhRwFJ4GJC3fHqqSNNmOUf1mo6cASA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Sun, 20 May 2018 01:52:27 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipN79YKQElpcgqo-XydKUyl4Mt-0uNQuIxlMB0ep=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipN79YKQElpcgqo-XydKUyl4Mt-0uNQuIxlMB0ep=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Sun, 20 May 2018 01:52:28 GMT
 recorded_with: VCR 4.0.0

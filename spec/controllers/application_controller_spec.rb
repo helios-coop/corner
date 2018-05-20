@@ -3,8 +3,6 @@
 RSpec.describe ApplicationController do
   require "browser/testing"
 
-  render_views
-
   controller do
     def index
       @listings = []

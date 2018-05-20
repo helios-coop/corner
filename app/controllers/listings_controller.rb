@@ -30,6 +30,8 @@ class ListingsController < ApplicationController
 
       redirect_to listings_path
     else
+      @all_categories = Category.all.pluck(:name)
+      @listing_categories = []
       flash[:danger] = "Something has gone horribly wrong. Listing not created."
       @currencies = Currency.all
       render :new
