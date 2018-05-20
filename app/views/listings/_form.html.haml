@@ -13,16 +13,16 @@
         - @currencies.each do |currency|
           .form-check.form-check-inline
             = check_box_tag "currencies[]", currency.id, @listing.currencies.include?(currency), class: "form-check-input", id: currency.symbol
-            %label.form-check-label{ for:"#{currency.symbol}" }= currency.symbol
+            %label.form-check-label{ for: "#{currency.symbol}" }= currency.symbol
 
     .row.form-group
       .col-sm-2 Phone
-      .col-sm-10= f.text_field :phone, class: "form-control",  :placeholder => "408 867 5309"
+      .col-sm-10= f.text_field :phone, class: "form-control", :placeholder => "408 867 5309"
     .row.form-group
       .col-sm-2= f.label :url
       .col-sm-10= f.text_field :url, class: "form-control", :placeholder => "http://www.unchainedpodcast.co"
     .row.form-group
-      %label.form-check-label.col-sm-2{ for:"online_only" } Online Only
+      %label.form-check-label.col-sm-2{ for: "online_only" } Online Only
       .col-sm-2= f.check_box :online_only, class: "form-check-input", id: "online_only"
     .form-row#address-components
       .form-group.col-sm-6
@@ -47,7 +47,7 @@
     %hr
     .input-group.mb-5
       = label_tag "Add Categories"
-      = select_tag "categories[]", options_for_select(@all_categories,  @listing_categories),{ class: "ui fluid search dropdown", id: "categories", :multiple => "", :prompt => 'Search' }
+      = select_tag "categories[]", options_for_select(@all_categories, @listing_categories), { class: "ui fluid search dropdown", id: "categories", :multiple => "", :prompt => 'Search' }
 
     .form-row
       = hidden_field_tag :from_google_places, false
