@@ -1,4 +1,4 @@
-%nav.navbar.navbar-expand-sm.navbar-light#primary-navbar
+%nav.navbar.navbar-expand-sm.navbar-light#primary-navbar-mobile
   = link_to root_path, class: "navbar-brand" do
     = image_tag "corner_logo.png", height: 70
     = image_tag "beta-icon.png", height: 50
@@ -8,8 +8,6 @@
 
   #navbar-nav.collapse.navbar-collapse.justify-content-end
     %ul.navbar-nav.nav-pills.ml-auto
-      %li.nav-item.mr-1{ class: request.path == "/listings/new" ? "active" : "" }
-        = link_to "Add Listing", new_listing_path, class: "nav-link"
       %li.nav-item.mr-1{ class: request.path == "/admin/currencies" ? "active" : "" }
         = link_to "Currencies", admin_currencies_path, class: "nav-link"
 

@@ -59,3 +59,28 @@ $standard-radius: 20px;
 #category-search {
   min-width: 200px;
 }
+
+#flashsuccess {
+  margin-bottom: 0px;
+}
+
+// Primary Header Mobile
+#primary-navbar-mobile {
+  background: $navbar-color;
+  border-bottom: 8px solid $navbar-button-color !important;
+}
+
+// Secondary Header Mobile
+#secondary-header-mobile {
+  padding: 10px 15px 10px 15px;
+  background: $navbar-color-darker-1;
+  border-bottom: 1px solid black;
+  margin-bottom: 7px;
+
+  .btn {
+    height: 1.75rem;
+    font-size: 1em;
+    line-height: 1em;
+    background: $navbar-color;
+  }
+}
