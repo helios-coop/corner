@@ -8,10 +8,14 @@ Rails.application.routes.draw do
 
   # User Signup, Login, Logout
   get  "/signup" => "users#new"
-  post "/users" => "users#create"
-  get  "/login" => "sessions#new"
-  post "/login" => "sessions#create"
+  post "/users"  => "users#create"
+  get  "/login"  => "sessions#new"
+  post "/login"  => "sessions#create"
   get  "/logout" => "sessions#destroy"
+
+  # Contact Us
+  get  "/contact" => "users#contact"
+  post "/contact" => "users#message"
 
   # Admin pages
   namespace :admin do
