@@ -1,10 +1,16 @@
+= content_for :head do
+  = stylesheet_link_tag "sessions"
+
 .container-fluid
   .row
-    .col
-      %p
-      = link_to "Create an Account", signup_path, class: "btn btn-warning"
-    .col-5
-      %h1 Log In
+    .col.col-sm.col-md
+
+    .col-10.col-sm-8.col-md-5
+      %h1.mt-5
+        .row.justify-content-between
+          .col-auto Log In
+          .col-auto.or or
+          .col-auto= link_to "Create an Account", signup_path, class: "btn btn-warning"
 
       = form_tag login_path do
         .form-group
@@ -16,4 +22,4 @@
 
         = submit_tag "Log In", class: "btn btn-primary"
 
-    .col
+    .col.col-sm.col-md
