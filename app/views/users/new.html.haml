@@ -1,7 +1,7 @@
 .container-fluid
   .row
-    .col
-    .col-5
+    .col.col-sm.col-md
+    .col-10.col-sm-8.col-md-5.mt-5
       %h1 Sign Up
 
       -# Error messages
@@ -27,4 +27,4 @@
           = f.password_field :password_confirmation, class: "form-control", required: true
 
         = submit_tag "Create Account", class: "btn btn-primary"
-    .col
+    .col.col-sm.col-md
