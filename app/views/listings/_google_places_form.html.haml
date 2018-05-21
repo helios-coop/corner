@@ -30,7 +30,7 @@
         = form_tag listings_path do
           %label#accepts Accepts:
           - @currencies.each do |currency|
-            = check_box_tag "currencies[]", currency.id, @listing.currencies.include?(currency), id: currency.symbol
+            = check_box_tag "listing[currency_ids][]", currency.id, @listing.currencies.include?(currency), id: currency.symbol
             %label{ class: "currency-check-box form-check-label", for: "#{currency.symbol}" }= currency.symbol
 
           %hr

@@ -25,7 +25,6 @@ class ListingsController < ApplicationController
     @listing = Listing.new(listing_attributes.merge(submitter: current_user))
 
     if @listing.save
-      @listing.currencies = Currency.where(id: params[:currencies])
       @listing.categories << Category.where(name: params[:categories])
 
       redirect_to listings_path
@@ -63,7 +62,6 @@ class ListingsController < ApplicationController
     @listing = Listing.find(params[:id])
     if @listing.editable_by?(current_user)
       @listing.update!(listing_params)
-      @listing.replace_currencies(Currency.where(id: params[:currencies]))
       @listing.categories = Category.where(name: params[:categories])
     else
       flash[:danger] = "Sorry, you cannot edit this listing"
@@ -87,6 +85,7 @@ class ListingsController < ApplicationController
     :url,
     :zipcode,
     :online_only,
+    currency_ids: [],
     images: [],
   ].freeze
 
@@ -96,7 +95,8 @@ class ListingsController < ApplicationController
 
   def listing_attributes_from_params
     if params[:from_google_places] == "true"
-      GooglePlaceParamsParser.new.call(params["google-place"])
+      place_params = GooglePlaceParamsParser.new.call(params["google-place"])
+      listing_params.merge(place_params)
     else
       listing_params
     end

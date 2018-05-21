@@ -69,6 +69,10 @@ class Listing < ApplicationRecord
     user == submitter || ["admin", "moderator"].include?(user.role)
   end
 
+  def currency_ids=(currency_ids)
+    replace_currencies(Currency.find(currency_ids.select(&:present?)))
+  end
+
   def replace_currencies(currencies)
     new_currencies = currencies - self.currencies
     removed_currencies = self.currencies - currencies
