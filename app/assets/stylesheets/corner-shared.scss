@@ -20,19 +20,29 @@ $standard-radius: 20px;
 
 // Header
 #primary-navbar {
-  border-bottom: 8px solid $navbar-button-color !important;
   background: $navbar-color !important;
-  height: 7rem;
 
-  .active {
-    background-color: $navbar-color-active;
-    border-radius: $standard-radius;
+  .tagline {
+    font-size: 14px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
-  .nav-pills .nav-item:hover {
-    background-color: $navbar-color-active;
-    border-color: $navbar-color-active;
-    border-radius: $standard-radius;
+  // When not showing collapsed header
+  @media (min-width: 577px) {
+    border-bottom: 8px solid $navbar-button-color !important;
+    height: 7rem;
+
+    .active {
+      background-color: $navbar-color-active;
+      border-radius: $standard-radius;
+    }
+
+    .nav-pills .nav-item:hover {
+      background-color: $navbar-color-active;
+      border-color: $navbar-color-active;
+      border-radius: $standard-radius;
+    }
   }
 }
 
