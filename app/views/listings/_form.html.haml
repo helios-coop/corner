@@ -46,7 +46,7 @@
     = label_tag "Add Images"
     .input-group.mb-1
       .custom-file
-        = f.file_field :images, multiple: true, id: "customFile", class: "custom-file-input", required: true
+        = f.file_field :images, multiple: true, id: "customFile", class: "custom-file-input", required: @listing.new_record?
         %label.custom-file-label{ for: "customFile" } Choose file
     .mt-2.mb-2#preview-images-container
 
