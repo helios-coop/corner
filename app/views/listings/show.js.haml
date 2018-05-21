@@ -17,3 +17,6 @@ googleMap.setZoom(16)
 
 -# Update photos
 $(".carousel-inner").html("#{escape_javascript(render(partial: "carousel"))}");
+
+-# Scroll to top of page
+$("html, body").animate({ scrollTop: 0 }, "fast");
