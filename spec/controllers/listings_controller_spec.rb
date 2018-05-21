@@ -73,8 +73,7 @@ RSpec.describe ListingsController do
     let(:valid_params) do
       {
         id: listing.id,
-        currencies: [litecoin.id, tron.id],
-        listing: { name: "whatevs" },
+        listing: { name: "whatevs", currency_ids: [litecoin.id, tron.id] },
       }
     end
 
@@ -141,19 +140,20 @@ RSpec.describe ListingsController do
 
   describe "POST #create" do
     let(:bitcoin) { currencies(:bitcoin) }
-    let(:currency_params) { [bitcoin.id] }
     let(:google_place_params) do
       File.read(File.join(fixture_path, "places.json"))
     end
 
     let(:valid_params) do
-      { 'google-place': google_place_params, from_google_places: true }
+      {
+        'google-place': google_place_params,
+        from_google_places: true,
+        listing: { currency_ids: [bitcoin.id] },
+      }
     end
 
     context "when a user is logged in" do
-      subject(:post_request) do
-        post :create, params: valid_params.merge(currencies: currency_params)
-      end
+      subject(:post_request) { post :create, params: valid_params }
 
       before do
         login(satoshi)
