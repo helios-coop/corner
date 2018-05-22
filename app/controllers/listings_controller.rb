@@ -33,6 +33,9 @@ class ListingsController < ApplicationController
       @listing_categories = []
       flash[:danger] = "Something has gone horribly wrong. Listing not created."
       @currencies = Currency.all
+      @categories = Category.all.pluck(:name)
+      @all_categories = Category.all.pluck(:name)
+      @listing_categories = []
       render :new
     end
   end
