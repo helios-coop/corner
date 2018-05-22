@@ -27,11 +27,11 @@
           %span
             = link_to "https://www.merkle-tree-cafe.com", "https://www.merkle-tree-cafe.com", id: "website"
 
-        = form_tag listings_path do
+        = form_for @listing do |form|
           %label#accepts Accepts:
-          - @currencies.each do |currency|
-            = check_box_tag "listing[currency_ids][]", currency.id, @listing.currencies.include?(currency), id: currency.symbol
-            %label{ class: "currency-check-box form-check-label", for: "#{currency.symbol}" }= currency.symbol
+          = form.collection_check_boxes :currency_ids, Currency.all, :id, :symbol do |builder|
+            = builder.check_box
+            = builder.label class: 'currency-check-box form-check-label'
 
           %hr
           .input-group.mb-5
