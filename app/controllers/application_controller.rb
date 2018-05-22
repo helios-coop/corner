@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session, if: proc { |c| c.request.format == "application/json" }
   helper_method :current_user
   helper_method :google_maps_api_key
+  helper_method :satoshi_image
 
   before_action :fake_ip unless Rails.env.production?
   before_action :detect_device_variant
@@ -47,5 +48,10 @@ class ApplicationController < ActionController::Base
 
   def set_google_analytics_key
     gon.google_analytics_key = ENV.fetch("GOOGLE_ANALYTICS_KEY")
+  end
+
+  def satoshi_image(width:)
+    "https://www.thesun.co.uk/wp-content/uploads" \
+      "/2017/11/nintchdbpict000074010725.jpg?strip=all&w=#{width}"
   end
 end
