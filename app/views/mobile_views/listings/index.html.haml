@@ -61,9 +61,6 @@
           %span.carousel-control-next-icon{ "aria-hidden": "true" }
           %span.sr-only Next
 
-
-
-
 -# TODO: DRY up. This also lives in the non-mobile haml file
 :javascript
   $("#larger-map-button").click( function(event) {
@@ -122,7 +119,6 @@
       })
     })
   };
-
 
 -# This has to be called after javascript above loads
 %script{ async: "", defer: "defer", src: "https://maps.googleapis.com/maps/api/js?key=#{google_maps_api_key}&callback=initMap" }
