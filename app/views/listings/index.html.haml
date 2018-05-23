@@ -23,7 +23,10 @@
                 .card-text
                   -# I dont know by css formaating breaks if you remove the link.
                   - if current_user && listing.editable_by?(current_user)
-                    = link_to "Edit", edit_listing_path(listing), class: "edit-link mt-0", style: "color: #f1ce35; text-decoration: underline"
+                    = link_to "Edit",
+                              edit_listing_path(listing),
+                              class: "edit-link mt-0",
+                              style: "color: #f1ce35; text-decoration: underline"
                   - else
                     = link_to "", "#"
 
@@ -92,7 +95,6 @@
 
   // for semanitic-ui
   $('.ui.dropdown').dropdown();
-
 
 -# This has to be called after javascript above loads
 %script{ async: "", defer: "defer", src: "https://maps.googleapis.com/maps/api/js?key=#{google_maps_api_key}&callback=initMap" }
