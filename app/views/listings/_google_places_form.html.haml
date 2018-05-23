@@ -8,7 +8,6 @@
                        id: "searchTextField",
                        required: true }
 
-
 %p
   .media.pl-3
     .row
@@ -24,8 +23,7 @@
 
         %p
           %span.icon= image_tag "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png", class: "mr-3", id: "icon", height: "20"
-          %span
-            = link_to "https://www.merkle-tree-cafe.com", "https://www.merkle-tree-cafe.com", id: "website"
+          %span= link_to "https://www.merkle-tree-cafe.com", "https://www.merkle-tree-cafe.com", id: "website"
 
         = form_for @listing do |form|
           %label#accepts Accepts:
@@ -43,9 +41,7 @@
                          multiple: "",
                          prompt: "Search"
 
-
           = hidden_field_tag "google-place", "not added yet"
           = hidden_field_tag :from_google_places, true
 
-          %p
-            = submit_tag "Add Listing", class: "btn btn-primary mb-4", id: "submit-listing-buttton"
+          %p= submit_tag "Add Listing", class: "btn btn-primary mb-4", id: "submit-listing-buttton"

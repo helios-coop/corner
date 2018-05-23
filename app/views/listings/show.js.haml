@@ -4,7 +4,6 @@
 - else
   $("#listing-details").html("#{escape_javascript(render(partial: "non_google_place_details", locals: { listing: @listing }))}");
 
-
 -# Update map
 var latitude = parseFloat("#{@listing.lat}")
 var longitude = parseFloat("#{@listing.long}")

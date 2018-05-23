@@ -10,7 +10,6 @@
           .carousel-item
             - image_url = photo.fetch_url(400)
             %img.d-block.w-100{ alt: "First slide", src: image_url }
-
   - else
     - cache @listing do
       .carousel-inner
