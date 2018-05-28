@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  CONTACT_US_WEBHOOK_URL = ENV.fetch("SLACK_CONTACT_WEBHOOK_URL")
+  SLACK_WEBHOOK_URL = ENV.fetch("SLACK_CONTACT_WEBHOOK_URL")
 
   def new
     @user = User.new
@@ -13,6 +13,8 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:success] = "Much Wow. Account created"
+      post_to_slack(@user) if Rails.env.production?
+
       redirect_to listings_path
     else
       render :new
@@ -24,8 +26,8 @@ class UsersController < ApplicationController
 
   # Recieves message from Contact Us page
   def message
-    notifier = Slack::Notifier.new CONTACT_US_WEBHOOK_URL do
-      defaults channel: "#corner-messages", username: "https://corner-pay.com/contact"
+    notifier = Slack::Notifier.new SLACK_WEBHOOK_URL do
+      defaults channel: "#corner-messages", username: "Satoshi-Bot"
     end
 
     if notifier.post slack_formatted_message
@@ -42,6 +44,14 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def post_to_slack(user)
+    notifier = Slack::Notifier.new SLACK_WEBHOOK_URL do
+      defaults channel: "#corner-messages", username: "Satoshi-Bot"
+    end
+
+    notifier.post slack_formatted_new_user(user)
+  end
 
   # Slack notification formatting: https://bit.ly/2LgtfLT
   def slack_formatted_message
@@ -72,6 +82,23 @@ class UsersController < ApplicationController
                 "know we are paying attention.",
           color: "#3AA3E3",
           title: "Next Steps:",
+        },
+      ], }
+  end
+
+  def slack_formatted_new_user(user)
+    { text: "<!channel> Woot, a new user just signed up!",
+      attachments: [
+        {
+          title: "Thats #{User.count} users signed up.",
+          fields: [
+            {
+              title: "Display Name",
+              value: user.display_name,
+              color: "#8db600",
+              short: true,
+            },
+          ],
         },
       ], }
   end
