@@ -5,12 +5,13 @@
 
       -# TODO: Make into a view helper or decorator or whateves
       .rating
-        - 1.upto(@google_place.rating) do
-          .star-icon.d-inline= fa_icon "star"
-        - if (@google_place.rating % 1) >= 0.9
-          .star-icon.d-inline= fa_icon "star"
-        - elsif (@google_place.rating % 1) >= 0.5
-          .star-icon.d-inline= fa_icon "star-half"
+        - if @google_place.rating
+          - 1.upto(@google_place.rating) do
+            .star-icon.d-inline= fa_icon "star"
+          - if (@google_place.rating % 1) >= 0.9
+            .star-icon.d-inline= fa_icon "star"
+          - elsif (@google_place.rating % 1) >= 0.5
+            .star-icon.d-inline= fa_icon "star-half"
 
     .row
       .col-12
