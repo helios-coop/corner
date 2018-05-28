@@ -1,0 +1,47 @@
+- if @listing
+  .card.non-google-place
+    .card-body
+      %h1.card-title
+        %span.mr-2= @listing.name
+
+      .row
+        .col-sm-6
+          %ul.list-unstyled
+
+            %li
+              = fa_icon "building"
+              - if @listing.online_only
+                Online Only
+              - else
+                #{@listing.address}, #{@listing.city}, #{@listing.state}
+
+            %li
+              = fa_icon "phone"
+              = @listing.phone
+            %li
+              %span
+                = link_to @listing.url, @listing.url, target: "_blank", class: "detail-url"
+
+        .col-sm-6
+          %p
+            %strong Currencies Accepted
+
+          - @listing.currencies.each do |currency|
+            %span= image_tag currency.icon_path
+
+          %p.mt-3.mb-0
+            %strong Categories
+
+          - @listing.categories.pluck(:name).each do |category_name|
+            %span.badge.badge-primary.categories-badge= category_name
+
+- else
+  .card#no-listing-found
+    %img.card-img-top{ src: satoshi_image(width: 300) }
+    .card-body
+      %h4.card-title No listings found for your search location
+      %p.card-text Satoshi suggests searching somewhere else
+    .card-footer
+      %h5
+        Try a different Location
+        = link_to "or starting here", "/listings?location=san+francisco"
