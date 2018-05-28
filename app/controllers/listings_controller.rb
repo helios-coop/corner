@@ -26,6 +26,7 @@ class ListingsController < ApplicationController
 
     if @listing.save
       @listing.categories << Category.where(name: params[:categories])
+      SlackNotifier.new.call(:new_listing, listing: @listing)
 
       redirect_to listings_path
     else

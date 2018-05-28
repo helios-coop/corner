@@ -40,6 +40,7 @@ Metrics/MethodLength:
     - app/poros/google_place_params_parser.rb
     - app/controllers/listings_controller.rb
     - app/controllers/users_controller.rb
+    - app/poros/slack_notifier.rb
 
 Metrics/ClassLength:
   Exclude:
