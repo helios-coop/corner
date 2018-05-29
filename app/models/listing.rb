@@ -43,7 +43,6 @@ class Listing < ApplicationRecord
       scope.joins(:categories).merge(Category.search_by_name(term))
     end,
     coordinates: ->(scope, term) { scope.near(term, 5) },
-    status: ->(scope, term) { scope.where(disabled: term) },
   }.freeze
 
   def self.full_search(search_options)

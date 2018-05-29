@@ -1660,4 +1660,4122 @@ http_interactions:
         HREF=\"https://lh3.googleusercontent.com/p/AF1QipNAgBcVLBZpBSpu-TrGLcaK_qCnfrktpyYcdZbJ=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
     http_version:
   recorded_at: Mon, 28 May 2018 23:12:02 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/details/json?extensions=&key=TRASH&language=&placeid=ChIJQcRZgK2Aj4ARnXNv0N65GMI
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 29 May 2018 02:51:04 GMT
+      Expires:
+      - Tue, 29 May 2018 02:56:04 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '4653'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "html_attributions" : [],
+           "result" : {
+              "address_components" : [
+                 {
+                    "long_name" : "2001",
+                    "short_name" : "2001",
+                    "types" : [ "street_number" ]
+                 },
+                 {
+                    "long_name" : "Broadway",
+                    "short_name" : "Broadway",
+                    "types" : [ "route" ]
+                 },
+                 {
+                    "long_name" : "Downtown",
+                    "short_name" : "Downtown",
+                    "types" : [ "neighborhood", "political" ]
+                 },
+                 {
+                    "long_name" : "Oakland",
+                    "short_name" : "Oakland",
+                    "types" : [ "locality", "political" ]
+                 },
+                 {
+                    "long_name" : "Alameda County",
+                    "short_name" : "Alameda County",
+                    "types" : [ "administrative_area_level_2", "political" ]
+                 },
+                 {
+                    "long_name" : "California",
+                    "short_name" : "CA",
+                    "types" : [ "administrative_area_level_1", "political" ]
+                 },
+                 {
+                    "long_name" : "United States",
+                    "short_name" : "US",
+                    "types" : [ "country", "political" ]
+                 },
+                 {
+                    "long_name" : "94612",
+                    "short_name" : "94612",
+                    "types" : [ "postal_code" ]
+                 }
+              ],
+              "adr_address" : "\u003cspan class=\"street-address\"\u003e2001 Broadway\u003c/span\u003e, \u003cspan class=\"locality\"\u003eOakland\u003c/span\u003e, \u003cspan class=\"region\"\u003eCA\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e94612\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eUSA\u003c/span\u003e",
+              "formatted_address" : "2001 Broadway, Oakland, CA 94612, USA",
+              "formatted_phone_number" : "(510) 986-0511",
+              "geometry" : {
+                 "location" : {
+                    "lat" : 37.8092687,
+                    "lng" : -122.2683876
+                 },
+                 "viewport" : {
+                    "northeast" : {
+                       "lat" : 37.8106178302915,
+                       "lng" : -122.2669272697085
+                    },
+                    "southwest" : {
+                       "lat" : 37.8079198697085,
+                       "lng" : -122.2696252302915
+                    }
+                 }
+              },
+              "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+              "id" : "06ba9b39621d9793cf68d6ab8063bb60ef348daf",
+              "international_phone_number" : "+1 510-986-0511",
+              "name" : "Tierra Mia Coffee",
+              "opening_hours" : {
+                 "open_now" : true,
+                 "periods" : [
+                    {
+                       "close" : {
+                          "day" : 0,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 0,
+                          "time" : "0700"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 1,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 1,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 2,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 2,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 3,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 3,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 4,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 4,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 5,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 5,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 6,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 6,
+                          "time" : "0700"
+                       }
+                    }
+                 ],
+                 "weekday_text" : [
+                    "Monday: 6:00 AM – 9:00 PM",
+                    "Tuesday: 6:00 AM – 9:00 PM",
+                    "Wednesday: 6:00 AM – 9:00 PM",
+                    "Thursday: 6:00 AM – 9:00 PM",
+                    "Friday: 6:00 AM – 9:00 PM",
+                    "Saturday: 7:00 AM – 9:00 PM",
+                    "Sunday: 7:00 AM – 9:00 PM"
+                 ]
+              },
+              "photos" : [
+                 {
+                    "height" : 3006,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/100359130346774861821/photos\"\u003eSarah YL Pun\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA5ULBLrEaDEF6rsQA0EVEBTRIzokAbBJMXBGdMpKqJRUA3bk6Vy-M3iTZqeVr5H9KWW5gnYCVBlqEuPIa7l0HgJYPToFkHpw8k5PhwOwl2mW6Q49ZEpqbhaTu-fq8gFV1EhD2ZaodXHlZ1FcBy3bVLmyUGhSu7D9UF4lUwIyUhA5y1VK0CN8ykw",
+                    "width" : 5344
+                 },
+                 {
+                    "height" : 3036,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/111711797880452354333/photos\"\u003eCassidy Byrd\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA43QJ61wZ-qXuYmBLrOY69NSLW645oCPU8wcal1_Lvwfx9G7eomWVxrFWgQ0Bjvn_TTfPhvz_Niz0byO92fW_cWk5FhY-mhPgocsTud1Pr2jtinp-ZI4dtLpDM7kF-leaEhAWCNWCazfBwD0-uaesdCRlGhQ_bsBM0aQTyykrRnhVEmFokLm9gg",
+                    "width" : 4048
+                 },
+                 {
+                    "height" : 3024,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eRichard Navarro\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA0Hhsm-pEl54cDSALqFTRFOayNSNa-z_rHU9EeMlXmet0Hu6ctTbHuO7yJM03wHHH6UrbMoqpMobKK4Z0yD8YhfDcnTvP_nA0drhm3oHYRWaqrF2EAV08aPmC2EuAGtmsEhADXA64WSQeEVp9q9_qfgeoGhSlJBPkPg2UAC6iRD2So9Vo51BKLg",
+                    "width" : 4032
+                 },
+                 {
+                    "height" : 4191,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/111224506919386004790/photos\"\u003eMahvash Nejad\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAiZRyzxVCdjV2EToFjOJkjFBjYw0CDvRN6Oth-5vvfmtyKlkDuXj8Sj1Ymau5s-JmFu_UWloNOdTGldg9vpr9ozDTUzvNIj5qQzZK6khGI7jei5sOlGcvA92VpH2LVd7hEhBdL5x4jy6d07KCz2LBkHuGGhT6ESpxKvHIde4mpyt-LvAq3ANSwQ",
+                    "width" : 2358
+                 },
+                 {
+                    "height" : 3024,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eRichard Navarro\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAlbk5oS6KXUtV_pEyqgdzPNzbDs06O50r6Rgx2X3MHMMGXarKjOXMi4TvQWZB0NC94dzJgZMWwB9Xrp-SNl1x9k73s2AJCKxxVVhLo3g6r-f5u8GaMwmHCthLCPEVRab0EhCaHjbra-Dz0P520syySYI0GhTB6iWxtjpgjqKpw1IXz5wakY0o-w",
+                    "width" : 4032
+                 },
+                 {
+                    "height" : 4032,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/112474668069053802130/photos\"\u003eChristina Calhoun\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAXYd7a3gOXSWx4a4rM8CBiQMjoyf41xBdg1zK9XxqjRi7ZLn5zoUPqhbQzQCJvZxbxpFO5OskladGMKG_x8r1G_uT88qcPOc1a9B2r_06EwCh5xJfS8m6H4keGtyCRXY-EhBw0PtZVJBlibaYiSUowu7mGhQIrm7sO99ofPREslbz1m4_ub1qhg",
+                    "width" : 3024
+                 },
+                 {
+                    "height" : 3120,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/112231468090529052166/photos\"\u003eIvan Chen\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAZr-u1H6VHIvFIvRQhr_f-WQAPyuTRAs-Q8LuR26fD7OjDkEnsaSTmrYLW7oEjnCR4Nc4V-_ZaPpk0TutJLZNzgC7uZ1qr11cr04FINHaL4YgcAcjUBqDo4cSagZZ3nFDEhBI_VZfkXoMPiXzGETn1RvqGhROpMPMwxi4qzQOK5CnZkuubgq-ZQ",
+                    "width" : 4160
+                 },
+                 {
+                    "height" : 2048,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eRichard Navarro\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAc0tqZmOQ31h3dU5WKCh3t8mMIDx-IjwXdLeEp4jBrUa_STWqwkrftbOgmjYTB9LUkNc3a-EiV1ha2TL5BIvoi6puo3X6Bxwo9mOB2xEIWBansW9mC-el1t9hlNDczmAHEhDHdjWw7DUFp-L35s9sGgylGhQ3dwclcleneGy0omYaxDnGSpNaow",
+                    "width" : 1536
+                 },
+                 {
+                    "height" : 3120,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/101300838103388218604/photos\"\u003eMichael Wright\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAxnX8nilQfNGTNFewa2kbcf-xgjx--QiNxzhMT630pTRFdVtwaKmgaUvlWDrpR1FkW1AuU6v52vfQIajGULbQN-Rb--Ur2R5B06Gh9LsWMfR72ixOpF24ceDx3ZKzDxTwEhAGYZWTvJM-sQaITKYnujUhGhSpGvQxSrit1rkp66zog1O646S-iA",
+                    "width" : 4160
+                 },
+                 {
+                    "height" : 4160,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/105450214682081516163/photos\"\u003eJ Davis\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAUyZiGau-G-9qdPOuJue5JQ9CP9tRzgCIUQlzRhmy50_wZW66polrpgQyQKOhDq33EUYk4t5MCbH8E1lIyrYYD679JlfeWMA8aEuYiwvjmEm4ftLMeRL29gSOyUXGXH3eEhCTDPAB8Mfx64JG7I0pUmZcGhRTGRFxSHvbyQYjllirXnSosnOE5g",
+                    "width" : 2340
+                 }
+              ],
+              "place_id" : "ChIJQcRZgK2Aj4ARnXNv0N65GMI",
+              "price_level" : 1,
+              "rating" : 4.5,
+              "reference" : "CmRSAAAAutH4P7mGbc_-mOdkNyo0PV2dgbJDO6a3FWb6XdDhnQ3IuvwBW5KrrI-iMIvbe7gHO0px15HcG2IxKNFilOsy4NFXWbNhILY70YyZp5kwagx3AgyRGldT8MriBlSlcI2xEhBqdr0zr5sI3inHqlga-EYcGhS3SpXajY-m3nOHRVAgL8Gdn6MrrA",
+              "reviews" : [
+                 {
+                    "author_name" : "Cassidy Byrd",
+                    "author_url" : "https://www.google.com/maps/contrib/111711797880452354333/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh5.googleusercontent.com/-25_oG7ro7Ic/AAAAAAAAAAI/AAAAAAAAAGI/XMW43weApLg/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "a month ago",
+                    "text" : "Tierra Mia is so good I drive from San Jose to get here. The hands down best vanilla latte, and the horchata latte is dangerously addictive (I had three in two hours). They also offer alternative milks. It's usually busy, so finding a seat is tricky, but if you're coming to study, it's worth the wait. Outlets all around, and their weird pastries are great. Everyone is friendly and amazing.",
+                    "time" : 1524087684
+                 },
+                 {
+                    "author_name" : "Elliott Park",
+                    "author_url" : "https://www.google.com/maps/contrib/101664298358840051377/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh6.googleusercontent.com/-TMcuTEZt68g/AAAAAAAAAAI/AAAAAAAAAbc/L7lszvuhS6s/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 4,
+                    "relative_time_description" : "3 weeks ago",
+                    "text" : "Horchata Latte is delicious. Overall vibe and style is great. Could work on the cleanliness a bit. There was a swarm of flies just outside the door that you have to walk through to get in and they get inside. But, if you can handle that, it is great.",
+                    "time" : 1525451221
+                 },
+                 {
+                    "author_name" : "Christopher Harris",
+                    "author_url" : "https://www.google.com/maps/contrib/106717560997501857177/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh6.googleusercontent.com/-dA5pTT1AI28/AAAAAAAAAAI/AAAAAAAABDQ/_x2TPBkw35c/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 1,
+                    "relative_time_description" : "2 months ago",
+                    "text" : "I think the concept behind is totally backwards. The coffee is decent but to say terra Mia ( my land ) is for he Hispanic community is ridiculous. From where they get the coffee is maybe $2 Per kilo tops, yet they charge $20 for 12oz at their shops. They also told me because it’s from Long Beach they want to keep the Hispanic culture and community behind it so they’re located in newly developed areas which were once Latino. How many Latino customers from the communities do they have? WHAT ABOUT FAIR TRADE???",
+                    "time" : 1520710782
+                 },
+                 {
+                    "author_name" : "Sandeep Singh",
+                    "author_url" : "https://www.google.com/maps/contrib/110371970951493322064/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh4.googleusercontent.com/-5o8joC_vj74/AAAAAAAAAAI/AAAAAAAAAEg/50Ttbyri7to/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "a month ago",
+                    "text" : "Stopped here for coffee just by chance. It was the best cup of coffee I had ever had. Period. I have made the 20 mile trip just for coffee half a dozen times since. Hope they open up a joint in Walnut Creek.",
+                    "time" : 1523128889
+                 },
+                 {
+                    "author_name" : "Rebecca Leah",
+                    "author_url" : "https://www.google.com/maps/contrib/109145974557381081868/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh4.googleusercontent.com/-zlJG7bMcpwg/AAAAAAAAAAI/AAAAAAAAAp8/O_Y973hIRyo/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "2 months ago",
+                    "text" : "Tierra Mia has good food and coffee and a nice, chill vibe. Lots of students and freelancers there. Not super quiet but not too noisy...in between. Staff are very nice. Right above the 19th St. BART station. Highly recommend.",
+                    "time" : 1520560091
+                 }
+              ],
+              "scope" : "GOOGLE",
+              "types" : [
+                 "cafe",
+                 "store",
+                 "restaurant",
+                 "food",
+                 "point_of_interest",
+                 "establishment"
+              ],
+              "url" : "https://maps.google.com/?cid=13986133009429918621",
+              "utc_offset" : -420,
+              "vicinity" : "2001 Broadway, Oakland",
+              "website" : "http://www.tierramiacoffee.com/"
+           },
+           "status" : "OK"
+        }
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:51:04 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAA5ULBLrEaDEF6rsQA0EVEBTRIzokAbBJMXBGdMpKqJRUA3bk6Vy-M3iTZqeVr5H9KWW5gnYCVBlqEuPIa7l0HgJYPToFkHpw8k5PhwOwl2mW6Q49ZEpqbhaTu-fq8gFV1EhD2ZaodXHlZ1FcBy3bVLmyUGhSu7D9UF4lUwIyUhA5y1VK0CN8ykw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:51:04 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipMhiW5xJjaP8KIsUgbQZKFRJXxN_0ty3VSxiRst=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipMhiW5xJjaP8KIsUgbQZKFRJXxN_0ty3VSxiRst=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:51:04 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAA43QJ61wZ-qXuYmBLrOY69NSLW645oCPU8wcal1_Lvwfx9G7eomWVxrFWgQ0Bjvn_TTfPhvz_Niz0byO92fW_cWk5FhY-mhPgocsTud1Pr2jtinp-ZI4dtLpDM7kF-leaEhAWCNWCazfBwD0-uaesdCRlGhQ_bsBM0aQTyykrRnhVEmFokLm9gg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:51:05 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipP-GI02-kz8ZI-dkQrXByYuEMq3y5UWS3wsNAm0=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipP-GI02-kz8ZI-dkQrXByYuEMq3y5UWS3wsNAm0=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:51:05 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAA0Hhsm-pEl54cDSALqFTRFOayNSNa-z_rHU9EeMlXmet0Hu6ctTbHuO7yJM03wHHH6UrbMoqpMobKK4Z0yD8YhfDcnTvP_nA0drhm3oHYRWaqrF2EAV08aPmC2EuAGtmsEhADXA64WSQeEVp9q9_qfgeoGhSlJBPkPg2UAC6iRD2So9Vo51BKLg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:51:05 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipPHBMJ6P_CjyGtD_tawv7bzbmZH3KQRCAXMB09m=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipPHBMJ6P_CjyGtD_tawv7bzbmZH3KQRCAXMB09m=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:51:05 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAAiZRyzxVCdjV2EToFjOJkjFBjYw0CDvRN6Oth-5vvfmtyKlkDuXj8Sj1Ymau5s-JmFu_UWloNOdTGldg9vpr9ozDTUzvNIj5qQzZK6khGI7jei5sOlGcvA92VpH2LVd7hEhBdL5x4jy6d07KCz2LBkHuGGhT6ESpxKvHIde4mpyt-LvAq3ANSwQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:51:05 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipM5AcZw8fpM-QqPOXv9QYBy4MZaicQP0Oa-adUB=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipM5AcZw8fpM-QqPOXv9QYBy4MZaicQP0Oa-adUB=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:51:05 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAAlbk5oS6KXUtV_pEyqgdzPNzbDs06O50r6Rgx2X3MHMMGXarKjOXMi4TvQWZB0NC94dzJgZMWwB9Xrp-SNl1x9k73s2AJCKxxVVhLo3g6r-f5u8GaMwmHCthLCPEVRab0EhCaHjbra-Dz0P520syySYI0GhTB6iWxtjpgjqKpw1IXz5wakY0o-w
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:51:05 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipPTc06MNDdJwx5kTBS0AT9pd8t5ubwyFkE48w9v=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipPTc06MNDdJwx5kTBS0AT9pd8t5ubwyFkE48w9v=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:51:05 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAAXYd7a3gOXSWx4a4rM8CBiQMjoyf41xBdg1zK9XxqjRi7ZLn5zoUPqhbQzQCJvZxbxpFO5OskladGMKG_x8r1G_uT88qcPOc1a9B2r_06EwCh5xJfS8m6H4keGtyCRXY-EhBw0PtZVJBlibaYiSUowu7mGhQIrm7sO99ofPREslbz1m4_ub1qhg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:51:05 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipOiglRKXvuSu88icOuewSRm_iZFxFQvu4jct_EO=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipOiglRKXvuSu88icOuewSRm_iZFxFQvu4jct_EO=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:51:05 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAAZr-u1H6VHIvFIvRQhr_f-WQAPyuTRAs-Q8LuR26fD7OjDkEnsaSTmrYLW7oEjnCR4Nc4V-_ZaPpk0TutJLZNzgC7uZ1qr11cr04FINHaL4YgcAcjUBqDo4cSagZZ3nFDEhBI_VZfkXoMPiXzGETn1RvqGhROpMPMwxi4qzQOK5CnZkuubgq-ZQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:51:06 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipN79YKQElpcgqo-XydKUyl4Mt-0uNQuIxlMB0ep=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipN79YKQElpcgqo-XydKUyl4Mt-0uNQuIxlMB0ep=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:51:06 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAAc0tqZmOQ31h3dU5WKCh3t8mMIDx-IjwXdLeEp4jBrUa_STWqwkrftbOgmjYTB9LUkNc3a-EiV1ha2TL5BIvoi6puo3X6Bxwo9mOB2xEIWBansW9mC-el1t9hlNDczmAHEhDHdjWw7DUFp-L35s9sGgylGhQ3dwclcleneGy0omYaxDnGSpNaow
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:51:06 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipMkei8oIMbOss1ejFzOLce0bi8zVh8YDziOOW49=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipMkei8oIMbOss1ejFzOLce0bi8zVh8YDziOOW49=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:51:06 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAAxnX8nilQfNGTNFewa2kbcf-xgjx--QiNxzhMT630pTRFdVtwaKmgaUvlWDrpR1FkW1AuU6v52vfQIajGULbQN-Rb--Ur2R5B06Gh9LsWMfR72ixOpF24ceDx3ZKzDxTwEhAGYZWTvJM-sQaITKYnujUhGhSpGvQxSrit1rkp66zog1O646S-iA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:51:06 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipNXG0PXIoCcH3AXDuTdBTEZzzeRqvQQMqKtEBr6=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipNXG0PXIoCcH3AXDuTdBTEZzzeRqvQQMqKtEBr6=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:51:06 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAAUyZiGau-G-9qdPOuJue5JQ9CP9tRzgCIUQlzRhmy50_wZW66polrpgQyQKOhDq33EUYk4t5MCbH8E1lIyrYYD679JlfeWMA8aEuYiwvjmEm4ftLMeRL29gSOyUXGXH3eEhCTDPAB8Mfx64JG7I0pUmZcGhRTGRFxSHvbyQYjllirXnSosnOE5g
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:51:06 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipNAgBcVLBZpBSpu-TrGLcaK_qCnfrktpyYcdZbJ=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipNAgBcVLBZpBSpu-TrGLcaK_qCnfrktpyYcdZbJ=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:51:06 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/details/json?extensions=&key=TRASH&language=&placeid=ChIJQcRZgK2Aj4ARnXNv0N65GMI
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 29 May 2018 02:53:17 GMT
+      Expires:
+      - Tue, 29 May 2018 02:58:17 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '4651'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "html_attributions" : [],
+           "result" : {
+              "address_components" : [
+                 {
+                    "long_name" : "2001",
+                    "short_name" : "2001",
+                    "types" : [ "street_number" ]
+                 },
+                 {
+                    "long_name" : "Broadway",
+                    "short_name" : "Broadway",
+                    "types" : [ "route" ]
+                 },
+                 {
+                    "long_name" : "Downtown",
+                    "short_name" : "Downtown",
+                    "types" : [ "neighborhood", "political" ]
+                 },
+                 {
+                    "long_name" : "Oakland",
+                    "short_name" : "Oakland",
+                    "types" : [ "locality", "political" ]
+                 },
+                 {
+                    "long_name" : "Alameda County",
+                    "short_name" : "Alameda County",
+                    "types" : [ "administrative_area_level_2", "political" ]
+                 },
+                 {
+                    "long_name" : "California",
+                    "short_name" : "CA",
+                    "types" : [ "administrative_area_level_1", "political" ]
+                 },
+                 {
+                    "long_name" : "United States",
+                    "short_name" : "US",
+                    "types" : [ "country", "political" ]
+                 },
+                 {
+                    "long_name" : "94612",
+                    "short_name" : "94612",
+                    "types" : [ "postal_code" ]
+                 }
+              ],
+              "adr_address" : "\u003cspan class=\"street-address\"\u003e2001 Broadway\u003c/span\u003e, \u003cspan class=\"locality\"\u003eOakland\u003c/span\u003e, \u003cspan class=\"region\"\u003eCA\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e94612\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eUSA\u003c/span\u003e",
+              "formatted_address" : "2001 Broadway, Oakland, CA 94612, USA",
+              "formatted_phone_number" : "(510) 986-0511",
+              "geometry" : {
+                 "location" : {
+                    "lat" : 37.8092687,
+                    "lng" : -122.2683876
+                 },
+                 "viewport" : {
+                    "northeast" : {
+                       "lat" : 37.8106178302915,
+                       "lng" : -122.2669272697085
+                    },
+                    "southwest" : {
+                       "lat" : 37.8079198697085,
+                       "lng" : -122.2696252302915
+                    }
+                 }
+              },
+              "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+              "id" : "06ba9b39621d9793cf68d6ab8063bb60ef348daf",
+              "international_phone_number" : "+1 510-986-0511",
+              "name" : "Tierra Mia Coffee",
+              "opening_hours" : {
+                 "open_now" : true,
+                 "periods" : [
+                    {
+                       "close" : {
+                          "day" : 0,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 0,
+                          "time" : "0700"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 1,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 1,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 2,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 2,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 3,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 3,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 4,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 4,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 5,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 5,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 6,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 6,
+                          "time" : "0700"
+                       }
+                    }
+                 ],
+                 "weekday_text" : [
+                    "Monday: 6:00 AM – 9:00 PM",
+                    "Tuesday: 6:00 AM – 9:00 PM",
+                    "Wednesday: 6:00 AM – 9:00 PM",
+                    "Thursday: 6:00 AM – 9:00 PM",
+                    "Friday: 6:00 AM – 9:00 PM",
+                    "Saturday: 7:00 AM – 9:00 PM",
+                    "Sunday: 7:00 AM – 9:00 PM"
+                 ]
+              },
+              "photos" : [
+                 {
+                    "height" : 3006,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/100359130346774861821/photos\"\u003eSarah YL Pun\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAfUzSxXxzKhNvJNIVWh_y97o89mZhtao2rJQQNcQleT05UK9r7PVO11LyowWh-qEKwpeK6AGHPwRLTw_1jr0QfsGizQ2c6ixiQPbTLo7gnCZ9LVh9_6lRmh8C4VX1f8pPEhDMqyQU8jwyWeKw0_lcjVydGhQdYK26x4s4dx_O4NGyfhH7T0Uhxg",
+                    "width" : 5344
+                 },
+                 {
+                    "height" : 3036,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/111711797880452354333/photos\"\u003eCassidy Byrd\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAGaBVUyF_sNnasaCI10c1Bh3WBsjVO7u0YsraFaNh00bMEqtrV4G0tg2fAvfy6oet-32nsW8J-BGgPNb6NTWHDxLxQckshuARVl7EcvkS7TKcRsM590KC7OzvUNRQNBmwEhCQ11dcjY7nyfrsoSf4pULaGhTJRMo6rQnambKLhwN_4n5nBucY1g",
+                    "width" : 4048
+                 },
+                 {
+                    "height" : 3024,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eRichard Navarro\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA6rhxkkYIt-wga9YoagJL5RPAZeyIvi3FJBRmtYNYlccAnifYSLzE6cHfGw5x16kSdMMtLdE7jYNlSHFphMY5Gckx9X5Bnl4j5Eyyzf5EKeN0J5otFltDnp-wTQmQoX22EhCnbFaimhLY3WZ2o-5GyL_mGhR1_Uq120EaO7b-gXqP8yqEr6i0WQ",
+                    "width" : 4032
+                 },
+                 {
+                    "height" : 4191,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/111224506919386004790/photos\"\u003eMahvash Nejad\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAiXT0itw5mbzfI7j52TLovSumxUjinaYWV8pa6IAYCliK0P0eAcp3RnDFyexJ2H-URAsAH5JTOS1iTn9rHYClp3CjdbXskFkh5SZHSz3z8lcTFI_SCirQz9mtkQ1O5P09EhD259A6wb2_8d8dRRnEaP93GhRtYc-TyQ50SufKuQOkqz-HxArrGA",
+                    "width" : 2358
+                 },
+                 {
+                    "height" : 3024,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eRichard Navarro\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAIrNgwHRasLdJbTvNZUHzKp54EDGaK3BGfPMpjJEF2--v2_Gh9jvhHedAfyQIC0RgVIOFPraKpVANP2zJbPPl_Ml3BglckjtRNrmqMQbYvYmTG0yefD7Gutwo7zLueniNEhA1CpAql0jqoyarisOAr7djGhQsUpUyskSRoPXsn5T_nzMEO71g8w",
+                    "width" : 4032
+                 },
+                 {
+                    "height" : 4032,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/112474668069053802130/photos\"\u003eChristina Calhoun\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA_8aTciILUpleZtUkCgf6BYCJ5cYP88uCFvQ727JhbrzY4xQh9MeatBd-_XIVkIPF4dUpWCcWluqCKv4seDkUjxI5vAbnwTAY-y8Pz9HLddZwmcjS-D3Vkro9SlOnHQvREhBDSSfM7_gYQP7_YQ1sh6ceGhRKnnbD8A65U4X1EzxTds1fguMWJA",
+                    "width" : 3024
+                 },
+                 {
+                    "height" : 3120,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/112231468090529052166/photos\"\u003eIvan Chen\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA_W9vI1hDMLT2FTtz9OV-qEAdG0ciUJFhfbBb2f2Al68D67su6WcT6NQh3SdfYorUWUYRF7sofd4uWiMUleVKR_56OOgeVpBnjm9GEOeb6mYel2O5jsF9xVEjrUChEuL3EhAWkKGFuGDyrRCSO-96qIdwGhTM7u7RbD77XBbvlWTmEZ74Q5sI9A",
+                    "width" : 4160
+                 },
+                 {
+                    "height" : 2048,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eRichard Navarro\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAwQ3bVRqP4VABbs2s6SUWV6QWjG_OLET5AiGl7Ffqgd-ACzq2qRlNcsy0mfTF3zSqgBXv8ugRjPUx8y2Al4-dHm9ExQd5HGxWu_37uNjhof0N9-LWmkd79o6a-SQCHGdIEhCKUPgpm6FS5G9hZedDOPCVGhQBNkD8ykTC2VhHEP5McPLsDB0N0w",
+                    "width" : 1536
+                 },
+                 {
+                    "height" : 3120,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/101300838103388218604/photos\"\u003eMichael Wright\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAPnMrsOE2eTxuAyo7dcgfDpOgW82m4x5_TWs6haAJtw3qWhCgBHVmT9apaAu3RFOQlFpJW3yEdcmG4hvZP7BHiV6ZS5ubKjExZUTUaMnDmUxEjGhPYdBooKzB4TzDtT8pEhDlT1rNcRynSrCwPTOF2BT2GhQB54unRUY4JALP1vSFZEnZjoqQQg",
+                    "width" : 4160
+                 },
+                 {
+                    "height" : 4160,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/105450214682081516163/photos\"\u003eJ Davis\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAxWnVmYrxDjLIRai5LPx9BpF2-WnZ1fTHCorBjf7BJ7nCIZaVlz2tW5AWPmv4rlMbMvJpbn_v2XVG58S3INmHMaZY8_8RZItx3fBEVstAkUWLaaGbvldV5OXRERLKMrLtEhAYf0XvOma1UxVf5ZRLDtKMGhRugPUaUjsD1jxgUWrO2mbmOLqtXw",
+                    "width" : 2340
+                 }
+              ],
+              "place_id" : "ChIJQcRZgK2Aj4ARnXNv0N65GMI",
+              "price_level" : 1,
+              "rating" : 4.5,
+              "reference" : "CmRSAAAAQQLUBYrrRP7WKcvR9Y7sH0A-d0HTsO5p_g2jh_we0aewHSjNc282B9kxnWW8S33qkNTt7mlPMOuy2uohVP7n0OUiEqOdjcUD4qeQcqSyG6bNIuQRLwtkI0Cf9meVvTZqEhBPdXYvTnNBHQmvRnvtg0eZGhS1QMohOEIxew4Nfc22ktvBbDRIQQ",
+              "reviews" : [
+                 {
+                    "author_name" : "Cassidy Byrd",
+                    "author_url" : "https://www.google.com/maps/contrib/111711797880452354333/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh5.googleusercontent.com/-25_oG7ro7Ic/AAAAAAAAAAI/AAAAAAAAAGI/XMW43weApLg/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "a month ago",
+                    "text" : "Tierra Mia is so good I drive from San Jose to get here. The hands down best vanilla latte, and the horchata latte is dangerously addictive (I had three in two hours). They also offer alternative milks. It's usually busy, so finding a seat is tricky, but if you're coming to study, it's worth the wait. Outlets all around, and their weird pastries are great. Everyone is friendly and amazing.",
+                    "time" : 1524087684
+                 },
+                 {
+                    "author_name" : "Elliott Park",
+                    "author_url" : "https://www.google.com/maps/contrib/101664298358840051377/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh6.googleusercontent.com/-TMcuTEZt68g/AAAAAAAAAAI/AAAAAAAAAbc/L7lszvuhS6s/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 4,
+                    "relative_time_description" : "3 weeks ago",
+                    "text" : "Horchata Latte is delicious. Overall vibe and style is great. Could work on the cleanliness a bit. There was a swarm of flies just outside the door that you have to walk through to get in and they get inside. But, if you can handle that, it is great.",
+                    "time" : 1525451221
+                 },
+                 {
+                    "author_name" : "Christopher Harris",
+                    "author_url" : "https://www.google.com/maps/contrib/106717560997501857177/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh6.googleusercontent.com/-dA5pTT1AI28/AAAAAAAAAAI/AAAAAAAABDQ/_x2TPBkw35c/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 1,
+                    "relative_time_description" : "2 months ago",
+                    "text" : "I think the concept behind is totally backwards. The coffee is decent but to say terra Mia ( my land ) is for he Hispanic community is ridiculous. From where they get the coffee is maybe $2 Per kilo tops, yet they charge $20 for 12oz at their shops. They also told me because it’s from Long Beach they want to keep the Hispanic culture and community behind it so they’re located in newly developed areas which were once Latino. How many Latino customers from the communities do they have? WHAT ABOUT FAIR TRADE???",
+                    "time" : 1520710782
+                 },
+                 {
+                    "author_name" : "Sandeep Singh",
+                    "author_url" : "https://www.google.com/maps/contrib/110371970951493322064/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh4.googleusercontent.com/-5o8joC_vj74/AAAAAAAAAAI/AAAAAAAAAEg/50Ttbyri7to/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "a month ago",
+                    "text" : "Stopped here for coffee just by chance. It was the best cup of coffee I had ever had. Period. I have made the 20 mile trip just for coffee half a dozen times since. Hope they open up a joint in Walnut Creek.",
+                    "time" : 1523128889
+                 },
+                 {
+                    "author_name" : "Rebecca Leah",
+                    "author_url" : "https://www.google.com/maps/contrib/109145974557381081868/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh4.googleusercontent.com/-zlJG7bMcpwg/AAAAAAAAAAI/AAAAAAAAAp8/O_Y973hIRyo/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "2 months ago",
+                    "text" : "Tierra Mia has good food and coffee and a nice, chill vibe. Lots of students and freelancers there. Not super quiet but not too noisy...in between. Staff are very nice. Right above the 19th St. BART station. Highly recommend.",
+                    "time" : 1520560091
+                 }
+              ],
+              "scope" : "GOOGLE",
+              "types" : [
+                 "cafe",
+                 "store",
+                 "restaurant",
+                 "food",
+                 "point_of_interest",
+                 "establishment"
+              ],
+              "url" : "https://maps.google.com/?cid=13986133009429918621",
+              "utc_offset" : -420,
+              "vicinity" : "2001 Broadway, Oakland",
+              "website" : "http://www.tierramiacoffee.com/"
+           },
+           "status" : "OK"
+        }
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:53:17 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAAfUzSxXxzKhNvJNIVWh_y97o89mZhtao2rJQQNcQleT05UK9r7PVO11LyowWh-qEKwpeK6AGHPwRLTw_1jr0QfsGizQ2c6ixiQPbTLo7gnCZ9LVh9_6lRmh8C4VX1f8pPEhDMqyQU8jwyWeKw0_lcjVydGhQdYK26x4s4dx_O4NGyfhH7T0Uhxg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:53:17 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipMhiW5xJjaP8KIsUgbQZKFRJXxN_0ty3VSxiRst=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipMhiW5xJjaP8KIsUgbQZKFRJXxN_0ty3VSxiRst=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:53:17 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAAGaBVUyF_sNnasaCI10c1Bh3WBsjVO7u0YsraFaNh00bMEqtrV4G0tg2fAvfy6oet-32nsW8J-BGgPNb6NTWHDxLxQckshuARVl7EcvkS7TKcRsM590KC7OzvUNRQNBmwEhCQ11dcjY7nyfrsoSf4pULaGhTJRMo6rQnambKLhwN_4n5nBucY1g
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:53:18 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipP-GI02-kz8ZI-dkQrXByYuEMq3y5UWS3wsNAm0=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipP-GI02-kz8ZI-dkQrXByYuEMq3y5UWS3wsNAm0=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:53:18 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAA6rhxkkYIt-wga9YoagJL5RPAZeyIvi3FJBRmtYNYlccAnifYSLzE6cHfGw5x16kSdMMtLdE7jYNlSHFphMY5Gckx9X5Bnl4j5Eyyzf5EKeN0J5otFltDnp-wTQmQoX22EhCnbFaimhLY3WZ2o-5GyL_mGhR1_Uq120EaO7b-gXqP8yqEr6i0WQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:53:18 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipPHBMJ6P_CjyGtD_tawv7bzbmZH3KQRCAXMB09m=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipPHBMJ6P_CjyGtD_tawv7bzbmZH3KQRCAXMB09m=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:53:18 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAAiXT0itw5mbzfI7j52TLovSumxUjinaYWV8pa6IAYCliK0P0eAcp3RnDFyexJ2H-URAsAH5JTOS1iTn9rHYClp3CjdbXskFkh5SZHSz3z8lcTFI_SCirQz9mtkQ1O5P09EhD259A6wb2_8d8dRRnEaP93GhRtYc-TyQ50SufKuQOkqz-HxArrGA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:53:18 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipM5AcZw8fpM-QqPOXv9QYBy4MZaicQP0Oa-adUB=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipM5AcZw8fpM-QqPOXv9QYBy4MZaicQP0Oa-adUB=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:53:18 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAAIrNgwHRasLdJbTvNZUHzKp54EDGaK3BGfPMpjJEF2--v2_Gh9jvhHedAfyQIC0RgVIOFPraKpVANP2zJbPPl_Ml3BglckjtRNrmqMQbYvYmTG0yefD7Gutwo7zLueniNEhA1CpAql0jqoyarisOAr7djGhQsUpUyskSRoPXsn5T_nzMEO71g8w
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:53:18 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipPTc06MNDdJwx5kTBS0AT9pd8t5ubwyFkE48w9v=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipPTc06MNDdJwx5kTBS0AT9pd8t5ubwyFkE48w9v=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:53:18 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAA_8aTciILUpleZtUkCgf6BYCJ5cYP88uCFvQ727JhbrzY4xQh9MeatBd-_XIVkIPF4dUpWCcWluqCKv4seDkUjxI5vAbnwTAY-y8Pz9HLddZwmcjS-D3Vkro9SlOnHQvREhBDSSfM7_gYQP7_YQ1sh6ceGhRKnnbD8A65U4X1EzxTds1fguMWJA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:53:19 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipOiglRKXvuSu88icOuewSRm_iZFxFQvu4jct_EO=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipOiglRKXvuSu88icOuewSRm_iZFxFQvu4jct_EO=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:53:19 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAA_W9vI1hDMLT2FTtz9OV-qEAdG0ciUJFhfbBb2f2Al68D67su6WcT6NQh3SdfYorUWUYRF7sofd4uWiMUleVKR_56OOgeVpBnjm9GEOeb6mYel2O5jsF9xVEjrUChEuL3EhAWkKGFuGDyrRCSO-96qIdwGhTM7u7RbD77XBbvlWTmEZ74Q5sI9A
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:53:19 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipN79YKQElpcgqo-XydKUyl4Mt-0uNQuIxlMB0ep=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipN79YKQElpcgqo-XydKUyl4Mt-0uNQuIxlMB0ep=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:53:19 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAAwQ3bVRqP4VABbs2s6SUWV6QWjG_OLET5AiGl7Ffqgd-ACzq2qRlNcsy0mfTF3zSqgBXv8ugRjPUx8y2Al4-dHm9ExQd5HGxWu_37uNjhof0N9-LWmkd79o6a-SQCHGdIEhCKUPgpm6FS5G9hZedDOPCVGhQBNkD8ykTC2VhHEP5McPLsDB0N0w
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:53:19 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipMkei8oIMbOss1ejFzOLce0bi8zVh8YDziOOW49=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipMkei8oIMbOss1ejFzOLce0bi8zVh8YDziOOW49=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:53:19 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAAPnMrsOE2eTxuAyo7dcgfDpOgW82m4x5_TWs6haAJtw3qWhCgBHVmT9apaAu3RFOQlFpJW3yEdcmG4hvZP7BHiV6ZS5ubKjExZUTUaMnDmUxEjGhPYdBooKzB4TzDtT8pEhDlT1rNcRynSrCwPTOF2BT2GhQB54unRUY4JALP1vSFZEnZjoqQQg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:53:19 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipNXG0PXIoCcH3AXDuTdBTEZzzeRqvQQMqKtEBr6=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipNXG0PXIoCcH3AXDuTdBTEZzzeRqvQQMqKtEBr6=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:53:19 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=TRASH&maxwidth=400&photoreference=CmRaAAAAxWnVmYrxDjLIRai5LPx9BpF2-WnZ1fTHCorBjf7BJ7nCIZaVlz2tW5AWPmv4rlMbMvJpbn_v2XVG58S3INmHMaZY8_8RZItx3fBEVstAkUWLaaGbvldV5OXRERLKMrLtEhAYf0XvOma1UxVf5ZRLDtKMGhRugPUaUjsD1jxgUWrO2mbmOLqtXw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:53:19 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipNAgBcVLBZpBSpu-TrGLcaK_qCnfrktpyYcdZbJ=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipNAgBcVLBZpBSpu-TrGLcaK_qCnfrktpyYcdZbJ=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:53:20 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/details/json?extensions=&key=trash&language=&placeid=ChIJQcRZgK2Aj4ARnXNv0N65GMI
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 29 May 2018 02:54:51 GMT
+      Expires:
+      - Tue, 29 May 2018 02:59:51 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '4651'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "html_attributions" : [],
+           "result" : {
+              "address_components" : [
+                 {
+                    "long_name" : "2001",
+                    "short_name" : "2001",
+                    "types" : [ "street_number" ]
+                 },
+                 {
+                    "long_name" : "Broadway",
+                    "short_name" : "Broadway",
+                    "types" : [ "route" ]
+                 },
+                 {
+                    "long_name" : "Downtown",
+                    "short_name" : "Downtown",
+                    "types" : [ "neighborhood", "political" ]
+                 },
+                 {
+                    "long_name" : "Oakland",
+                    "short_name" : "Oakland",
+                    "types" : [ "locality", "political" ]
+                 },
+                 {
+                    "long_name" : "Alameda County",
+                    "short_name" : "Alameda County",
+                    "types" : [ "administrative_area_level_2", "political" ]
+                 },
+                 {
+                    "long_name" : "California",
+                    "short_name" : "CA",
+                    "types" : [ "administrative_area_level_1", "political" ]
+                 },
+                 {
+                    "long_name" : "United States",
+                    "short_name" : "US",
+                    "types" : [ "country", "political" ]
+                 },
+                 {
+                    "long_name" : "94612",
+                    "short_name" : "94612",
+                    "types" : [ "postal_code" ]
+                 }
+              ],
+              "adr_address" : "\u003cspan class=\"street-address\"\u003e2001 Broadway\u003c/span\u003e, \u003cspan class=\"locality\"\u003eOakland\u003c/span\u003e, \u003cspan class=\"region\"\u003eCA\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e94612\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eUSA\u003c/span\u003e",
+              "formatted_address" : "2001 Broadway, Oakland, CA 94612, USA",
+              "formatted_phone_number" : "(510) 986-0511",
+              "geometry" : {
+                 "location" : {
+                    "lat" : 37.8092687,
+                    "lng" : -122.2683876
+                 },
+                 "viewport" : {
+                    "northeast" : {
+                       "lat" : 37.8106178302915,
+                       "lng" : -122.2669272697085
+                    },
+                    "southwest" : {
+                       "lat" : 37.8079198697085,
+                       "lng" : -122.2696252302915
+                    }
+                 }
+              },
+              "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+              "id" : "06ba9b39621d9793cf68d6ab8063bb60ef348daf",
+              "international_phone_number" : "+1 510-986-0511",
+              "name" : "Tierra Mia Coffee",
+              "opening_hours" : {
+                 "open_now" : true,
+                 "periods" : [
+                    {
+                       "close" : {
+                          "day" : 0,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 0,
+                          "time" : "0700"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 1,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 1,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 2,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 2,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 3,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 3,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 4,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 4,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 5,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 5,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 6,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 6,
+                          "time" : "0700"
+                       }
+                    }
+                 ],
+                 "weekday_text" : [
+                    "Monday: 6:00 AM – 9:00 PM",
+                    "Tuesday: 6:00 AM – 9:00 PM",
+                    "Wednesday: 6:00 AM – 9:00 PM",
+                    "Thursday: 6:00 AM – 9:00 PM",
+                    "Friday: 6:00 AM – 9:00 PM",
+                    "Saturday: 7:00 AM – 9:00 PM",
+                    "Sunday: 7:00 AM – 9:00 PM"
+                 ]
+              },
+              "photos" : [
+                 {
+                    "height" : 3006,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/100359130346774861821/photos\"\u003eSarah YL Pun\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAJROTjGCMaH3W306ME4kv53kPf4D8RcoTmbck07IJzy1lMrHpI4Sliu_TdnTaNsOzfio8YaNEaimjWZG6hYkLoD-ejLyYbavY6tC2ip_nQZSAdMYDXNt1xy-EA-teWUIgEhBdC3aMcbAINwvg0O6Q-YJYGhQjhff91WGUSyFa5KN7G3yI2PP-Iw",
+                    "width" : 5344
+                 },
+                 {
+                    "height" : 3036,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/111711797880452354333/photos\"\u003eCassidy Byrd\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAALEEFM9uBXUb0dJAeua5KURXhFt4E6h_zqFXj-mGuXGEQ3UklcFdBNQeAEnxi54wHYO9-F_Bl0QZUt18lVPl-rLLUna1Ty8GU4lXQHekAm7Wc9KVyG5NZfF5hstvpIbuoEhDSR1bvz8FrU3kd-e1nEV1TGhSLiNty4JnRTuI6sxPFZO_XZF9SFQ",
+                    "width" : 4048
+                 },
+                 {
+                    "height" : 3024,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eRichard Navarro\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA8osfpKJ6EeWfPCGvwfKlaZQH6sso29isiwEAyvZgmhbFcT7H2gqDF-EFg6MEf2_I_YkT_6SDWALO3YjF89yOj3_Yx4ewafPtwjmbOf4BwfyD-fxEsgjjzIVUKsiw-nhYEhBO02GJTBJx0_09gDviotu-GhRgF7aCNmlpjcjeUzXIm3t-y4I_WQ",
+                    "width" : 4032
+                 },
+                 {
+                    "height" : 4191,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/111224506919386004790/photos\"\u003eMahvash Nejad\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAYN07q4bUTPjPVAImmN3WBv2AGarbTdIcnYdT13iXX_lIRqZxlyvLSnt62VefxZCSgAdXf1xfZT34jydnHPp9VFrzffyX1jRFJPxVftDwVyzs2uEUjecukUirslrSyoDbEhBZGhzKR3D0VBnw3bj9HX9FGhQ9-_KyKyoDrduNSZEerO5SsvS3EQ",
+                    "width" : 2358
+                 },
+                 {
+                    "height" : 3024,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eRichard Navarro\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAOnFbCDTtrqPnKkr-wEjme82ySZPlOALl9IRUP3Fimq16Al4Dc28xcSxtcdgsTjMYlA45goYAzhwUOBma2d8uftLMmI3gn8vMPCErTJRcPx2hAtFFkJLAjUs-Aqoor2wREhDFbjtoNL2CCTg1hxc1qJVGGhSsrCtHaicQO6bWX9NAOLhocye_Kg",
+                    "width" : 4032
+                 },
+                 {
+                    "height" : 4032,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/112474668069053802130/photos\"\u003eChristina Calhoun\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAb5fL1LZnm7NyQZ6AxBG4vCDgzCA_9HkXcquDEvWz7PMUhDocb3B0AL98shDWY-Cq7f8wzRyqkNbVFNWY1e1mjQR1pGO59DxaYmb79EgxwT7sNqM6baXKbzweD4YdbFTcEhAOY4cNgDVj9_nnouJl46_lGhRR-KN35L-p5lbgLkexOOAtDmZ2Yg",
+                    "width" : 3024
+                 },
+                 {
+                    "height" : 3120,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/112231468090529052166/photos\"\u003eIvan Chen\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAAw3pQXekOfCwDApnu_aog5tdBWKYs7WJdwPvlRWoDbbfjpYgY95WLSbz_WJ3jXY3sf8cWXAkOFWVXdis3WU3-PGtj-ePigj7JJ5A869UCN-TZjTRL26IbO35Bv6jRoFvEhCHCRctyDYpuB2C_arRPS2vGhQ_nLbSGPUMsefn9H3m8w2DVfR4jg",
+                    "width" : 4160
+                 },
+                 {
+                    "height" : 2048,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eRichard Navarro\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAcbpXaO5kZcxM42gEJbPlo7o-0Ig3Vq2ldJ1hhTe9FLb1JIB2ivuAafs4Xn1RsYYeVsx9oeaj7Hf8-hOoJTeqHEUQERbQiPsV5DWu5Oxl41mtHcxQGATie0oIbQ0L9ANoEhDlyagxqQFTv9U2ykCKKVp5GhQpD1rgmD7RfspUfL2gBFs8XF8Z6w",
+                    "width" : 1536
+                 },
+                 {
+                    "height" : 3120,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/101300838103388218604/photos\"\u003eMichael Wright\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAWsziNDp5q2SP9Vp1TIVDkL_fyKKeV_NdrziP44BaSyRkueEIStcoD8qgy-t895zUumWsbc6dqHjAdh6UY0RFJMr9pjSYnLupP6Mex-s-gvZ5Q5KSGxS70N5HbXcqrViOEhDuF_g-aTOuBmVP_MREHT9LGhTBhafpQ_cz4WLnGCPE-txBmodqGA",
+                    "width" : 4160
+                 },
+                 {
+                    "height" : 4160,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/105450214682081516163/photos\"\u003eJ Davis\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAFLDCvjwDrtTlxVz8Aah-R44XPwKhfOqQsFP0LCkId60JkwOMmyX_mVj4AETmjvPnssH-RST65W9ZSo4smwW_3_oQFVTsh38H9xaVhJ2VZOrIe95a4qXP05s0YIqChXRtEhBEP8XhxEkcV_700Wn8CRQiGhQA40hWzoygvZx4vIsMPyoZ0FHfWA",
+                    "width" : 2340
+                 }
+              ],
+              "place_id" : "ChIJQcRZgK2Aj4ARnXNv0N65GMI",
+              "price_level" : 1,
+              "rating" : 4.5,
+              "reference" : "CmRSAAAAlKPEEaaHZyrcVYzPmYXIEpkjgFY_AdJgQdSQeUNEXPSL-vHEAFxsTUJory_tscuQZdwo9ZMbT3FwvsUi97m2juGD45hWZ_PEVgstLlT_pU2046uR9tNkFRE5aKnpzLe3EhAsj1xliBMvfGcFRuH57E4DGhS986kVrZZ4K3yNeemPEZ5QmRzWZg",
+              "reviews" : [
+                 {
+                    "author_name" : "Cassidy Byrd",
+                    "author_url" : "https://www.google.com/maps/contrib/111711797880452354333/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh5.googleusercontent.com/-25_oG7ro7Ic/AAAAAAAAAAI/AAAAAAAAAGI/XMW43weApLg/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "a month ago",
+                    "text" : "Tierra Mia is so good I drive from San Jose to get here. The hands down best vanilla latte, and the horchata latte is dangerously addictive (I had three in two hours). They also offer alternative milks. It's usually busy, so finding a seat is tricky, but if you're coming to study, it's worth the wait. Outlets all around, and their weird pastries are great. Everyone is friendly and amazing.",
+                    "time" : 1524087684
+                 },
+                 {
+                    "author_name" : "Elliott Park",
+                    "author_url" : "https://www.google.com/maps/contrib/101664298358840051377/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh6.googleusercontent.com/-TMcuTEZt68g/AAAAAAAAAAI/AAAAAAAAAbc/L7lszvuhS6s/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 4,
+                    "relative_time_description" : "3 weeks ago",
+                    "text" : "Horchata Latte is delicious. Overall vibe and style is great. Could work on the cleanliness a bit. There was a swarm of flies just outside the door that you have to walk through to get in and they get inside. But, if you can handle that, it is great.",
+                    "time" : 1525451221
+                 },
+                 {
+                    "author_name" : "Christopher Harris",
+                    "author_url" : "https://www.google.com/maps/contrib/106717560997501857177/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh6.googleusercontent.com/-dA5pTT1AI28/AAAAAAAAAAI/AAAAAAAABDQ/_x2TPBkw35c/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 1,
+                    "relative_time_description" : "2 months ago",
+                    "text" : "I think the concept behind is totally backwards. The coffee is decent but to say terra Mia ( my land ) is for he Hispanic community is ridiculous. From where they get the coffee is maybe $2 Per kilo tops, yet they charge $20 for 12oz at their shops. They also told me because it’s from Long Beach they want to keep the Hispanic culture and community behind it so they’re located in newly developed areas which were once Latino. How many Latino customers from the communities do they have? WHAT ABOUT FAIR TRADE???",
+                    "time" : 1520710782
+                 },
+                 {
+                    "author_name" : "Sandeep Singh",
+                    "author_url" : "https://www.google.com/maps/contrib/110371970951493322064/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh4.googleusercontent.com/-5o8joC_vj74/AAAAAAAAAAI/AAAAAAAAAEg/50Ttbyri7to/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "a month ago",
+                    "text" : "Stopped here for coffee just by chance. It was the best cup of coffee I had ever had. Period. I have made the 20 mile trip just for coffee half a dozen times since. Hope they open up a joint in Walnut Creek.",
+                    "time" : 1523128889
+                 },
+                 {
+                    "author_name" : "Rebecca Leah",
+                    "author_url" : "https://www.google.com/maps/contrib/109145974557381081868/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh4.googleusercontent.com/-zlJG7bMcpwg/AAAAAAAAAAI/AAAAAAAAAp8/O_Y973hIRyo/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "2 months ago",
+                    "text" : "Tierra Mia has good food and coffee and a nice, chill vibe. Lots of students and freelancers there. Not super quiet but not too noisy...in between. Staff are very nice. Right above the 19th St. BART station. Highly recommend.",
+                    "time" : 1520560091
+                 }
+              ],
+              "scope" : "GOOGLE",
+              "types" : [
+                 "cafe",
+                 "store",
+                 "restaurant",
+                 "food",
+                 "point_of_interest",
+                 "establishment"
+              ],
+              "url" : "https://maps.google.com/?cid=13986133009429918621",
+              "utc_offset" : -420,
+              "vicinity" : "2001 Broadway, Oakland",
+              "website" : "http://www.tierramiacoffee.com/"
+           },
+           "status" : "OK"
+        }
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:54:51 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAJROTjGCMaH3W306ME4kv53kPf4D8RcoTmbck07IJzy1lMrHpI4Sliu_TdnTaNsOzfio8YaNEaimjWZG6hYkLoD-ejLyYbavY6tC2ip_nQZSAdMYDXNt1xy-EA-teWUIgEhBdC3aMcbAINwvg0O6Q-YJYGhQjhff91WGUSyFa5KN7G3yI2PP-Iw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:54:51 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipMhiW5xJjaP8KIsUgbQZKFRJXxN_0ty3VSxiRst=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipMhiW5xJjaP8KIsUgbQZKFRJXxN_0ty3VSxiRst=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:54:51 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAALEEFM9uBXUb0dJAeua5KURXhFt4E6h_zqFXj-mGuXGEQ3UklcFdBNQeAEnxi54wHYO9-F_Bl0QZUt18lVPl-rLLUna1Ty8GU4lXQHekAm7Wc9KVyG5NZfF5hstvpIbuoEhDSR1bvz8FrU3kd-e1nEV1TGhSLiNty4JnRTuI6sxPFZO_XZF9SFQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:54:51 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipP-GI02-kz8ZI-dkQrXByYuEMq3y5UWS3wsNAm0=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipP-GI02-kz8ZI-dkQrXByYuEMq3y5UWS3wsNAm0=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:54:52 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAA8osfpKJ6EeWfPCGvwfKlaZQH6sso29isiwEAyvZgmhbFcT7H2gqDF-EFg6MEf2_I_YkT_6SDWALO3YjF89yOj3_Yx4ewafPtwjmbOf4BwfyD-fxEsgjjzIVUKsiw-nhYEhBO02GJTBJx0_09gDviotu-GhRgF7aCNmlpjcjeUzXIm3t-y4I_WQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:54:52 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipPHBMJ6P_CjyGtD_tawv7bzbmZH3KQRCAXMB09m=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipPHBMJ6P_CjyGtD_tawv7bzbmZH3KQRCAXMB09m=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:54:52 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAYN07q4bUTPjPVAImmN3WBv2AGarbTdIcnYdT13iXX_lIRqZxlyvLSnt62VefxZCSgAdXf1xfZT34jydnHPp9VFrzffyX1jRFJPxVftDwVyzs2uEUjecukUirslrSyoDbEhBZGhzKR3D0VBnw3bj9HX9FGhQ9-_KyKyoDrduNSZEerO5SsvS3EQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:54:52 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipM5AcZw8fpM-QqPOXv9QYBy4MZaicQP0Oa-adUB=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipM5AcZw8fpM-QqPOXv9QYBy4MZaicQP0Oa-adUB=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:54:52 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAOnFbCDTtrqPnKkr-wEjme82ySZPlOALl9IRUP3Fimq16Al4Dc28xcSxtcdgsTjMYlA45goYAzhwUOBma2d8uftLMmI3gn8vMPCErTJRcPx2hAtFFkJLAjUs-Aqoor2wREhDFbjtoNL2CCTg1hxc1qJVGGhSsrCtHaicQO6bWX9NAOLhocye_Kg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:54:52 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipPTc06MNDdJwx5kTBS0AT9pd8t5ubwyFkE48w9v=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipPTc06MNDdJwx5kTBS0AT9pd8t5ubwyFkE48w9v=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:54:52 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAb5fL1LZnm7NyQZ6AxBG4vCDgzCA_9HkXcquDEvWz7PMUhDocb3B0AL98shDWY-Cq7f8wzRyqkNbVFNWY1e1mjQR1pGO59DxaYmb79EgxwT7sNqM6baXKbzweD4YdbFTcEhAOY4cNgDVj9_nnouJl46_lGhRR-KN35L-p5lbgLkexOOAtDmZ2Yg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:54:52 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipOiglRKXvuSu88icOuewSRm_iZFxFQvu4jct_EO=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipOiglRKXvuSu88icOuewSRm_iZFxFQvu4jct_EO=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:54:52 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAAw3pQXekOfCwDApnu_aog5tdBWKYs7WJdwPvlRWoDbbfjpYgY95WLSbz_WJ3jXY3sf8cWXAkOFWVXdis3WU3-PGtj-ePigj7JJ5A869UCN-TZjTRL26IbO35Bv6jRoFvEhCHCRctyDYpuB2C_arRPS2vGhQ_nLbSGPUMsefn9H3m8w2DVfR4jg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:54:52 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipN79YKQElpcgqo-XydKUyl4Mt-0uNQuIxlMB0ep=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipN79YKQElpcgqo-XydKUyl4Mt-0uNQuIxlMB0ep=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:54:52 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAcbpXaO5kZcxM42gEJbPlo7o-0Ig3Vq2ldJ1hhTe9FLb1JIB2ivuAafs4Xn1RsYYeVsx9oeaj7Hf8-hOoJTeqHEUQERbQiPsV5DWu5Oxl41mtHcxQGATie0oIbQ0L9ANoEhDlyagxqQFTv9U2ykCKKVp5GhQpD1rgmD7RfspUfL2gBFs8XF8Z6w
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:54:53 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipMkei8oIMbOss1ejFzOLce0bi8zVh8YDziOOW49=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipMkei8oIMbOss1ejFzOLce0bi8zVh8YDziOOW49=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:54:53 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAWsziNDp5q2SP9Vp1TIVDkL_fyKKeV_NdrziP44BaSyRkueEIStcoD8qgy-t895zUumWsbc6dqHjAdh6UY0RFJMr9pjSYnLupP6Mex-s-gvZ5Q5KSGxS70N5HbXcqrViOEhDuF_g-aTOuBmVP_MREHT9LGhTBhafpQ_cz4WLnGCPE-txBmodqGA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:54:53 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipNXG0PXIoCcH3AXDuTdBTEZzzeRqvQQMqKtEBr6=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipNXG0PXIoCcH3AXDuTdBTEZzzeRqvQQMqKtEBr6=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:54:53 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAFLDCvjwDrtTlxVz8Aah-R44XPwKhfOqQsFP0LCkId60JkwOMmyX_mVj4AETmjvPnssH-RST65W9ZSo4smwW_3_oQFVTsh38H9xaVhJ2VZOrIe95a4qXP05s0YIqChXRtEhBEP8XhxEkcV_700Wn8CRQiGhQA40hWzoygvZx4vIsMPyoZ0FHfWA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:54:53 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipNAgBcVLBZpBSpu-TrGLcaK_qCnfrktpyYcdZbJ=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipNAgBcVLBZpBSpu-TrGLcaK_qCnfrktpyYcdZbJ=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:54:53 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/details/json?extensions=&key=trash&language=&placeid=ChIJQcRZgK2Aj4ARnXNv0N65GMI
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 29 May 2018 02:55:29 GMT
+      Expires:
+      - Tue, 29 May 2018 03:00:29 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '4648'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "html_attributions" : [],
+           "result" : {
+              "address_components" : [
+                 {
+                    "long_name" : "2001",
+                    "short_name" : "2001",
+                    "types" : [ "street_number" ]
+                 },
+                 {
+                    "long_name" : "Broadway",
+                    "short_name" : "Broadway",
+                    "types" : [ "route" ]
+                 },
+                 {
+                    "long_name" : "Downtown",
+                    "short_name" : "Downtown",
+                    "types" : [ "neighborhood", "political" ]
+                 },
+                 {
+                    "long_name" : "Oakland",
+                    "short_name" : "Oakland",
+                    "types" : [ "locality", "political" ]
+                 },
+                 {
+                    "long_name" : "Alameda County",
+                    "short_name" : "Alameda County",
+                    "types" : [ "administrative_area_level_2", "political" ]
+                 },
+                 {
+                    "long_name" : "California",
+                    "short_name" : "CA",
+                    "types" : [ "administrative_area_level_1", "political" ]
+                 },
+                 {
+                    "long_name" : "United States",
+                    "short_name" : "US",
+                    "types" : [ "country", "political" ]
+                 },
+                 {
+                    "long_name" : "94612",
+                    "short_name" : "94612",
+                    "types" : [ "postal_code" ]
+                 }
+              ],
+              "adr_address" : "\u003cspan class=\"street-address\"\u003e2001 Broadway\u003c/span\u003e, \u003cspan class=\"locality\"\u003eOakland\u003c/span\u003e, \u003cspan class=\"region\"\u003eCA\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e94612\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eUSA\u003c/span\u003e",
+              "formatted_address" : "2001 Broadway, Oakland, CA 94612, USA",
+              "formatted_phone_number" : "(510) 986-0511",
+              "geometry" : {
+                 "location" : {
+                    "lat" : 37.8092687,
+                    "lng" : -122.2683876
+                 },
+                 "viewport" : {
+                    "northeast" : {
+                       "lat" : 37.8106178302915,
+                       "lng" : -122.2669272697085
+                    },
+                    "southwest" : {
+                       "lat" : 37.8079198697085,
+                       "lng" : -122.2696252302915
+                    }
+                 }
+              },
+              "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+              "id" : "06ba9b39621d9793cf68d6ab8063bb60ef348daf",
+              "international_phone_number" : "+1 510-986-0511",
+              "name" : "Tierra Mia Coffee",
+              "opening_hours" : {
+                 "open_now" : true,
+                 "periods" : [
+                    {
+                       "close" : {
+                          "day" : 0,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 0,
+                          "time" : "0700"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 1,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 1,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 2,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 2,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 3,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 3,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 4,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 4,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 5,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 5,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 6,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 6,
+                          "time" : "0700"
+                       }
+                    }
+                 ],
+                 "weekday_text" : [
+                    "Monday: 6:00 AM – 9:00 PM",
+                    "Tuesday: 6:00 AM – 9:00 PM",
+                    "Wednesday: 6:00 AM – 9:00 PM",
+                    "Thursday: 6:00 AM – 9:00 PM",
+                    "Friday: 6:00 AM – 9:00 PM",
+                    "Saturday: 7:00 AM – 9:00 PM",
+                    "Sunday: 7:00 AM – 9:00 PM"
+                 ]
+              },
+              "photos" : [
+                 {
+                    "height" : 3006,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/100359130346774861821/photos\"\u003eSarah YL Pun\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAI_lMqJufqoib2USImxBsU4iePv0WXDtaR-J-4adf0WY5eKvVUKBIIeMH7ksgPjrREdVsSxnZeEoCBFqfzY89gYyeZpfQ0mwtZ2MEy3BzhOSPQJDPiyDL5WAkD7gHuZImEhCHn5o41k0qYy8iYTS6RTwAGhQWvz0edw0JsxB7CCDsRwwih_3Vew",
+                    "width" : 5344
+                 },
+                 {
+                    "height" : 3036,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/111711797880452354333/photos\"\u003eCassidy Byrd\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAU0oC4FS5zJAHHj79j91O4tiKsjIFjCc4xOqmOTnWGZC54m8LTC35NtRvmDrrW3BbjERmIxo681q7sNsMeCgt4S8MR6DjiS37LoGJArJQ6jFufChr1hDrUnosLoCApCYoEhDPS1GixbZzFVAAZuAvtRRvGhTM_7m2pvKFWndBPlmVjk-LPgnIwQ",
+                    "width" : 4048
+                 },
+                 {
+                    "height" : 3024,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eRichard Navarro\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAwQmMTSM98TFACg-WfPNEToX1I7VaaSXwK1tkUCRFuc0dw8QQDHatatyc1VBd27C8cfrUzvp8dFbtvGl8t15y1GNcDH-_VESWX0USs-HX5C-Nz1okcEFhZJWUe338p9ReEhDmIMZuFn74CMjNcPgjmk8eGhSksGQIL6aiqnTNPks9nhwfL8fKTw",
+                    "width" : 4032
+                 },
+                 {
+                    "height" : 4191,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/111224506919386004790/photos\"\u003eMahvash Nejad\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAx7gOM8jgwaxshBIJA5gD0ZoIvPEqQ_TMqSBEi7O4mnb1evVxj9PG44WawkK1wlP_ZMBhmWGZmK-O3msKfngnUfox50NIbztes2kbjyzaYVl_mIR9ySGdvVZDfIryAWl5EhAMh_WLNcXNwQn5G_WdP1jqGhTMoFttIDJReTIjAkM8-BEAFOdsaQ",
+                    "width" : 2358
+                 },
+                 {
+                    "height" : 3024,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eRichard Navarro\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAmYi3l9oCfha1HaX2cANwxbRSbBvPve5EU8mUGaOT_EEGJF6n0FZM6ryM-mOXBbGFLi-izK5f8ow9aqNIeUofN8ROKgExgiTew69A2TayBvn9ZYU97SpkXLzZv1SgeFaAEhD-oh4Khi9lv5QYjzDN_0sHGhRR8e3bh7EYD2LSIHNSxfjwNU_U4w",
+                    "width" : 4032
+                 },
+                 {
+                    "height" : 4032,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/112474668069053802130/photos\"\u003eChristina Calhoun\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAACBYbx1pxyTOubWHxZYp4Y7aAn_xIrdDMopYtNl9OGS82DYuG3OdF1YicVozNGp24epaIK37gFf4Bg1UZyfX5jJwEv5eFIe9NpM247vDc_ytW6MXmeKbN2OriyyCBKfSfEhDXgZPkBwfPUicSFwCLkn98GhTL9gpobe56mzHFmiHstvIQqXZK2A",
+                    "width" : 3024
+                 },
+                 {
+                    "height" : 3120,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/112231468090529052166/photos\"\u003eIvan Chen\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAnZ--T6oJ_2s2TozfEepGay7JPIagrCR5pV9lSQxupCSIyhhdaYKGaynaQyM31ygTjeAhLhn6ar3AqYzXq36c3D0Ypx3Wd8XWcKHGAq6p71kqLDQdzjFUznWkKW8fBsqgEhAe43zMndz3khZCSORLZDKXGhSXgNexMHfiYSShH4Q3X9lbSGLd7w",
+                    "width" : 4160
+                 },
+                 {
+                    "height" : 2048,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eRichard Navarro\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAmmhaMS4fmR8jlXihk4O1wDigPBMsRS2D2oEoIuJs_0AbnQOcjUgdXmU80Dsh4ioyTsWLiJH6Q0QEX5fSJyFDGmNMu9BNRkhB3MSA0NEWGe2Rg5jex8SZAGA630DI9C4jEhAIzpMM_u4GHUG_yVsQfnekGhT2apUnHY74nVQfkY-os_bJu7mWjg",
+                    "width" : 1536
+                 },
+                 {
+                    "height" : 3120,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/101300838103388218604/photos\"\u003eMichael Wright\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAArLMUlSxRFArBW29_RvDeFJGBIUzoREk5Y6Bx8xIsyI3dAZQUIuq2kOXRQXvQvw_xmCQQ-CB4U2Dx0l30b7nz7Ape5ArrE-aV_SHVrv8mSMeZIyhlT9DTN2b0Y6aHX4JEEhC3n2oneGZqm6Gfic9wyzJAGhTPj-IPGpN8FwlQ5FYxGc7Rzd5ZOw",
+                    "width" : 4160
+                 },
+                 {
+                    "height" : 4160,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/105450214682081516163/photos\"\u003eJ Davis\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAPO56EuwUX7Yj3cPKNvEoCbesnTS5E5fFq5mXzrLBfCMPvS8b3HDHmUGHHhfP3qXpVdMBVaZWwOtMYuB_HWp1B1hK7RSYOm0QPdhv2aUfeLAktyPHYWDnvTx2VW-w7jWSEhD5o4E1KiYhFd3pHwMMfJNCGhRQHvxcaIaCaUWkvwoOffX1yeE_Xg",
+                    "width" : 2340
+                 }
+              ],
+              "place_id" : "ChIJQcRZgK2Aj4ARnXNv0N65GMI",
+              "price_level" : 1,
+              "rating" : 4.5,
+              "reference" : "CmRSAAAARoVRoV1AhmYZXhMwkR_nbz6XFIAE12XPumlxJ2PGOoX7lr8bpHO3tY2_lzMRbOWX394PT9LCYA5IYBODWoHSCIyz8csS1Sjjf41YkQYjilJmII043qqUOVwas1639doVEhChoySnTKsmhxAwz9567bh8GhRunHwOufRGyeBfsc0sS-s9QP3OEA",
+              "reviews" : [
+                 {
+                    "author_name" : "Cassidy Byrd",
+                    "author_url" : "https://www.google.com/maps/contrib/111711797880452354333/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh5.googleusercontent.com/-25_oG7ro7Ic/AAAAAAAAAAI/AAAAAAAAAGI/XMW43weApLg/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "a month ago",
+                    "text" : "Tierra Mia is so good I drive from San Jose to get here. The hands down best vanilla latte, and the horchata latte is dangerously addictive (I had three in two hours). They also offer alternative milks. It's usually busy, so finding a seat is tricky, but if you're coming to study, it's worth the wait. Outlets all around, and their weird pastries are great. Everyone is friendly and amazing.",
+                    "time" : 1524087684
+                 },
+                 {
+                    "author_name" : "Elliott Park",
+                    "author_url" : "https://www.google.com/maps/contrib/101664298358840051377/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh6.googleusercontent.com/-TMcuTEZt68g/AAAAAAAAAAI/AAAAAAAAAbc/L7lszvuhS6s/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 4,
+                    "relative_time_description" : "3 weeks ago",
+                    "text" : "Horchata Latte is delicious. Overall vibe and style is great. Could work on the cleanliness a bit. There was a swarm of flies just outside the door that you have to walk through to get in and they get inside. But, if you can handle that, it is great.",
+                    "time" : 1525451221
+                 },
+                 {
+                    "author_name" : "Christopher Harris",
+                    "author_url" : "https://www.google.com/maps/contrib/106717560997501857177/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh6.googleusercontent.com/-dA5pTT1AI28/AAAAAAAAAAI/AAAAAAAABDQ/_x2TPBkw35c/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 1,
+                    "relative_time_description" : "2 months ago",
+                    "text" : "I think the concept behind is totally backwards. The coffee is decent but to say terra Mia ( my land ) is for he Hispanic community is ridiculous. From where they get the coffee is maybe $2 Per kilo tops, yet they charge $20 for 12oz at their shops. They also told me because it’s from Long Beach they want to keep the Hispanic culture and community behind it so they’re located in newly developed areas which were once Latino. How many Latino customers from the communities do they have? WHAT ABOUT FAIR TRADE???",
+                    "time" : 1520710782
+                 },
+                 {
+                    "author_name" : "Sandeep Singh",
+                    "author_url" : "https://www.google.com/maps/contrib/110371970951493322064/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh4.googleusercontent.com/-5o8joC_vj74/AAAAAAAAAAI/AAAAAAAAAEg/50Ttbyri7to/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "a month ago",
+                    "text" : "Stopped here for coffee just by chance. It was the best cup of coffee I had ever had. Period. I have made the 20 mile trip just for coffee half a dozen times since. Hope they open up a joint in Walnut Creek.",
+                    "time" : 1523128889
+                 },
+                 {
+                    "author_name" : "Rebecca Leah",
+                    "author_url" : "https://www.google.com/maps/contrib/109145974557381081868/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh4.googleusercontent.com/-zlJG7bMcpwg/AAAAAAAAAAI/AAAAAAAAAp8/O_Y973hIRyo/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "2 months ago",
+                    "text" : "Tierra Mia has good food and coffee and a nice, chill vibe. Lots of students and freelancers there. Not super quiet but not too noisy...in between. Staff are very nice. Right above the 19th St. BART station. Highly recommend.",
+                    "time" : 1520560091
+                 }
+              ],
+              "scope" : "GOOGLE",
+              "types" : [
+                 "cafe",
+                 "store",
+                 "restaurant",
+                 "food",
+                 "point_of_interest",
+                 "establishment"
+              ],
+              "url" : "https://maps.google.com/?cid=13986133009429918621",
+              "utc_offset" : -420,
+              "vicinity" : "2001 Broadway, Oakland",
+              "website" : "http://www.tierramiacoffee.com/"
+           },
+           "status" : "OK"
+        }
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:55:29 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAI_lMqJufqoib2USImxBsU4iePv0WXDtaR-J-4adf0WY5eKvVUKBIIeMH7ksgPjrREdVsSxnZeEoCBFqfzY89gYyeZpfQ0mwtZ2MEy3BzhOSPQJDPiyDL5WAkD7gHuZImEhCHn5o41k0qYy8iYTS6RTwAGhQWvz0edw0JsxB7CCDsRwwih_3Vew
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:55:30 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipMhiW5xJjaP8KIsUgbQZKFRJXxN_0ty3VSxiRst=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipMhiW5xJjaP8KIsUgbQZKFRJXxN_0ty3VSxiRst=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:55:30 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAU0oC4FS5zJAHHj79j91O4tiKsjIFjCc4xOqmOTnWGZC54m8LTC35NtRvmDrrW3BbjERmIxo681q7sNsMeCgt4S8MR6DjiS37LoGJArJQ6jFufChr1hDrUnosLoCApCYoEhDPS1GixbZzFVAAZuAvtRRvGhTM_7m2pvKFWndBPlmVjk-LPgnIwQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:55:31 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipP-GI02-kz8ZI-dkQrXByYuEMq3y5UWS3wsNAm0=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipP-GI02-kz8ZI-dkQrXByYuEMq3y5UWS3wsNAm0=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:55:31 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAwQmMTSM98TFACg-WfPNEToX1I7VaaSXwK1tkUCRFuc0dw8QQDHatatyc1VBd27C8cfrUzvp8dFbtvGl8t15y1GNcDH-_VESWX0USs-HX5C-Nz1okcEFhZJWUe338p9ReEhDmIMZuFn74CMjNcPgjmk8eGhSksGQIL6aiqnTNPks9nhwfL8fKTw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:55:32 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipPHBMJ6P_CjyGtD_tawv7bzbmZH3KQRCAXMB09m=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipPHBMJ6P_CjyGtD_tawv7bzbmZH3KQRCAXMB09m=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:55:32 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAx7gOM8jgwaxshBIJA5gD0ZoIvPEqQ_TMqSBEi7O4mnb1evVxj9PG44WawkK1wlP_ZMBhmWGZmK-O3msKfngnUfox50NIbztes2kbjyzaYVl_mIR9ySGdvVZDfIryAWl5EhAMh_WLNcXNwQn5G_WdP1jqGhTMoFttIDJReTIjAkM8-BEAFOdsaQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:55:32 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipM5AcZw8fpM-QqPOXv9QYBy4MZaicQP0Oa-adUB=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipM5AcZw8fpM-QqPOXv9QYBy4MZaicQP0Oa-adUB=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:55:32 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAmYi3l9oCfha1HaX2cANwxbRSbBvPve5EU8mUGaOT_EEGJF6n0FZM6ryM-mOXBbGFLi-izK5f8ow9aqNIeUofN8ROKgExgiTew69A2TayBvn9ZYU97SpkXLzZv1SgeFaAEhD-oh4Khi9lv5QYjzDN_0sHGhRR8e3bh7EYD2LSIHNSxfjwNU_U4w
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:55:32 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipPTc06MNDdJwx5kTBS0AT9pd8t5ubwyFkE48w9v=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipPTc06MNDdJwx5kTBS0AT9pd8t5ubwyFkE48w9v=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:55:32 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAACBYbx1pxyTOubWHxZYp4Y7aAn_xIrdDMopYtNl9OGS82DYuG3OdF1YicVozNGp24epaIK37gFf4Bg1UZyfX5jJwEv5eFIe9NpM247vDc_ytW6MXmeKbN2OriyyCBKfSfEhDXgZPkBwfPUicSFwCLkn98GhTL9gpobe56mzHFmiHstvIQqXZK2A
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:55:32 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipOiglRKXvuSu88icOuewSRm_iZFxFQvu4jct_EO=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipOiglRKXvuSu88icOuewSRm_iZFxFQvu4jct_EO=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:55:32 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAnZ--T6oJ_2s2TozfEepGay7JPIagrCR5pV9lSQxupCSIyhhdaYKGaynaQyM31ygTjeAhLhn6ar3AqYzXq36c3D0Ypx3Wd8XWcKHGAq6p71kqLDQdzjFUznWkKW8fBsqgEhAe43zMndz3khZCSORLZDKXGhSXgNexMHfiYSShH4Q3X9lbSGLd7w
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:55:33 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipN79YKQElpcgqo-XydKUyl4Mt-0uNQuIxlMB0ep=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipN79YKQElpcgqo-XydKUyl4Mt-0uNQuIxlMB0ep=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:55:33 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAmmhaMS4fmR8jlXihk4O1wDigPBMsRS2D2oEoIuJs_0AbnQOcjUgdXmU80Dsh4ioyTsWLiJH6Q0QEX5fSJyFDGmNMu9BNRkhB3MSA0NEWGe2Rg5jex8SZAGA630DI9C4jEhAIzpMM_u4GHUG_yVsQfnekGhT2apUnHY74nVQfkY-os_bJu7mWjg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:55:33 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipMkei8oIMbOss1ejFzOLce0bi8zVh8YDziOOW49=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipMkei8oIMbOss1ejFzOLce0bi8zVh8YDziOOW49=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:55:33 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAArLMUlSxRFArBW29_RvDeFJGBIUzoREk5Y6Bx8xIsyI3dAZQUIuq2kOXRQXvQvw_xmCQQ-CB4U2Dx0l30b7nz7Ape5ArrE-aV_SHVrv8mSMeZIyhlT9DTN2b0Y6aHX4JEEhC3n2oneGZqm6Gfic9wyzJAGhTPj-IPGpN8FwlQ5FYxGc7Rzd5ZOw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:55:34 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipNXG0PXIoCcH3AXDuTdBTEZzzeRqvQQMqKtEBr6=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipNXG0PXIoCcH3AXDuTdBTEZzzeRqvQQMqKtEBr6=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:55:34 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAPO56EuwUX7Yj3cPKNvEoCbesnTS5E5fFq5mXzrLBfCMPvS8b3HDHmUGHHhfP3qXpVdMBVaZWwOtMYuB_HWp1B1hK7RSYOm0QPdhv2aUfeLAktyPHYWDnvTx2VW-w7jWSEhD5o4E1KiYhFd3pHwMMfJNCGhRQHvxcaIaCaUWkvwoOffX1yeE_Xg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 02:55:35 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipNAgBcVLBZpBSpu-TrGLcaK_qCnfrktpyYcdZbJ=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipNAgBcVLBZpBSpu-TrGLcaK_qCnfrktpyYcdZbJ=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 02:55:35 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/details/json?extensions=&key=trash&language=&placeid=ChIJQcRZgK2Aj4ARnXNv0N65GMI
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 29 May 2018 03:03:52 GMT
+      Expires:
+      - Tue, 29 May 2018 03:08:52 GMT
+      Cache-Control:
+      - public, max-age=300
+      Vary:
+      - Accept-Language
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '4652'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "html_attributions" : [],
+           "result" : {
+              "address_components" : [
+                 {
+                    "long_name" : "2001",
+                    "short_name" : "2001",
+                    "types" : [ "street_number" ]
+                 },
+                 {
+                    "long_name" : "Broadway",
+                    "short_name" : "Broadway",
+                    "types" : [ "route" ]
+                 },
+                 {
+                    "long_name" : "Downtown",
+                    "short_name" : "Downtown",
+                    "types" : [ "neighborhood", "political" ]
+                 },
+                 {
+                    "long_name" : "Oakland",
+                    "short_name" : "Oakland",
+                    "types" : [ "locality", "political" ]
+                 },
+                 {
+                    "long_name" : "Alameda County",
+                    "short_name" : "Alameda County",
+                    "types" : [ "administrative_area_level_2", "political" ]
+                 },
+                 {
+                    "long_name" : "California",
+                    "short_name" : "CA",
+                    "types" : [ "administrative_area_level_1", "political" ]
+                 },
+                 {
+                    "long_name" : "United States",
+                    "short_name" : "US",
+                    "types" : [ "country", "political" ]
+                 },
+                 {
+                    "long_name" : "94612",
+                    "short_name" : "94612",
+                    "types" : [ "postal_code" ]
+                 }
+              ],
+              "adr_address" : "\u003cspan class=\"street-address\"\u003e2001 Broadway\u003c/span\u003e, \u003cspan class=\"locality\"\u003eOakland\u003c/span\u003e, \u003cspan class=\"region\"\u003eCA\u003c/span\u003e \u003cspan class=\"postal-code\"\u003e94612\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eUSA\u003c/span\u003e",
+              "formatted_address" : "2001 Broadway, Oakland, CA 94612, USA",
+              "formatted_phone_number" : "(510) 986-0511",
+              "geometry" : {
+                 "location" : {
+                    "lat" : 37.8092687,
+                    "lng" : -122.2683876
+                 },
+                 "viewport" : {
+                    "northeast" : {
+                       "lat" : 37.8106178302915,
+                       "lng" : -122.2669272697085
+                    },
+                    "southwest" : {
+                       "lat" : 37.8079198697085,
+                       "lng" : -122.2696252302915
+                    }
+                 }
+              },
+              "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/cafe-71.png",
+              "id" : "06ba9b39621d9793cf68d6ab8063bb60ef348daf",
+              "international_phone_number" : "+1 510-986-0511",
+              "name" : "Tierra Mia Coffee",
+              "opening_hours" : {
+                 "open_now" : true,
+                 "periods" : [
+                    {
+                       "close" : {
+                          "day" : 0,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 0,
+                          "time" : "0700"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 1,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 1,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 2,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 2,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 3,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 3,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 4,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 4,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 5,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 5,
+                          "time" : "0600"
+                       }
+                    },
+                    {
+                       "close" : {
+                          "day" : 6,
+                          "time" : "2100"
+                       },
+                       "open" : {
+                          "day" : 6,
+                          "time" : "0700"
+                       }
+                    }
+                 ],
+                 "weekday_text" : [
+                    "Monday: 6:00 AM – 9:00 PM",
+                    "Tuesday: 6:00 AM – 9:00 PM",
+                    "Wednesday: 6:00 AM – 9:00 PM",
+                    "Thursday: 6:00 AM – 9:00 PM",
+                    "Friday: 6:00 AM – 9:00 PM",
+                    "Saturday: 7:00 AM – 9:00 PM",
+                    "Sunday: 7:00 AM – 9:00 PM"
+                 ]
+              },
+              "photos" : [
+                 {
+                    "height" : 3006,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/100359130346774861821/photos\"\u003eSarah YL Pun\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAj9kIhLiNIgLRC2x7XEXvyAtMe-xnUvr5CV_L2kJmpO3LEWU2unnqVM6yVkzYNrTR_PuUL5zHAwvvd4l_ya01LE1ioWHReTMRkbWtn_oeXo_I_gAzhnZQs_Iq9XMtAbhiEhA9_WGJIdUllwyiip47L4FAGhStX_RRv1NRD7gGCUvo-uCcDvATOA",
+                    "width" : 5344
+                 },
+                 {
+                    "height" : 3036,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/111711797880452354333/photos\"\u003eCassidy Byrd\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAkaE8dax0cBhNCyjqufkh887ZpwR5XCOiL9b77ObhGnQu6USerBYGiIa9poWvUEnaOS9rAfGVHCDS26dT2diWNz2XnuOLwr58jhB6SpkMK4PxyOyGYc6F-pNF6Pu8KlqIEhAbnULIMTkchDATHdasQQSqGhTO88XzJgyrlDdeCq0SywGuFYtRjA",
+                    "width" : 4048
+                 },
+                 {
+                    "height" : 3024,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eRichard Navarro\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAZjxXOYOvhzmfIDYfl0r0cMmWiO4AZPCQSc3e_vtG-zmXMjTFkk2VI3aQg_ZO-Iwf52fPAZhIZdYVoSKVF7Vywqh5TD95RlH0rFfgHSBDkW7EjKw9rxhnWVDBRR40VzAyEhChkqbOy0FPydVH5l6oN8quGhRRGeucVX0Qzjpgvy0ThMa9C_7rww",
+                    "width" : 4032
+                 },
+                 {
+                    "height" : 4191,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/111224506919386004790/photos\"\u003eMahvash Nejad\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAs56zHeIKic86V8ogy5C_7ngIavQsWt9bNPd1RP8zjKSjivp8qNqM10izL2WESMzCFXuthiDbVk7fRG9Kg-yCtEn49I8ulE1Js57jnMfzbrY5_7dkq1vH9L9QEtVYvxMPEhDVmVNdlbYKiBKA1UI4kr1sGhTxrHg6Epghc0Y_ZmiHabACu6Uv3A",
+                    "width" : 2358
+                 },
+                 {
+                    "height" : 3024,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eRichard Navarro\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA2o5jb-HC4iVRomzes5pxCdiK0orqPYu5FWrSt-9c-r9Dfm3jH5Em2TRJi91G6g55YdTvd6n-RgfinZJlYKhsMW6jKByaa-Vt0hltFK-12yqb1OFVReTKF5QPrQQS9SWSEhBgpt7IWbZC5J5wyMDxmp7FGhQHTH1nrOo7x0EuoL0NMfL4M-kO_Q",
+                    "width" : 4032
+                 },
+                 {
+                    "height" : 4032,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/112474668069053802130/photos\"\u003eChristina Calhoun\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA7RoJPms4I3VbZhs8eiV9KrRw6CN05Q23LWwUjC3xMN3BJuQc1NOUPrTcoG4AzeXaK4UDyPyKoWAHvQ7eA-xYdOm5tZZG3BZ3ouLSate0jF5x4mds9aAQ9l6CGFbW6Z6AEhAQaP6J_l9a54iOj5_ebaIVGhSkZz7C5AlG1qZfnw_6ETMBe76AZg",
+                    "width" : 3024
+                 },
+                 {
+                    "height" : 3120,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/112231468090529052166/photos\"\u003eIvan Chen\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAAiBMX1z2aRXCGmz-kTHylfJSDYczQ2xzgUcjANYGxV8_CqLjqd3Ndl2q1-LDCln6KO3bvEdw3iuyjbUIsBiVIuNhSUMpC42Q8GwzcIrEhJlwSYFLk9kxJWzIVjW1qbjmUEhBSIxtOG1mnc-EHY6eSVQLtGhSP9F8YHNLVfnlJhRrX-J3hUVntLg",
+                    "width" : 4160
+                 },
+                 {
+                    "height" : 2048,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/102837592139129677983/photos\"\u003eRichard Navarro\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA9pXqnszbFL-q7u66TEQ5Zi769IxHllMvDHZ2Uxi8p9r4-FfdEOIrx0nn0oWJtL0GKt_2GP-1k9NQ5sF4EXCnCLyQkRGAvTVISECLyPxKKjNw3b4qmdLpY6W1-YxraTS4EhDbw_fUHlmiOYgtjow9M0fGGhRKxuNY5YiNmkk4zpjFlKg1jivmsQ",
+                    "width" : 1536
+                 },
+                 {
+                    "height" : 3120,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/101300838103388218604/photos\"\u003eMichael Wright\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA9PNZuZCz4pHC8Xhcfrda0Pct-1JdGpEkwyaxzuDA1Z5GXcLEX-SAhn_D4BlgqHDizfV2pvLjo-287WWx0kGtoJaMRMR7Tq-JdCfv5UiP_enjjRxpLOb_IFHrQX9QOotXEhDTG6atiYte7pm1OjJv597IGhSU-ntOkj8h6G34Tl9nu7a6VT4bYg",
+                    "width" : 4160
+                 },
+                 {
+                    "height" : 4160,
+                    "html_attributions" : [
+                       "\u003ca href=\"https://maps.google.com/maps/contrib/105450214682081516163/photos\"\u003eJ Davis\u003c/a\u003e"
+                    ],
+                    "photo_reference" : "CmRaAAAA4DU12su1r4EHHPt7pWQ3uJY1ZXQI0fhaYhC7uusoFTWuua6jlgCE6CMY3dSB7rQ39nG4xidW4_776FnlpqEG_FQmnjtxfPzckqej_ScVaELsoF1vnIxF2QZvvQQJrbYQEhDLM-OVN2bkX_Rp-yhpf87kGhQIDVZZqZOgqlM7ZOPDiu15Sgc5Gw",
+                    "width" : 2340
+                 }
+              ],
+              "place_id" : "ChIJQcRZgK2Aj4ARnXNv0N65GMI",
+              "price_level" : 1,
+              "rating" : 4.5,
+              "reference" : "CmRSAAAAwFSF8Gkoeg6UXf-8_2iVAEFsM2Bd_89jKYqxCq3g8hN-yGwq_KuaXFa60NekhDfbTkHRHp2RgAzx1niMwwACCkD1RgBHXKgTAyHOhoPUjdjz584FGB7gdf14QiekKQu0EhBJLOavhwcDp1bNby5NzoFqGhQlwfOIIMi53zjh5_A-gqXr_eL6sA",
+              "reviews" : [
+                 {
+                    "author_name" : "Cassidy Byrd",
+                    "author_url" : "https://www.google.com/maps/contrib/111711797880452354333/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh5.googleusercontent.com/-25_oG7ro7Ic/AAAAAAAAAAI/AAAAAAAAAGI/XMW43weApLg/s128-c0x00000000-cc-rp-mo-ba3/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "a month ago",
+                    "text" : "Tierra Mia is so good I drive from San Jose to get here. The hands down best vanilla latte, and the horchata latte is dangerously addictive (I had three in two hours). They also offer alternative milks. It's usually busy, so finding a seat is tricky, but if you're coming to study, it's worth the wait. Outlets all around, and their weird pastries are great. Everyone is friendly and amazing.",
+                    "time" : 1524087684
+                 },
+                 {
+                    "author_name" : "Elliott Park",
+                    "author_url" : "https://www.google.com/maps/contrib/101664298358840051377/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh6.googleusercontent.com/-TMcuTEZt68g/AAAAAAAAAAI/AAAAAAAAAbc/L7lszvuhS6s/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 4,
+                    "relative_time_description" : "3 weeks ago",
+                    "text" : "Horchata Latte is delicious. Overall vibe and style is great. Could work on the cleanliness a bit. There was a swarm of flies just outside the door that you have to walk through to get in and they get inside. But, if you can handle that, it is great.",
+                    "time" : 1525451221
+                 },
+                 {
+                    "author_name" : "Christopher Harris",
+                    "author_url" : "https://www.google.com/maps/contrib/106717560997501857177/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh6.googleusercontent.com/-dA5pTT1AI28/AAAAAAAAAAI/AAAAAAAABDQ/_x2TPBkw35c/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 1,
+                    "relative_time_description" : "2 months ago",
+                    "text" : "I think the concept behind is totally backwards. The coffee is decent but to say terra Mia ( my land ) is for he Hispanic community is ridiculous. From where they get the coffee is maybe $2 Per kilo tops, yet they charge $20 for 12oz at their shops. They also told me because it’s from Long Beach they want to keep the Hispanic culture and community behind it so they’re located in newly developed areas which were once Latino. How many Latino customers from the communities do they have? WHAT ABOUT FAIR TRADE???",
+                    "time" : 1520710782
+                 },
+                 {
+                    "author_name" : "Sandeep Singh",
+                    "author_url" : "https://www.google.com/maps/contrib/110371970951493322064/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh4.googleusercontent.com/-5o8joC_vj74/AAAAAAAAAAI/AAAAAAAAAEg/50Ttbyri7to/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "a month ago",
+                    "text" : "Stopped here for coffee just by chance. It was the best cup of coffee I had ever had. Period. I have made the 20 mile trip just for coffee half a dozen times since. Hope they open up a joint in Walnut Creek.",
+                    "time" : 1523128889
+                 },
+                 {
+                    "author_name" : "Rebecca Leah",
+                    "author_url" : "https://www.google.com/maps/contrib/109145974557381081868/reviews",
+                    "language" : "en",
+                    "profile_photo_url" : "https://lh4.googleusercontent.com/-zlJG7bMcpwg/AAAAAAAAAAI/AAAAAAAAAp8/O_Y973hIRyo/s128-c0x00000000-cc-rp-mo/photo.jpg",
+                    "rating" : 5,
+                    "relative_time_description" : "2 months ago",
+                    "text" : "Tierra Mia has good food and coffee and a nice, chill vibe. Lots of students and freelancers there. Not super quiet but not too noisy...in between. Staff are very nice. Right above the 19th St. BART station. Highly recommend.",
+                    "time" : 1520560091
+                 }
+              ],
+              "scope" : "GOOGLE",
+              "types" : [
+                 "cafe",
+                 "store",
+                 "restaurant",
+                 "food",
+                 "point_of_interest",
+                 "establishment"
+              ],
+              "url" : "https://maps.google.com/?cid=13986133009429918621",
+              "utc_offset" : -420,
+              "vicinity" : "2001 Broadway, Oakland",
+              "website" : "http://www.tierramiacoffee.com/"
+           },
+           "status" : "OK"
+        }
+    http_version:
+  recorded_at: Tue, 29 May 2018 03:03:52 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAj9kIhLiNIgLRC2x7XEXvyAtMe-xnUvr5CV_L2kJmpO3LEWU2unnqVM6yVkzYNrTR_PuUL5zHAwvvd4l_ya01LE1ioWHReTMRkbWtn_oeXo_I_gAzhnZQs_Iq9XMtAbhiEhA9_WGJIdUllwyiip47L4FAGhStX_RRv1NRD7gGCUvo-uCcDvATOA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 03:03:52 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipMhiW5xJjaP8KIsUgbQZKFRJXxN_0ty3VSxiRst=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipMhiW5xJjaP8KIsUgbQZKFRJXxN_0ty3VSxiRst=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 03:03:52 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAkaE8dax0cBhNCyjqufkh887ZpwR5XCOiL9b77ObhGnQu6USerBYGiIa9poWvUEnaOS9rAfGVHCDS26dT2diWNz2XnuOLwr58jhB6SpkMK4PxyOyGYc6F-pNF6Pu8KlqIEhAbnULIMTkchDATHdasQQSqGhTO88XzJgyrlDdeCq0SywGuFYtRjA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 03:03:52 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipP-GI02-kz8ZI-dkQrXByYuEMq3y5UWS3wsNAm0=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipP-GI02-kz8ZI-dkQrXByYuEMq3y5UWS3wsNAm0=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 03:03:52 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAZjxXOYOvhzmfIDYfl0r0cMmWiO4AZPCQSc3e_vtG-zmXMjTFkk2VI3aQg_ZO-Iwf52fPAZhIZdYVoSKVF7Vywqh5TD95RlH0rFfgHSBDkW7EjKw9rxhnWVDBRR40VzAyEhChkqbOy0FPydVH5l6oN8quGhRRGeucVX0Qzjpgvy0ThMa9C_7rww
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 03:03:53 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipPHBMJ6P_CjyGtD_tawv7bzbmZH3KQRCAXMB09m=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipPHBMJ6P_CjyGtD_tawv7bzbmZH3KQRCAXMB09m=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 03:03:53 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAs56zHeIKic86V8ogy5C_7ngIavQsWt9bNPd1RP8zjKSjivp8qNqM10izL2WESMzCFXuthiDbVk7fRG9Kg-yCtEn49I8ulE1Js57jnMfzbrY5_7dkq1vH9L9QEtVYvxMPEhDVmVNdlbYKiBKA1UI4kr1sGhTxrHg6Epghc0Y_ZmiHabACu6Uv3A
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 03:03:53 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipM5AcZw8fpM-QqPOXv9QYBy4MZaicQP0Oa-adUB=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipM5AcZw8fpM-QqPOXv9QYBy4MZaicQP0Oa-adUB=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 03:03:53 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAA2o5jb-HC4iVRomzes5pxCdiK0orqPYu5FWrSt-9c-r9Dfm3jH5Em2TRJi91G6g55YdTvd6n-RgfinZJlYKhsMW6jKByaa-Vt0hltFK-12yqb1OFVReTKF5QPrQQS9SWSEhBgpt7IWbZC5J5wyMDxmp7FGhQHTH1nrOo7x0EuoL0NMfL4M-kO_Q
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 03:03:53 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipPTc06MNDdJwx5kTBS0AT9pd8t5ubwyFkE48w9v=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipPTc06MNDdJwx5kTBS0AT9pd8t5ubwyFkE48w9v=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 03:03:53 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAA7RoJPms4I3VbZhs8eiV9KrRw6CN05Q23LWwUjC3xMN3BJuQc1NOUPrTcoG4AzeXaK4UDyPyKoWAHvQ7eA-xYdOm5tZZG3BZ3ouLSate0jF5x4mds9aAQ9l6CGFbW6Z6AEhAQaP6J_l9a54iOj5_ebaIVGhSkZz7C5AlG1qZfnw_6ETMBe76AZg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 03:03:53 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipOiglRKXvuSu88icOuewSRm_iZFxFQvu4jct_EO=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipOiglRKXvuSu88icOuewSRm_iZFxFQvu4jct_EO=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 03:03:53 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAAiBMX1z2aRXCGmz-kTHylfJSDYczQ2xzgUcjANYGxV8_CqLjqd3Ndl2q1-LDCln6KO3bvEdw3iuyjbUIsBiVIuNhSUMpC42Q8GwzcIrEhJlwSYFLk9kxJWzIVjW1qbjmUEhBSIxtOG1mnc-EHY6eSVQLtGhSP9F8YHNLVfnlJhRrX-J3hUVntLg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 03:03:54 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipN79YKQElpcgqo-XydKUyl4Mt-0uNQuIxlMB0ep=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipN79YKQElpcgqo-XydKUyl4Mt-0uNQuIxlMB0ep=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 03:03:54 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAA9pXqnszbFL-q7u66TEQ5Zi769IxHllMvDHZ2Uxi8p9r4-FfdEOIrx0nn0oWJtL0GKt_2GP-1k9NQ5sF4EXCnCLyQkRGAvTVISECLyPxKKjNw3b4qmdLpY6W1-YxraTS4EhDbw_fUHlmiOYgtjow9M0fGGhRKxuNY5YiNmkk4zpjFlKg1jivmsQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 03:03:54 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipMkei8oIMbOss1ejFzOLce0bi8zVh8YDziOOW49=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipMkei8oIMbOss1ejFzOLce0bi8zVh8YDziOOW49=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 03:03:54 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAA9PNZuZCz4pHC8Xhcfrda0Pct-1JdGpEkwyaxzuDA1Z5GXcLEX-SAhn_D4BlgqHDizfV2pvLjo-287WWx0kGtoJaMRMR7Tq-JdCfv5UiP_enjjRxpLOb_IFHrQX9QOotXEhDTG6atiYte7pm1OjJv597IGhSU-ntOkj8h6G34Tl9nu7a6VT4bYg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 03:03:54 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipNXG0PXIoCcH3AXDuTdBTEZzzeRqvQQMqKtEBr6=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipNXG0PXIoCcH3AXDuTdBTEZzzeRqvQQMqKtEBr6=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 03:03:54 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/photo?key=trash&maxwidth=400&photoreference=CmRaAAAA4DU12su1r4EHHPt7pWQ3uJY1ZXQI0fhaYhC7uusoFTWuua6jlgCE6CMY3dSB7rQ39nG4xidW4_776FnlpqEG_FQmnjtxfPzckqej_ScVaELsoF1vnIxF2QZvvQQJrbYQEhDLM-OVN2bkX_Rp-yhpf87kGhQIDVZZqZOgqlM7ZOPDiu15Sgc5Gw
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 29 May 2018 03:03:54 GMT
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Location:
+      - https://lh3.googleusercontent.com/p/AF1QipNAgBcVLBZpBSpu-TrGLcaK_qCnfrktpyYcdZbJ=s1600-w400
+      Content-Type:
+      - text/html; charset=UTF-8
+      Server:
+      - scaffolding on HTTPServer2
+      Content-Length:
+      - '288'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - hq=":443"; ma=2592000; quic=51303433; quic=51303432; quic=51303431; quic=51303339;
+        quic=51303335,quic=":443"; ma=2592000; v="43,42,41,39,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://lh3.googleusercontent.com/p/AF1QipNAgBcVLBZpBSpu-TrGLcaK_qCnfrktpyYcdZbJ=s1600-w400\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version:
+  recorded_at: Tue, 29 May 2018 03:03:54 GMT
 recorded_with: VCR 4.0.0

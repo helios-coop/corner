@@ -120,13 +120,6 @@ class ListingsController < ApplicationController
     search_terms[:name]     = params[:name]     if params[:name].present?
     search_terms[:location] = params[:location] if params[:location].present?
     search_terms[:category] = params[:category] if params[:category].present?
-    search_terms[:status]   = if params[:status] == "all"
-                                [true, nil, false]
-                              elsif params[:status] == "disabled"
-                                [true]
-                              else
-                                [nil, false]
-                              end
 
     if search_terms.present?
       @listings = Listing.full_search(search_terms)
@@ -138,9 +131,21 @@ class ListingsController < ApplicationController
 
     gon.coordinates = @listings.map(&:coordinates)
 
+    case params[:status]
+    when "disabled"
+      @listings = @listings.disabled
+      online_only = Listing.disabled.where.not(online_only: nil)
+    when "all"
+      @listing = @listings
+      online_only = Listing.where.not(online_only: nil)
+    else
+      @listings = @listings.enabled
+      online_only = Listing.enabled.where.not(online_only: nil)
+    end
+
     # Until we have enough local listings add in online_only
     if search_terms[:location].present? || search_terms.empty?
-      @listings = (@listings + Listing.where.not(online_only: nil)).uniq
+      @listings = (@listings + online_only).uniq
     end
   end
 
