@@ -138,9 +138,21 @@ class ListingsController < ApplicationController
 
     gon.coordinates = @listings.map(&:coordinates)
 
+    case params[:status]
+    when "disabled"
+      @listings = @listings.disabled
+      online_only = Listing.disabled.where.not(online_only: nil)
+    when "all"
+      @listing = @listings
+      online_only = Listing.where.not(online_only: nil)
+    else
+      @listings = @listings.enabled
+      online_only = Listing.enabled.where.not(online_only: nil)
+    end
+
     # Until we have enough local listings add in online_only
     if search_terms[:location].present? || search_terms.empty?
-      @listings = (@listings + Listing.where.not(online_only: nil)).uniq
+      @listings = (@listings + online_only).uniq
     end
   end
 
