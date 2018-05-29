@@ -3,6 +3,12 @@
 
 #listing-form
   = form_for @listing do |f|
+    - if current_user.admin?
+      .row.form-group
+        %label.form-check-label.col-md-2{ for: "disabled-listing" } Disabled
+        .col-md-2= f.check_box :disabled, class: "form-check-input", id: "disabled-listing"
+      %hr
+
     .row.form-group
       .col-sm-2= f.label :name
       .col-sm-10= f.text_field :name, class: "form-control", placeholder: "Satoshi's Cafe"
@@ -28,7 +34,7 @@
         %label.form-check-label.col-md-2{ for: "online_only" } Online Only
         .col-md-2= f.check_box :online_only, class: "form-check-input", id: "online_only"
       .form-row#address-components
-        .form-group.col-md-6#or
+        .form-group.col-md-12#or
           OR
         .form-group.col-md-6
           = f.text_field :address, class: "form-control", placeholder: "Address"

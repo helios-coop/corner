@@ -89,6 +89,7 @@ class ListingsController < ApplicationController
     :url,
     :zipcode,
     :online_only,
+    :disabled,
     currency_ids: [],
     images: [],
   ].freeze
