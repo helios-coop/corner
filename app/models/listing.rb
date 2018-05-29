@@ -20,6 +20,8 @@ class Listing < ApplicationRecord
   # https://evilmartians.com/chronicles/rails-5-2-active-storage-and-beyond
   has_many_attached :images
   scope :with_eager_loaded_images, -> { eager_load(images_attachments: :blob) }
+  scope :disabled, -> { where(disabled: true) }
+  scope :enabled, -> { where(disabled: [nil, false]) }
 
   # Search By Name
   include PgSearch
@@ -41,6 +43,7 @@ class Listing < ApplicationRecord
       scope.joins(:categories).merge(Category.search_by_name(term))
     end,
     coordinates: ->(scope, term) { scope.near(term, 5) },
+    status: ->(scope, term) { scope.where(disabled: term) },
   }.freeze
 
   def self.full_search(search_options)
