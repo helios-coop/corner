@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_02_172147) do
+ActiveRecord::Schema.define(version: 2018_05_28_235023) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(version: 2018_05_02_172147) do
     t.string "google_places_id"
     t.string "thumbnail_url"
     t.boolean "online_only"
+    t.boolean "disabled"
     t.index ["google_places_id"], name: "index_listings_on_google_places_id", unique: true
     t.index ["submitter_id"], name: "index_listings_on_submitter_id"
   end
