@@ -120,6 +120,13 @@ class ListingsController < ApplicationController
     search_terms[:name]     = params[:name]     if params[:name].present?
     search_terms[:location] = params[:location] if params[:location].present?
     search_terms[:category] = params[:category] if params[:category].present?
+    search_terms[:status]   = if params[:status] == "all"
+                                [true, nil, false]
+                              elsif params[:status] == "disabled"
+                                [true]
+                              else
+                                [nil, false]
+                              end
 
     if search_terms.present?
       @listings = Listing.full_search(search_terms)
