@@ -120,40 +120,54 @@ class ListingsController < ApplicationController
     search_terms[:name]     = params[:name]     if params[:name].present?
     search_terms[:location] = params[:location] if params[:location].present?
     search_terms[:category] = params[:category] if params[:category].present?
-    search_terms[:status]   = if params[:status] == "all"
-                                [true, nil, false]
-                              elsif params[:status] == "disabled"
-                                [true]
-                              else
-                                [nil, false]
-                              end
 
-    if search_terms.present?
-      @listings = Listing.full_search(search_terms)
-    else
+    if search_terms.empty?
       set_map_center_point
       coordinates = gon.centerPoint.values_at(:latitude, :longitude)
-      @listings = Listing.full_search(coordinates: coordinates)
-    end
-
-    gon.coordinates = @listings.map(&:coordinates)
-
-    case params[:status]
-    when "disabled"
-      @listings = @listings.disabled
-      online_only = Listing.disabled.where.not(online_only: nil)
-    when "all"
-      @listing = @listings
-      online_only = Listing.where.not(online_only: nil)
-    else
-      @listings = @listings.enabled
-      online_only = Listing.enabled.where.not(online_only: nil)
+      search_terms[:coordinates] = coordinates
     end
 
     # Until we have enough local listings add in online_only
-    if search_terms[:location].present? || search_terms.empty?
-      @listings = (@listings + online_only).uniq
+    if add_online_only_listings?(search_terms)
+      @online_only_listings = online_only_listings
     end
+
+    search_terms[:status] = status_param
+
+    @listings = Listing.full_search(search_terms)
+
+    gon.coordinates = @listings.map(&:coordinates)
+
+    if @online_only_listings
+      @listings = (@listings + @online_only_listings).uniq
+    end
+  end
+
+  def online_only_listings
+    case params[:status]
+    when "all"
+      Listing.where.not(online_only: nil)
+    when "disabled"
+      Listing.disabled.where.not(online_only: nil)
+    else
+      Listing.enabled.where.not(online_only: nil)
+    end
+  end
+
+  def status_param
+    case params[:status]
+    when "all"
+      [true, nil, false]
+    when "disabled"
+      [true]
+    else
+      [nil, false]
+    end
+  end
+
+  def add_online_only_listings?(search_terms)
+    search_terms[:location].present? ||
+      (!search_terms[:name] && !search_terms[:Location] && !search_terms[:category])
   end
 
   def set_map_center_point
