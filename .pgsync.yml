@@ -21,10 +21,7 @@ to: postgres://localhost:5432/corner_development
 
 # protect sensitive information
 data_rules:
-  email: unique_email
   phone: unique_phone
   last_name: random_letter
   birthday: random_date
   encrypted_*: null
-  password_digest:
-    value: "asdfasdf"
