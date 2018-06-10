@@ -15,4 +15,5 @@ Rails.application.config.assets.paths << Rails.root.join("node_modules")
 # folder are already added.
 Rails.application.config.assets.precompile += ["listings.css",
                                                "sessions.css",
+                                               "donations.css",
                                                "corner-shared.css",]

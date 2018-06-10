@@ -17,6 +17,8 @@
         = link_to "Add Listing", new_listing_path, class: "nav-link"
       %li.nav-item.mr-1{ class: request.path == "/contact" ? "active" : "" }
         = link_to "Contact Us", contact_path, class: "nav-link"
+      %li.nav-item.mr-1{ class: request.path == "/donate" ? "active" : "" }
+        = link_to "Donate", donate_path, class: "nav-link"
       - if current_user && current_user.admin?
         %li.nav-item.mr-1{ class: request.path == "/admin/currencies" ? "active" : "" }
           = link_to "Currencies", admin_currencies_path, class: "nav-link"

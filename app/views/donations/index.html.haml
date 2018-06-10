@@ -1,0 +1,22 @@
+= content_for :head do
+  = stylesheet_link_tag "donations"
+
+
+.container-fluid
+  .row
+    .col.col-sm.col-md
+    .col-10.col-sm-8.col-md-5.mt-5
+      %h1 Donate
+
+      %h3 Corner's mission is to promote real world crypto usage at your local corner store, coffee shop, restaurant and everywhere else.
+
+      %h3 Help support this mission and continue spreading crypto acceptance at merchants in your local area.
+
+      %div
+      %a.donate-with-crypto#donate-button{ href: "https://commerce.coinbase.com/checkout/3e93c090-587a-439f-a3b0-ad475bd4e2b7" }
+        %span Donate with Crypto
+
+      %script{ src: "https://commerce.coinbase.com/v1/checkout.js" }
+        :cdata
+
+    .col.col-sm.col-md

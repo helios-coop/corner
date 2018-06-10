@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   get  "/contact" => "users#contact"
   post "/contact" => "users#message"
 
+  # Donations
+  get "/donate" => "donations#index"
+
   # Admin pages
   namespace :admin do
     resources :currencies
