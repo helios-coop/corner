@@ -1,0 +1,10 @@
+@import "application";
+
+// Override coinbase button styles
+#donate-button {
+  background: $navbar-color-darker-1 !important;
+}
+
+#donate-button:hover {
+  background: $navbar-color !important;
+}
