@@ -19,15 +19,19 @@
 
     %ul.navbar-nav.nav-pills.ml-auto
       %li.nav-item.mr-1{ class: request.path == "/listings/new" ? "active" : "" }
-        = link_to "Add Listing", new_listing_path, class: "nav-link"
+        = link_to "Add A Listing", new_listing_path, class: "nav-link"
       %li.nav-item.mr-1{ class: request.path == "/contact" ? "active" : "" }
         = link_to "Contact Us", contact_path, class: "nav-link"
       %li.nav-item.mr-1{ class: request.path == "/donate" ? "active" : "" }
-        = link_to "Donate", donate_path, class: "nav-link"
+        = link_to "Donate Now", donate_path, class: "nav-link"
+      %li.nav-item.mr-1
+        = link_to "Accept Bitcoin", "https://medium.com/@dladowitz/how-to-take-cryptocurrencies-at-the-register-da0956498079",
+                                    class: "nav-link",
+                                    target: "blank"
 
       - if current_user && current_user.admin?
         %li.nav-item.mr-1{ class: request.path == "/admin/currencies" ? "active" : "" }
-          = link_to "Currencies", admin_currencies_path, class: "nav-link"
+          = link_to "Edit Currencies", admin_currencies_path, class: "nav-link"
 
       - if current_user
         %li.nav-item
